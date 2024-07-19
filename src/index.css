@@ -21,7 +21,23 @@ code {
   height: 100vh;
   background-repeat: no-repeat;
   background-size: 80% 35%;
-  background-position:50% 50%;
+  background-position: 50% 50%;
   overflow: hidden;
+}
+
+/* Adjustments for tablets */
+@media (max-width: 768px) {
+  .hero_bg {
+    background-size: 100% 50%; /* Adjust as needed */
+    background-position: 50% 50%;
+  }
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 480px) {
+  .hero_bg {
+    background-size: 100% 20%; /* Adjust as needed */
+    background-position: 50% 50%;
+  }
 }
 
