@@ -1,16 +1,20 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
 import { animateHero } from './gsapAnimations';
-import Navbar from './Navbar';
-
+import Navbar from './Component/Navbar';
+import StickyWhatsapp from './Component/StickyWhatsapp';
 const Hero = () => {
     useEffect(() => {
         animateHero();
     }, []);
 
+    
+
     return (
         <Box>
+            <StickyWhatsapp link={"https://wa.me/8220570301"} />
             <Box sx={{ height: '100vh', bgcolor: '#4b0082' }} className="hero_bg" >
+                <Navbar />
                 {/* <Box sx={{display:'flex',justifyContent:'center'}}>
                     <Box component='img' src="/Assets/logo.png" sx={{ position: 'absolute'}} />
                 </Box> */}
@@ -23,7 +27,7 @@ const Hero = () => {
                         ml: "3.5%",
                         mt: ["40%", "30%", "6.5%"],
                         transition: 'tranaform',
-                        transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2.5s',
+                        transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
                         position: 'absolute',
                     }}
                 />
@@ -33,9 +37,10 @@ const Hero = () => {
                         src='/Images/img-4.png'
                         alt='pack'
                         sx={{
-                            width: ["43%", "43%", "28%"],
-                            mt: [25, 30, 0],
-                            transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2.5s',
+                            width: ["40%", "43%", "28%"],
+                            mt: [15, 30, 0],
+                            ml: 3.5,
+                            transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
                             position: 'absolute',
                             zIndex: 2
                         }}
@@ -45,10 +50,10 @@ const Hero = () => {
                         src='/Images/cashew.png'
                         alt='pack'
                         sx={{
-                            width: ["30%", "25%", "15%"],
-                            mt: ["90%", "70%", '26%'],
-                            ml: '15%',
-                            transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2.5s',
+                            width: ["28%", "25%", "15%"],
+                            mt: ["65%", "70%", '26%'],
+                            ml: ['20%','15%'],
+                            transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
                             position: 'absolute',
                             zIndex: 2
                         }}
@@ -63,16 +68,16 @@ const Hero = () => {
                         bottom: 20,
                         right: "10rem",
                         transition: 'tranaform',
-                        transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2.5s',
+                        transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
                         position: 'absolute',
                     }}
                 />
             </Box>
-            <Box sx={{ height: '102vh', bgcolor: '#92553D' }} className="two">
+            <Box sx={{ height: ['100vh','110vh'], bgcolor: '#92553D' }} className="two">
                 <Navbar />
-                <Box sx={{ display: 'flex', flexDirection: ['column', 'column', 'row'], alignItems: 'center', justifyContent: "space-between", height: '80%', mx: [2, 11] }}>
+                <Box sx={{ display: 'flex', flexDirection: ['column', 'column', 'row'], alignItems: 'center', justifyContent: "space-between", height:[ '80%','95%'], mx: [2, 11] }}>
                     <Box sx={{ display: 'flex', justifyContent: ['center', 'center', 'normal'] }}>
-                        <Box component='img' src='/Images/platte.png' alt='Cover 2' sx={{ width: ["60%", "60%","38%"], mt: [33, 50, 0], position: 'absolute'}} />
+                        <Box component='img' src='Images/platte-1.png' alt='Cover 2' sx={{ width: ["60%", "60%", "38%"], mt: [20,50, 0], position: 'absolute' }} />
                     </Box>
                     <Box sx={{ width: ["100%", "100%", "50%"] }}>
                         <Typography sx={{
@@ -87,6 +92,59 @@ const Hero = () => {
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi ut et numquam repudiandae, ullam laudantium in? Repudiandae, veniam nemo, iure cum facere accusamus est eligendi quisquam asperiores delectus aspernatur nisi?
                         </Typography>
                     </Box>
+                </Box>
+            </Box>
+            <Box component='img'
+                src='Images/img-right-up@2x.avif'
+                alt='leaf'
+                sx={{
+                    width: ["40%", "20%", "20%"],
+                    right: 0,
+                    position: 'absolute',
+                }}
+            />
+            <Box sx={{ bgcolor: '#212121', pb: 10 }} className="three" >
+                <Typography sx={{ px: [2, 5, 16], py: [2, 6], fontWeight: 600, color: 'white', fontSize: ["2.5rem", "2.5rem", '3.5rem'], letterSpacing: 1, fontFamily: 'serif', position: 'relative' }}>Our Products</Typography>
+                <Box component='img'
+                    src='Images/leaf3.avif'
+                    alt='leaf'
+                    sx={{
+                        width: ["70%", "50%", "30%"],
+                        ml: [-10],
+                        mt: [30,30, -22],
+                        position: 'absolute',
+                    }}
+                />
+                <Box sx={{ mx: [2, 5, 25] }}>
+                    <Grid container spacing={{ xs: 3, sm: 3, md: 5}} justifyContent={'center'} columns={{ xs: 2, sm: 3, md: 3 }}>
+                        {[...Array(3)].map((_, index) => (
+                            <Grid item xs={1} sm={1} md={1} key={index}>
+                                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                    <Box
+                                        component='img'
+                                        src='/Images/img-1.png'
+                                        alt='pack'
+                                        sx={{
+                                            width: ["100%", "100%"],
+                                            bgcolor:'white',
+                                            borderRadius:'3%',
+                                            height:"80%",
+                                            mb: [-4.5, -8]
+                                        }}
+                                    />
+                                    <Typography sx={{
+                                        fontSize: ['1.5rem', '1.5rem', '1.5rem'],
+                                        fontWeight: '600',
+                                        color: '#282828',
+                                        textAlign: 'center',
+                                        letterSpacing: 1
+                                    }}>
+                                        Dates
+                                    </Typography>
+                                </Box>
+                            </Grid>
+                        ))}
+                    </Grid>
                 </Box>
             </Box>
         </Box>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Stack, Typography } from '@mui/material'
 const Navbar = () => {
     return (
-        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center' ,py:5}}>
             <Box sx={{ py: [2, 2, 2], width: ['24rem'], zIndex: 10 }}>
                 <Box>
                     <nav>
