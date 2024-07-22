@@ -19,7 +19,7 @@ export const animateHero = () => {
             }
         });
 
-        tl.to("#pack", { top: "115%", left: "7%" }, 'orange')
+        tl.to("#pack", { top: "115%", left: "10.5%" }, 'orange')
             .to("#cashew", { width: "15%", top: "125%", right: "10%" }, 'orange')
             .to("#leaf", { top: "110%", rotate: "65deg", left: "70%" }, 'orange')
             .to("#leaf2", { top: "120%", rotate: "200deg", left: "0%" }, 'orange');
@@ -49,13 +49,13 @@ export const animateHero = () => {
             scrollTrigger: {
                 trigger: ".two",
                 start: "0% 95%",
-                end: "60% 40%",
+                end: "80% 60%",
                 scrub: true,
-                // markers: true,
+
             }
         });
 
-        tl.to("#pack", { top: "100%", left: "16%"}, 'orange')
+        tl.to("#pack", { top: "100%", left: "30%"}, 'orange')
             .to("#cashew", { width: "25%", top: "110%", right: "0%" }, 'orange')
             .to("#leaf", { top: "120%", rotate: "30deg", left: "70%" }, 'orange')
             .to("#leaf2", { top: "120%", rotate: "150deg", left: "8%" }, 'orange');

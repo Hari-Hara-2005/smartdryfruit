@@ -7,15 +7,14 @@
   background-image: url('logo.png');
   height: 100vh;
   background-repeat: no-repeat;
-  background-size: 90% 50%;
-  background-position: 50% 70%;
-  overflow: hidden;
+  background-size: 50% 50%;
+  background-position: 50% 50%;
 }
 
 /* Adjustments for tablets */
 @media (max-width: 768px) {
   .hero_bg {
-    background-size: 100% 50%; /* Adjust as needed */
+    background-size: 80% 50%; /* Adjust as needed */
     background-position: 50% 50%;
   }
 }
@@ -30,27 +29,27 @@
 } */
 @media (min-width: 320px) and (max-width: 359px) {
   .hero_bg {
-    background-size: 100% 20%;
-    background-position: 50% 80%;
+    background-size: 100% 15%;
+    background-position: 50% 48%;
   }
 }
 
 @media (min-width: 360px) and (max-width: 374px) {
   .hero_bg {
-    background-size: 100% 20%;
+    background-size: 100% 15%;
     background-position: 50% 42%;
   }
 }
 @media (min-width: 375px) and (max-width: 380px) {
   .hero_bg {
-    background-size: 100% 20%;
-    background-position: 50% 55%;
+    background-size: 100% 15%;
+    background-position: 50% 52%;
   }
 }
 @media (min-width: 390px) and (max-width: 391px) {
   .hero_bg {
-    background-size: 100% 20%;
-    background-position: 50% 54%;
+    background-size: 100% 15%;
+    background-position: 50% 50%;
   }
 }
 @media (min-width: 392px) and (max-width: 400px) {
@@ -61,8 +60,8 @@
 }
 @media (min-width: 412px) and (max-width: 413px) {
   .hero_bg {
-    background-size: 100% 20%;
-    background-position: 50% 43%;
+    background-size: 100% 15%;
+    background-position: 50% 39%;
   }
 }
 @media (min-width: 414px) and (max-width: 420px) {
@@ -71,10 +70,16 @@
     background-position: 50% 50%;
   }
 }
-@media (min-width: 428px) and (max-width: 450px) {
+@media (min-width: 425px) and (max-width: 427px) {
   .hero_bg {
     background-size: 100% 20%;
-    background-position: 50% 49%;
+    background-position: 50% 50%;
+  }
+}
+@media (min-width: 428px) and (max-width: 450px) {
+  .hero_bg {
+    background-size: 100% 15%;
+    background-position: 50% 46%;
   }
 }
 /* Styles for devices between 375px and 480px */
@@ -112,7 +117,7 @@
 /* Styles for devices larger than 768px */
 @media (min-width: 769px) {
   .hero_bg {
-    background-size: 100% 50%; /* Adjust as needed */
-    background-position: 50% 50%;
+    background-size: 100% 40%; /* Adjust as needed */
+    background-position: 50% 55%;
   }
 }

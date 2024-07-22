@@ -3,13 +3,13 @@ import React, { useEffect } from 'react';
 import { animateHero } from './gsapAnimations';
 import Navbar from './Component/Navbar';
 import StickyWhatsapp from './Component/StickyWhatsapp';
+import CustomerReview from './Component/CustomerReview';
+import Title from './Component/Title';
+import IndustryCarousel from './Component/ProductSlide';
 const Hero = () => {
     useEffect(() => {
         animateHero();
     }, []);
-
-    
-
     return (
         <Box>
             <StickyWhatsapp link={"https://wa.me/8220570301"} />
@@ -23,23 +23,23 @@ const Hero = () => {
                     src='/Images/leaf.png'
                     alt='leaf'
                     sx={{
-                        width: ["20%", "15%", "12.5%"],
+                        width: ["25%", "15%", "12.5%"],
                         ml: "3.5%",
-                        mt: ["40%", "30%", "6.5%"],
+                        mt: ["10%", "30%", "0%"],
                         transition: 'tranaform',
                         transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
                         position: 'absolute',
                     }}
                 />
-                <Box sx={{ display: 'flex', justifyContent: 'center', py: '2rem', transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 0.5s', ml: -1.2 }}>
+                <Box sx={{ display: 'flex', justifyContent: 'center', transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 0.5s', ml: [1, -4.5], py: [3, 0] }}>
                     <Box component='img'
                         id='pack'
                         src='/Images/img-4.png'
                         alt='pack'
                         sx={{
                             width: ["40%", "43%", "28%"],
-                            mt: [15, 30, 0],
-                            ml: 3.5,
+                            mt: [15, 30, -1],
+                            ml: 0,
                             transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
                             position: 'absolute',
                             zIndex: 2
@@ -51,8 +51,8 @@ const Hero = () => {
                         alt='pack'
                         sx={{
                             width: ["28%", "25%", "15%"],
-                            mt: ["65%", "70%", '26%'],
-                            ml: ['20%','15%'],
+                            mt: ["68%", "70%", '26%'],
+                            ml: ['20%', '18%'],
                             transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
                             position: 'absolute',
                             zIndex: 2
@@ -64,20 +64,20 @@ const Hero = () => {
                     src='/Images/leaf2.png'
                     alt='leaf'
                     sx={{
-                        width: ["25%", "20%", "14%"],
-                        bottom: 20,
-                        right: "10rem",
+                        width: ["35%", "20%", "14%"],
+                        bottom: [50, 5],
+                        right: [10, "10rem"],
                         transition: 'tranaform',
                         transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
                         position: 'absolute',
                     }}
                 />
             </Box>
-            <Box sx={{ height: ['100vh','110vh'], bgcolor: '#92553D' }} className="two">
+            <Box sx={{ height: ['100vh', '110vh'], bgcolor: '#92553D' }} className="two">
                 <Navbar />
-                <Box sx={{ display: 'flex', flexDirection: ['column', 'column', 'row'], alignItems: 'center', justifyContent: "space-between", height:[ '80%','95%'], mx: [2, 11] }}>
+                <Box sx={{ display: 'flex', flexDirection: ['column', 'column', 'row'], alignItems: 'center', justifyContent: "space-between", height: ['80%', '95%'], mx: [2, 11] }}>
                     <Box sx={{ display: 'flex', justifyContent: ['center', 'center', 'normal'] }}>
-                        <Box component='img' src='Images/platte-1.png' alt='Cover 2' sx={{ width: ["60%", "60%", "38%"], mt: [20,50, 0], position: 'absolute' }} />
+                        <Box component='img' src='Images/platte-1.png' alt='Cover 2' sx={{ width: ["60%", "60%", "38%"], mt: [20, 50, 0], position: 'absolute' }} />
                     </Box>
                     <Box sx={{ width: ["100%", "100%", "50%"] }}>
                         <Typography sx={{
@@ -103,20 +103,22 @@ const Hero = () => {
                     position: 'absolute',
                 }}
             />
-            <Box sx={{ bgcolor: '#212121', pb: 10 }} className="three" >
-                <Typography sx={{ px: [2, 5, 16], py: [2, 6], fontWeight: 600, color: 'white', fontSize: ["2.5rem", "2.5rem", '3.5rem'], letterSpacing: 1, fontFamily: 'serif', position: 'relative' }}>Our Products</Typography>
+            <Box sx={{ bgcolor: '#fff', height: '100vh' }} className="three" >
+                <Box sx={{ display: 'flex', justifyContent: 'start', color: 'black', px: [2, 5, 8], pb: 5 }}>
+                    <Title color="#282828">Our Products</Title>
+                </Box>
                 <Box component='img'
                     src='Images/leaf3.avif'
                     alt='leaf'
                     sx={{
                         width: ["70%", "50%", "30%"],
                         ml: [-10],
-                        mt: [30,30, -22],
+                        mt: [30, 30, -22],
                         position: 'absolute',
                     }}
                 />
                 <Box sx={{ mx: [2, 5, 25] }}>
-                    <Grid container spacing={{ xs: 3, sm: 3, md: 5}} justifyContent={'center'} columns={{ xs: 2, sm: 3, md: 3 }}>
+                    <Grid container spacing={{ xs: 3, sm: 3, md: 5 }} justifyContent={'center'} columns={{ xs: 2, sm: 3, md: 3 }}>
                         {[...Array(3)].map((_, index) => (
                             <Grid item xs={1} sm={1} md={1} key={index}>
                                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -126,9 +128,9 @@ const Hero = () => {
                                         alt='pack'
                                         sx={{
                                             width: ["100%", "100%"],
-                                            bgcolor:'white',
-                                            borderRadius:'3%',
-                                            height:"80%",
+                                            borderRadius: '3%',
+                                            boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
+                                            height: "80%",
                                             mb: [-4.5, -8]
                                         }}
                                     />
@@ -147,6 +149,13 @@ const Hero = () => {
                     </Grid>
                 </Box>
             </Box>
+            <Box sx={{ bgcolor: '#282828' }}>
+                <Box sx={{ display: 'flex', justifyContent: 'start', px: [2, 5, 8], pb: 5 }}>
+                    <Title color="#fff" >Read our customers say</Title>
+                </Box>
+                <CustomerReview />
+            </Box>
+            <IndustryCarousel/>
         </Box>
     );
 }
