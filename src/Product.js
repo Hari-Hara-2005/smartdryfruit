@@ -5,50 +5,10 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import StarIcon from '@mui/icons-material/Star';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
-import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { Height } from '@mui/icons-material';
-const products = [
-    {
-        id: 1,
-        category: 'Bangles',
-        name: 'Cashew',
-        rating: 5,
-        price: '₹365.00',
-        image: '/Images/img-1.png',
-        unitsSold: '50',
-    },
-    {
-        id: 2,
-        category: 'Bangles',
-        name: 'Cashew Splits',
-        rating: 4,
-        price: '₹425.00',
-        image: '/Images/img-2.jpg',
-        unitsSold: 45,
-    },
-    {
-        id: 3,
-        category: 'Bangles',
-        name: 'Roasted Cashew',
-        rating: 4,
-        price: '₹425.00',
-        image: '/Images/img-3.jpg',
-        unitsSold: 43,
-    },
-    {
-        id: 4,
-        category: 'Bangles',
-        name: 'Regal Reflection Bangles',
-        rating: 3,
-        price: '₹800',
-        image: '/bengel-1.jpg',
-        unitsSold: 25,
-    },
-];
+import { products } from "./utils/data";
 
 const StyledCard = styled(Card)(({ theme }) => ({
     backgroundColor: '#fff', // Adjust for dark background
@@ -123,7 +83,7 @@ const ProductCard = ({ product }) => {
     return (
         <StyledCard>
             <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                <StyledMedia component="img" sx={{ width: ["10rem", "15rem"] }} image={product.image} alt={product.name} />
+                <StyledMedia component="img" sx={{ width: ["10rem", "25rem"] }} image={product.image} alt={product.name} />
             </Box>
             <IconContainer>
                 <IconButton aria-label="add to favorites" sx={{
@@ -132,7 +92,7 @@ const ProductCard = ({ product }) => {
                         boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
                     },
                 }} onClick={handleLikeClick}>
-                    <FavoriteIcon sx={{ fontSize: ['1rem','1.5rem'] }} />
+                    <FavoriteIcon sx={{ fontSize: ['1rem', '1.5rem'] }} />
                 </IconButton>
                 <IconButton aria-label="save" sx={{
                     color: bookmarked ? 'lightgray' : '#fff', bgcolor: '#92553D', '&:hover': {
@@ -152,7 +112,7 @@ const ProductCard = ({ product }) => {
                 </IconButton>
             </IconContainer>
             <CardContent>
-                <Typography variant={["0.8rem","h6"]} component="div" sx={{ textAlign: 'start', fontWeight: [700,600], letterSpacing: 1 }} >
+                <Typography variant={["0.8rem", "h6"]} component="div" sx={{ textAlign: 'start', fontWeight: [700, 600], letterSpacing: 1 }} >
                     {product.name}
                 </Typography>
                 <Typography variant="body1" component="div" sx={{ textAlign: 'start', letterSpacing: 0.5 }} >
@@ -162,7 +122,7 @@ const ProductCard = ({ product }) => {
                     <VerifiedIcon sx={{ fontSize: '1rem' }} />
                     Smart Dry Fruits
                 </Typography>
-                <Stack direction={["column",'row']} justifyContent={'space-between'}>
+                <Stack direction={["column", 'row']} justifyContent={'space-between'}>
                     <Box>
                         <RatingStars rating={product.rating} size="1.2rem" />
                         <Typography color={'#282828'} sx={{ textAlign: 'start', fontWeight: 700, fontSize: '1rem', letterSpacing: 0.5, display: 'flex', alignItems: 'center' }} >
@@ -196,7 +156,7 @@ const ProductGrid = () => {
     return (
         <Box sx={{ textAlign: 'center', px: [2, 3, 0], py: 10 }}>
             <Grid container spacing={6} justifyContent="center" alignItems="center">
-                {bangles.slice(0,).map((product) => (
+                {bangles.slice(0, 20).map((product) => ( // Adjust slicing as per your requirement
                     <Grid item key={product.id} xs={12} sm={6} md={3.5}>
                         <ProductCard product={product} />
                     </Grid>
