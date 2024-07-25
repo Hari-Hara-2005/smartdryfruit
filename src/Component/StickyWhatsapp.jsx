@@ -28,11 +28,11 @@ function StickyWhatsapp({ link }) {
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                     sx={{
-                        width: ["2.5rem", "3rem", "3rem", "3.5rem", "3.5rem"],
+                        width: ["4rem", "3rem", "3rem", "3.5rem", "3.5rem"],
                         overflow: "hidden",
                         alignItems: "center",
                         justifyContent: "center",
-                        height: ["2.5rem", "3rem", "3rem", "3rem", "3.5rem"],
+                        height: ["4rem", "3rem", "3rem", "3rem", "3.5rem"],
                         background: "linear-gradient(91.83deg, #282828 0%, #282828 100%)",
                         p: [1.5, 1.5, 1.5, 1.5, 2],
                         position: "fixed",

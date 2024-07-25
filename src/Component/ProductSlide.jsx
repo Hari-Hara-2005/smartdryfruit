@@ -7,12 +7,12 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
 const industryData = [
-    { id: "1", img: "Images/img-2.jpg", title: "Nuts 1" },
-    { id: "2", img: "Images/img-2.jpg", title: "Nuts 2" },
-    { id: "3", img: "Images/img-2.jpg", title: "Nuts 3" },
-    { id: "4", img: "Images/img-2.jpg", title: "Nuts 4" },
-    { id: "5", img: "Images/img-2.jpg", title: "Nuts 5" },
-    { id: "6", img: "Images/img-2.jpg", title: "Nuts 6" },
+    { id: "1", img: "Images/download.jpg", title: "Nuts 1" },
+    { id: "2", img:  "Images/download.jpg", title: "Nuts 2" },
+    { id: "3", img:  "Images/download.jpg", title: "Nuts 3" },
+    { id: "4", img:  "Images/download.jpg", title: "Nuts 4" },
+    { id: "5", img:  "Images/download.jpg", title: "Nuts 5" },
+    { id: "6", img:  "Images/download.jpg", title: "Nuts 6" },
 ];
 
 const IndustryCarousel = () => {
@@ -20,9 +20,9 @@ const IndustryCarousel = () => {
 
     return (
         <>
-            <Box sx={{ width: '100%', height: ["29rem", "32rem", "25rem", "29rem", "36rem"] }}>
+            <Box sx={{ width: '100%', height: ["25rem", "20rem", "25rem", "29rem", "36rem"],pt:5 }}>
                 <Swiper
-                    slidesPerView={1}
+                    slidesPerView={1.3}
                     navigation={true}
                     modules={[Navigation]}
                     className="mySwiper"
@@ -31,10 +31,10 @@ const IndustryCarousel = () => {
                             slidesPerView: 2,
                         },
                         1024: {
-                            slidesPerView: 3,
+                            slidesPerView: 4,
                         },
                         1700: {
-                            slidesPerView: 4,
+                            slidesPerView: 5,
                         },
                     }}
                 >
@@ -43,11 +43,12 @@ const IndustryCarousel = () => {
                             <Box
                                 sx={{
                                     position: 'relative',
-                                    width: { xs: "20rem", sm: "21rem", md: "18.5rem", lg: "20rem", xl: "25rem" },
-                                    height: { xs: "28rem", sm: "30rem", md: "26.5rem", lg: "24rem", xl: "25rem" },
+                                    width: { xs: "95%", sm: "18rem", md: "18.5rem", lg: "20rem", xl: "22rem" },
+                                    height: { xs: "18rem", sm: "30rem", md: "26.5rem", lg: "24rem", xl: "20rem" },
                                     borderRadius: "8px",
                                     overflow: 'hidden',
-                                    boxShadow: 3,
+                                    boxShadow: 5,
+                                    ml: 3,
                                     transition: 'transform 0.3s ease',
                                     '&:hover': {
                                         transform: 'scale(1.05)',
@@ -58,8 +59,8 @@ const IndustryCarousel = () => {
                                     src={item.img}
                                     alt={item.title}
                                     style={{
-                                        width: '50%',
-                                        height: '50%',
+                                        width: '100%',
+                                        height: '100%',
                                         objectFit: 'cover',
                                     }}
                                 />
@@ -74,7 +75,7 @@ const IndustryCarousel = () => {
                                         p: 1,
                                     }}
                                 >
-                                    <Typography variant="h6">
+                                    <Typography sx={{ fontSize: ['1rem'] }}    >
                                         {item.title}
                                     </Typography>
                                 </Box>
@@ -137,7 +138,7 @@ const IndustryCarousel = () => {
             font-size: 1.5rem;
             font-weight: 900;
             text-align: center;
-            margin-left: -3px;
+            margin-left: -5px;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
             -webkit-text-stroke: 3px gray;
             text-stroke: 3px #F44247;
@@ -146,6 +147,7 @@ const IndustryCarousel = () => {
           @media (max-width: 800px) {
             .swiper-button-next,
             .swiper-button-prev {
+            display:none;
               padding: 1rem;
               height: 2rem;
               width: 2rem;
@@ -160,7 +162,7 @@ const IndustryCarousel = () => {
 
             .swiper-button-prev:after {
               font-size: 1rem;
-              margin-left: -0.3rem;
+              margin-left: -0.5rem;
               -webkit-text-stroke: 0.1125rem #F44247;
               text-stroke: 0.1125rem #F44247;
             }

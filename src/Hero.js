@@ -6,6 +6,8 @@ import StickyWhatsapp from './Component/StickyWhatsapp';
 import CustomerReview from './Component/CustomerReview';
 import Title from './Component/Title';
 import IndustryCarousel from './Component/ProductSlide';
+import Faq from './Component/Faq';
+import Footer from './Component/Footer';
 const Hero = () => {
     useEffect(() => {
         animateHero();
@@ -103,7 +105,7 @@ const Hero = () => {
                     position: 'absolute',
                 }}
             />
-            <Box sx={{ bgcolor: '#fff', height: '100vh' }} className="three" >
+            <Box sx={{ bgcolor: '#fff' }} className="three" >
                 <Box sx={{ display: 'flex', justifyContent: 'start', color: 'black', px: [2, 5, 8], pb: 5 }}>
                     <Title color="#282828">Our Products</Title>
                 </Box>
@@ -120,7 +122,12 @@ const Hero = () => {
                 <Box sx={{ mx: [2, 5, 25] }}>
                     <Grid container spacing={{ xs: 3, sm: 3, md: 5 }} justifyContent={'center'} columns={{ xs: 2, sm: 3, md: 3 }}>
                         {[...Array(3)].map((_, index) => (
-                            <Grid item xs={1} sm={1} md={1} key={index}>
+                            <Grid item xs={1} sm={1} md={1} key={index} sx={{
+                                transition: 'transform 0.3s ease',
+                                '&:hover': {
+                                    transform: 'scale(1.05)',
+                                }
+                            }}>
                                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                                     <Box
                                         component='img'
@@ -131,7 +138,7 @@ const Hero = () => {
                                             borderRadius: '3%',
                                             boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
                                             height: "80%",
-                                            mb: [-4.5, -8]
+                                            mb: [-4.5, -8],
                                         }}
                                     />
                                     <Typography sx={{
@@ -148,14 +155,22 @@ const Hero = () => {
                         ))}
                     </Grid>
                 </Box>
+                <IndustryCarousel />
             </Box>
-            <Box sx={{ bgcolor: '#282828' }}>
-                <Box sx={{ display: 'flex', justifyContent: 'start', px: [2, 5, 8], pb: 5 }}>
+            <Box sx={{ bgcolor: '#282828', height: ["80vh", "100vh"] }}>
+                <Box sx={{ display: 'flex', justifyContent: 'start', px: [2, 5, 8], pb: [0, 15], pt: 5 }}>
                     <Title color="#fff" >Read our customers say</Title>
                 </Box>
                 <CustomerReview />
             </Box>
-            <IndustryCarousel/>
+            <IndustryCarousel />
+            <Box sx={{ px: 2 }}>
+                <Box sx={{ display: 'flex', justifyContent: 'start', color: 'black', px: [2, 5, 8], pb: 5 }}>
+                    <Title color="#282828">Frequently Asked Question</Title>
+                </Box>
+                <Faq />
+            </Box>
+            <Footer />
         </Box>
     );
 }

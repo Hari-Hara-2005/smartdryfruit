@@ -83,7 +83,7 @@ const ProductCard = ({ product }) => {
     return (
         <StyledCard>
             <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                <StyledMedia component="img" sx={{ width: ["10rem", "25rem"] }} image={product.image} alt={product.name} />
+                <StyledMedia component="img" sx={{ width: ["100%", "18rem"],}} image={product.image} alt={product.name} />
             </Box>
             <IconContainer>
                 <IconButton aria-label="add to favorites" sx={{
