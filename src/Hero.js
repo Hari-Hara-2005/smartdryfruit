@@ -96,7 +96,7 @@ const Hero = () => {
                     </Box>
                 </Box>
             </Box>
-            <Box component='img'
+            {/* <Box component='img'
                 src='Images/img-right-up@2x.avif'
                 alt='leaf'
                 sx={{
@@ -104,7 +104,7 @@ const Hero = () => {
                     right: 0,
                     position: 'absolute',
                 }}
-            />
+            /> */}
             <Box sx={{ bgcolor: '#fff' }} className="three" >
                 <Box sx={{ display: 'flex', justifyContent: 'start', color: 'black', px: [2, 5, 8], pb: 5 }}>
                     <Title color="#282828">Our Products</Title>
@@ -123,6 +123,7 @@ const Hero = () => {
                     <Grid container spacing={{ xs: 3, sm: 3, md: 5 }} justifyContent={'center'} columns={{ xs: 2, sm: 3, md: 3 }}>
                         {[...Array(3)].map((_, index) => (
                             <Grid item xs={1} sm={1} md={1} key={index} sx={{
+                                cursor: 'pointer',
                                 transition: 'transform 0.3s ease',
                                 '&:hover': {
                                     transform: 'scale(1.05)',
@@ -163,14 +164,15 @@ const Hero = () => {
                 </Box>
                 <CustomerReview />
             </Box>
-            <IndustryCarousel />
             <Box sx={{ px: 2 }}>
                 <Box sx={{ display: 'flex', justifyContent: 'start', color: 'black', px: [2, 5, 8], pb: 5 }}>
                     <Title color="#282828">Frequently Asked Question</Title>
                 </Box>
                 <Faq />
             </Box>
-            <Footer />
+            <Box sx={{ bgcolor: 'black', mt: 10, px: 2 }}>
+                <Footer />
+            </Box>
         </Box>
     );
 }

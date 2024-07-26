@@ -54,8 +54,8 @@
 }
 @media (min-width: 392px) and (max-width: 400px) {
   .hero_bg {
-    background-size: 100% 20%;
-    background-position: 50% 47%;
+    background-size: 100% 15%;
+    background-position: 50% 42%;
   }
 }
 @media (min-width: 412px) and (max-width: 413px) {

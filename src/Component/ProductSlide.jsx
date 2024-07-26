@@ -8,11 +8,11 @@ import { Navigation } from 'swiper/modules';
 
 const industryData = [
     { id: "1", img: "Images/download.jpg", title: "Nuts 1" },
-    { id: "2", img:  "Images/download.jpg", title: "Nuts 2" },
-    { id: "3", img:  "Images/download.jpg", title: "Nuts 3" },
-    { id: "4", img:  "Images/download.jpg", title: "Nuts 4" },
-    { id: "5", img:  "Images/download.jpg", title: "Nuts 5" },
-    { id: "6", img:  "Images/download.jpg", title: "Nuts 6" },
+    { id: "2", img: "Images/download.jpg", title: "Nuts 2" },
+    { id: "3", img: "Images/download.jpg", title: "Nuts 3" },
+    { id: "4", img: "Images/download.jpg", title: "Nuts 4" },
+    { id: "5", img: "Images/download.jpg", title: "Nuts 5" },
+    { id: "6", img: "Images/download.jpg", title: "Nuts 6" },
 ];
 
 const IndustryCarousel = () => {
@@ -20,7 +20,7 @@ const IndustryCarousel = () => {
 
     return (
         <>
-            <Box sx={{ width: '100%', height: ["25rem", "20rem", "25rem", "29rem", "36rem"],pt:5 }}>
+            <Box sx={{ width: '100%', height: ["25rem", "20rem", "25rem", "29rem", "36rem"], pt: 5 }}>
                 <Swiper
                     slidesPerView={1.3}
                     navigation={true}
@@ -50,6 +50,7 @@ const IndustryCarousel = () => {
                                     boxShadow: 5,
                                     ml: 3,
                                     transition: 'transform 0.3s ease',
+                                    cursor: 'pointer',
                                     '&:hover': {
                                         transform: 'scale(1.05)',
                                     }

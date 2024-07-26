@@ -62,42 +62,6 @@ export const reviews = [
 ];
 
 
-const productData = [
-    {
-        id: 1,
-        name: "MASSDROP X SENNHEISER HD 6XX HEADPHONES",
-        image: "https://massdrop-s3.imgix.net/product-images/massdrop-sennheiser-hd6xx/FP/cJolRuxYSgqdFtmFawp8_yJ6M80CfTZGYMcNKc5of_0cYrqmTrQFOf4cbRVO6t_H6xx%20Reshoot32572.png?auto=format&fm=jpg&fit=fill&w=300&h=300&bg=f0f0f0&fill=solid&fill-color=f0f0f0&dpr=1&q=70",
-        productType: "openBackHeadphones",
-        price: 220,
-        rating: 5,
-        timeLeft: 27,
-        totalSales: 7479
-    },
-    {
-        id: 2,
-        name: "DROP + SENNHEISER PC38X GAMING HEADSET",
-        image: "https://massdrop-s3.imgix.net/product-images/drop-sennheiser-pc38x-gaming-headset/FP/CeH9BYVoTniYOsScfzZ0_PC.png?auto=format&fm=jpg&fit=fill&w=300&h=300&bg=f0f0f0&fill=solid&fill-color=f0f0f0&dpr=1&q=70",
-        productType: "openBackHeadphones",
-        price: 169,
-        rating: 5,
-        timeLeft: 24,
-        totalSales: 6898
-    },
-    {
-        id: 3,
-        name: "MASSDROP X SENNHEISER HD 58X JUBILEE HEADPHONES",
-        image: "https://massdrop-s3.imgix.net/product-images/massdrop-x-sennheiser-hd-58x-jubilee-headphones/FP/jbCgVcPdRXZC1YRI2oZ3_3qKeFvWGRbQ3wreRhIVc_58x_clear.png?auto=format&fm=jpg&fit=fill&w=300&h=300&bg=f0f0f0&fill=solid&fill-color=f0f0f0&dpr=1&q=70",
-        productType: "openBackHeadphones",
-        price: 170,
-        rating: 4,
-        timeLeft: 21,
-        totalSales: 6347
-    }
-];
-
-export default productData;
-
-
 export const products = [
     {
         id: 1,
@@ -162,6 +126,99 @@ export const products = [
         //     image: 'Images/ProductsImages/Purely Delight (5).png',
         //     unitsSold: 43,
         // },
+    {
+        id: 8,
+        category: 'Bangles',
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/Purely Delight (6).png',
+        unitsSold: 43,
+    },
+    {
+        id: 9,
+        category: 'Bangles',
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/Purely Delight (7).png',
+        unitsSold: 43,
+    },
+    {
+        id: 10,
+        category: 'Bangles',
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/sunflower seeds.png',
+        unitsSold: 43,
+    },
+    {
+        id: 11,
+        category: 'Bangles',
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/wallnut.png',
+        unitsSold: 43,
+    },
+    {
+        id: 12,
+        category: 'Bangles',
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/watermelon seeds.png',
+        unitsSold: 43,
+    },
+];
+
+export const footerProducts = [
+    {
+        id: 1,
+        category: 'Bangles',
+        name: 'Cashew',
+        rating: 5,
+        price: '₹365.00',
+        image: 'Images/ProductsImages/cashew-2.png',
+        unitsSold: '50',
+    },
+    {
+        id: 2,
+        category: 'Bangles',
+        name: 'Cashew Splits',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/pepper cashew..png',
+        unitsSold: 45,
+    },
+    {
+        id: 3,
+        category: 'Bangles',
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/Purely Delight (1).png',
+        unitsSold: 43,
+    },
+    {
+        id: 4,
+        category: 'Bangles',
+        name: 'Roasted Cashew',
+        rating: 3,
+        price: '₹800',
+        image: 'Images/ProductsImages/Purely Delight (2).png',
+        unitsSold: 25,
+    },
+    {
+        id: 5,
+        category: 'Bangles',
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/Purely Delight (3).png',
+        unitsSold: 43,
+    },
     {
         id: 8,
         category: 'Bangles',
