@@ -135,16 +135,16 @@ const Hero = () => {
                                         src='Images/ProductsImages/dry fruits.png'
                                         alt='pack'
                                         sx={{
-                                            width: ["95%", "95%"],
+                                            width: ["100%", "95%"],
                                             p: 2,
                                             borderRadius: '3%',
-                                            height:['15rem','32rem'],
+                                            height:['13rem','32rem'],
                                             boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
-                                            mb: [-4.5, -5],
+                                            mb: [-4, -5],
                                         }}
                                     />
                                     <Typography sx={{
-                                        fontSize: ['1.5rem', '1.5rem', '1.5rem'],
+                                        fontSize: ['1.2rem', '1.5rem', '1.5rem'],
                                         fontWeight: '600',
                                         color: '#282828',
                                         textAlign: 'center',
