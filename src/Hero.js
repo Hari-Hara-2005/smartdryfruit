@@ -136,9 +136,9 @@ const Hero = () => {
                                         alt='pack'
                                         sx={{
                                             width: ["100%", "95%"],
-                                            p: 2,
+                                            p:[ 3,2],
                                             borderRadius: '3%',
-                                            height:['13rem','32rem'],
+                                            height:['12rem','32rem'],
                                             boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
                                             mb: [-4, -5],
                                         }}
