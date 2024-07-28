@@ -158,8 +158,8 @@ const Hero = () => {
                 </Box>
                 <IndustryCarousel />
             </Box>
-            <Box sx={{ bgcolor: '#282828', height: ["80vh", "100vh"] }}>
-                <Box sx={{ display: 'flex', justifyContent: 'start', px: [2, 5, 8], pb: [0, 15], pt: 5 }}>
+            <Box sx={{ bgcolor: '#282828',}}>
+                <Box sx={{ display: 'flex', justifyContent: 'start', px: [2, 5, 8], pb: [0, 0,3], pt: 5 }}>
                     <Title color="#fff" >Read our customers say</Title>
                 </Box>
                 <CustomerReview />

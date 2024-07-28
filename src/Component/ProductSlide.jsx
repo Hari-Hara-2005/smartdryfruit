@@ -22,7 +22,7 @@ const IndustryCarousel = () => {
         <>
             <Box sx={{ width: '100%', height: ["25rem", "20rem", "25rem", "29rem", "36rem"], pt: 5 }}>
                 <Swiper
-                    slidesPerView={1.3}
+                    slidesPerView={1.145}
                     navigation={true}
                     modules={[Navigation]}
                     className="mySwiper"
