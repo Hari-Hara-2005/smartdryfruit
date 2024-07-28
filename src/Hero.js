@@ -135,7 +135,7 @@ const Hero = () => {
                                         src='Images/ProductsImages/dry fruits.png'
                                         alt='pack'
                                         sx={{
-                                            width: ["100%", "95%"],
+                                            width: ["95%", "95%"],
                                             p: 2,
                                             borderRadius: '3%',
                                             height:['15rem','32rem'],
