@@ -135,11 +135,12 @@ const Hero = () => {
                                         src='Images/ProductsImages/dry fruits.png'
                                         alt='pack'
                                         sx={{
-                                            width: ["100%", "100%"],
+                                            width: ["100%", "95%"],
+                                            p: 2,
                                             borderRadius: '3%',
+                                            height:['15rem','32rem'],
                                             boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
-                                            height: "80%",
-                                            mb: [-4.5, -8],
+                                            mb: [-4.5, -5],
                                         }}
                                     />
                                     <Typography sx={{
@@ -158,8 +159,8 @@ const Hero = () => {
                 </Box>
                 <IndustryCarousel />
             </Box>
-            <Box sx={{ bgcolor: '#282828',}}>
-                <Box sx={{ display: 'flex', justifyContent: 'start', px: [2, 5, 8], pb: [0, 0,3], pt: 5 }}>
+            <Box sx={{ bgcolor: '#282828', }}>
+                <Box sx={{ display: 'flex', justifyContent: 'start', px: [2, 5, 8], pb: [0, 0, 3], pt: 5 }}>
                     <Title color="#fff" >Read our customers say</Title>
                 </Box>
                 <CustomerReview />

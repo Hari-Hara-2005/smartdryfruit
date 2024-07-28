@@ -41,7 +41,7 @@ const CustomerReview = () => {
                 alignItems: "center",
                 justifyContent: "space-around",
                 whiteSpace: "nowrap",
-                gap: '5rem',
+                gap: ['2rem','5rem'],
                 py: '1rem',
                 animation: `${scrollX} 140s linear infinite`,
             }}>
