@@ -132,7 +132,7 @@ const Hero = () => {
                                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                                     <Box
                                         component='img'
-                                        src='/Images/img-1.png'
+                                        src='Images/ProductsImages/dry fruits.png'
                                         alt='pack'
                                         sx={{
                                             width: ["100%", "100%"],
