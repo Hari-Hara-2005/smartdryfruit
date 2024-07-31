@@ -84,7 +84,7 @@ const Hero = () => {
                 <Navbar />
                 <Box sx={{ display: 'flex', flexDirection: ['column', 'column', 'row'], alignItems: 'center', justifyContent: "space-between", height: ['80%'], mx: [2, 11] }}>
                     <Box sx={{ display: 'flex', justifyContent: ['center', 'center', 'normal'] }}>
-                        <Box component='img' src='Images/platte-1.png' alt='Cover 2' sx={{ width: ["60%", "60%", "36%"], mt: [30, 50, 9], position: 'absolute' }} />
+                        <Box component='img' src='Images/platte-1.png' alt='Cover 2' sx={{ width: ["60%", "60%", "36%"], mt: [25, 50, 9], position: 'absolute' }} />
                     </Box>
                     <Box sx={{ width: ["100%", "100%", "50%"] }}>
                         <Typography sx={{
