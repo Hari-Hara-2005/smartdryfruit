@@ -54,7 +54,7 @@ function Footer() {
                 </Box>
                 {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FF6B6B" fillOpacity="1" d="M0,32L80,53.3C160,75,320,117,480,112C640,107,800,53,960,42.7C1120,32,1280,64,1360,80L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> */}
                 <Box sx={{ mx: [2.5, 2], mt: 8 }}>
-                    <Grid container spacing={10} justifyContent={{ xs: 'flex-start', md: 'center' }}>
+                    <Grid container spacing={8} justifyContent={{ xs: 'flex-start', md: 'center' }}>
                         <Grid item xs={12} sm={6} lg={3}>
                             <Box>
                                 <Typography sx={{ fontSize: '18px', fontFamily: 'sans-serif', fontWeight: '500', color: 'white', letterSpacing: 1 }}>
@@ -434,8 +434,8 @@ function Footer() {
                 </Box>
             </Box >
             <Box sx={{ display: ['block', 'block', 'none'] }}>
-                <Box sx={{ display: 'flex', justifyContent: 'center', my: ['2.5rem', '1.5rem'], }}>
-                    <Box sx={{ bgcolor: 'black', width: ['8rem', '7rem', '9rem'], height: ['8rem', '7rem', '9rem'], display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '100%', my: -6 }}>
+                <Box sx={{ display: 'flex', justifyContent: 'center', my:['2.5rem','3rem'] }}>
+                    <Box sx={{ bgcolor: 'black', width: ['8rem', '11rem', '9rem'], height: ['8rem', '11rem', '9rem'], display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '100%', my: [-6,-8] }}>
                         <Box component='img' src='Images/logo.png' alt="customer" sx={{ width: ['6rem', '8rem', '10.5rem'], height: ['6rem', '8rem', '10.5rem'], borderRadius: '100%' }} />
                     </Box>
                 </Box>
@@ -473,22 +473,7 @@ function Footer() {
                         lg: "space-around",
                     }}
                 >
-                    {/* Address */}
-                    {/* <Box sx={{ pb: 4 }}>
-                        <Box sx={{ pb: 2, mx: [2.5, 4] }}>
-                            <Box component='img' src='Images/logo.png' alt="customer" sx={{ width: ['8rem', '8rem', '10.5rem'], ml: 0.5, height: ['8rem', '8rem', '10.5rem'], borderRadius: '100%' }} />
-                            <Typography sx={{ fontSize: '18px', fontFamily: 'sans-serif', fontWeight: '600', color: 'white', letterSpacing: 1.2, textTransform: 'uppercase', mx: 4, my: 0.5 }}>Smart</Typography>
-                            <Typography sx={{ fontSize: '15px', fontFamily: 'sans-serif', fontWeight: '600', color: 'white', letterSpacing: 5, textTransform: 'uppercase' }}>dry fruits</Typography>
-                        </Box>
-                        <Box>
-                            <Typography sx={{ fontSize: '15px', fontFamily: 'sans-serif', color: 'white', mt: 1, letterSpacing: 1, display: 'flex', alignItems: 'center', gap: 1, pb: 1 }}>
-                                <MailIcon />maha050108@gmail.com
-                            </Typography>
-                            <Typography sx={{ fontSize: '15px', fontFamily: 'sans-serif', color: 'white', mt: 1, letterSpacing: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
-                                <PhoneCallback />+91 9952857016
-                            </Typography>
-                        </Box>
-                    </Box> */}
+                  
 
 
                     <CusAccordion
@@ -915,100 +900,6 @@ function Footer() {
                             </Box>
                         }
                     />
-
-                    {/* Services */}
-
-                    {/* <CusAccordion
-                        display={["flex", "flex", "none"]}
-                        head={
-                            <Typography
-                                sx={{
-                                    fontSize: ["1rem"],
-                                    fontWeight: 600,
-                                    color: "#7624F3",
-                                    background: "linear-gradient(91.83deg, #FF512F 0%, #DD2476 100%)",
-                                    backgroundClip: "text",
-                                    textFillColor: "transparent",
-                                    letterSpacing: 3,
-                                    textTransform: "uppercase",
-                                }}
-                            >
-                                Services
-                            </Typography>
-                        }
-                        body={
-                            <Stack direction={{ xs: "column" }} gap={{ xs: 1.2, sm: 2 }}>
-                                {services.slice(0, 10).map((item, index) => (
-                                    <Typography
-                                        key={index}
-                                        component={Link}
-                                        href={`/services/${item.id}`}
-                                        color={"inherit"}
-                                        underline="hover"
-                                        sx={{
-                                            fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                            ":hover": {
-                                                color: "#F74641",
-                                                textDecoration: 'none'
-                                            },
-                                        }}
-                                    >
-                                        {item.title}
-                                    </Typography>
-                                ))}
-                            </Stack>
-                        }
-                    />
-
-                    <Box
-                        display="flex"
-                        flexDirection={{ xs: "column" }}
-                        alignItems={{ xs: "flex-start" }}
-                        gap={{ xs: 0.5, sm: 1 }}
-                        color="#fff"
-                        sx={{
-                            display: ["none", "none", "flex"],
-                        }}
-                    >
-                        <Typography
-                            sx={{
-                                fontSize: ["1.5rem", ".85rem", "20px", "25px", "2rem"],
-                                fontWeight: 600,
-                                color: "#7624F3",
-                                background: "linear-gradient(91.83deg, #FF512F 0%, #DD2476 100%)",
-                                backgroundClip: "text",
-                                textFillColor: "transparent",
-                                letterSpacing: 2,
-                                textTransform: "uppercase",
-                            }}
-                        >
-                            Services
-                        </Typography>
-                        <Stack direction={{ xs: "column" }} gap={{ xs: 1.2, sm: 2 }}>
-                            {services.slice(0, 10).map((item, index) => (
-                                <Typography
-                                    key={index}
-                                    component={Link}
-                                    href={`/services/${item.id}`}
-                                    color={"inherit"}
-                                    underline="hover"
-                                    sx={{
-                                        fontSize: ["1.2rem", ".85rem", "12px", "15px", "1.2rem"],
-                                        ":hover": {
-                                            color: "#F74641 ",
-                                            textDecoration: 'none'
-                                        },
-                                    }}
-                                >
-                                    {item.title}
-                                </Typography>
-                            ))}
-                        </Stack>
-                    </Box> */}
-                    {/* Industries */}
-
-
-
 
                     <CusAccordion
                         display={["flex", "flex", "none"]}

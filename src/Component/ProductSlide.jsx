@@ -20,9 +20,9 @@ const IndustryCarousel = () => {
 
     return (
         <>
-            <Box sx={{ width: '100%', height: ["25rem", "20rem", "25rem", "29rem", "36rem"], pt: 5 }}>
+            <Box sx={{ width: '100%', height: ["25rem", "30rem", "30rem", "29rem", "36rem"], pt: 5 }}>
                 <Swiper
-                    slidesPerView={1.145}
+                    slidesPerView={1.2}
                     navigation={true}
                     modules={[Navigation]}
                     className="mySwiper"
@@ -30,7 +30,10 @@ const IndustryCarousel = () => {
                         700: {
                             slidesPerView: 2,
                         },
-                        1024: {
+                        1280: {
+                            slidesPerView: 3,
+                        },
+                        1281: {
                             slidesPerView: 4,
                         },
                         1700: {
@@ -43,12 +46,12 @@ const IndustryCarousel = () => {
                             <Box
                                 sx={{
                                     position: 'relative',
-                                    width: { xs: "95%", sm: "18rem", md: "18.5rem", lg: "20rem", xl: "22rem" },
-                                    height: { xs: "18rem", sm: "30rem", md: "26.5rem", lg: "24rem", xl: "20rem" },
+                                    width: { xs: "88%", sm: "93%", md: "95%", lg: "90%", xl: "22rem" },
+                                    height: { xs: "15rem", sm: "18rem", md: "25rem", lg: "25rem", xl: "20rem" },
                                     borderRadius: "8px",
                                     overflow: 'hidden',
                                     boxShadow: 5,
-                                    ml: 3,
+                                    ml:[ 3,0],
                                     transition: 'transform 0.3s ease',
                                     cursor: 'pointer',
                                     '&:hover': {
