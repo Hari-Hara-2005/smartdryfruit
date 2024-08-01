@@ -1,15 +1,12 @@
 import * as React from "react";
-import { styled, alpha } from "@mui/material/styles";
+import { useState, useEffect } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import InputBase from "@mui/material/InputBase";
 import MenuIcon from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
-import { useState } from "react";
 import {
   Button,
   Drawer,
@@ -22,6 +19,8 @@ import {
   useScrollTrigger,
   Slide,
   CssBaseline,
+  Menu,
+  MenuItem,
 } from "@mui/material";
 
 const drawerWidth = 240;
@@ -42,16 +41,32 @@ function HideOnScroll(props) {
 export default function Navbar(props) {
   const [isDown, setIsDown] = React.useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const changeNavStyle = () => {
-    if (window.scrollY >= 90) {
-      setIsDown(true);
-    } else {
-      setIsDown(false);
-    }
-  };
-  window.addEventListener("scroll", changeNavStyle);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const openDropdown = Boolean(anchorEl);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 90) {
+        setIsDown(true);
+      } else {
+        setIsDown(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+  };
+
+  const handleDropdownClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleDropdownClose = () => {
+    setAnchorEl(null);
   };
 
   const navItems = [
@@ -72,6 +87,7 @@ export default function Navbar(props) {
       name: "Contact Us",
     },
   ];
+
   const drawer = (
     <Stack direction="column">
       <Toolbar
@@ -109,11 +125,13 @@ export default function Navbar(props) {
           >
             <ListItem
               onClick={() => {
-                setMobileOpen(!mobileOpen);
+                setMobileOpen(false);
               }}
               button
               sx={{
-                fontWeight: "medium", color: "#fff", ":hover": {
+                fontWeight: "medium",
+                color: "#fff",
+                ":hover": {
                   color: "#fff",
                 },
               }}
@@ -174,11 +192,18 @@ export default function Navbar(props) {
                 justifyContent: 'space-between'
               }}
             >
-              <Link color={"inherit"} underline="none" href="/"><Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                <ImageListItem sx={{}}>
-                  <Box component='img' src="/logoh.png" sx={{ width: ['4rem', '5rem', '6rem'], height: ['4rem', '5rem', '6rem'], }} alt='logo' />
-                </ImageListItem>
-              </Box></Link>
+              <Link color={"inherit"} underline="none" href="/">
+                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', bg: 'transparent' }}>
+                  <ImageListItem>
+                    <Box
+                      component='img'
+                      src="Images/logo.png"
+                      sx={{ width: ['4rem', '5rem', '6rem'], height: ['4rem', '5rem', '6rem'], borderRadius: '100%',p:1.3 }}
+                      alt='logo'
+                    />
+                  </ImageListItem>
+                </Box>
+              </Link>
               <IconButton
                 onClick={handleDrawerToggle}
                 size="large"
@@ -202,18 +227,80 @@ export default function Navbar(props) {
             </Link>
             <Box sx={{ display: { xs: "none", md: "flex", gap: '2rem' } }}>
               {navItems.map((item, index) => (
-                <Button
-                  key={index}
-                  href={item.link}
-                  sx={{
-                    fontSize: [17],
-                    fontWeight: '600',
-                    color: isDown ? "#000" : "#fff",
-                    textTransform: "none",
-                  }}
-                >
-                  {item.name}
-                </Button>
+                item.name === "Product" ? (
+                  <Box key={index}>
+                    <Button
+                      onClick={handleDropdownClick}
+                      sx={{
+                        fontSize: [17],
+                        fontWeight: '600',
+                        color: isDown ? "#000" : "#fff",
+                        textTransform: "none",
+                        "&:hover": {
+                          backgroundColor: "rgba(255,255,255,0.1)",
+                        }
+                      }}
+                    >
+                      {item.name}
+                    </Button>
+                    <Menu
+                      anchorEl={anchorEl}
+                      open={Boolean(anchorEl)}
+                      onClose={handleDropdownClose}
+                      PaperProps={{
+                        sx: {
+                          mt: 1,
+                          borderRadius: '10px',
+                          background: '#fff',
+                          p: 0.5,
+                          fontSize: [17],
+                          fontWeight: '600',
+                          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+                          width: '13rem',
+                          border: '3.5px solid #92553D'
+                        },
+                      }}
+                    >
+                      <MenuItem onClick={handleDropdownClose}
+                        sx={{
+                          fontSize: [18],
+                          fontWeight: '600',
+                        }}>
+                        <Link href="/product/category1" color="inherit" underline="none">Dates</Link>
+                      </MenuItem>
+                      <MenuItem onClick={handleDropdownClose}
+                        sx={{
+                          fontSize: [18],
+                          fontWeight: '600',
+                        }}>
+                        <Link href="/product/category2" color="inherit" underline="none">Dry Fruits</Link>
+                      </MenuItem>
+                      <MenuItem onClick={handleDropdownClose}
+                        sx={{
+                          fontSize: [18],
+                          fontWeight: '600',
+                        }}>
+                        <Link href="/product/category3" color="inherit" underline="none">Seed</Link>
+                      </MenuItem>
+                    </Menu>
+                  </Box>
+                ) : (
+                  <Button
+                    key={index}
+                    href={item.link}
+                    sx={{
+                      fontSize: [17],
+                      fontWeight: '600',
+                      color: isDown ? "#000" : "#fff",
+                      textTransform: "none",
+                      "&:hover": {
+                        backgroundColor: "rgba(255,255,255,0.1)",
+                      }
+                    }}
+                  >
+                    {item.name}
+                  </Button>
+                )
               ))}
             </Box>
           </Toolbar>
@@ -241,6 +328,7 @@ export default function Navbar(props) {
               width: "100%",
               background:
                 "linear-gradient(180.83deg, #181818 0%, #181818 100%)",
+              transition: "width 0.3s ease-in-out",
             },
           }}
         >

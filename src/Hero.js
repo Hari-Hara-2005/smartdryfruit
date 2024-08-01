@@ -45,7 +45,7 @@ const Hero = () => {
                         alt='pack'
                         sx={{
                             width: ["25%", "43%", "22%"],
-                            mt: [21, 30, -1],
+                            mt: ['43%', 30, -1],
                             ml: [0, 4.5],
                             transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
                             position: 'absolute',
@@ -121,21 +121,21 @@ const Hero = () => {
                         position: 'absolute',
                     }}
                 />
-                <Box sx={{ display: 'flex', justifyContent: 'start', color: 'black', px: [2, 5, 8], pb:[5,10] }}>
+                <Box sx={{ display: 'flex', justifyContent: 'start', color: 'black', px: [2, 5, 8], pb: [5, 12] }}>
                     <Title color="#282828">Our Products</Title>
                 </Box>
-                <Box sx={{ mx: [2, 5, 10] }}>
+                <Box sx={{ mx: [2, 5, 5, 12] }}>
                     <Grid container spacing={{ xs: 3, sm: 3, md: 5 }} justifyContent={'center'} columns={{ xs: 2, sm: 3, md: 3 }}>
                         {industryData.map((item, index) => (
                             <Grid item xs={1} sm={1} md={1} key={index} sx={{
                                 cursor: 'pointer',
-                                transition: 'transform 0.3s ease',
+                                transition: 'transform 0.5s ease',
                                 '&:hover': {
-                                    transform: 'scale(1.05)',
+                                    transform: 'scale(1.10)',
                                 }
                             }}>
                                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                    <Box sx={{ width: ["100%",'27rem'] }}>
+                                    <Box sx={{ width: ["100%", "100%", "100%",  "100%", '25rem'] }}>
                                         <Box
                                             component='img'
                                             src={item.img}
@@ -143,9 +143,10 @@ const Hero = () => {
                                             sx={{
                                                 width: ["100%"],
                                                 borderRadius: '3%',
-                                                height: ['12rem', '18rem', '32rem'],
+                                                height: ['12rem', '18rem', '20rem', '25rem'],
+                                                border:'3px solid #92553D',
                                                 boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
-                                                mb: [-4, -6],
+                                                mb: [-4.5, -6],
                                             }}
                                         />
                                     </Box>
@@ -177,7 +178,7 @@ const Hero = () => {
                 </Box>
                 <Faq />
             </Box>
-            <Box sx={{ bgcolor: 'black', mt: 10, px: 2 }}>
+            <Box sx={{ bgcolor: 'black', mt: 20, px: 2 }}>
                 <Footer />
             </Box>
         </Box>

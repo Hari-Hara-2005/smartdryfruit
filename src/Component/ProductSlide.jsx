@@ -25,13 +25,13 @@ const IndustryCarousel = () => {
     useEffect(() => {
         const updateSlidesPerView = () => {
             if (window.innerWidth >= 1700) {
-                setSlidesPerView(5);
+                setSlidesPerView(3);
             } else if (window.innerWidth >= 1280) {
                 setSlidesPerView(3);
             } else if (window.innerWidth >= 700) {
-                setSlidesPerView(2);
+                setSlidesPerView(3);
             } else {
-                setSlidesPerView(1.340); 
+                setSlidesPerView(1.340);
             }
         };
 
@@ -47,7 +47,7 @@ const IndustryCarousel = () => {
 
     return (
         <>
-            <Box sx={{ width: '100%', height: ["25rem", "30rem", "30rem", "29rem", "36rem"], pt: 5 }}>
+            <Box sx={{ width: '100%', height: ["25rem", "30rem", "40rem", "40rem", "40rem"], pt: 5 }}>
                 <Swiper
                     slidesPerView={slidesPerView}
                     navigation={true}
@@ -58,7 +58,7 @@ const IndustryCarousel = () => {
                     onSlideChange={handleSlideChange}
                     breakpoints={{
                         700: {
-                            slidesPerView: 2,
+                            slidesPerView: 3,
                             centeredSlides: false,
                         },
                         1280: {
@@ -66,7 +66,7 @@ const IndustryCarousel = () => {
                             centeredSlides: false,
                         },
                         1700: {
-                            slidesPerView: 5,
+                            slidesPerView: 3,
                             centeredSlides: false,
                         },
                     }}
@@ -76,11 +76,10 @@ const IndustryCarousel = () => {
                             <Box
                                 sx={{
                                     position: 'relative',
-                                    width: { xs: "91%", sm: "93%", md: "95%", lg: "100%", xl: "85%" },
+                                    width: { xs: "91%", sm: "85%", md: "90%", lg: "90%", xl: "88%" },
                                     height: { xs: "15rem", sm: "18rem", md: "25rem", lg: "25rem", xl: "25rem" },
                                     borderRadius: "8px",
                                     overflow: 'hidden',
-                                    ml: [0, 0],
                                     cursor: 'pointer',
                                     transform: (index === activeIndex + Math.floor(slidesPerView / 2)) ? 'scale(1.20)' : 'scale(1)',
                                     transition: 'transform 0.3s ease',

@@ -41,7 +41,7 @@ const CustomerReview = () => {
                 alignItems: "center",
                 justifyContent: "space-around",
                 whiteSpace: "nowrap",
-                gap: ['2rem','2rem','5rem'],
+                gap: ['2rem','2rem','3rem'],
                 py: '1rem',
                 animation: `${scrollX} 140s linear infinite`,
             }}>
@@ -55,7 +55,7 @@ const CustomerReview = () => {
                                 alt={review.name}
                                 sx={{ width: 100, height: 100, mx: 'auto', mb: -5, zIndex: 1 }}
                             />
-                            <Card sx={{ maxWidth: [300, 345], mx: 'auto', textAlign: 'center', p: 2, borderRadius: '10px', bgcolor: '#f9f9f9', pt: 7 }}>
+                            <Card sx={{ maxWidth: [300, 350], mx: 'auto', textAlign: 'center', p: 2, borderRadius: '10px', bgcolor: '#f9f9f9', pt: 7 }}>
                                 <CardContent>
                                     <Typography variant="h6" component="div">
                                         {review.name}

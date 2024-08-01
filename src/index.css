@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  scrollbar-width: none;
 }
 .hero_bg {
   background-image: url('logo.png');
@@ -37,7 +38,7 @@
 @media (min-width: 360px) and (max-width: 374px) {
   .hero_bg {
     background-size: 100% 15%;
-    background-position: 50% 45%;
+    background-position: 50% 42%;
   }
 }
 @media (min-width: 375px) and (max-width: 380px) {
