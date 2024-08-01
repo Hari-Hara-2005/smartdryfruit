@@ -45,7 +45,7 @@ const Hero = () => {
                         alt='pack'
                         sx={{
                             width: ["25%", "43%", "22%"],
-                            mt: [20, 30, -1],
+                            mt: [21, 30, -1],
                             ml: [0, 4.5],
                             transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
                             position: 'absolute',

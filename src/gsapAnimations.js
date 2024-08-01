@@ -55,7 +55,7 @@ export const animateHero = () => {
             }
         });
 
-        tl.to("#pack", { top: "115%", left: "37%"},'orange')
+        tl.to("#pack", { top: "110%", left: "37%"},'orange')
             .to("#cashew", { top: "123%", right: "0%" }, 'orange')
             .to("#leaf", { top: "120%", rotate: "30deg", left: "70%" }, 'orange')
             .to("#leaf2", { top: "110%", rotate: "180deg", left: "4%" }, 'orange');

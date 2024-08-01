@@ -83,7 +83,7 @@ const ProductCard = ({ product }) => {
     return (
         <StyledCard>
             <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                <StyledMedia component="img" sx={{ width: ["100%", "18rem"],}} image={product.image} alt={product.name} />
+                <StyledMedia component="img" sx={{ width: ["8rem", "18rem"],}} image={product.image} alt={product.name} />
             </Box>
             <IconContainer>
                 <IconButton aria-label="add to favorites" sx={{
@@ -92,7 +92,7 @@ const ProductCard = ({ product }) => {
                         boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
                     },
                 }} onClick={handleLikeClick}>
-                    <FavoriteIcon sx={{ fontSize: ['1rem', '1.5rem'] }} />
+                    <FavoriteIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
                 </IconButton>
                 <IconButton aria-label="save" sx={{
                     color: bookmarked ? 'lightgray' : '#fff', bgcolor: '#92553D', '&:hover': {
@@ -100,7 +100,7 @@ const ProductCard = ({ product }) => {
                         boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
                     },
                 }} onClick={handleBookmarkClick}>
-                    <BookmarkIcon sx={{ fontSize: ['1rem', '1.5rem'] }} />
+                    <BookmarkIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
                 </IconButton >
                 <IconButton aria-label="add to cart" sx={{
                     color: '#fff', bgcolor: '#92553D', '&:hover': {
@@ -108,7 +108,7 @@ const ProductCard = ({ product }) => {
                         boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
                     },
                 }} onClick={handleShoppingClick}>
-                    <ShoppingCartIcon sx={{ fontSize: ['1rem', '1.5rem'] }} />
+                    <ShoppingCartIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
                 </IconButton>
             </IconContainer>
             <CardContent>

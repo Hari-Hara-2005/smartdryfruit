@@ -37,7 +37,7 @@
 @media (min-width: 360px) and (max-width: 374px) {
   .hero_bg {
     background-size: 100% 15%;
-    background-position: 50% 42%;
+    background-position: 50% 45%;
   }
 }
 @media (min-width: 375px) and (max-width: 380px) {
@@ -73,7 +73,7 @@
 @media (min-width: 425px) and (max-width: 427px) {
   .hero_bg {
     background-size: 100% 15%;
-    background-position: 50% 50%;
+    background-position: 50% 40%;
   }
 }
 @media (min-width: 428px) and (max-width: 450px) {
