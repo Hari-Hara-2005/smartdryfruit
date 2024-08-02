@@ -8,17 +8,17 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { dates } from "../../utils/data";
+import { nuts } from "../../utils/data";
 import Navbar from '../../Component/Navbar';
 import Title from '../../Component/Title';
 
 const StyledCard = styled(Card)(({ theme }) => ({
   backgroundColor: '#fff',
+  border: '3px solid #92553D',
   color: '#92553D',
   fontWeight: 900,
   boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
   transition: 'transform 0.5s, box-shadow 0.5s',
-  border: '3px solid #92553D',
   '&:hover': {
     transform: 'scale(1.05)',
     boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
@@ -150,7 +150,7 @@ const ProductCard = ({ product }) => {
   );
 };
 
-const Dates = () => {
+const Nuts = () => {
   return (
     <>
       <Navbar color="#000" />
@@ -165,13 +165,13 @@ const Dates = () => {
         }}
       />
       <Box sx={{ display: 'flex', justifyContent: 'start', color: 'black', px: [2, 5, 4] }}>
-        <Title color="#282828">Dates</Title>
+        <Title color="#282828">Nuts</Title>
       </Box>
       <Box sx={{ textAlign: 'center', px: [2, 3, 0], py: [10] }}>
         <Grid container spacing={6} justifyContent="center" alignItems="center">
-          {dates.map((date) => (
-            <Grid item key={date.id} xs={12} sm={6} md={3.8} lg={3.6}>
-              <ProductCard product={date} />
+          {nuts.map((nut) => (
+            <Grid item key={nut.id} xs={12} sm={6} md={3.8} lg={3.6}>
+              <ProductCard product={nut} />
             </Grid>
           ))}
         </Grid>
@@ -180,4 +180,4 @@ const Dates = () => {
   );
 };
 
-export default Dates;
+export default Nuts;

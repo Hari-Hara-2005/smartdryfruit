@@ -8,11 +8,14 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { dryfruits, products } from "../../utils/data";
+import { dryfruits } from "../../utils/data";
+import Title from '../../Component/Title';
+import Navbar from '../../Component/Navbar';
 
 const StyledCard = styled(Card)(({ theme }) => ({
     backgroundColor: '#fff',
     color: '#92553D',
+    border: '3px solid #92553D',
     fontWeight: 900,
     boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
     transition: 'transform 0.5s, box-shadow 0.5s',
@@ -80,7 +83,7 @@ const ProductCard = ({ product }) => {
 
     return (
         <StyledCard>
-            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', ml: [2, 0], mt:[ 0,2] }}>
+            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', ml: [2, 0], mt: [0, 2] }}>
                 <Box sx={{ width: ["7.5rem", "12rem"] }}>
                     <Box component="img" sx={{ width: ['85%', '100%'], }} src={product.image} alt={product.name} />
                 </Box>
@@ -134,7 +137,10 @@ const ProductCard = ({ product }) => {
                         </Typography>
                     </Box>
                     <Box sx={{ display: ['flex'], alignItems: 'center' }}>
-                        <Button variant="contained" startIcon={<ShoppingCartOutlinedIcon />} sx={{ bgcolor: "#92553D", textTransform: 'none', borderRadius: '50px', px: [2.5] }}>
+                        <Button variant="contained" startIcon={<ShoppingCartOutlinedIcon />} sx={{
+                            bgcolor: "#92553D", textTransform: 'none', borderRadius: '50px', px: [2.5], '&:hover': {
+                                bgcolor: "#282828"
+                            }, }}>
                             Add to cart
                         </Button>
                     </Box>
@@ -146,15 +152,31 @@ const ProductCard = ({ product }) => {
 
 const DryFruits = () => {
     return (
-        <Box sx={{ textAlign: 'center', px: [2, 3, 0], py: [10] }}>
-            <Grid container spacing={6} justifyContent="center" alignItems="center">
-                {dryfruits.map((dryfruit) => (
-                    <Grid item key={dryfruit.id} xs={12} sm={6} md={3.8} lg={3.6}>
-                        <ProductCard product={dryfruit} />
-                    </Grid>
-                ))}
-            </Grid>
-        </Box>
+        <>
+            <Navbar color="#000" />
+            <Box component='img'
+                src='Images/leaf3.avif'
+                alt='leaf'
+                sx={{
+                    width: ["70%", "50%", "25%"],
+                    ml: [-10],
+                    mt: [-2, 20, -2],
+                    position: 'absolute',
+                }}
+            />
+            <Box sx={{ display: 'flex', justifyContent: 'start', color: 'black', px: [2, 5, 4] }}>
+                <Title color="#282828">Dry Fruits</Title>
+            </Box>
+            <Box sx={{ textAlign: 'center', px: [2, 3, 0], py: [10] }}>
+                <Grid container spacing={6} justifyContent="center" alignItems="center">
+                    {dryfruits.map((dryfruit) => (
+                        <Grid item key={dryfruit.id} xs={12} sm={6} md={3.8} lg={3.6}>
+                            <ProductCard product={dryfruit} />
+                        </Grid>
+                    ))}
+                </Grid>
+            </Box>
+        </>
     );
 };
 

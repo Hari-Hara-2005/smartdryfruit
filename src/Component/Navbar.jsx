@@ -11,7 +11,6 @@ import {
   Button,
   Drawer,
   ImageListItem,
-  Link,
   List,
   ListItem,
   ListItemText,
@@ -21,7 +20,11 @@ import {
   CssBaseline,
   Menu,
   MenuItem,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
+import CusAccordion from './CusAccordion'; // Import your CusAccordion component
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -39,10 +42,13 @@ function HideOnScroll(props) {
 }
 
 export default function Navbar(props) {
-  const [isDown, setIsDown] = React.useState(false);
+  const { color } = props;
+  const [isDown, setIsDown] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const openDropdown = Boolean(anchorEl);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,7 +81,6 @@ export default function Navbar(props) {
       name: "Home",
     },
     {
-      link: "/product",
       name: "Product",
     },
     {
@@ -86,6 +91,13 @@ export default function Navbar(props) {
       link: "/contact",
       name: "Contact Us",
     },
+  ];
+
+  const productMenuItems = [
+    { link: "/dates", name: "Dates" },
+    { link: "/dryfruits", name: "Dry Fruits" },
+    { link: "/seeds", name: "Seeds" },
+    { link: "/nuts", name: "Nuts" },
   ];
 
   const drawer = (
@@ -99,7 +111,7 @@ export default function Navbar(props) {
         }}
       >
         <CloseIcon
-          sx={{ color: '#fff' }}
+          sx={{ color: "#fff" }}
           onClick={() => {
             setMobileOpen(false);
           }}
@@ -116,48 +128,172 @@ export default function Navbar(props) {
           justifyContent: "center",
         }}
       >
-        {navItems.map((item, index) => (
-          <Link
-            href={`${item.link}`}
-            color={"inherit"}
-            underline="none"
-            key={index}
-          >
-            <ListItem
-              onClick={() => {
-                setMobileOpen(false);
-              }}
-              button
-              sx={{
-                fontWeight: "medium",
-                color: "#fff",
-                ":hover": {
-                  color: "#fff",
-                },
-              }}
-            >
-              <ListItemText
-                sx={{
-                  fontWeight: "medium",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-                disableTypography
-                primary={
-                  <Typography
-                    style={{
-                      fontWeight: "bold",
-                      fontSize: "1.3rem",
-                      textAlign: "center",
+        {navItems.map((item, index) =>
+          item.name === "Product" ? (
+            <React.Fragment key={index}>
+              {isMobile ? (
+                <Box sx={{ width: '40%', ml: 3.5 }}>
+                  <CusAccordion
+                    head={
+                      <Typography
+                        sx={{
+                          fontWeight: "bold",
+                          fontSize: "1.3rem",
+                          textAlign: "center",
+                          color: "#fff",
+                        }}
+                      >
+                        {item.name}
+                      </Typography>
+                    }
+                    body={
+                      <>
+                        {productMenuItems.map((menuItem, menuIndex) => (
+                          <Link
+                            to={menuItem.link}
+                            color={"inherit"}
+                            style={{ textDecoration: 'none' }}
+                            key={index}
+                          >
+                            <Typography
+                              key={menuIndex}
+                              color={"inherit"}
+                              underline="hover"
+                              sx={{
+                                fontSize: ["1rem", "1rem", "12px", "12px", ".85rem"],
+                                letterSpacing: 1,
+                                py: 1,
+                                color: "white",
+                              }}
+                            >
+                              {menuItem.name}
+                            </Typography>
+                          </Link>
+                        ))}
+                      </>
+                    }
+                  />
+                </Box>
+              ) : (
+                <>
+                  <ListItem
+                    button
+                    onClick={handleDropdownClick}
+                    sx={{
+                      fontWeight: "medium",
+                      color: "#fff",
+                      ":hover": {
+                        color: "#fff",
+                      },
                     }}
                   >
-                    {item.name}
-                  </Typography>
-                }
-              />
-            </ListItem>
-          </Link>
-        ))}
+                    <ListItemText
+                      sx={{
+                        fontWeight: "medium",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                      disableTypography
+                      primary={
+                        <Typography
+                          style={{
+                            fontWeight: "bold",
+                            fontSize: "1.3rem",
+                            textAlign: "center",
+                            color: "#fff",
+                          }}
+                        >
+                          {item.name}
+                        </Typography>
+                      }
+                    />
+                  </ListItem>
+                  <Menu
+                    anchorEl={anchorEl}
+                    open={openDropdown}
+                    onClose={handleDropdownClose}
+                    PaperProps={{
+                      sx: {
+                        mt: 1,
+                        borderRadius: "10px",
+                        background: "#fff",
+                        p: 0.5,
+                        fontSize: [17],
+                        fontWeight: "600",
+                        boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+                        width: "13rem",
+                        border: "3.5px solid #92553D",
+                        left: "50%",
+                        transform: "translateX(-50%)",
+                      },
+                    }}
+                  >
+                    {productMenuItems.map((menuItem, menuIndex) => (
+                      <MenuItem
+                        key={menuIndex}
+                        onClick={() => {
+                          handleDropdownClose();
+                          setMobileOpen(false);
+                        }}
+                        sx={{
+                          fontSize: [18],
+                          fontWeight: "600",
+                          color: "#000", // Use the color prop here
+                        }}
+                      >
+                        <Link href={menuItem.link} color="inherit" underline="none">
+                          {menuItem.name}
+                        </Link>
+                      </MenuItem>
+                    ))}
+                  </Menu>
+                </>
+              )}
+            </React.Fragment>
+          ) : (
+            <Link
+              href={`${item.link}`}
+              color={"inherit"}
+              underline="none"
+              key={index}
+            >
+              <ListItem
+                onClick={() => {
+                  setMobileOpen(false);
+                }}
+                button
+                sx={{
+                  fontWeight: "medium",
+                  color: "#fff",
+                  ":hover": {
+                    color: "#fff",
+                  },
+                }}
+              >
+                <ListItemText
+                  sx={{
+                    fontWeight: "medium",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                  disableTypography
+                  primary={
+                    <Typography
+                      style={{
+                        fontWeight: "bold",
+                        fontSize: "1.3rem",
+                        textAlign: "center",
+                        color: "#fff",
+                      }}
+                    >
+                      {item.name}
+                    </Typography>
+                  }
+                />
+              </ListItem>
+            </Link>
+          )
+        )}
       </List>
     </Stack>
   );
@@ -173,7 +309,7 @@ export default function Navbar(props) {
             sx={{
               backgroundColor: "transparent",
               py: [0, 1.5, 3],
-              color: isDown ? "#000" : "#fff",
+              color: isDown ? '#000' : color, // Use the color prop here
               bgcolor: isDown ? "rgba(255,255,255,.6)" : null,
               backdropFilter: isDown ? "blur(25px)" : null,
               borderRadius: isDown
@@ -189,17 +325,30 @@ export default function Navbar(props) {
               gap={1}
               sx={{
                 display: ["flex", "flex", "none"],
-                justifyContent: 'space-between'
+                justifyContent: "space-between",
               }}
             >
               <Link color={"inherit"} underline="none" href="/">
-                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', bg: 'transparent' }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    bg: "transparent",
+                  }}
+                >
                   <ImageListItem>
                     <Box
-                      component='img'
+                      component="img"
                       src="Images/logo.png"
-                      sx={{ width: ['4rem', '5rem', '6rem'], height: ['4rem', '5rem', '6rem'], borderRadius: '100%',p:1.3 }}
-                      alt='logo'
+                      sx={{
+                        width: ["4rem", "5rem", "6rem"],
+                        height: ["4rem", "5rem", "6rem"],
+                        borderRadius: "100%",
+                        p: 1.3,
+                      }}
+                      alt="logo"
                     />
                   </ImageListItem>
                 </Box>
@@ -216,29 +365,37 @@ export default function Navbar(props) {
             </Stack>
 
             <Link color={"inherit"} underline="none" href="/">
-              <ImageListItem sx={{ my: -5, display: { xs: 'none', md: 'block' } }}>
+              <ImageListItem
+                sx={{ my: -5, display: { xs: "none", md: "block", } }}
+              >
                 <Box
-                  component='img'
-                  src="/logoh.png"
-                  sx={{ width: ['4rem', '5rem', '6rem'], height: ['4rem', '5rem', '6rem'] }}
-                  alt='logo'
+                  component="img"
+                  src="Images/logo.png"
+                  sx={{
+                    width: ["4rem", "5rem", "6rem"],
+                    height: ["4rem", "5rem", "6rem"],
+                    borderRadius: "100%",
+                    bgcolor: 'transparent',
+                    p: 2
+                  }}
+                  alt="logo"
                 />
               </ImageListItem>
             </Link>
-            <Box sx={{ display: { xs: "none", md: "flex", gap: '2rem' } }}>
-              {navItems.map((item, index) => (
+            <Box sx={{ display: { xs: "none", md: "flex", gap: "2rem" } }}>
+              {navItems.map((item, index) =>
                 item.name === "Product" ? (
                   <Box key={index}>
                     <Button
                       onClick={handleDropdownClick}
                       sx={{
                         fontSize: [17],
-                        fontWeight: '600',
-                        color: isDown ? "#000" : "#fff",
+                        fontWeight: "600",
+                        color: isDown ? '#000' : color, // Use the color prop here
                         textTransform: "none",
                         "&:hover": {
                           backgroundColor: "rgba(255,255,255,0.1)",
-                        }
+                        },
                       }}
                     >
                       {item.name}
@@ -250,37 +407,64 @@ export default function Navbar(props) {
                       PaperProps={{
                         sx: {
                           mt: 1,
-                          borderRadius: '10px',
-                          background: '#fff',
+                          borderRadius: "10px",
+                          background: "#fff",
                           p: 0.5,
                           fontSize: [17],
-                          fontWeight: '600',
-                          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
-                          width: '13rem',
-                          border: '3.5px solid #92553D'
+                          fontWeight: "600",
+                          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+                          width: "13rem",
+                          border: "3.5px solid #92553D",
                         },
                       }}
                     >
-                      <MenuItem onClick={handleDropdownClose}
+                      <MenuItem
+                        onClick={handleDropdownClose}
                         sx={{
                           fontSize: [18],
-                          fontWeight: '600',
-                        }}>
-                        <Link href="/product/category1" color="inherit" underline="none">Dates</Link>
+                          fontWeight: "600",
+                          color: '#000', // Use the color prop here
+                        }}
+                      >
+                        <Link href="/dates" color="inherit" underline="none">
+                          Dates
+                        </Link>
                       </MenuItem>
-                      <MenuItem onClick={handleDropdownClose}
+                      <MenuItem
+                        onClick={handleDropdownClose}
                         sx={{
                           fontSize: [18],
-                          fontWeight: '600',
-                        }}>
-                        <Link href="/product/category2" color="inherit" underline="none">Dry Fruits</Link>
+                          fontWeight: "600",
+                          color: '#000', // Use the color prop here
+                        }}
+                      >
+                        <Link href="/dryfruits" color="inherit" underline="none">
+                          Dry Fruits
+                        </Link>
                       </MenuItem>
-                      <MenuItem onClick={handleDropdownClose}
+                      <MenuItem
+                        onClick={handleDropdownClose}
                         sx={{
                           fontSize: [18],
-                          fontWeight: '600',
-                        }}>
-                        <Link href="/product/category3" color="inherit" underline="none">Seed</Link>
+                          fontWeight: "600",
+                          color: '#000', // Use the color prop here
+                        }}
+                      >
+                        <Link href="/seeds" color="inherit" underline="none">
+                          Seed
+                        </Link>
+                      </MenuItem>
+                      <MenuItem
+                        onClick={handleDropdownClose}
+                        sx={{
+                          fontSize: [18],
+                          fontWeight: "600",
+                          color: '#000', // Use the color prop here
+                        }}
+                      >
+                        <Link href="/nuts" color="inherit" underline="none">
+                          Nuts
+                        </Link>
                       </MenuItem>
                     </Menu>
                   </Box>
@@ -290,18 +474,18 @@ export default function Navbar(props) {
                     href={item.link}
                     sx={{
                       fontSize: [17],
-                      fontWeight: '600',
-                      color: isDown ? "#000" : "#fff",
+                      fontWeight: "600",
+                      color: isDown ? '#000' : color, // Use the color prop here
                       textTransform: "none",
                       "&:hover": {
                         backgroundColor: "rgba(255,255,255,0.1)",
-                      }
+                      },
                     }}
                   >
                     {item.name}
                   </Button>
                 )
-              ))}
+              )}
             </Box>
           </Toolbar>
         </AppBar>

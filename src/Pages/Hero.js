@@ -8,14 +8,17 @@ import Title from '../Component/Title';
 import IndustryCarousel from '../Component/ProductSlide';
 import Faq from '../Component/Faq';
 import Footer from '../Component/Footer';
+import { Link } from 'react-router-dom';
 const Hero = () => {
     useEffect(() => {
         animateHero();
     }, []);
+
     const industryData = [
-        { id: "1", img: "Images/ProductsImages/dry fruits1.png", title: "Dates" },
-        { id: "2", img: "Images/ProductsImages/dry fruits.png", title: "Dry Fruits" },
-        { id: "3", img: "Images/ProductsImages/dry fruits2.png", title: "Seed" },
+        { id: "1", img: "Images/ProductsImages/dry fruits1.png", title: "Dates", link: "/dates" },
+        { id: "2", img: "Images/ProductsImages/dry fruits.png", title: "Nuts", link: "/nuts" },
+        { id: "3", img: "Images/ProductsImages/dry fruits2.png", title: "Seed", link: "/seeds" },
+        { id: "2", img: "Images/ProductsImages/dry fruits.png", title: "Dry Fruits", link: "/dryfruits" },
     ];
     return (
         <Box>
@@ -81,7 +84,7 @@ const Hero = () => {
                 />
             </Box>
             <Box sx={{ height: ['100vh', '110vh'], bgcolor: '#92553D' }} className="two">
-                <Navbar />
+                <Navbar color="#fff" />
                 <Box sx={{ display: 'flex', flexDirection: ['column', 'column', 'row'], alignItems: 'center', justifyContent: "space-between", height: ['80%'], mx: [2, 11] }}>
                     <Box sx={{ display: 'flex', justifyContent: ['center', 'center', 'normal'] }}>
                         <Box component='img' src='Images/platte-1.png' alt='Cover 2' sx={{ width: ["60%", "60%", "36%"], mt: [25, 50, 9], position: 'absolute' }} />
@@ -117,7 +120,7 @@ const Hero = () => {
                     sx={{
                         width: ["70%", "50%", "30%"],
                         ml: [-10],
-                        mt: [52, 20, -5],
+                        mt: [54, 20, -5],
                         position: 'absolute',
                     }}
                 />
@@ -135,30 +138,38 @@ const Hero = () => {
                                 }
                             }}>
                                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                    <Box sx={{ width: ["100%", "100%", "100%",  "100%", '25rem'] }}>
-                                        <Box
-                                            component='img'
-                                            src={item.img}
-                                            alt='pack'
-                                            sx={{
-                                                width: ["100%"],
-                                                borderRadius: '3%',
-                                                height: ['12rem', '18rem', '20rem', '25rem'],
-                                                border:'3px solid #92553D',
-                                                boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
-                                                mb: [-4.5, -6],
-                                            }}
-                                        />
-                                    </Box>
-                                    <Typography sx={{
-                                        fontSize: ['1.2rem', '1.5rem', '1.5rem'],
-                                        fontWeight: '600',
-                                        color: '#282828',
-                                        textAlign: 'center',
-                                        letterSpacing: 1
-                                    }}>
-                                        {item.title}
-                                    </Typography>
+                                    <Link
+                                        to={item.link}
+                                        color={"inherit"}
+                                        style={{ textDecoration: 'none' }}
+                                        key={index}
+                                    >
+                                        <Box sx={{ width: ["100%", "100%", "100%", "100%", '25rem'] }}>
+                                            <Box
+                                                component='img'
+                                                src={item.img}
+                                                alt='pack'
+                                                sx={{
+                                                    width: ["100%"],
+                                                    borderRadius: '3%',
+                                                    height: ['12rem', '18rem', '20rem', '25rem'],
+                                                    border: '3px solid #92553D',
+                                                    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
+                                                    cursor: 'pointer',
+                                                    mb: [-4.5, -6]
+                                                }}
+                                            />
+                                        </Box>
+                                        <Typography sx={{
+                                            fontSize: ['1.2rem', '1.5rem', '1.5rem'],
+                                            fontWeight: '600',
+                                            color: '#282828',
+                                            textAlign: 'center',
+                                            letterSpacing: 1,
+                                        }}>
+                                            {item.title}
+                                        </Typography>
+                                    </Link>
                                 </Box>
                             </Grid>
                         ))}

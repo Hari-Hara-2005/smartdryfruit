@@ -4,7 +4,7 @@ export const reviews = [
         img: 'Images/images.png',
         description: "Absolutely love it! The attention to detail is amazing, and it adds a touch of charm wherever I place it.",
         name: "Sarojini",
-        position:'Thanjavur'
+        position: 'Thanjavur'
     },
     {
         id: 2,
@@ -31,7 +31,7 @@ export const reviews = [
         id: 5,
         img: 'Images/images.png',
         description: "Beautiful craftsmanship! It's clear a lot of care went into making it, and it's now a cherished piece in my collection.",
-        name: "Sreema", 
+        name: "Sreema",
         position: 'Thanjavur'
     },
     {
@@ -115,22 +115,22 @@ export const products = [
     },
     {
         id: 6,
-     
+
         name: 'Roasted Cashew',
         rating: 4,
         price: '₹425.00',
         image: 'Images/ProductsImages/Purely Delight (4).png',
         unitsSold: 43,
     },
-        {
-            id: 7,
-         
-            name: 'Roasted Cashew',
-            rating: 4,
-            price: '₹425.00',
-            image: 'Images/ProductsImages/Purely Delight (5).png',
-            unitsSold: 43,
-        },
+    {
+        id: 7,
+
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/Purely Delight (5).png',
+        unitsSold: 43,
+    },
     {
         id: 8,
         name: 'Roasted Cashew',
@@ -188,7 +188,7 @@ export const dryfruits = [
         name: 'Cashew Splits',
         rating: 4,
         price: '₹425.00',
-        image: 'Images/ProductsImages/dryFruits/Black grapes  seeds.png',
+        image: 'Images/ProductsImages/dryFruits/baby orange.png',
         unitsSold: 45,
     },
     {
@@ -225,12 +225,29 @@ export const dryfruits = [
         unitsSold: 43,
     },
     {
+        id: 12,
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/dryFruits/dry amla.png',
+        unitsSold: 43,
+    },
+    {
         id: 7,
 
         name: 'Roasted Cashew',
         rating: 4,
         price: '₹425.00',
         image: 'Images/ProductsImages/dryFruits/ginger cubes.png',
+        unitsSold: 43,
+    },
+    {
+        id: 7,
+
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/dryFruits/ginger slice.png',
         unitsSold: 43,
     },
     {
@@ -266,6 +283,14 @@ export const dryfruits = [
         unitsSold: 43,
     },
     {
+        id: 11,
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/dryFruits/pomelo.png',
+        unitsSold: 43,
+    },
+    {
         id: 12,
         name: 'Roasted Cashew',
         rating: 4,
@@ -286,14 +311,6 @@ export const dryfruits = [
         name: 'Roasted Cashew',
         rating: 4,
         price: '₹425.00',
-        image: 'Images/ProductsImages/dryFruits/salted almond.png',
-        unitsSold: 43,
-    },
-    {
-        id: 12,
-        name: 'Roasted Cashew',
-        rating: 4,
-        price: '₹425.00',
         image: 'Images/ProductsImages/dryFruits/strawberry.png',
         unitsSold: 43,
     },
@@ -302,7 +319,7 @@ export const dryfruits = [
         name: 'Roasted Cashew',
         rating: 4,
         price: '₹425.00',
-        image: 'Images/ProductsImages/dryFruits/salted cashew.png',
+        image: 'Images/ProductsImages/dryFruits/yellow peach.png',
         unitsSold: 43,
     },
     {
@@ -341,12 +358,224 @@ export const dryfruits = [
 
 
 
+export const nuts = [
+    {
+        id: 1,
+        name: 'Cashew',
+        rating: 5,
+        price: '₹365.00',
+        image:'Images/ProductsImages/nuts/Almond.png',
+        unitsSold: '50',
+    },
+    {
+        id: 1,
+        name: 'Cashew',
+        rating: 5,
+        price: '₹365.00',
+        image: 'Images/ProductsImages/nuts/Anjeer.png',
+        unitsSold: '50',
+    },
+    {
+        id: 2,
+        name: 'Cashew Splits',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/nuts/Brazil nuts.png',
+        unitsSold: 45,
+    },
+    {
+        id: 3,
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/nuts/Cashew.png',
+        unitsSold: 43,
+    },
+    {
+        id: 4,
+        name: 'Roasted Cashew',
+        rating: 3,
+        price: '₹800',
+        image: 'Images/ProductsImages/nuts/Pecan nut.png',
+        unitsSold: 25,
+    },
+    {
+        id: 5,
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/nuts/pepper cashew.png',
+        unitsSold: 43,
+    },
+    {
+        id: 6,
+
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/nuts/Pine nuts.png',
+        unitsSold: 43,
+    },
+    {
+        id: 12,
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/nuts/pista.png',
+        unitsSold: 43,
+    },
+    {
+        id: 7,
+
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/nuts/salted almond.png',
+        unitsSold: 43,
+    },
+    {
+        id: 7,
+
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/nuts/salted cashew.png',
+        unitsSold: 43,
+    },
+    {
+        id: 8,
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/nuts/wallnut.png',
+        unitsSold: 43,
+    },
+];
+
+
+
+export const seeds = [
+    {
+        id: 1,
+        name: 'Cashew',
+        rating: 5,
+        price: '₹365.00',
+        image: 'Images/ProductsImages/seeds/Black grapes  seeds.png',
+        unitsSold: '50',
+    },
+    {
+        id: 2,
+        name: 'Cashew Splits',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/seeds/chia seeds.png',
+        unitsSold: 45,
+    },
+    {
+        id: 3,
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/seeds/flax seed.png',
+        unitsSold: 43,
+    },
+    {
+        id: 4,
+        name: 'Roasted Cashew',
+        rating: 3,
+        price: '₹800',
+        image: 'Images/ProductsImages/seeds/Karunjeeragam  seeds.png',
+        unitsSold: 25,
+    },
+    {
+        id: 5,
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/seeds/Poppy seeds.png',
+        unitsSold: 43,
+    },
+    {
+        id: 6,
+
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/seeds/pumpkin seeds.png',
+        unitsSold: 43,
+    },
+    {
+        id: 12,
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/seeds/sabja seeds.png',
+        unitsSold: 43,
+    },
+    {
+        id: 7,
+
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/seeds/sunflower seeds (1).png',
+        unitsSold: 43,
+    },
+    {
+        id: 7,
+
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/seeds/watermelon seeds (1).png',
+        unitsSold: 43,
+    },
+    {
+        id: 8,
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/nuts/wallnut.png',
+        unitsSold: 43,
+    },
+];
+
+
+
+export const dates = [
+    {
+        id: 1,
+        name: 'Cashew',
+        rating: 5,
+        price: '₹365.00',
+        image: 'Images/ProductsImages/dates/ajwa dates.png',
+        unitsSold: '50',
+    },
+    {
+        id: 2,
+        name: 'Cashew Splits',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/dates/khimiya   dates.png',
+        unitsSold: 45,
+    },
+    {
+        id: 3,
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/dates/medjoul  dates.png',
+        unitsSold: 43,
+    },
+];
+
+
 
 
 // export const footerProducts = [
 //     {
 //         id: 1,
-//      
+//
 //         name: 'Cashew',
 //         rating: 5,
 //         price: '₹365.00',
@@ -355,7 +584,7 @@ export const dryfruits = [
 //     },
 //     {
 //         id: 2,
-//      
+//
 //         name: 'Cashew Splits',
 //         rating: 4,
 //         price: '₹425.00',
@@ -364,7 +593,7 @@ export const dryfruits = [
 //     },
 //     {
 //         id: 3,
-//      
+//
 //         name: 'Roasted Cashew',
 //         rating: 4,
 //         price: '₹425.00',
@@ -373,7 +602,7 @@ export const dryfruits = [
 //     },
 //     {
 //         id: 4,
-//      
+//
 //         name: 'Roasted Cashew',
 //         rating: 3,
 //         price: '₹800',
@@ -382,7 +611,7 @@ export const dryfruits = [
 //     },
 //     {
 //         id: 5,
-//      
+//
 //         name: 'Roasted Cashew',
 //         rating: 4,
 //         price: '₹425.00',
@@ -391,7 +620,7 @@ export const dryfruits = [
 //     },
 //     {
 //         id: 8,
-//      
+//
 //         name: 'Roasted Cashew',
 //         rating: 4,
 //         price: '₹425.00',
@@ -400,7 +629,7 @@ export const dryfruits = [
 //     },
 //     {
 //         id: 9,
-//      
+//
 //         name: 'Roasted Cashew',
 //         rating: 4,
 //         price: '₹425.00',
@@ -409,7 +638,7 @@ export const dryfruits = [
 //     },
 //     {
 //         id: 10,
-//      
+//
 //         name: 'Roasted Cashew',
 //         rating: 4,
 //         price: '₹425.00',
@@ -418,7 +647,7 @@ export const dryfruits = [
 //     },
 //     {
 //         id: 11,
-//      
+//
 //         name: 'Roasted Cashew',
 //         rating: 4,
 //         price: '₹425.00',
@@ -427,7 +656,7 @@ export const dryfruits = [
 //     },
 //     {
 //         id: 12,
-//      
+//
 //         name: 'Roasted Cashew',
 //         rating: 4,
 //         price: '₹425.00',
