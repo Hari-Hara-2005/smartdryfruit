@@ -11,6 +11,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { seeds } from "../../utils/data";
 import Navbar from '../../Component/Navbar';
 import Title from '../../Component/Title';
+import ProductNavbar from '../../Component/ProductNavbar';
 
 const StyledCard = styled(Card)(({ theme }) => ({
   backgroundColor: '#fff',
@@ -18,7 +19,6 @@ const StyledCard = styled(Card)(({ theme }) => ({
   fontWeight: 900,
   boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
   transition: 'transform 0.5s, box-shadow 0.5s',
-  border: '3px solid #92553D',
   '&:hover': {
     transform: 'scale(1.05)',
     boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
@@ -136,11 +136,12 @@ const ProductCard = ({ product }) => {
               {product.originalPrice}
             </Typography>
           </Box>
-          <Box sx={{ display: ['flex'], alignItems: 'center' }}>
+          <Box sx={{ display: ['flex'], alignItems: 'center', mt: 1.5 }}>
             <Button variant="contained" startIcon={<ShoppingCartOutlinedIcon />} sx={{
               bgcolor: "#92553D", textTransform: 'none', borderRadius: '50px', px: [2.5], '&:hover': {
                 bgcolor: "#282828"
-              } }}>
+              }
+            }}>
               Add to cart
             </Button>
           </Box>
@@ -160,22 +161,28 @@ const Seeds = () => {
         sx={{
           width: ["70%", "50%", "25%"],
           ml: [-10],
-          mt: [-2, 20, -2],
+          mt: [0, 20, -2],
+          zIndex: -2,
           position: 'absolute',
         }}
-      />
-      <Box sx={{ display: 'flex', justifyContent: 'start', color: 'black', px: [2, 5, 4] }}>
+      /><Box sx={{ display: ['block', 'none'] }}>
+        <ProductNavbar />
+      </Box>
+      <Box sx={{ display: 'flex', justifyContent: 'start', color: 'black', px: [2, 5, 4], zIndex: 30 }}>
         <Title color="#282828">Seeds</Title>
       </Box>
-    <Box sx={{ textAlign: 'center', px: [2, 3, 0], py: [10] }}>
-      <Grid container spacing={6} justifyContent="center" alignItems="center">
-        {seeds.map((seed) => (
-          <Grid item key={seed.id} xs={12} sm={6} md={3.8} lg={3.6}>
-            <ProductCard product={seed} />
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
+      <Box sx={{ display: ['none', 'block'] }}>
+        <ProductNavbar />
+      </Box>
+      <Box sx={{ textAlign: 'center', px: [2, 3, 0], py: [5] }}>
+        <Grid container spacing={6} justifyContent="center" alignItems="center">
+          {seeds.map((seed) => (
+            <Grid item key={seed.id} xs={12} sm={6} md={3.8} lg={3.6}>
+              <ProductCard product={seed} />
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
     </>
   );
 };

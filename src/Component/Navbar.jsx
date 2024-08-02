@@ -229,22 +229,22 @@ export default function Navbar(props) {
                     }}
                   >
                     {productMenuItems.map((menuItem, menuIndex) => (
-                      <MenuItem
-                        key={menuIndex}
-                        onClick={() => {
-                          handleDropdownClose();
-                          setMobileOpen(false);
-                        }}
-                        sx={{
-                          fontSize: [18],
-                          fontWeight: "600",
-                          color: "#000", // Use the color prop here
-                        }}
-                      >
-                        <Link href={menuItem.link} color="inherit" underline="none">
+                      <Link to={menuItem.link} style={{ color: 'black' }} underline="none">
+                        <MenuItem
+                          key={menuIndex}
+                          onClick={() => {
+                            handleDropdownClose();
+                            setMobileOpen(false);
+                          }}
+                          sx={{
+                            fontSize: [18],
+                            fontWeight: "600",
+                            color: "#000", // Use the color prop here
+                          }}
+                        >
                           {menuItem.name}
-                        </Link>
-                      </MenuItem>
+                        </MenuItem>
+                      </Link>
                     ))}
                   </Menu>
                 </>
@@ -252,7 +252,7 @@ export default function Navbar(props) {
             </React.Fragment>
           ) : (
             <Link
-              href={`${item.link}`}
+              to={item.link}
               color={"inherit"}
               underline="none"
               key={index}
@@ -418,18 +418,18 @@ export default function Navbar(props) {
                         },
                       }}
                     >
-                      <MenuItem
-                        onClick={handleDropdownClose}
-                        sx={{
-                          fontSize: [18],
-                          fontWeight: "600",
-                          color: '#000', // Use the color prop here
-                        }}
-                      >
-                        <Link href="/dates" color="inherit" underline="none">
+                      <Link to='/dates' color="inherit" underline="none">
+                        <MenuItem
+                          onClick={handleDropdownClose}
+                          sx={{
+                            fontSize: [18],
+                            fontWeight: "600",
+                            color: '#000', // Use the color prop here
+                          }}
+                        >
                           Dates
-                        </Link>
-                      </MenuItem>
+                        </MenuItem>
+                      </Link>
                       <MenuItem
                         onClick={handleDropdownClose}
                         sx={{
@@ -438,7 +438,7 @@ export default function Navbar(props) {
                           color: '#000', // Use the color prop here
                         }}
                       >
-                        <Link href="/dryfruits" color="inherit" underline="none">
+                        <Link to="/dryfruits" color="inherit" underline="none">
                           Dry Fruits
                         </Link>
                       </MenuItem>
@@ -450,7 +450,7 @@ export default function Navbar(props) {
                           color: '#000', // Use the color prop here
                         }}
                       >
-                        <Link href="/seeds" color="inherit" underline="none">
+                        <Link to="/seeds" color="inherit" underline="none">
                           Seed
                         </Link>
                       </MenuItem>
@@ -462,7 +462,7 @@ export default function Navbar(props) {
                           color: '#000', // Use the color prop here
                         }}
                       >
-                        <Link href="/nuts" color="inherit" underline="none">
+                        <Link to="/nuts" color="inherit" underline="none">
                           Nuts
                         </Link>
                       </MenuItem>
