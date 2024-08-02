@@ -8,10 +8,10 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { products } from "./utils/data";
+import { dryfruits, products } from "../../utils/data";
 
 const StyledCard = styled(Card)(({ theme }) => ({
-    backgroundColor: '#fff', // Adjust for dark background
+    backgroundColor: '#fff',
     color: '#92553D',
     fontWeight: 900,
     boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
@@ -47,7 +47,7 @@ const IconContainer = styled(Box)(({ theme }) => ({
     gap: 10,
 
     [theme.breakpoints.down('sm')]: {
-        width: '8%', 
+        width: '8%',
     },
 }));
 
@@ -80,8 +80,10 @@ const ProductCard = ({ product }) => {
 
     return (
         <StyledCard>
-            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                <StyledMedia component="img" sx={{ width: ["8rem", "18rem"] }} image={product.image} alt={product.name} />
+            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', ml: [2, 0], mt:[ 0,2] }}>
+                <Box sx={{ width: ["7.5rem", "12rem"] }}>
+                    <Box component="img" sx={{ width: ['85%', '100%'], }} src={product.image} alt={product.name} />
+                </Box>
             </Box>
             <IconContainer>
                 <IconButton aria-label="add to favorites" sx={{
@@ -142,13 +144,13 @@ const ProductCard = ({ product }) => {
     );
 };
 
-const ProductGrid = () => {
+const DryFruits = () => {
     return (
-        <Box sx={{ textAlign: 'center', px: [2, 3, 0], py: 10 }}>
+        <Box sx={{ textAlign: 'center', px: [2, 3, 0], py: [10] }}>
             <Grid container spacing={6} justifyContent="center" alignItems="center">
-                {products.slice(0, 20).map((product) => (
-                    <Grid item key={product.id} xs={12} sm={6} md={3.5}>
-                        <ProductCard product={product} />
+                {dryfruits.map((dryfruit) => (
+                    <Grid item key={dryfruit.id} xs={12} sm={6} md={3.8} lg={3.6}>
+                        <ProductCard product={dryfruit} />
                     </Grid>
                 ))}
             </Grid>
@@ -156,4 +158,4 @@ const ProductGrid = () => {
     );
 };
 
-export default ProductGrid;
+export default DryFruits;

@@ -1,13 +1,13 @@
 import { Box, Grid, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
-import { animateHero } from './gsapAnimations';
-import Navbar from './Component/Navbar';
-import StickyWhatsapp from './Component/StickyWhatsapp';
-import CustomerReview from './Component/CustomerReview';
-import Title from './Component/Title';
-import IndustryCarousel from './Component/ProductSlide';
-import Faq from './Component/Faq';
-import Footer from './Component/Footer';
+import { animateHero } from '../gsapAnimations';
+import Navbar from '../Component/Navbar';
+import StickyWhatsapp from '../Component/StickyWhatsapp';
+import CustomerReview from '../Component/CustomerReview';
+import Title from '../Component/Title';
+import IndustryCarousel from '../Component/ProductSlide';
+import Faq from '../Component/Faq';
+import Footer from '../Component/Footer';
 const Hero = () => {
     useEffect(() => {
         animateHero();

@@ -75,7 +75,6 @@ export const reviews = [
 export const products = [
     {
         id: 1,
-        category: 'Bangles',
         name: 'Cashew',
         rating: 5,
         price: '₹365.00',
@@ -84,7 +83,6 @@ export const products = [
     },
     {
         id: 2,
-        category: 'Bangles',
         name: 'Cashew Splits',
         rating: 4,
         price: '₹425.00',
@@ -93,7 +91,6 @@ export const products = [
     },
     {
         id: 3,
-        category: 'Bangles',
         name: 'Roasted Cashew',
         rating: 4,
         price: '₹425.00',
@@ -102,7 +99,6 @@ export const products = [
     },
     {
         id: 4,
-        category: 'Bangles',
         name: 'Roasted Cashew',
         rating: 3,
         price: '₹800',
@@ -111,34 +107,32 @@ export const products = [
     },
     {
         id: 5,
-        category: 'Bangles',
         name: 'Roasted Cashew',
         rating: 4,
         price: '₹425.00',
         image: 'Images/ProductsImages/Purely Delight (3).png',
         unitsSold: 43,
     },
-    // {
-    //     id: 6,
-    //     category: 'Bangles',
-    //     name: 'Roasted Cashew',
-    //     rating: 4,
-    //     price: '₹425.00',
-    //     image: 'Images/ProductsImages/Purely Delight (4).png',
-    //     unitsSold: 43,
-    // },
-        // {
-        //     id: 7,
-        //     category: 'Bangles',
-        //     name: 'Roasted Cashew',
-        //     rating: 4,
-        //     price: '₹425.00',
-        //     image: 'Images/ProductsImages/Purely Delight (5).png',
-        //     unitsSold: 43,
-        // },
+    {
+        id: 6,
+     
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/Purely Delight (4).png',
+        unitsSold: 43,
+    },
+        {
+            id: 7,
+         
+            name: 'Roasted Cashew',
+            rating: 4,
+            price: '₹425.00',
+            image: 'Images/ProductsImages/Purely Delight (5).png',
+            unitsSold: 43,
+        },
     {
         id: 8,
-        category: 'Bangles',
         name: 'Roasted Cashew',
         rating: 4,
         price: '₹425.00',
@@ -147,7 +141,6 @@ export const products = [
     },
     {
         id: 9,
-        category: 'Bangles',
         name: 'Roasted Cashew',
         rating: 4,
         price: '₹425.00',
@@ -156,7 +149,6 @@ export const products = [
     },
     {
         id: 10,
-        category: 'Bangles',
         name: 'Roasted Cashew',
         rating: 4,
         price: '₹425.00',
@@ -165,7 +157,6 @@ export const products = [
     },
     {
         id: 11,
-        category: 'Bangles',
         name: 'Roasted Cashew',
         rating: 4,
         price: '₹425.00',
@@ -174,7 +165,6 @@ export const products = [
     },
     {
         id: 12,
-        category: 'Bangles',
         name: 'Roasted Cashew',
         rating: 4,
         price: '₹425.00',
@@ -183,95 +173,265 @@ export const products = [
     },
 ];
 
-export const footerProducts = [
+
+export const dryfruits = [
     {
         id: 1,
-        category: 'Bangles',
         name: 'Cashew',
         rating: 5,
         price: '₹365.00',
-        image: 'Images/ProductsImages/cashew-2.png',
+        image: 'Images/ProductsImages/dryFruits/Apricot.png',
         unitsSold: '50',
     },
     {
         id: 2,
-        category: 'Bangles',
         name: 'Cashew Splits',
         rating: 4,
         price: '₹425.00',
-        image: 'Images/ProductsImages/pepper cashew..png',
+        image: 'Images/ProductsImages/dryFruits/Black grapes  seeds.png',
         unitsSold: 45,
     },
     {
         id: 3,
-        category: 'Bangles',
         name: 'Roasted Cashew',
         rating: 4,
         price: '₹425.00',
-        image: 'Images/ProductsImages/Purely Delight (1).png',
+        image: 'Images/ProductsImages/dryFruits/Blackcurrent.png',
         unitsSold: 43,
     },
     {
         id: 4,
-        category: 'Bangles',
         name: 'Roasted Cashew',
         rating: 3,
         price: '₹800',
-        image: 'Images/ProductsImages/Purely Delight (2).png',
+        image: 'Images/ProductsImages/dryFruits/blueberry.png',
         unitsSold: 25,
     },
     {
         id: 5,
-        category: 'Bangles',
         name: 'Roasted Cashew',
         rating: 4,
         price: '₹425.00',
-        image: 'Images/ProductsImages/Purely Delight (3).png',
+        image: 'Images/ProductsImages/dryFruits/Cherry.png',
+        unitsSold: 43,
+    },
+    {
+        id: 6,
+
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/dryFruits/Drypapaya.png',
+        unitsSold: 43,
+    },
+    {
+        id: 7,
+
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/dryFruits/ginger cubes.png',
         unitsSold: 43,
     },
     {
         id: 8,
-        category: 'Bangles',
         name: 'Roasted Cashew',
         rating: 4,
         price: '₹425.00',
-        image: 'Images/ProductsImages/Purely Delight (6).png',
+        image: 'Images/ProductsImages/dryFruits/honey amla.png',
         unitsSold: 43,
     },
     {
         id: 9,
-        category: 'Bangles',
         name: 'Roasted Cashew',
         rating: 4,
         price: '₹425.00',
-        image: 'Images/ProductsImages/Purely Delight (7).png',
+        image: 'Images/ProductsImages/dryFruits/Mango slice.png',
         unitsSold: 43,
     },
     {
         id: 10,
-        category: 'Bangles',
         name: 'Roasted Cashew',
         rating: 4,
         price: '₹425.00',
-        image: 'Images/ProductsImages/sunflower seeds.png',
+        image: 'Images/ProductsImages/dryFruits/pineapple coin.png',
         unitsSold: 43,
     },
     {
         id: 11,
-        category: 'Bangles',
         name: 'Roasted Cashew',
         rating: 4,
         price: '₹425.00',
-        image: 'Images/ProductsImages/wallnut.png',
+        image: 'Images/ProductsImages/dryFruits/Pineapple ring.png',
         unitsSold: 43,
     },
     {
         id: 12,
-        category: 'Bangles',
         name: 'Roasted Cashew',
         rating: 4,
         price: '₹425.00',
-        image: 'Images/ProductsImages/watermelon seeds.png',
+        image: 'Images/ProductsImages/dryFruits/prunes.png',
+        unitsSold: 43,
+    },
+    {
+        id: 12,
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/dryFruits/Rashberry.png',
+        unitsSold: 43,
+    },
+    {
+        id: 12,
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/dryFruits/salted almond.png',
+        unitsSold: 43,
+    },
+    {
+        id: 12,
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/dryFruits/strawberry.png',
+        unitsSold: 43,
+    },
+    {
+        id: 12,
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/dryFruits/salted cashew.png',
+        unitsSold: 43,
+    },
+    {
+        id: 12,
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/dryFruits/prunes.png',
+        unitsSold: 43,
+    },
+    {
+        id: 12,
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/dryFruits/prunes.png',
+        unitsSold: 43,
+    },
+    {
+        id: 12,
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/dryFruits/prunes.png',
+        unitsSold: 43,
+    },
+    {
+        id: 12,
+        name: 'Roasted Cashew',
+        rating: 4,
+        price: '₹425.00',
+        image: 'Images/ProductsImages/dryFruits/prunes.png',
         unitsSold: 43,
     },
 ];
+
+
+
+
+
+// export const footerProducts = [
+//     {
+//         id: 1,
+//      
+//         name: 'Cashew',
+//         rating: 5,
+//         price: '₹365.00',
+//         image: 'Images/ProductsImages/cashew-2.png',
+//         unitsSold: '50',
+//     },
+//     {
+//         id: 2,
+//      
+//         name: 'Cashew Splits',
+//         rating: 4,
+//         price: '₹425.00',
+//         image: 'Images/ProductsImages/pepper cashew..png',
+//         unitsSold: 45,
+//     },
+//     {
+//         id: 3,
+//      
+//         name: 'Roasted Cashew',
+//         rating: 4,
+//         price: '₹425.00',
+//         image: 'Images/ProductsImages/Purely Delight (1).png',
+//         unitsSold: 43,
+//     },
+//     {
+//         id: 4,
+//      
+//         name: 'Roasted Cashew',
+//         rating: 3,
+//         price: '₹800',
+//         image: 'Images/ProductsImages/Purely Delight (2).png',
+//         unitsSold: 25,
+//     },
+//     {
+//         id: 5,
+//      
+//         name: 'Roasted Cashew',
+//         rating: 4,
+//         price: '₹425.00',
+//         image: 'Images/ProductsImages/Purely Delight (3).png',
+//         unitsSold: 43,
+//     },
+//     {
+//         id: 8,
+//      
+//         name: 'Roasted Cashew',
+//         rating: 4,
+//         price: '₹425.00',
+//         image: 'Images/ProductsImages/Purely Delight (6).png',
+//         unitsSold: 43,
+//     },
+//     {
+//         id: 9,
+//      
+//         name: 'Roasted Cashew',
+//         rating: 4,
+//         price: '₹425.00',
+//         image: 'Images/ProductsImages/Purely Delight (7).png',
+//         unitsSold: 43,
+//     },
+//     {
+//         id: 10,
+//      
+//         name: 'Roasted Cashew',
+//         rating: 4,
+//         price: '₹425.00',
+//         image: 'Images/ProductsImages/sunflower seeds.png',
+//         unitsSold: 43,
+//     },
+//     {
+//         id: 11,
+//      
+//         name: 'Roasted Cashew',
+//         rating: 4,
+//         price: '₹425.00',
+//         image: 'Images/ProductsImages/wallnut.png',
+//         unitsSold: 43,
+//     },
+//     {
+//         id: 12,
+//      
+//         name: 'Roasted Cashew',
+//         rating: 4,
+//         price: '₹425.00',
+//         image: 'Images/ProductsImages/watermelon seeds.png',
+//         unitsSold: 43,
+//     },
+// ];
