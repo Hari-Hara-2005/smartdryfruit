@@ -26,7 +26,7 @@ const ProductNavbar = () => {
                 sx={{
                   width: 'auto',
                   py: 0,
-                  px: { xs: '1.5rem', sm: '3rem' },
+                  px: { xs: '1.3rem', sm: '3rem' },
                   borderBottom: isActive ? '2px solid black' : 'none',
                 }}
               >

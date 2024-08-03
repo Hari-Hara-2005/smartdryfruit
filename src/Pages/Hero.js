@@ -23,12 +23,32 @@ const Hero = () => {
     return (
         <Box>
             <StickyWhatsapp link={"https://wa.me/8220570301"} />
-            <Box sx={{ height: '100vh', bgcolor: '#4b0082' }} className="hero_bg" >
+            <Box sx={{ height: '100vh', bgcolor: '#4b0082', position: 'relative' }}>
                 <Navbar />
                 {/* <Box sx={{display:'flex',justifyContent:'center'}}>
-                    <Box component='img' src="/Assets/logo.png" sx={{ position: 'absolute'}} />
-                </Box> */}
-                <Box component='img'
+          <Box component='img' src="/Assets/logo.png" sx={{ position: 'absolute'}} />
+      </Box> */}
+                <Typography
+                    variant="h1"
+                    sx={{
+                        fontSize: "23rem",
+                        fontWeight: "bold",
+                        letterSpacing:30,
+                        color: "white",
+                        position: 'absolute',
+                        top: "50%",
+                        left: "50%",
+                        transform: "translate(-50%, -50%)",
+                        zIndex: 1,
+                        // opacity: 0.2,
+                        textTransform:'uppercase',
+                        fontFamily: "'Poppins ', serif", 
+                    }}
+                >
+                    smart
+                </Typography>
+                <Box
+                    component='img'
                     id='leaf'
                     src='/Images/leaf.png'
                     alt='leaf'
@@ -36,13 +56,21 @@ const Hero = () => {
                         width: ["25%", "15%", "12.5%"],
                         ml: "3.5%",
                         mt: ["10%", "30%", "0%"],
-                        transition: 'tranaform',
                         transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
                         position: 'absolute',
                     }}
                 />
-                <Box sx={{ display: 'flex', justifyContent: 'center', transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 0.5s', ml: [1, -4.5], py: [3, 0] }}>
-                    <Box component='img'
+                <Box
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 0.5s',
+                        ml: [1, -4.5],
+                        py: [3, 0]
+                    }}
+                >
+                    <Box
+                        component='img'
                         id='pack'
                         src='/Images/img-4.png'
                         alt='pack'
@@ -55,7 +83,8 @@ const Hero = () => {
                             zIndex: 2
                         }}
                     />
-                    <Box component='img'
+                    <Box
+                        component='img'
                         id='cashew'
                         src='/Images/cashew.png'
                         alt='pack'
@@ -69,7 +98,8 @@ const Hero = () => {
                         }}
                     />
                 </Box>
-                <Box component='img'
+                <Box
+                    component='img'
                     id='leaf2'
                     src='/Images/leaf2.png'
                     alt='leaf'
@@ -77,7 +107,6 @@ const Hero = () => {
                         width: ["35%", "20%", "14%"],
                         bottom: [50, 5],
                         right: [10, "10rem"],
-                        transition: 'tranaform',
                         transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
                         position: 'absolute',
                     }}
