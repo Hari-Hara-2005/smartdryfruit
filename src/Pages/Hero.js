@@ -31,12 +31,18 @@ const Hero = () => {
                 <Typography
                     variant="h1"
                     sx={{
-                        fontSize: "23rem",
+                        fontSize: ["6rem","23rem"],
                         fontWeight: "bold",
-                        letterSpacing:30,
+                        letterSpacing:[0,30],
                         color: "white",
                         position: 'absolute',
-                        top: "50%",
+                        top: {
+                            xs: "45%",  // Extra small devices
+                            sm: "40%",  // Small devices
+                            md: "50%",  // Medium devices
+                            lg: "50%",  // Large devices
+                            xl: "50%"   // Extra large devices
+                        },
                         left: "50%",
                         transform: "translate(-50%, -50%)",
                         zIndex: 1,
@@ -76,7 +82,7 @@ const Hero = () => {
                         alt='pack'
                         sx={{
                             width: ["25%", "43%", "22%"],
-                            mt: ['43%', 30, -1],
+                            mt: ['45%', 30, -1],
                             ml: [0, 4.5],
                             transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
                             position: 'absolute',
@@ -90,7 +96,7 @@ const Hero = () => {
                         alt='pack'
                         sx={{
                             width: ["28%", "25%", "15%"],
-                            mt: ["68%", "70%", '26%'],
+                            mt: ["72%", "70%", '26%'],
                             ml: ['20%', '18%'],
                             transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
                             position: 'absolute',
