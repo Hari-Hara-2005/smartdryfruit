@@ -18,8 +18,9 @@ const Hero = () => {
         { id: "1", img: "Images/ProductsImages/ourproducts images/dates.png", title: "Dates", link: "/dates" },
         { id: "2", img: "Images/ProductsImages/ourproducts images/nuts.png", title: "Nuts", link: "/nuts" },
         { id: "3", img: "Images/ProductsImages/ourproducts images/seeds.webp", title: "Seeds", link: "/seeds" },
-        { id: "2", img: "Images/ProductsImages/ourproducts images/dryfruitss.jpg", title: "Dry Fruits", link: "/dryfruits" },
-        
+        { id: "4", img: "Images/ProductsImages/ourproducts images/dryfruitss.jpg", title: "Dry Fruits", link: "/dryfruits" },
+        { id: "5", img: "Images/ProductsImages/ourproducts images/seeds.webp", title: "Chocolates", link: "/chocolates" },
+        { id: "6", img: "Images/ProductsImages/ourproducts images/dryfruitss.jpg", title: "Drinks", link: "/juice" },
     ];
     return (
         <Box>
@@ -199,7 +200,7 @@ const Hero = () => {
                                         <Typography sx={{
                                             fontSize: ['1.2rem', '1.5rem', '1.5rem'],
                                             fontWeight: '600',
-                                            color: '#282828',
+                                            color: '#fff',
                                             textAlign: 'center',
                                             letterSpacing: 1,
                                         }}>

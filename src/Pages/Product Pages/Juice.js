@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardMedia, IconButton, Typography, Grid, Box, Stack, Button } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { Card, CardContent, CardMedia, IconButton, Typography, Grid, Box, Stack, Button, Skeleton } from '@mui/material';
 import { styled } from '@mui/system';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
@@ -28,7 +28,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
     display: 'flex',
     flexDirection: 'row', // Default for mobile
     [theme.breakpoints.up('sm')]: {
-        flexDirection: 'column', // Change to row for larger screens
+        flexDirection: 'column', // Change to column for larger screens
     },
 }));
 
@@ -36,7 +36,6 @@ const StyledMedia = styled(CardMedia)`
   height: 220px;
   
   @media (min-width: 600px) {
-    /* Adjust height for larger devices (like tablets and desktops) */
     height: 350px;
   }
 `;
@@ -65,7 +64,7 @@ const RatingStars = ({ rating, size }) => (
     </Box>
 );
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, isLoading }) => {
     const [liked, setLiked] = useState(false);
     const [bookmarked, setBookmarked] = useState(false);
 
@@ -83,75 +82,109 @@ const ProductCard = ({ product }) => {
 
     return (
         <StyledCard>
-            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', ml: [2, 0], mt: [0, 2] }}>
-                <Box sx={{ width: ["7.5rem", "12rem"] }}>
-                    <Box component="img" sx={{ width: ['85%', '100%'], }} src={product.image} alt={product.name} />
+            {isLoading ? (
+                <Skeleton variant="rectangular" animation="wave" width="100%" height={220} />
+            ) : (
+                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', ml: [2, 0], mt: [0, 2] }}>
+                    <Box sx={{ width: ["7.5rem", "12rem"] }}>
+                        <Box component="img" sx={{ width: ['85%', '100%'], }} src={product.image} alt={product.name} />
+                    </Box>
                 </Box>
-            </Box>
+            )}
             <IconContainer>
-                <IconButton aria-label="add to favorites" sx={{
-                    color: liked ? 'red' : '#fff', bgcolor: '#92553D', '&:hover': {
-                        bgcolor: '#212121',
-                        boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
-                    },
-                }} onClick={handleLikeClick}>
-                    <FavoriteIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
-                </IconButton>
-                <IconButton aria-label="save" sx={{
-                    color: bookmarked ? 'lightgray' : '#fff', bgcolor: '#92553D', '&:hover': {
-                        bgcolor: '#212121',
-                        boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
-                    },
-                }} onClick={handleBookmarkClick}>
-                    <BookmarkIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
-                </IconButton >
-                <IconButton aria-label="add to cart" sx={{
-                    color: '#fff', bgcolor: '#92553D', '&:hover': {
-                        bgcolor: '#212121',
-                        boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
-                    },
-                }} onClick={handleShoppingClick}>
-                    <ShoppingCartIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
-                </IconButton>
+                {isLoading ? (
+                    <>
+                        <Skeleton variant="circular"  animation="wave"  width={40} height={40} />
+                        <Skeleton variant="circular"  animation="wave"  width={40} height={40} />
+                        <Skeleton variant="circular"  animation="wave"  width={40} height={40} />
+                    </>
+                ) : (
+                    <>
+                        <IconButton aria-label="add to favorites" sx={{
+                            color: liked ? 'red' : '#fff', bgcolor: '#92553D', '&:hover': {
+                                bgcolor: '#212121',
+                                boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
+                            },
+                        }} onClick={handleLikeClick}>
+                            <FavoriteIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
+                        </IconButton>
+                        <IconButton aria-label="save" sx={{
+                            color: bookmarked ? 'lightgray' : '#fff', bgcolor: '#92553D', '&:hover': {
+                                bgcolor: '#212121',
+                                boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
+                            },
+                        }} onClick={handleBookmarkClick}>
+                            <BookmarkIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
+                        </IconButton >
+                        <IconButton aria-label="add to cart" sx={{
+                            color: '#fff', bgcolor: '#92553D', '&:hover': {
+                                bgcolor: '#212121',
+                                boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
+                            },
+                        }} onClick={handleShoppingClick}>
+                            <ShoppingCartIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
+                        </IconButton>
+                    </>
+                )}
             </IconContainer>
             <CardContent>
-                <Typography variant={["0.8rem", "h6"]} component="div" sx={{ textAlign: 'start', fontWeight: [700, 600], letterSpacing: 1 }} >
-                    {product.name}
-                </Typography>
-                <Typography variant="body1" component="div" sx={{ textAlign: 'start', letterSpacing: 0.5 }} >
-                    250 gm
-                </Typography>
-                <Typography color={'#92553D'} sx={{ textAlign: 'start', fontWeight: 600, fontSize: '0.8rem', letterSpacing: 0.5, mt: 1, display: 'flex', }} >
-                    <VerifiedIcon sx={{ fontSize: '1rem' }} />
-                    Smart Dry Fruits
-                </Typography>
-                <Stack direction={["column", 'row']} justifyContent={'space-between'}>
-                    <Box>
-                        <RatingStars rating={product.rating} size="1.2rem" />
-                        <Typography color={'#282828'} sx={{ textAlign: 'start', fontWeight: 700, fontSize: '1rem', letterSpacing: 0.5, display: 'flex', alignItems: 'center' }} >
-                            {product.price}
-                            <LocalOfferOutlinedIcon sx={{ fontSize: '0.9rem' }} />
+                {isLoading ? (
+                    <>
+                        <Skeleton variant="text"  animation="wave"  width="80%" />
+                        <Skeleton variant="text"  animation="wave"  width="60%" />
+                        <Skeleton variant="text"  animation="wave"  width="40%" />
+                        <Skeleton variant="rectangular" width="100%" animation="wave" height={50} />
+                    </>
+                ) : (
+                    <>
+                        <Typography variant={["0.8rem", "h6"]} component="div" sx={{ textAlign: 'start', fontWeight: [700, 600], letterSpacing: 1 }} >
+                            {product.name}
                         </Typography>
-                        <Typography color={'gray'} sx={{ textAlign: 'start', fontWeight: 600, fontSize: '0.8rem', letterSpacing: 0.5, textDecoration: "line-through" }} >
-                            {product.originalPrice}
+                        <Typography variant="body1" component="div" sx={{ textAlign: 'start', letterSpacing: 0.5 }} >
+                            250 gm
                         </Typography>
-                    </Box>
-                    <Box sx={{ display: ['flex'], alignItems: 'center', mt: 1.5 }}>
-                        <Button variant="contained" startIcon={<ShoppingCartOutlinedIcon />} sx={{
-                            bgcolor: "#92553D", textTransform: 'none', borderRadius: '50px', px: [2.5], '&:hover': {
-                                bgcolor: "#282828"
-                            }
-                        }}>
-                            Add to cart
-                        </Button>
-                    </Box>
-                </Stack>
+                        <Typography color={'#92553D'} sx={{ textAlign: 'start', fontWeight: 600, fontSize: '0.8rem', letterSpacing: 0.5, mt: 1, display: 'flex', }} >
+                            <VerifiedIcon sx={{ fontSize: '1rem' }} />
+                            Smart Dry Fruits
+                        </Typography>
+                        <Stack direction={["column", 'row']} justifyContent={'space-between'}>
+                            <Box>
+                                <RatingStars rating={product.rating} size="1.2rem" />
+                                <Typography color={'#282828'} sx={{ textAlign: 'start', fontWeight: 700, fontSize: '1rem', letterSpacing: 0.5, display: 'flex', alignItems: 'center' }} >
+                                    {product.price}
+                                    <LocalOfferOutlinedIcon sx={{ fontSize: '0.9rem' }} />
+                                </Typography>
+                                <Typography color={'gray'} sx={{ textAlign: 'start', fontWeight: 600, fontSize: '0.8rem', letterSpacing: 0.5, textDecoration: "line-through" }} >
+                                    {product.originalPrice}
+                                </Typography>
+                            </Box>
+                            <Box sx={{ display: ['flex'], alignItems: 'center', mt: 1.5 }}>
+                                <Button variant="contained" startIcon={<ShoppingCartOutlinedIcon />} sx={{
+                                    bgcolor: "#92553D", textTransform: 'none', borderRadius: '50px', px: [2.5], '&:hover': {
+                                        bgcolor: "#282828"
+                                    }
+                                }}>
+                                    Add to cart
+                                </Button>
+                            </Box>
+                        </Stack>
+                    </>
+                )}
             </CardContent>
         </StyledCard>
     );
 };
 
-const Juice = () => {
+const Seeds = () => {
+    const [isLoading, setIsLoading] = useState(true);
+
+    // Simulate loading data
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2500); 
+    }, []);
+
     return (
         <>
             <Navbar color="#000" />
@@ -179,7 +212,7 @@ const Juice = () => {
                 <Grid container spacing={6} justifyContent="center" alignItems="center">
                     {drinks.map((drink) => (
                         <Grid item key={drink.id} xs={12} sm={6} md={3.8} lg={3.6}>
-                            <ProductCard product={drink} />
+                            <ProductCard product={drink} isLoading={isLoading} />
                         </Grid>
                     ))}
                 </Grid>
@@ -188,4 +221,4 @@ const Juice = () => {
     );
 };
 
-export default Juice;
+export default Seeds;
