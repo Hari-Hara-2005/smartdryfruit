@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
 const industryData = [
-    { id: "1", img: "Images/download.jpg", title: "Nuts 1" },
+    { id: "1", img: "Images/ProductsImages/overview/pistachios.jpg", title: "Nuts 1" },
     { id: "2", img: "Images/download.jpg", title: "Nuts 2" },
     { id: "3", img: "Images/download.jpg", title: "Nuts 3" },
     { id: "4", img: "Images/download.jpg", title: "Nuts 4" },
