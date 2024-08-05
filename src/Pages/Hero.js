@@ -15,10 +15,11 @@ const Hero = () => {
     }, []);
 
     const industryData = [
-        { id: "1", img: "Images/ProductsImages/dry fruits1.png", title: "Dates", link: "/dates" },
-        { id: "2", img: "Images/ProductsImages/dry fruits.png", title: "Nuts", link: "/nuts" },
-        { id: "3", img: "Images/ProductsImages/dry fruits2.png", title: "Seed", link: "/seeds" },
-        { id: "2", img: "Images/ProductsImages/dry fruits.png", title: "Dry Fruits", link: "/dryfruits" },
+        { id: "1", img: "Images/ProductsImages/ourproducts images/dates.png", title: "Dates", link: "/dates" },
+        { id: "2", img: "Images/ProductsImages/ourproducts images/nuts.png", title: "Nuts", link: "/nuts" },
+        { id: "3", img: "Images/ProductsImages/ourproducts images/seeds.webp", title: "Seeds", link: "/seeds" },
+        { id: "2", img: "Images/ProductsImages/ourproducts images/dryfruitss.jpg", title: "Dry Fruits", link: "/dryfruits" },
+        
     ];
     return (
         <Box>
@@ -181,7 +182,7 @@ const Hero = () => {
                                     >
                                         <Box sx={{ width: ["100%", "100%", "100%", "100%", '25rem'] }}>
                                             <Box
-                                                component='img'
+                                                component='img'                 
                                                 src={item.img}
                                                 alt='pack'
                                                 sx={{
