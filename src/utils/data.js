@@ -680,6 +680,43 @@ export const dates = [
 ];
 
 
+export const chocalates = [
+    {
+        id: 1,
+        name: 'Ajwa Dates',
+        rating: 5,
+        price: '₹1200.00',
+        image: 'Images/ProductsImages/dates/ajwa dates.png',
+        unitsSold: '50',
+    },
+    {
+        id: 2,
+        name: 'Khimiya Dates',
+        rating: 4,
+        price: '₹750.00',
+        image: 'Images/ProductsImages/dates/khimiya   dates.png',
+        unitsSold: 45,
+    },
+];
+
+export const drinks = [
+    {
+        id: 1,
+        name: 'Ajwa Dates',
+        rating: 5,
+        price: '₹1200.00',
+        image: 'Images/ProductsImages/dates/ajwa dates.png',
+        unitsSold: '50',
+    },
+    {
+        id: 2,
+        name: 'Khimiya Dates',
+        rating: 4,
+        price: '₹750.00',
+        image: 'Images/ProductsImages/dates/khimiya   dates.png',
+        unitsSold: 45,
+    },
+];
 
 
 // export const footerProducts = [
