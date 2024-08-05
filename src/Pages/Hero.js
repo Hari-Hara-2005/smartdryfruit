@@ -181,7 +181,7 @@ const Hero = () => {
                                     >
                                         <Box sx={{ width: ["100%", "100%", "100%", "100%", '25rem'] }}>
                                             <Box
-                                                component='img'
+                                                component='img'                 
                                                 src={item.img}
                                                 alt='pack'
                                                 sx={{
