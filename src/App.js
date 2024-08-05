@@ -8,6 +8,8 @@ import Nuts from './Pages/Product Pages/Nuts';
 import Seeds from './Pages/Product Pages/Seeds';
 import { About } from './Pages/About';
 import { Contact } from './Pages/Contact-Us';
+import Chocolates from './Pages/Product Pages/Chocolates';
+import Juice from './Pages/Product Pages/Juice';
 
 export const App = () => {
   return (
@@ -19,8 +21,10 @@ export const App = () => {
         <Route path='/dates' element={<Dates />} />
         <Route path='/nuts' element={<Nuts />} />
         <Route path='/seeds' element={<Seeds />} />
-        <Route path='/about' element={<About/>} />
-        <Route path='/contact' element={<Contact/>}/>
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/chocolates' element={<Chocolates />} />
+        <Route path='/Juice' element={<Juice />} />
       </Routes>
     </BrowserRouter>
   )
