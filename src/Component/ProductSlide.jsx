@@ -6,12 +6,13 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
 const industryData = [
-    { id: "1", img: "Images/download.jpg", title: "Nuts 1" },
-    { id: "2", img: "Images/download.jpg", title: "Nuts 2" },
-    { id: "3", img: "Images/download.jpg", title: "Nuts 3" },
-    { id: "4", img: "Images/download.jpg", title: "Nuts 4" },
-    { id: "5", img: "Images/download.jpg", title: "Nuts 5" },
-    { id: "6", img: "Images/download.jpg", title: "Nuts 6" },
+    { id: "1", img: "Images/ProductsImages/overview images/almond.jpeg", title: "Almond" },
+    { id: "2", img: "Images/ProductsImages/overview images/cashew.webp", title: "Cashew" },
+    
+    { id: "4", img: "Images/ProductsImages/overview images/raisin.jpeg", title: "Nuts 4" },
+    { id: "5", img: "Images/ProductsImages/overview images/wallnut..png", title: "Nuts 5" },
+    { id: "6", img: "Images/ProductsImages/overview images/pistachios.jpg", title: "Nuts 6" },
+    { id: "3", img: "Images/ProductsImages/overview images/dates.jpeg", title: "Nuts 3" },
 ];
 
 const IndustryCarousel = () => {
