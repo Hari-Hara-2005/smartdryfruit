@@ -8,11 +8,10 @@ import { Navigation } from 'swiper/modules';
 const industryData = [
     { id: "1", img: "Images/ProductsImages/overview images/almond.jpeg", title: "Almond" },
     { id: "2", img: "Images/ProductsImages/overview images/cashew.webp", title: "Cashew" },
-    
-    { id: "4", img: "Images/ProductsImages/overview images/raisin.jpeg", title: "Nuts 4" },
-    { id: "5", img: "Images/ProductsImages/overview images/wallnut..png", title: "Nuts 5" },
-    { id: "6", img: "Images/ProductsImages/overview images/pistachios.jpg", title: "Nuts 6" },
-    { id: "3", img: "Images/ProductsImages/overview images/dates.jpeg", title: "Nuts 3" },
+    { id: "4", img: "Images/ProductsImages/overview images/raisin.jpeg", title: "Raisin" },
+    { id: "5", img: "Images/ProductsImages/overview images/wallnut..png", title: "Wallnut" },
+    { id: "6", img: "Images/ProductsImages/overview images/pistachios.jpg", title: "Pistachios" },
+    { id: "3", img: "Images/ProductsImages/overview images/dates.jpeg", title: "Dates" },
 ];
 
 const IndustryCarousel = () => {
