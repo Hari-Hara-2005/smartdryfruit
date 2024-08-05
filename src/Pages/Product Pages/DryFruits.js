@@ -174,7 +174,7 @@ const DryFruits = () => {
             <Box sx={{ display: 'flex', justifyContent: 'start', color: 'black', px: [2, 5, 4], zIndex: 30 }}>
                 <Title color="#282828">Dry Fruits</Title>
             </Box>
-            <Box sx={{display:['none','block']}}>
+            <Box sx={{ display: ['none', 'block'] }}>
                 <ProductNavbar />
             </Box>
             <Box sx={{ textAlign: 'center', px: [2, 3, 0], py: [5] }}>

@@ -41,7 +41,7 @@ const CustomerReview = () => {
                 alignItems: "center",
                 justifyContent: "space-around",
                 whiteSpace: "nowrap",
-                gap: ['2rem','2rem','3rem'],
+                gap: ['2rem', '2rem', '3rem'],
                 py: '1rem',
                 animation: `${scrollX} 140s linear infinite`,
             }}>
@@ -49,7 +49,7 @@ const CustomerReview = () => {
                     // Rotate through color styles for each review
                     const colorStyle = colorStyles[index % colorStyles.length];
                     return (
-                        <Box key={index} sx={{ position: 'relative', my:[5,5,8] }}>
+                        <Box key={index} sx={{ position: 'relative', my: [5, 5, 8] }}>
                             <Avatar
                                 src={review.img}
                                 alt={review.name}

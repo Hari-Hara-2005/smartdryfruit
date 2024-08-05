@@ -47,7 +47,7 @@ const IconContainer = styled(Box)(({ theme }) => ({
     gap: 10,
 
     [theme.breakpoints.down('sm')]: {
-        width: '8%', 
+        width: '8%',
     },
 }));
 

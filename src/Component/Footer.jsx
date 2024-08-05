@@ -12,7 +12,6 @@ import PhoneCallback from '@mui/icons-material/PhoneCallback';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import { footerProducts } from "../utils/data";
 import CusAccordion from "./CusAccordion";
 function Footer() {
     const overview = [
@@ -434,8 +433,8 @@ function Footer() {
                 </Box>
             </Box >
             <Box sx={{ display: ['block', 'block', 'none'] }}>
-                <Box sx={{ display: 'flex', justifyContent: 'center', my:['2.5rem','3rem'] }}>
-                    <Box sx={{ bgcolor: 'black', width: ['8rem', '11rem', '9rem'], height: ['8rem', '11rem', '9rem'], display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '100%', my: [-6,-8] }}>
+                <Box sx={{ display: 'flex', justifyContent: 'center', my: ['2.5rem', '3rem'] }}>
+                    <Box sx={{ bgcolor: 'black', width: ['8rem', '11rem', '9rem'], height: ['8rem', '11rem', '9rem'], display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '100%', my: [-6, -8] }}>
                         <Box component='img' src='Images/logo.png' alt="customer" sx={{ width: ['6rem', '8rem', '10.5rem'], height: ['6rem', '8rem', '10.5rem'], borderRadius: '100%' }} />
                     </Box>
                 </Box>
@@ -473,7 +472,7 @@ function Footer() {
                         lg: "space-around",
                     }}
                 >
-                  
+
 
 
                     <CusAccordion
