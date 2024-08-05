@@ -98,6 +98,8 @@ export default function Navbar(props) {
     { link: "/dryfruits", name: "Dry Fruits" },
     { link: "/seeds", name: "Seeds" },
     { link: "/nuts", name: "Nuts" },
+    { link: "/chocolates", name: "Chocolates" },
+    { link: "/juice", name: "Drinks" }
   ];
 
   const drawer = (
