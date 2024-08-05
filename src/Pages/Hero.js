@@ -17,8 +17,9 @@ const Hero = () => {
     const industryData = [
         { id: "1", img: "Images/ProductsImages/ourproducts images/dates.png", title: "Dates", link: "/dates" },
         { id: "2", img: "Images/ProductsImages/ourproducts images/nuts.png", title: "Nuts", link: "/nuts" },
-        { id: "3", img: "Images/ProductsImages/ourproducts images/seeds.webp", title: "Seed", link: "/seeds" },
+        { id: "3", img: "Images/ProductsImages/ourproducts images/seeds.webp", title: "Seeds", link: "/seeds" },
         { id: "2", img: "Images/ProductsImages/ourproducts images/dryfruitss.jpg", title: "Dry Fruits", link: "/dryfruits" },
+        
     ];
     return (
         <Box>
