@@ -51,7 +51,7 @@ const Hero = () => {
                         fontFamily: "'Poppins ', serif", 
                     }}
                 >
-                    smart
+                    manoj
                 </Typography>
                 <Box
                     component='img'
