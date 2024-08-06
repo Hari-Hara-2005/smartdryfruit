@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Card, CardContent, CardMedia, IconButton, Typography, Grid, Box, Stack, Button, Skeleton } from '@mui/material';
 import { styled } from '@mui/system';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -183,7 +183,9 @@ const Chocolates = () => {
             setIsLoading(false);
         }, 2500); // Simulate a 2-second loading time
     }, []);
-
+    useEffect(() => {
+        document.title = "Chocolates";
+    }, []);
     return (
         <>
             <Navbar color="#000" />
