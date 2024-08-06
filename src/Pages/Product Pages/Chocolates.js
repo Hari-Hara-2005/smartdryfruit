@@ -142,9 +142,6 @@ const ProductCard = ({ product, isLoading }) => {
                         <Typography variant={["0.8rem", "h6"]} component="div" sx={{ textAlign: 'start', fontWeight: [700, 600], letterSpacing: 1 }} >
                             {product.name}
                         </Typography>
-                        <Typography variant="body1" component="div" sx={{ textAlign: 'start', letterSpacing: 0.5 }} >
-                            250 gm
-                        </Typography>
                         <Typography color={'#92553D'} sx={{ textAlign: 'start', fontWeight: 600, fontSize: '0.8rem', letterSpacing: 0.5, mt: 1, display: 'flex', }} >
                             <VerifiedIcon sx={{ fontSize: '1rem' }} />
                             Smart Dry Fruits

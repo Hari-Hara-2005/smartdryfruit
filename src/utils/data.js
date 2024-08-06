@@ -79,7 +79,6 @@ export const products = [
         rating: 5,
         price: '₹365.00',
         image: 'Images/ProductsImages/cashew-2.png',
-        unitsSold: '50',
     },
     {
         id: 2,
@@ -95,7 +94,6 @@ export const products = [
         rating: 4,
         price: '₹425.00',
         image: 'Images/ProductsImages/Purely Delight (1).png',
-        unitsSold: 43,
     },
     {
         id: 4,
@@ -111,7 +109,6 @@ export const products = [
         rating: 4,
         price: '₹425.00',
         image: 'Images/ProductsImages/Purely Delight (3).png',
-        unitsSold: 43,
     },
     {
         id: 6,
@@ -120,7 +117,6 @@ export const products = [
         rating: 4,
         price: '₹425.00',
         image: 'Images/ProductsImages/Purely Delight (4).png',
-        unitsSold: 43,
     },
     {
         id: 7,
@@ -129,7 +125,6 @@ export const products = [
         rating: 4,
         price: '₹425.00',
         image: 'Images/ProductsImages/Purely Delight (5).png',
-        unitsSold: 43,
     },
     {
         id: 8,
@@ -137,7 +132,6 @@ export const products = [
         rating: 4,
         price: '₹425.00',
         image: 'Images/ProductsImages/Purely Delight (6).png',
-        unitsSold: 43,
     },
     {
         id: 9,
@@ -145,7 +139,6 @@ export const products = [
         rating: 4,
         price: '₹425.00',
         image: 'Images/ProductsImages/Purely Delight (7).png',
-        unitsSold: 43,
     },
     {
         id: 10,
@@ -153,7 +146,6 @@ export const products = [
         rating: 4,
         price: '₹425.00',
         image: 'Images/ProductsImages/sunflower seeds.png',
-        unitsSold: 43,
     },
     {
         id: 11,
@@ -161,7 +153,6 @@ export const products = [
         rating: 4,
         price: '₹425.00',
         image: 'Images/ProductsImages/wallnut.png',
-        unitsSold: 43,
     },
     {
         id: 12,
@@ -169,7 +160,6 @@ export const products = [
         rating: 4,
         price: '₹425.00',
         image: 'Images/ProductsImages/watermelon seeds.png',
-        unitsSold: 43,
     },
 ];
 
@@ -181,7 +171,6 @@ export const dryfruits = [
         rating: 5,
         price: '₹125.00',
         image: 'Images/ProductsImages/dryFruits/Apricot.png',
-        unitsSold: '50',
     },
     {
         id: 2,
@@ -294,7 +283,7 @@ export const dryfruits = [
         name: 'Mixed Fruits',
         rating: 4,
         price: '₹80.00',
-        image: 'Images/ProductsImages/dryFruits/Mixedfruits.jpg',
+        image: 'Images/ProductsImages/dryFruits/mixeddryfruit.jpg',
         unitsSold: 43,
     },
     {
@@ -364,7 +353,6 @@ export const nuts = [
         rating: 5,
         price: '₹65.00/₹75.00',
         image:'Images/ProductsImages/nuts/Almond.png',
-        unitsSold: '50',
     },
     {
         id: 2,
@@ -372,7 +360,6 @@ export const nuts = [
         rating: 5,
         price: '₹90.00/₹140.00',
         image: 'Images/ProductsImages/nuts/Anjeer.png',
-        unitsSold: '50',
     },
     {
         id: 3,
@@ -380,7 +367,6 @@ export const nuts = [
         rating: 4,
         price: '₹220.00',
         image: 'Images/ProductsImages/nuts/Brazil nuts.png',
-        unitsSold: 45,
     },
     {
         id: 4,
@@ -388,7 +374,6 @@ export const nuts = [
         rating: 4,
         price: '₹95.00/₹75.00',
         image: 'Images/ProductsImages/nuts/Cashew.png',
-        unitsSold: 43,
     },
     {
         id: 5,
@@ -396,7 +381,6 @@ export const nuts = [
         rating: 3,
         price: '₹240.00',
         image: 'Images/ProductsImages/nuts/Pecan nut.png',
-        unitsSold: 25,
     },
     {
         id: 6,
@@ -404,7 +388,6 @@ export const nuts = [
         rating: 4,
         price: '₹95.00',
         image: 'Images/ProductsImages/nuts/pepper cashew.png',
-        unitsSold: 43,
     },
     {
         id: 7,
@@ -412,7 +395,6 @@ export const nuts = [
         rating: 4,
         price: '₹800.00',
         image: 'Images/ProductsImages/nuts/Pine nuts.png',
-        unitsSold: 43,
     },
     {
         id: 8,
@@ -420,24 +402,20 @@ export const nuts = [
         rating: 4,
         price: '₹110.00/₹125.00',
         image: 'Images/ProductsImages/nuts/pista.png',
-        unitsSold: 43,
     },
     {
         id: 9,
         name: 'Salted Almond',
         rating: 4,
         price: '₹95.00',
-        image: 'Images/ProductsImages/nuts/salted almond.png',
-        unitsSold: 43,
+        image: 'Images/ProductsImages/nuts/saltedalmond.jpg',
     },
     {
         id: 10,
-
         name: 'Salted Cashew',
         rating: 4,
         price: '₹95.00',
-        image: 'Images/ProductsImages/nuts/salted cashew.png',
-        unitsSold: 43,
+        image: 'Images/ProductsImages/nuts/saltedcashew.jpg',
     },
     {
         id: 11,
@@ -445,7 +423,6 @@ export const nuts = [
         rating: 4,
         price: '₹130.00/₹160.00',
         image: 'Images/ProductsImages/nuts/wallnut.png',
-        unitsSold: 43,
     },
     {
         id: 12,
@@ -453,7 +430,6 @@ export const nuts = [
         rating: 4,
         price: '₹95.00',
         image: 'Images/ProductsImages/nuts/chillicashew.jpg',
-        unitsSold: 43,
     },
     {
         id: 13,
@@ -461,7 +437,6 @@ export const nuts = [
         rating: 4,
         price: '₹95.00',
         image: 'Images/ProductsImages/nuts/peripericashew.jpg',
-        unitsSold: 43,
     },
     {
         id: 14,
@@ -469,7 +444,6 @@ export const nuts = [
         rating: 4,
         price: '₹28.00',
         image: 'Images/ProductsImages/nuts/Indiangrape.jpg',
-        unitsSold: 43,
     },
     {
         id: 15,
@@ -477,7 +451,6 @@ export const nuts = [
         rating: 4,
         price: '₹60.00',
         image: 'Images/ProductsImages/nuts/Afghangrape.jpg',
-        unitsSold: 43,
     },
     {
         id: 16,
@@ -485,7 +458,6 @@ export const nuts = [
         rating: 4,
         price: '₹140.00',
         image: 'Images/ProductsImages/nuts/Hazlenut.jpg',
-        unitsSold: 43,
     },
 ];
 
@@ -498,7 +470,6 @@ export const seeds = [
         rating: 5,
         price: '₹36.00',
         image: 'Images/ProductsImages/seeds/Black grapes  seeds.png',
-        unitsSold: '50',
     },
     {
         id: 2,
@@ -506,7 +477,6 @@ export const seeds = [
         rating: 4,
         price: '₹55.00',
         image: 'Images/ProductsImages/seeds/chia seeds.png',
-        unitsSold: 45,
     },
     {
         id: 3,
@@ -514,7 +484,6 @@ export const seeds = [
         rating: 4,
         price: '₹40.00',
         image: 'Images/ProductsImages/seeds/flax seed.png',
-        unitsSold: 43,
     },
     {
         id: 4,
@@ -522,7 +491,6 @@ export const seeds = [
         rating: 3,
         price: '₹50.00',
         image: 'Images/ProductsImages/seeds/Karunjeeragam  seeds.png',
-        unitsSold: 25,
     },
     {
         id: 5,
@@ -530,16 +498,13 @@ export const seeds = [
         rating: 4,
         price: '₹50.00',
         image: 'Images/ProductsImages/seeds/Poppy seeds.png',
-        unitsSold: 43,
     },
     {
         id: 6,
-
         name: 'Pumpkin Seeds',
         rating: 4,
         price: '₹60.00',
         image: 'Images/ProductsImages/seeds/pumpkin seeds.png',
-        unitsSold: 43,
     },
     {
         id: 7,
@@ -547,7 +512,6 @@ export const seeds = [
         rating: 4,
         price: '₹50.00',
         image: 'Images/ProductsImages/seeds/sabja seeds.png',
-        unitsSold: 43,
     },
     {
         id: 8,
@@ -555,7 +519,6 @@ export const seeds = [
         rating: 4,
         price: '₹45.00',
         image: 'Images/ProductsImages/seeds/sunflower seeds (1).png',
-        unitsSold: 43,
     },
     {
         id: 9,
@@ -563,7 +526,6 @@ export const seeds = [
         rating: 4,
         price: '₹105.00',
         image: 'Images/ProductsImages/seeds/watermelon seeds (1).png',
-        unitsSold: 43,
     },
     {
         id: 10,
@@ -571,7 +533,6 @@ export const seeds = [
         rating: 4,
         price: '₹130.00',
         image: 'Images/ProductsImages/nuts/wallnut.png',
-        unitsSold: 43,
     },
     {
         id: 11,
@@ -579,7 +540,6 @@ export const seeds = [
         rating: 4,
         price: '₹130.00',
         image: 'Images/ProductsImages/seeds/vellari.jpg',
-        unitsSold: 43,
     },
 
 
@@ -594,7 +554,6 @@ export const dates = [
         rating: 5,
         price: '₹1200.00',
         image: 'Images/ProductsImages/dates/ajwa dates.png',
-        unitsSold: '50',
     },
     {
         id: 2,
@@ -602,7 +561,6 @@ export const dates = [
         rating: 4,
         price: '₹750.00',
         image: 'Images/ProductsImages/dates/khimiya   dates.png',
-        unitsSold: 45,
     },
     {
         id: 3,
@@ -610,7 +568,6 @@ export const dates = [
         rating: 4,
         price: '₹1500.00',
         image: 'Images/ProductsImages/dates/medjoul  dates.png',
-        unitsSold: 43,
     },
     {
         id: 4,
@@ -618,7 +575,6 @@ export const dates = [
         rating: 4,
         price: '₹260.00',
         image: 'Images/ProductsImages/dates/kimia.jpg',
-        unitsSold: 43,
     },
     {
         id: 5,
@@ -626,7 +582,6 @@ export const dates = [
         rating: 4,
         price: '₹1250.00',
         image: 'Images/ProductsImages/dates/Mabroom.jpg',
-        unitsSold: 43,
     },
     {
         id: 6,
@@ -634,7 +589,6 @@ export const dates = [
         rating: 4,
         price: '₹850.00',
         image: 'Images/ProductsImages/dates/Mashrook.jpg',
-        unitsSold: 43,
     },
     {
         id: 7,
@@ -642,7 +596,6 @@ export const dates = [
         rating: 4,
         price: '₹560.00',
         image: 'Images/ProductsImages/dates/Barrari.jpg',
-        unitsSold: 43,
     },
     {
         id: 8,
@@ -650,40 +603,8 @@ export const dates = [
         rating: 4,
         price: '₹250.00',
         image: 'Images/ProductsImages/dates/Muscat.jpg',
-        unitsSold: 43,
     },
-    {
-        id: 9,
-        name: 'Joiner-65',
-        rating: 4,
-        price: '₹250.00',
-        image: 'Images/ProductsImages/juice/joiner.jpg',
-        unitsSold: 43,
-    },
-    {
-        id: 10,
-        name: 'Joiner-65',
-        rating: 4,
-        price: '₹250.00',
-        image: 'Images/ProductsImages/juice/joiner1.jpg',
-        unitsSold: 43,
-    },
-    {
-        id: 11,
-        name: 'Joiner-65',
-        rating: 4,
-        price: '₹250.00',
-        image: 'Images/ProductsImages/juice/joiner2.jpg',
-        unitsSold: 43,
-    },
-    {
-        id: 12,
-        name: 'Joiner-65',
-        rating: 4,
-        price: '₹250.00',
-        image: 'Images/ProductsImages/juice/joinerrpic.jpg',
-        unitsSold: 43,
-    },
+    
     
 ];
 
@@ -691,131 +612,177 @@ export const dates = [
 export const chocalates = [
     {
         id: 1,
-        name: 'Ajwa Dates',
-        rating: 5,
-        price: '₹1200.00',
-        image: 'Images/ProductsImages/dates/ajwa dates.png',
-        unitsSold: '50',
+        name: 'Twix',
+        rating: 4,
+        price: '₹70.00',
+        image: 'Images/ProductsImages/chocolates/twix.png',
     },
     {
         id: 2,
-        name: 'Khimiya Dates',
-        rating: 4,
-        price: '₹750.00',
-        image: 'Images/ProductsImages/dates/khimiya   dates.png',
-        unitsSold: 45,
+        name: 'Kinder Bueno',
+        rating: 5,
+        price: '₹95.00',
+        image: 'Images/ProductsImages/chocolates/bueno.png',
     },
+    {
+        id: 3,
+        name: 'Davidoff',
+        rating: 4,
+        price: '₹500.00',
+        image: 'Images/ProductsImages/chocolates/davidoff.png',
+    },
+    {
+        id: 4,
+        name: 'Lotus Biscoff Smooth',
+        rating: 4,
+        price: '₹250.00',
+        image: 'Images/ProductsImages/chocolates/lotusbiscoff.png',
+    },
+    {
+        id: 5,
+        name: 'Mars',
+        rating: 4,
+        price: '₹65.00',
+        image: 'Images/ProductsImages/chocolates/mars.png',
+    },
+    {
+        id: 6,
+        name: 'Lotus Biscoff',
+        rating: 4,
+        price: '₹300.00',
+        image: 'Images/ProductsImages/chocolates/biscoff.png',
+    },
+    {
+        id: 7,
+        name: 'Milo',
+        rating: 4,
+        price: '₹300.00',
+        image: 'Images/ProductsImages/chocolates/milo.png', 
+    },
+    {
+        id: 8,
+        name: 'Nutella Be Ready',
+        rating: 4,
+        price: '₹75.00',
+        image: 'Images/ProductsImages/chocolates/nutella.png',
+       
+    },
+    {
+        id: 9,
+        name: 'Nutella Go',
+        rating: 4,
+        price: '₹185.00',
+        image: 'Images/ProductsImages/chocolates/nutellago.png',
+    },
+    {
+        id: 10,
+        name: 'Ferrero Rocher',
+        rating: 4,
+        price: '₹140.00',
+        image: 'Images/ProductsImages/chocolates/ferroroucher.png',
+    },
+    {
+        id: 11,
+        name: 'Raffelo',
+        rating: 4,
+        price: '₹125.00',
+        image: 'Images/ProductsImages/chocolates/raffaello.png',
+    },
+    {
+        id: 12,
+        name: 'Ovaltine',
+        rating: 4,
+        price: '₹240.00',
+        image: 'Images/ProductsImages/chocolates/ovaltine.png',
+    },
+    {
+        id: 13,
+        name: 'Thai Chew Candy ',
+        rating: 4,
+        price: '₹65.00',
+        image: 'Images/ProductsImages/chocolates/thaichew.png',
+    },
+    {
+        id: 14,
+        name: 'M&M Choco',
+        rating: 4,
+        price: '₹75.00',
+        image: 'Images/ProductsImages/chocolates/mm choco.png',
+    },
+   
+   
 ];
 
 export const drinks = [
+   
     {
         id: 1,
-        name: 'Ajwa Dates',
-        rating: 5,
-        price: '₹1200.00',
-        image: 'Images/ProductsImages/dates/ajwa dates.png',
-        unitsSold: '50',
+        name: 'Redbull',
+        rating: 4,
+        price: '₹110.00',
+        image: 'Images/ProductsImages/juices/redbull.png',
     },
     {
         id: 2,
-        name: 'Khimiya Dates',
-        rating: 4,
-        price: '₹750.00',
-        image: 'Images/ProductsImages/dates/khimiya   dates.png',
-        unitsSold: 45,
+        name: '100 Plus',
+        rating: 3,
+        price: '₹95.00',
+        image: 'Images/ProductsImages/juices/100plus.png',
     },
+    {
+        id: 3,
+        name: 'Bavaria',
+        rating: 4,
+        price: '₹80.00',
+        image: 'Images/ProductsImages/juices/bavaria.png',
+    },
+    {
+        id: 4,
+        name: 'Mousey',
+        rating: 3,
+        price: '₹110.00',
+        image: 'Images/ProductsImages/juices/mossy.png',
+    },
+    {
+        id: 5,
+        name: 'Redbull Gold',
+        rating: 4,
+        price: '₹100.00',
+        image: 'Images/ProductsImages/juices/redbullgold.png',
+    },
+    {
+        id: 6,
+        name: 'American Basil',
+        rating: 4,
+        price: '₹65.00',
+        image: 'Images/ProductsImages/juices/american.png',
+    },
+    {
+        id: 7,
+        name: 'Red Wine',
+        rating: 4,
+        price: '₹0.00',
+        image: 'Images/ProductsImages/juices/red wine.png',
+    },
+    {
+        id: 8,
+        name: 'Joiner-65',
+        rating: 4,
+        price: '₹250.00',
+        image: 'Images/ProductsImages/juices/joiner65.png',
+    },
+   
+    {
+        id: 9,
+        name: 'Patritti Red Wine',
+        rating: 4,
+        price: '₹250.00',
+        image: 'Images/ProductsImages/juices/patritti .png',
+    },
+
+    
+
+   
 ];
 
 
-// export const footerProducts = [
-//     {
-//         id: 1,
-//
-//         name: 'Cashew',
-//         rating: 5,
-//         price: '₹365.00',
-//         image: 'Images/ProductsImages/cashew-2.png',
-//         unitsSold: '50',
-//     },
-//     {
-//         id: 2,
-//
-//         name: 'Cashew Splits',
-//         rating: 4,
-//         price: '₹425.00',
-//         image: 'Images/ProductsImages/pepper cashew..png',
-//         unitsSold: 45,
-//     },
-//     {
-//         id: 3,
-//
-//         name: 'Roasted Cashew',
-//         rating: 4,
-//         price: '₹425.00',
-//         image: 'Images/ProductsImages/Purely Delight (1).png',
-//         unitsSold: 43,
-//     },
-//     {
-//         id: 4,
-//
-//         name: 'Roasted Cashew',
-//         rating: 3,
-//         price: '₹800',
-//         image: 'Images/ProductsImages/Purely Delight (2).png',
-//         unitsSold: 25,
-//     },
-//     {
-//         id: 5,
-//
-//         name: 'Roasted Cashew',
-//         rating: 4,
-//         price: '₹425.00',
-//         image: 'Images/ProductsImages/Purely Delight (3).png',
-//         unitsSold: 43,
-//     },
-//     {
-//         id: 8,
-//
-//         name: 'Roasted Cashew',
-//         rating: 4,
-//         price: '₹425.00',
-//         image: 'Images/ProductsImages/Purely Delight (6).png',
-//         unitsSold: 43,
-//     },
-//     {
-//         id: 9,
-//
-//         name: 'Roasted Cashew',
-//         rating: 4,
-//         price: '₹425.00',
-//         image: 'Images/ProductsImages/Purely Delight (7).png',
-//         unitsSold: 43,
-//     },
-//     {
-//         id: 10,
-//
-//         name: 'Roasted Cashew',
-//         rating: 4,
-//         price: '₹425.00',
-//         image: 'Images/ProductsImages/sunflower seeds.png',
-//         unitsSold: 43,
-//     },
-//     {
-//         id: 11,
-//
-//         name: 'Roasted Cashew',
-//         rating: 4,
-//         price: '₹425.00',
-//         image: 'Images/ProductsImages/wallnut.png',
-//         unitsSold: 43,
-//     },
-//     {
-//         id: 12,
-//
-//         name: 'Roasted Cashew',
-//         rating: 4,
-//         price: '₹425.00',
-//         image: 'Images/ProductsImages/watermelon seeds.png',
-//         unitsSold: 43,
-//     },
-// ];
