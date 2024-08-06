@@ -20,8 +20,8 @@ export const About = () => {
         { id: "3", img: "/Images/aboutimage/ab4.jpg", title: "Nuts 3" },
         { id: "4", img: "/Images/aboutimage/ab5.jpg", title: "Nuts 4" },
         { id: "5", img: "/Images/aboutimage/ab6.jpg", title: "Nuts 5" },
-        { id: "6", img: "/Images/aboutimage/ab4.jpg", title: "Nuts 6" },
-        { id: "6", img: "/Images/aboutimage/ab3.jpg", title: "Nuts 6" },
+        { id: "6", img: "/Images/aboutimage/ab7.jpg", title: "Nuts 6" },
+        { id: "6", img: "/Images/aboutimage/ab8.jpg", title: "Nuts 6" },
     ];
 
     const features = [
