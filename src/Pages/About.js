@@ -29,15 +29,6 @@ export const About = () => {
     }, []);
 
     const industryData = [
-<<<<<<< HEAD
-        { id: "1", img: "Images/img-7.jpg", title: "Nuts 1" },
-        { id: "2", img: "Images/img-2.jpeg", title: "Nuts 2" },
-        { id: "3", img: "Images/img-3.jpeg", title: "Nuts 3" },
-        { id: "4", img: "Images/img-4.jpeg", title: "Nuts 4" },
-        { id: "5", img: "Images/img-5.jpeg", title: "Nuts 5" },
-        { id: "6", img: "Images/img-6.jpeg", title: "Nuts 6" },
-        { id: "7", img: "Images/img-7.jpg", title: "Nuts 7" },
-=======
         { id: "1", img: "/Images/aboutimage/ab2.jpg", title: "Nuts 1" },
         { id: "2", img: "/Images/aboutimage/ab3.jpg", title: "Nuts 2" },
         { id: "3", img: "/Images/aboutimage/ab4.jpg", title: "Nuts 3" },
@@ -45,7 +36,6 @@ export const About = () => {
         { id: "5", img: "/Images/aboutimage/ab6.jpg", title: "Nuts 5" },
         { id: "6", img: "/Images/aboutimage/ab7.jpg", title: "Nuts 6" },
         { id: "6", img: "/Images/aboutimage/ab8.jpg", title: "Nuts 6" },
->>>>>>> 7e14922382f4caab83325969b2eecff0e33cfd30
     ];
 
     const FeatureContainer = styled(Box)(({ theme }) => ({
