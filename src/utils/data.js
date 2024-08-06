@@ -657,7 +657,7 @@ export const dates = [
         name: 'Joiner-65',
         rating: 4,
         price: '₹250.00',
-        image: 'Images/ProductsImages/juice/joinerpic3.png',
+        image: 'Images/ProductsImages/juice/joinerpic4.png',
         unitsSold: 43,
     },
     {
