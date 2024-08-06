@@ -29,6 +29,7 @@ export const About = () => {
 
     const industryData = [
         { id: "1", img: "/Images/aboutimage/ab2.jpg", title: "Nuts 1" },
+        
         { id: "2", img: "/Images/aboutimage/ab3.jpg", title: "Nuts 2" },
         { id: "3", img: "/Images/aboutimage/ab4.jpg", title: "Nuts 3" },
         { id: "4", img: "/Images/aboutimage/ab5.jpg", title: "Nuts 4" },
