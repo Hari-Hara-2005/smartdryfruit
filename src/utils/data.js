@@ -652,38 +652,7 @@ export const dates = [
         image: 'Images/ProductsImages/dates/Muscat.jpg',
         unitsSold: 43,
     },
-    {
-        id: 9,
-        name: 'Joiner-65',
-        rating: 4,
-        price: '₹250.00',
-        image: 'Images/ProductsImages/juice/joinerpic4.png',
-        unitsSold: 43,
-    },
-    {
-        id: 10,
-        name: 'Joiner-65',
-        rating: 4,
-        price: '₹250.00',
-        image: 'Images/ProductsImages/juice/joiner1.jpg',
-        unitsSold: 43,
-    },
-    {
-        id: 11,
-        name: 'Joiner-65',
-        rating: 4,
-        price: '₹250.00',
-        image: 'Images/ProductsImages/juice/joiner2.jpg',
-        unitsSold: 43,
-    },
-    {
-        id: 12,
-        name: 'Joiner-65',
-        rating: 4,
-        price: '₹250.00',
-        image: 'Images/ProductsImages/juice/joinerpic3.png',
-        unitsSold: 43,
-    },
+    
     
 ];
 
@@ -710,20 +679,63 @@ export const chocalates = [
 export const drinks = [
     {
         id: 1,
-        name: 'Ajwa Dates',
-        rating: 5,
-        price: '₹1200.00',
-        image: 'Images/ProductsImages/dates/ajwa dates.png',
-        unitsSold: '50',
+        name: 'Joiner-65',
+        rating: 4,
+        price: '₹250.00',
+        image: 'Images/ProductsImages/juice/joiner65.png',
+        unitsSold: 43,
     },
     {
-        id: 2,
-        name: 'Khimiya Dates',
+        id: 1,
+        name: 'Redbull',
         rating: 4,
-        price: '₹750.00',
-        image: 'Images/ProductsImages/dates/khimiya   dates.png',
-        unitsSold: 45,
+        price: '₹250.00',
+        image: 'Images/ProductsImages/juice/redbull.png',
+        unitsSold: 43,
     },
+    {
+        id: 1,
+        name: '100 Plus',
+        rating: 4,
+        price: '₹250.00',
+        image: 'Images/ProductsImages/juice/100plus.png',
+        unitsSold: 43,
+    },
+    {
+        id: 1,
+        name: 'Mossy',
+        rating: 4,
+        price: '₹250.00',
+        image: 'Images/ProductsImages/juice/mossy.png',
+        unitsSold: 43,
+    },
+    {
+        id: 1,
+        name: 'Mossy',
+        rating: 4,
+        price: '₹250.00',
+        image: 'Images/ProductsImages/juice/american.png',
+        unitsSold: 43,
+    },
+    {
+        id: 1,
+        name: 'Mossy',
+        rating: 4,
+        price: '₹250.00',
+        image: 'Images/ProductsImages/juice/redbullgold.png',
+        unitsSold: 43,
+    },
+    {
+        id: 1,
+        name: 'Mossy',
+        rating: 4,
+        price: '₹250.00',
+        image: 'Images/ProductsImages/juice/bavaria.png',
+        unitsSold: 43,
+    },
+    
+
+   
 ];
 
 
