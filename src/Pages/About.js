@@ -24,6 +24,7 @@ export const About = () => {
         lockRef.current?.playFromBeginning();
         truckRef.current?.playFromBeginning();
         qualityRef.current?.playFromBeginning();
+        
         coinsRef.current?.playFromBeginning();
     }, []);
 
