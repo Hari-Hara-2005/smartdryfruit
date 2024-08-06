@@ -429,7 +429,7 @@ export const nuts = [
         name: 'Chilli Cashew',
         rating: 4,
         price: '₹95.00',
-        image: 'Images/ProductsImages/nuts/chillicashew.jpg',
+        image: 'Images/ProductsImages/nuts/Chillicashew.jpg',
     },
     {
         id: 13,
