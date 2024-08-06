@@ -12,6 +12,7 @@ import { dryfruits } from "../../utils/data";
 import Title from '../../Component/Title';
 import Navbar from '../../Component/Navbar';
 import ProductNavbar from '../../Component/ProductNavbar';
+import Footer from '../../Component/Footer';
 
 const StyledCard = styled(Card)(({ theme }) => ({
     backgroundColor: '#fff',
@@ -217,6 +218,9 @@ const DryFruits = () => {
                         </Grid>
                     ))}
                 </Grid>
+            </Box>
+            <Box sx={{ bgcolor: 'black', mt: 20, px: 2 }}>
+                <Footer />
             </Box>
         </>
     );

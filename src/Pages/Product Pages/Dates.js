@@ -12,6 +12,7 @@ import { dates } from "../../utils/data";
 import Navbar from '../../Component/Navbar';
 import Title from '../../Component/Title';
 import ProductNavbar from '../../Component/ProductNavbar';
+import Footer from '../../Component/Footer';
 
 const StyledCard = styled(Card)(({ theme }) => ({
   backgroundColor: '#fff',
@@ -217,6 +218,9 @@ const Dates = () => {
             </Grid>
           ))}
         </Grid>
+      </Box>
+      <Box sx={{ bgcolor: 'black', mt: 20, px: 2 }}>
+        <Footer />
       </Box>
     </>
   );
