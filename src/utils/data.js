@@ -283,7 +283,7 @@ export const dryfruits = [
         name: 'Mixed Fruits',
         rating: 4,
         price: '₹80.00',
-        image: 'Images/ProductsImages/dryFruits/Mixedfruits.jpg',
+        image: 'Images/ProductsImages/dryFruits/mixeddryfruit.jpg',
         unitsSold: 43,
     },
     {
@@ -408,14 +408,14 @@ export const nuts = [
         name: 'Salted Almond',
         rating: 4,
         price: '₹95.00',
-        image: 'Images/ProductsImages/nuts/salted almond.png',
+        image: 'Images/ProductsImages/nuts/saltedalmond.jpg',
     },
     {
         id: 10,
         name: 'Salted Cashew',
         rating: 4,
         price: '₹95.00',
-        image: 'Images/ProductsImages/nuts/salted cashew.png',
+        image: 'Images/ProductsImages/nuts/saltedcashew.jpg',
     },
     {
         id: 11,
