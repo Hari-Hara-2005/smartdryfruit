@@ -12,6 +12,7 @@ import { chocalates } from "../../utils/data";
 import Navbar from '../../Component/Navbar';
 import Title from '../../Component/Title';
 import ProductNavbar from '../../Component/ProductNavbar';
+import Footer from '../../Component/Footer';
 
 const StyledCard = styled(Card)(({ theme }) => ({
     backgroundColor: '#fff',
@@ -183,7 +184,7 @@ const Chocolates = () => {
     React.useEffect(() => {
         setTimeout(() => {
             setIsLoading(false);
-        }, 2000); // Simulate a 2-second loading time
+        }, 2500); // Simulate a 2-second loading time
     }, []);
 
     return (
@@ -217,6 +218,9 @@ const Chocolates = () => {
                         </Grid>
                     ))}
                 </Grid>
+            </Box>
+            <Box sx={{ bgcolor: 'black', mt: 20, px: 2 }}>
+                <Footer />
             </Box>
         </>
     );
