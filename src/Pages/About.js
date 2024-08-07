@@ -50,33 +50,43 @@ export const About = () => {
         },
     }));
 
-    const FeatureItem = styled(Grid)(({ theme }) => ({
-        textAlign: 'center',
-        padding: theme.spacing(2),
-        borderColor: 'rgba(255, 255, 255, 0.2)',
-        '& svg': {
-            color: '#f00',
-            transition: 'transform 0.3s, color 0.3s',
-        },
-        '&:hover svg': {
-            transform: 'scale(1.2)',
-            color: '#fff',
-        },
-        '&:hover p': {
-            color: '#f00',
-        },
+const FeatureItem = styled(Grid)(({ theme }) => ({
+    textAlign: 'center',
+    padding: theme.spacing(2),
+    borderColor: 'rgba(255, 255, 255, 0.2)',
+    '& svg': {
+        color: '#f00',
+        transition: 'transform 0.3s, color 0.3s',
+    },
+    '&:hover svg': {
+        transform: 'scale(1.2)',
+        color: '#fff',
+    },
+    '&:hover p': {
+        color: '#f00',
+    },
+    [theme.breakpoints.down('md')]: {
         '&:nth-of-type(1), &:nth-of-type(2)': {
             borderBottom: '2px solid rgba(255, 255, 255, 0.2)',
         },
         '&:nth-of-type(1), &:nth-of-type(3)': {
             borderRight: '2px solid rgba(255, 255, 255, 0.2)',
         },
-        [theme.breakpoints.up('md')]: {
-            '&:not(:nth-of-type(4))': {
-                borderRight: '2px solid rgba(255, 255, 255, 0.2)',
-            },
+    },
+    [theme.breakpoints.up('md')]: {
+        '&:nth-of-type(1), &:nth-of-type(3)': {
+            borderRight: '2px solid rgba(255, 255, 255, 0.2)',
         },
-    }));
+        '&:not(:nth-of-type(4))': {
+            borderRight: '2px solid rgba(255, 255, 255, 0.2)',
+        },
+    },
+}));
+
+
+    useEffect(() => {
+        document.title = "About";
+    }, []);
 
     return (
         <>
@@ -167,7 +177,7 @@ export const About = () => {
                 </Box>
             </Box>
             <Box sx={{}}>
-                <Box sx={{ py: [10], px:[ 2,5,2], display: 'flex', justifyContent: 'center', flexDirection: ['column', 'row'] }}>
+                <Box sx={{ py: [10], px: [2, 5, 2], display: 'flex', justifyContent: 'center', flexDirection: ['column', 'row'] }}>
                     <Box
                         sx={{
                             position: 'relative',
@@ -215,20 +225,20 @@ export const About = () => {
                             </Box>
                             <Box sx={{
                                 borderRight: ['none', 'none', '2px solid #92553D'],
-                                borderBottom: ['2px solid #92553D', 'none'], px: [0, 0, 5], pb: [2, 2, 0], ml: [0, 0,4]
+                                borderBottom: ['2px solid #92553D', 'none'], px: [0, 0, 5], pb: [2, 2, 0], ml: [0, 0, 4]
                             }}>
                                 <Typography variant="h6" component="div" sx={{ mb: -1, color: '#92553D', fontWeight: 600, }}>
                                     450000+
                                 </Typography>
-                                <Typography variant="h6" component="div" sx={{ color: '#000', fontWeight: 600, fontSize: 15, lineHeight: [1.3,1.5] }}>
+                                <Typography variant="h6" component="div" sx={{ color: '#000', fontWeight: 600, fontSize: 15, lineHeight: [1.3, 1.5] }}>
                                     Happy Customers
                                 </Typography>
                             </Box>
-                            <Box sx={{  ml: [0, 0, 4] ,pt: [2, 0,0] }}>
+                            <Box sx={{ ml: [0, 0, 4], pt: [2, 0, 0] }}>
                                 <Typography variant="h6" component="div" sx={{ mb: -1, color: '#92553D', fontWeight: 600, }}>
                                     500000+
                                 </Typography>
-                                <Typography variant="h6" component="div" sx={{ color: '#000', fontWeight: 600, fontSize: 15, lineHeight: [1.3,1.5] }}>
+                                <Typography variant="h6" component="div" sx={{ color: '#000', fontWeight: 600, fontSize: 15, lineHeight: [1.3, 1.5] }}>
                                     Order Delivered
                                 </Typography>
                             </Box>
@@ -264,7 +274,7 @@ export const About = () => {
                     </Box>
                 </Box>
             </Box>
-            <Box sx={{px:[2,5],py:[0,5]}}>
+            <Box sx={{ px: [2, 5], py: [0, 5] }}>
                 <FeatureContainer>
                     <Grid container spacing={0} justifyContent="center">
                         <FeatureItem item xs={6} md={3}>

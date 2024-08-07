@@ -186,6 +186,10 @@ const Seeds = () => {
         }, 2500); 
     }, []);
 
+    useEffect(() => {
+        document.title = "Drinks";
+    }, []);
+
     return (
         <>
             <Navbar color="#000" />

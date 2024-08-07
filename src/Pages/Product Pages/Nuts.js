@@ -183,7 +183,11 @@ const Seeds = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Simulate a 2-second loading time
+    }, 2500); // Simulate a 2-second loading time
+  }, []);
+
+  useEffect(() => {
+    document.title = "Nuts";
   }, []);
 
   return (

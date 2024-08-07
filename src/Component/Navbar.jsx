@@ -134,7 +134,7 @@ export default function Navbar(props) {
           item.name === "Product" ? (
             <React.Fragment key={index}>
               {isMobile ? (
-                <Box sx={{ width: '40%', ml: 3.5 }}>
+                <Box sx={{ width: ['40%','10%',], ml: [3.5] }}>
                   <CusAccordion
                     head={
                       <Typography
@@ -231,7 +231,7 @@ export default function Navbar(props) {
                     }}
                   >
                     {productMenuItems.map((menuItem, menuIndex) => (
-                      <Link to={menuItem.link} style={{ color: 'black' }} underline="none">
+                      <Link to={menuItem.link} style={{ color: 'black', textDecoration: 'none' }} underline="none">
                         <MenuItem
                           key={menuIndex}
                           onClick={() => {
@@ -258,6 +258,7 @@ export default function Navbar(props) {
               color={"inherit"}
               underline="none"
               key={index}
+              style={{ textDecoration: 'none' }}
             >
               <ListItem
                 onClick={() => {
@@ -395,6 +396,7 @@ export default function Navbar(props) {
                         fontWeight: "600",
                         color: isDown ? '#000' : color, // Use the color prop here
                         textTransform: "none",
+                        textDecoration: 'none',
                         "&:hover": {
                           backgroundColor: "rgba(255,255,255,0.1)",
                         },
@@ -479,6 +481,7 @@ export default function Navbar(props) {
                       fontWeight: "600",
                       color: isDown ? '#000' : color, // Use the color prop here
                       textTransform: "none",
+                      textDecoration: 'none',
                       "&:hover": {
                         backgroundColor: "rgba(255,255,255,0.1)",
                       },
