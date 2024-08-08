@@ -79,7 +79,7 @@ const ProductCard = ({ product, isLoading }) => {
   };
 
   const handleShareClick = async (product) => {
-    const shareUrl = `https://mahaslettering.com/products/${product.id}`;
+    const shareUrl = `https://smartdryfruitdryfruit.vercel.app/products/${product.id}`;
     const message = `Check out this amazing product: ${product.name}\nPrice: ${product.price}\n${shareUrl}`;
 
     // Encode URL and message
@@ -103,6 +103,7 @@ const ProductCard = ({ product, isLoading }) => {
       window.open(whatsappUrl, '_blank');
     }
   };
+
 
   return (
     <StyledCard>
