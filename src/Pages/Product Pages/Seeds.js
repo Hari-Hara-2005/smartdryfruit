@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom'; // Import useLocation from react-router-dom
 import { Card, CardContent, CardMedia, IconButton, Typography, Grid, Box, Stack, Button, Skeleton } from '@mui/material';
 import { styled } from '@mui/system';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -10,11 +9,11 @@ import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import ShareIcon from '@mui/icons-material/Share';
+import { seeds } from "../../utils/data";
 import Navbar from '../../Component/Navbar';
 import Title from '../../Component/Title';
 import ProductNavbar from '../../Component/ProductNavbar';
 import Footer from '../../Component/Footer';
-import { seeds } from "../../utils/data"; // Assuming this data includes all seeds
 
 const StyledCard = styled(Card)(({ theme }) => ({
   backgroundColor: '#fff',
@@ -69,15 +68,62 @@ const RatingStars = ({ rating, size }) => (
 
 const ProductCard = ({ product, isLoading }) => {
   const [liked, setLiked] = useState(false);
+  const [bookmarked, setBookmarked] = useState(false);
 
   const handleLikeClick = () => {
     setLiked(!liked);
   };
 
-  const handleShoppingClick = () => {
-    // Using the updated handleShoppingClick function
-    window.open(`https://wa.me/919952857016?text=${encodeURIComponent(`Hi! I'm interested in this product:\n\nName: ${product.name}\nPrice: ${product.price}\nGrams: ${product.grams}\nProduct Image: ${product.image}\n\nPlease provide more details and help me place an order.\n\nProduct Page: https://smartdryfruitdryfruit.vercel.app/seeds?productId=${product.id}`)}`, '_blank');
+  // const handleShoppingClick = () => {
+  //   window.open("https://wa.me/8220570301", "_blank");
+  // };
+  const handleShoppingClick = (product) => {
+    // Construct the URL for the product page on Vercel
+    const productPageUrl = `https://smartdryfruitdryfruit.vercel.app/seeds/${product.id}`;
+
+    // Encode URL and message
+    const encodedMessage = encodeURIComponent(`Hi! I'm interested in this product:\n\nName: ${product.name}\nPrice: ${product.price}\nGrams: ${product.grams}\n\nPlease provide more details and help me place an order.`);
+
+    // WhatsApp URL with the specific number
+    const whatsappNumber = '919952857016'; // Remove '+' from the number
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp chat
+    window.open(whatsappUrl, '_blank');
   };
+
+  const handleShareClick = async (product) => {
+    // Construct the URL for the product page on Vercel
+    const shareUrl = `https://smartdryfruitdryfruit.vercel.app/products/${product.id}`;
+    const message = `Check out this amazing product: ${product.name}\nPrice: ${product.price}\n${shareUrl}`;
+
+    // Encode URL and message
+    const encodedMessage = encodeURIComponent(message);
+
+    // WhatsApp URL with the specific number
+    const whatsappNumber = '+919952857016'; // Make sure to remove any '+' in the number
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // Share using the Web Share API if supported
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'Product Share',
+          text: message,
+          url: shareUrl,
+        });
+        console.log('Successful share');
+      } catch (error) {
+        console.log('Error sharing:', error);
+      }
+    } else {
+      // Fallback for browsers that don't support Web Share API
+      window.open(whatsappUrl, '_blank');
+    }
+  };
+
+
+
 
   return (
     <StyledCard>
@@ -112,17 +158,18 @@ const ProductCard = ({ product, isLoading }) => {
                 bgcolor: '#212121',
                 boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
               },
-            }} >
+            }} onClick={() => handleShareClick(product)}>
               <ShareIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
             </IconButton >
-            <IconButton aria-label="add to cart" sx={{
-              color: '#fff', bgcolor: '#92553D', '&:hover': {
-                bgcolor: '#212121',
-                boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
-              },
-            }} onClick={handleShoppingClick}>
-              <ShoppingCartIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
-            </IconButton>
+              <IconButton aria-label="add to cart" sx={{
+                color: '#fff', bgcolor: '#92553D', '&:hover': {
+                  bgcolor: '#212121',
+                  boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
+                },
+              }} onClick={() => handleShoppingClick(product)}>
+                <ShoppingCartIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
+              </IconButton>
+
           </>
         )}
       </IconContainer>
@@ -140,7 +187,7 @@ const ProductCard = ({ product, isLoading }) => {
               {product.name}
             </Typography>
             <Typography variant="body1" component="div" sx={{ textAlign: 'start', letterSpacing: 0.5 }} >
-              {product.grams} gm
+              250 gm
             </Typography>
             <Typography color={'#92553D'} sx={{ textAlign: 'start', fontWeight: 600, fontSize: '0.8rem', letterSpacing: 0.5, mt: 1, display: 'flex', }} >
               <VerifiedIcon sx={{ fontSize: '1rem' }} />
@@ -162,7 +209,7 @@ const ProductCard = ({ product, isLoading }) => {
                   bgcolor: "#92553D", textTransform: 'none', borderRadius: '50px', px: [2.5], '&:hover': {
                     bgcolor: "#282828"
                   }
-                }} onClick={handleShoppingClick}>
+                }}>
                   Add to cart
                 </Button>
               </Box>
@@ -176,39 +223,53 @@ const ProductCard = ({ product, isLoading }) => {
 
 const Seeds = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [seeds, setSeeds] = useState([]);
 
-  // Get query parameter from URL
-  const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
-  const productId = queryParams.get('productId');
+  // Simulate loading data
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2500); // Simulate a 2-second loading time
+  }, []);
 
   useEffect(() => {
-    // Simulate fetching data
-    setTimeout(() => {
-      setSeeds([
-        { id: 1, name: 'Seed 1', price: '$10', grams: '100g', image: 'seed1.jpg', rating: 4, originalPrice: '$12' },
-        { id: 2, name: 'Seed 1', price: '$10', grams: '100g', image: 'seed1.jpg', rating: 4, originalPrice: '$12' },
-        { id: 3, name: 'Seed 1', price: '$10', grams: '100g', image: 'seed1.jpg', rating: 4, originalPrice: '$12' },
-        { id: 4, name: 'Seed 1', price: '$10', grams: '100g', image: 'seed1.jpg', rating: 4, originalPrice: '$12' },
-      ]);
-      setIsLoading(false);
-    }, 1000);
+    document.title = "Seeds";
   }, []);
 
   return (
     <>
-      <Navbar />
-      <Title title="Seeds" />
-      <ProductNavbar />
-      <Grid container spacing={2} sx={{ p: 2 }}>
-        {seeds.map(seed => (
-          <Grid item key={seed.id} xs={12} sm={6} md={3.8} lg={3.6}>
-            <ProductCard product={seed} isLoading={isLoading} />
-          </Grid>
-        ))}
-      </Grid>
-      <Footer />
+      <Navbar color="#000" />
+      <Box component='img'
+        src='Images/leaf3.avif'
+        alt='leaf'
+        sx={{
+          width: ["70%", "50%", "25%", "25%", "25%"],
+          zIndex: -2,
+          ml: [-10],
+          mt: [0, 20, -2, -2, -2],
+          position: 'absolute',
+        }}
+      />
+      <Box sx={{ display: ['block', 'none'] }}>
+        <ProductNavbar />
+      </Box>
+      <Box sx={{ display: 'flex', justifyContent: 'start', color: 'black', px: [2, 5, 4] }}>
+        <Title color="#282828">Seeds</Title>
+      </Box>
+      <Box sx={{ display: ['none', 'block'] }}>
+        <ProductNavbar />
+      </Box>
+      <Box sx={{ textAlign: 'center', px: [2, 3, 0], py: [5], zIndex: 30 }}>
+        <Grid container spacing={6} justifyContent="center" alignItems="center">
+          {seeds.map((seed) => (
+            <Grid item key={seed.id} xs={12} sm={6} md={3.8} lg={3.6}>
+              <ProductCard product={seed} isLoading={isLoading} />
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+      <Box sx={{ bgcolor: 'black', mt: 20, px: 2 }}>
+        <Footer />
+      </Box>
     </>
   );
 };
