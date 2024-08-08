@@ -8,6 +8,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import ShareIcon from '@mui/icons-material/Share';
 import { seeds } from "../../utils/data";
 import Navbar from '../../Component/Navbar';
 import Title from '../../Component/Title';
@@ -73,12 +74,34 @@ const ProductCard = ({ product, isLoading }) => {
     setLiked(!liked);
   };
 
-  const handleBookmarkClick = () => {
-    setBookmarked(!bookmarked);
-  };
-
   const handleShoppingClick = () => {
     window.open("https://wa.me/8220570301", "_blank");
+  };
+
+  const handleShareClick = async (product) => {
+    const shareUrl = `https://mahaslettering.com/products/${product.id}`;
+    const message = `Check out this amazing product: ${product.name}\nPrice: ${product.price}\n${shareUrl}`;
+
+    // Encode URL and message
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
+
+    // Share using the Web Share API if supported
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'Product Share',
+          text: message,
+          url: shareUrl,
+        });
+        console.log('Successful share');
+      } catch (error) {
+        console.log('Error sharing:', error);
+      }
+    } else {
+      // Fallback for browsers that don't support Web Share API
+      window.open(whatsappUrl, '_blank');
+    }
   };
 
   return (
@@ -109,13 +132,13 @@ const ProductCard = ({ product, isLoading }) => {
             }} onClick={handleLikeClick}>
               <FavoriteIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
             </IconButton>
-            <IconButton aria-label="save" sx={{
-              color: bookmarked ? 'lightgray' : '#fff', bgcolor: '#92553D', '&:hover': {
+            <IconButton aria-label="share" sx={{
+              color: '#fff', bgcolor: '#92553D', '&:hover': {
                 bgcolor: '#212121',
                 boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
               },
-            }} onClick={handleBookmarkClick}>
-              <BookmarkIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
+            }} onClick={() => handleShareClick(product)}>
+              <ShareIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
             </IconButton >
             <IconButton aria-label="add to cart" sx={{
               color: '#fff', bgcolor: '#92553D', '&:hover': {
@@ -189,6 +212,7 @@ const Seeds = () => {
   useEffect(() => {
     document.title = "Seeds";
   }, []);
+
   return (
     <>
       <Navbar color="#000" />
@@ -196,10 +220,10 @@ const Seeds = () => {
         src='Images/leaf3.avif'
         alt='leaf'
         sx={{
-          width: ["70%", "50%", "25%"],
+          width: ["70%", "50%", "25%", "25%", "25%"],
           zIndex: -2,
           ml: [-10],
-          mt: [0, 20, -2],
+          mt: [0, 20, -2, -2, -2],
           position: 'absolute',
         }}
       />

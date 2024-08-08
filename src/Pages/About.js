@@ -98,7 +98,7 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
                     width: ["70%", "40%", "25%", "25%", "30rem"],
                     zIndex: 5,
                     ml: [-10, -10, -10, -10, -15],
-                    mt: [0, -4, -2.5, -2.5, -5],
+                    mt: [0, -4, 0, -2.5, -5],
                     position: 'absolute',
                 }}
             />
@@ -107,7 +107,7 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
             </Box>
             <Box>
                 <Box sx={{ display: 'flex', justifyContent: 'center', mt: 10 }}>
-                    <Box sx={{ width: { xs: "91%", sm: "91%", md: "90%", lg: "90%", xl: "95%" }, height: { xs: "15rem", sm: "20rem", md: "25rem", lg: "25rem", xl: "30rem" }, borderRadius: '20px', }}>
+                    <Box sx={{ width: { xs: "91%", sm: "91%", md: "90%", lg: "95%", xl: "95%" }, height: { xs: "15rem", sm: "20rem", md: "25rem", lg: "25rem", xl: "30rem" }, borderRadius: '20px', }}>
                         <Swiper
                             modules={[Navigation, Pagination, Autoplay]}
                             pagination={{ clickable: true }}
@@ -177,11 +177,11 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
                 </Box>
             </Box>
             <Box sx={{}}>
-                <Box sx={{ py: [10], px: [2, 5, 2], display: 'flex', justifyContent: 'center', flexDirection: ['column', 'row'] }}>
+                <Box sx={{ py: [10], px: [2, 5, 15, 5, 2], display: 'flex', justifyContent: 'center', flexDirection: ['column', 'row'] }}>
                     <Box
                         sx={{
                             position: 'relative',
-                            width: { xs: "90%", sm: "90%", md: "90%", lg: "90%", xl: "30%" },
+                            width: { xs: "90%", sm: "90%", md: "90%", lg: "50%", xl: "30%" },
                             height: { xs: "19rem", sm: "18rem", md: "25rem", lg: "25rem", xl: "25rem" },
                         }}
                     >
@@ -204,8 +204,8 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
                                 bgcolor: 'white',
                                 color: '#fff',
                                 width: ['38%', '38%', '40rem'],
-                                right: ['-11%', '-11%', "-90%"],
-                                bottom: ['5%', '5%', "-5%"],
+                                right: ['-11%', '-11%', '-90%', '-50%', "-90%"],
+                                bottom: ['5%', '5%', '-8%', '-8%', "-5%"],
                                 boxShadow: 3,
                                 borderRadius: '2px',
                                 px: [2, 2, 5],
@@ -244,7 +244,7 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
                             </Box>
                         </Box>
                     </Box>
-                    <Box sx={{ width: ["100%", "100%", "25%"], px: [2, 7, 5], textAlign: 'justify' }}>
+                    <Box sx={{ width: ["100%", "100%", "100%", "40%", "25%"], px: [2, 7, 5], textAlign: 'justify' }}>
                         <Typography sx={{
                             fontSize: ['1.5rem', '1.5rem', '1.5rem'],
                             fontWeight: '600',
