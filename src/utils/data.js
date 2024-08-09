@@ -876,7 +876,7 @@ export const chocalates = [
             '500g': { currentPrice: '₹150', originalPrice: '₹170' },
             '1kg': { currentPrice: '₹200', originalPrice: '₹220' },
         },
-        image: 'Images/ProductsImages/chocolates/lotusbiscoff.png',
+        image: 'Images/ProductsImages/chocolates/biscoffsmooth.png',
     },
     {
         id: 5,
@@ -912,7 +912,7 @@ export const chocalates = [
             '500g': { currentPrice: '₹150', originalPrice: '₹170' },
             '1kg': { currentPrice: '₹200', originalPrice: '₹220' },
         },
-        image: 'Images/ProductsImages/chocolates/milo.png',
+        image: 'Images/ProductsImages/chocolates/milo.jpg',
     },
     {
         id: 8,
@@ -924,7 +924,7 @@ export const chocalates = [
             '500g': { currentPrice: '₹150', originalPrice: '₹170' },
             '1kg': { currentPrice: '₹200', originalPrice: '₹220' },
         },
-        image: 'Images/ProductsImages/chocolates/nutella.png',
+        image: 'Images/ProductsImages/chocolates/nutellabeready.png',
 
     },
     {
@@ -932,21 +932,21 @@ export const chocalates = [
         name: 'Nutella Go',
         rating: 4,
         price: '₹185.00',
-        image: 'Images/ProductsImages/chocolates/nutellago.png',
+        image: 'Images/ProductsImages/chocolates/nutella.png',
     },
     {
         id: 10,
         name: 'Ferrero Rocher',
         rating: 4,
         price: '₹140.00',
-        image: 'Images/ProductsImages/chocolates/ferroroucher.png',
+        image: 'Images/ProductsImages/chocolates/ferreroroucher.png',
     },
     {
         id: 11,
         name: 'Raffelo',
         rating: 4,
         price: '₹125.00',
-        image: 'Images/ProductsImages/chocolates/raffaello.png',
+        image: 'Images/ProductsImages/chocolates/rafello.png',
     },
     {
         id: 12,
@@ -967,7 +967,7 @@ export const chocalates = [
         name: 'M&M Choco',
         rating: 4,
         price: '₹75.00',
-        image: 'Images/ProductsImages/chocolates/mm choco.png',
+        image: 'Images/ProductsImages/chocolates/mm.png',
     },
 
 
