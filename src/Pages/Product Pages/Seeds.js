@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardMedia, IconButton, Typography, Grid, Box, Stack, Button, Skeleton } from '@mui/material';
+import { Card, CardContent, CardMedia, IconButton, Typography, Grid, Box, Stack, Button, Skeleton, Select, MenuItem, InputLabel } from '@mui/material';
 import { styled } from '@mui/system';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
@@ -15,6 +15,12 @@ import Title from '../../Component/Title';
 import ProductNavbar from '../../Component/ProductNavbar';
 import Footer from '../../Component/Footer';
 
+const gramOptions = [
+  { value: '100g', label: '100g' },
+  { value: '250g', label: '250g' },
+  { value: '500g', label: '500g' },
+  { value: '1kg', label: '1kg' },
+];
 const StyledCard = styled(Card)(({ theme }) => ({
   backgroundColor: '#fff',
   color: '#92553D',
@@ -68,29 +74,29 @@ const RatingStars = ({ rating, size }) => (
 
 const ProductCard = ({ product, isLoading }) => {
   const [liked, setLiked] = useState(false);
-  const [bookmarked, setBookmarked] = useState(false);
+  const [selectedGram, setSelectedGram] = useState('100g'); // Default to 100g
+  const [price, setPrice] = useState(product.prices[selectedGram].currentPrice); // Set initial price based on default gram
+  const [originalPrice, setOriginalPrice] = useState(product.prices[selectedGram].originalPrice); // Set initial original price based on default gram
 
   const handleLikeClick = () => {
     setLiked(!liked);
   };
 
-  // const handleShoppingClick = () => {
-  //   window.open("https://wa.me/8220570301", "_blank");
-  // };
+  const handleGramChange = (e) => {
+    const newGram = e.target.value;
+    setSelectedGram(newGram);
+    setPrice(product.prices[newGram].currentPrice); // Update the current price based on the selected gram
+    setOriginalPrice(product.prices[newGram].originalPrice); // Update the original price based on the selected gram
+  };
+
   const handleShoppingClick = (product) => {
-    // Construct the URL for the product page on Vercel
-    const productPageUrl = `https://smartdryfruitdryfruit.vercel.app/seeds/${product.id}`;
-
-    // Encode URL and message
-    const encodedMessage = encodeURIComponent(`Hi! I'm interested in this product:\n\nName: ${product.name}\nPrice: ${product.price}\nGrams: ${product.grams}\n\nPlease provide more details and help me place an order.`);
-
-    // WhatsApp URL with the specific number
-    const whatsappNumber = '919952857016'; // Remove '+' from the number
+    const encodedMessage = encodeURIComponent(`Hi! I'm interested in this product:\n\nName: ${product.name}\nPrice: ${price}\nOriginal Price: ${originalPrice}\nGrams: ${selectedGram}\n\nPlease provide more details and help me place an order.`);
+    const whatsappNumber = '919952857016';
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
-    // Open WhatsApp chat
     window.open(whatsappUrl, '_blank');
   };
+
+
 
   const handleShareClick = async (product) => {
     // Construct the URL for the product page on Vercel
@@ -161,14 +167,14 @@ const ProductCard = ({ product, isLoading }) => {
             }} onClick={() => handleShareClick(product)}>
               <ShareIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
             </IconButton >
-              <IconButton aria-label="add to cart" sx={{
-                color: '#fff', bgcolor: '#92553D', '&:hover': {
-                  bgcolor: '#212121',
-                  boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
-                },
-              }} onClick={() => handleShoppingClick(product)}>
-                <ShoppingCartIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
-              </IconButton>
+            <IconButton aria-label="add to cart" sx={{
+              color: '#fff', bgcolor: '#92553D', '&:hover': {
+                bgcolor: '#212121',
+                boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
+              },
+            }} onClick={() => handleShoppingClick(product)}>
+              <ShoppingCartIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
+            </IconButton>
 
           </>
         )}
@@ -183,12 +189,50 @@ const ProductCard = ({ product, isLoading }) => {
           </>
         ) : (
           <>
-            <Typography variant={["0.8rem", "h6"]} component="div" sx={{ textAlign: 'start', fontWeight: [700, 600], letterSpacing: 1 }} >
+            <Typography  component="div" sx={{ textAlign: 'start', fontWeight: [700, 600], letterSpacing: 1,fontSize:['0.8rem','1.3rem'] }} >
               {product.name}
             </Typography>
-            <Typography variant="body1" component="div" sx={{ textAlign: 'start', letterSpacing: 0.5 }} >
-              250 gm
+            <Typography variant="body2" component="div" sx={{ textAlign: 'start', letterSpacing: 1, py: 1 }}>
+              <Select
+                value={selectedGram}
+                displayEmpty
+                style={{ height: 40 }}
+                onChange={handleGramChange}
+                sx={{
+                  fontSize: ['1rem', '1rem'],
+                  minWidth: 100,
+                  letterSpacing: 0.5,
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: '#ccc', // Default border color
+                    },
+                    '&:hover fieldset': {
+                      borderColor: '#92553D', // Border color on hover
+                    },
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#92553D', // Border color when focused
+                    },
+                  },
+                  '& .MuiOutlinedInput-notchedOutline': {
+                    borderColor: '#ccc', // Default border color
+                  },
+                  '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                    borderColor: '#92553D !important', // Border color when focused
+                  },
+                }}
+              >
+                <MenuItem value="" disabled>
+                  Select weight
+                </MenuItem>
+                {gramOptions.map((option) => (
+                  <MenuItem key={option.value} value={option.value}>
+                    {option.label}
+                  </MenuItem>
+                ))}
+              </Select>
             </Typography>
+
+
             <Typography color={'#92553D'} sx={{ textAlign: 'start', fontWeight: 600, fontSize: '0.8rem', letterSpacing: 0.5, mt: 1, display: 'flex', }} >
               <VerifiedIcon sx={{ fontSize: '1rem' }} />
               Smart Dry Fruits
@@ -197,11 +241,11 @@ const ProductCard = ({ product, isLoading }) => {
               <Box>
                 <RatingStars rating={product.rating} size="1.2rem" />
                 <Typography color={'#282828'} sx={{ textAlign: 'start', fontWeight: 700, fontSize: '1rem', letterSpacing: 0.5, display: 'flex', alignItems: 'center' }} >
-                  {product.price}
+                  {price}
                   <LocalOfferOutlinedIcon sx={{ fontSize: '0.9rem' }} />
                 </Typography>
                 <Typography color={'gray'} sx={{ textAlign: 'start', fontWeight: 600, fontSize: '0.8rem', letterSpacing: 0.5, textDecoration: "line-through" }} >
-                  {product.originalPrice}
+                  {originalPrice}
                 </Typography>
               </Box>
               <Box sx={{ display: ['flex'], alignItems: 'center', mt: 1.5 }}>
@@ -217,7 +261,7 @@ const ProductCard = ({ product, isLoading }) => {
           </>
         )}
       </CardContent>
-    </StyledCard>
+    </StyledCard >
   );
 };
 
