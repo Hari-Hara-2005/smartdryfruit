@@ -90,7 +90,7 @@ const ProductCard = ({ product, isLoading }) => {
   };
 
   const handleShoppingClick = (product) => {
-    const encodedMessage = encodeURIComponent(`Hi! I'm interested in this product:\n\nName: ${product.name}\nPrice: ${price}\nOriginal Price: ${originalPrice}\nGrams: ${selectedGram}\n\nPlease provide more details and help me place an order.`);
+    const encodedMessage = encodeURIComponent(`Hi! I'm interested in this product:\n\nName: ${product.name}\nPrice: ${price}\n\nGrams: ${selectedGram}\n\nPlease provide more details and help me place an order.`);
     const whatsappNumber = '919952857016';
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
@@ -100,7 +100,7 @@ const ProductCard = ({ product, isLoading }) => {
 
   const handleShareClick = async (product) => {
     // Construct the URL for the product page on Vercel
-    const shareUrl = `https://smartdryfruitdryfruit.vercel.app/products/${product.id}`;
+    const shareUrl = `https://smartdryfruitdryfruit.vercel.app/seeds`;
     const message = `Check out this amazing product: ${product.name}\nPrice: ${product.price}\n${shareUrl}`;
 
     // Encode URL and message
@@ -189,7 +189,7 @@ const ProductCard = ({ product, isLoading }) => {
           </>
         ) : (
           <>
-            <Typography  component="div" sx={{ textAlign: 'start', fontWeight: [700, 600], letterSpacing: 1,fontSize:['0.8rem','1.3rem'] }} >
+            <Typography component="div" sx={{ textAlign: 'start', fontWeight: [700, 600], letterSpacing: 1, fontSize: ['0.8rem', '1.3rem'] }} >
               {product.name}
             </Typography>
             <Typography variant="body2" component="div" sx={{ textAlign: 'start', letterSpacing: 1, py: 1 }}>
