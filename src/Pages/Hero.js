@@ -9,6 +9,7 @@ import IndustryCarousel from '../Component/ProductSlide';
 import Faq from '../Component/Faq';
 import Footer from '../Component/Footer';
 import { Link } from 'react-router-dom';
+import MainProductSlide from '../Component/MainProductSlide';
 const Hero = () => {
     useEffect(() => {
         animateHero();
@@ -25,17 +26,20 @@ const Hero = () => {
     return (
         <Box>
             <StickyWhatsapp link={"https://wa.me/8220570301"} />
-            <Box sx={{ height: '100vh', bgcolor: '#4b0082', position: 'relative' }}>
+            <Box sx={{ height: '100vh', bgcolor: '#282828', position: 'relative' }}>
                 <Navbar />
+                <MainProductSlide />
+            </Box>
+            <Box sx={{ height: '100vh', bgcolor: '#4b0082', position: 'relative' }}>
                 {/* <Box sx={{display:'flex',justifyContent:'center'}}>
           <Box component='img' src="/Assets/logo.png" sx={{ position: 'absolute'}} />
       </Box> */}
                 <Typography
                     variant="h1"
                     sx={{
-                        fontSize: ["6rem","23rem"],
+                        fontSize: ["6rem", "23rem"],
                         fontWeight: "bold",
-                        letterSpacing:[0,30],
+                        letterSpacing: [0, 30],
                         color: "white",
                         position: 'absolute',
                         top: {
@@ -49,8 +53,8 @@ const Hero = () => {
                         transform: "translate(-50%, -50%)",
                         zIndex: 1,
                         // opacity: 0.2,
-                        textTransform:'uppercase',
-                        fontFamily: "'Poppins ', serif", 
+                        textTransform: 'uppercase',
+                        fontFamily: "'Poppins ', serif",
                     }}
                 >
                     Smart
@@ -183,7 +187,7 @@ const Hero = () => {
                                     >
                                         <Box sx={{ width: ["100%", "100%", "100%", "100%", '25rem'] }}>
                                             <Box
-                                                component='img'                 
+                                                component='img'
                                                 src={item.img}
                                                 alt='pack'
                                                 sx={{
