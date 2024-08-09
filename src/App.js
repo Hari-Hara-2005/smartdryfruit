@@ -11,6 +11,7 @@ import { Contact } from './Pages/Contact-Us';
 import Chocolates from './Pages/Product Pages/Chocolates';
 import Juice from './Pages/Product Pages/Juice';
 import Cart from './Pages/Cart';
+import Powder from './Pages/Product Pages/Powder';
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Route path='/chocolates' element={<Chocolates />} />
         <Route path='/Juice' element={<Juice />} />
         <Route path='/cart' element={<Cart />} />
+        <Route path='/Powder' element={<Powder />} />
       </Routes>
     </BrowserRouter>
   );

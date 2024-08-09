@@ -1044,8 +1044,33 @@ export const drinks = [
         price: '₹250.00',
         image: 'Images/ProductsImages/juices/patritti .png',
     },
+];
 
-
+export const powders = [
+    {
+        id: 3,
+        name: 'Davidoff',
+        rating: 4,
+        prices: {
+            '100g': { currentPrice: '₹50', originalPrice: '₹60' },
+            '250g': { currentPrice: '₹100', originalPrice: '₹120' },
+            '500g': { currentPrice: '₹150', originalPrice: '₹170' },
+            '1kg': { currentPrice: '₹200', originalPrice: '₹220' },
+        },
+        image: 'Images/ProductsImages/chocolates/davidoff.png',
+    },
+    {
+        id: 3,
+        name: 'Davidoff',
+        rating: 4,
+        prices: {
+            '100g': { currentPrice: '₹50', originalPrice: '₹60' },
+            '250g': { currentPrice: '₹100', originalPrice: '₹120' },
+            '500g': { currentPrice: '₹150', originalPrice: '₹170' },
+            '1kg': { currentPrice: '₹200', originalPrice: '₹220' },
+        },
+        image: 'Images/ProductsImages/chocolates/davidoff.png',
+    },
 
 
 ];

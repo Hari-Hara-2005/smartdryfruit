@@ -10,23 +10,24 @@ const ProductNavbar = () => {
     { link: "/seeds", name: "Seeds" },
     { link: "/nuts", name: "Nuts" },
     { link: "/chocolates", name: "Chocolates" },
-    { link: "/juice", name: "Drinks" }
+    { link: "/juice", name: "Drinks" },
+    { link: "/powder", name: "Powders" }
   ];
 
   return (
-    <Box 
-      sx={{ 
-        display: 'flex', 
-        justifyContent: 'center', 
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
         overflowX: { xs: 'auto', sm: 'hidden' }, // Enable horizontal scroll on mobile
         whiteSpace: 'nowrap', // Prevent wrapping of items
         width: '100%', // Full width for container
         height: { xs: 'auto', sm: 'auto' } // Ensure proper height on mobile
       }}
     >
-      <List 
-        sx={{ 
-          display: 'flex', 
+      <List
+        sx={{
+          display: 'flex',
           flexDirection: 'row', // Horizontal layout
           padding: 0,
           overflowX: 'auto', // Allow horizontal scrolling
@@ -36,9 +37,9 @@ const ProductNavbar = () => {
         {items.map((item, index) => {
           const isActive = location.pathname === item.link;
           return (
-            <Link 
+            <Link
               key={index}
-              to={item.link} 
+              to={item.link}
               style={{ textDecoration: 'none', color: '#000' }}
             >
               <ListItem
