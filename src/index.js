@@ -6,8 +6,8 @@ import { store } from './redux/store'; // Adjust the path based on your director
 
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  // <Provider store={store}>
+    <App />,
+  // </Provider>,
   document.getElementById('root')
 );

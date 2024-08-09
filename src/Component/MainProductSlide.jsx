@@ -46,7 +46,7 @@ const MainProductSlide = () => {
 
     return (
         <>
-            <Box sx={{ width: '100%', height: ["25rem", "30rem", "40rem", "40rem", "40rem"], pt: 5 }}>
+            <Box sx={{ width: '100%', height: ["25rem", "30rem", "40rem", "40rem", "30rem"], pt: 5 }}>
                 <Swiper
                     slidesPerView={slidesPerView}
                     navigation={true}
