@@ -30,10 +30,7 @@ const Hero = () => {
                 <Navbar />
                 <MainProductSlide />
             </Box>
-            <Box sx={{ height: '100vh', bgcolor: '#4b0082', position: 'relative' }}>
-                {/* <Box sx={{display:'flex',justifyContent:'center'}}>
-          <Box component='img' src="/Assets/logo.png" sx={{ position: 'absolute'}} />
-      </Box> */}
+            {/* <Box sx={{ height: '100vh', bgcolor: '#4b0082', position: 'relative' }}>
                 <Typography
                     variant="h1"
                     sx={{
@@ -123,13 +120,25 @@ const Hero = () => {
                         position: 'absolute',
                     }}
                 />
-            </Box>
-            <Box sx={{ height: ['100vh', '110vh'], bgcolor: '#92553D' }} className="two">
+            </Box> */}
+            <Box sx={{ height: ['100vh', '110vh'], bgcolor: '#92553D' }}>
                 <Navbar color="#fff" />
                 <Box sx={{ display: 'flex', flexDirection: ['column', 'column', 'row'], alignItems: 'center', justifyContent: "space-between", height: ['80%'], mx: [2, 11] }}>
                     <Box sx={{ display: 'flex', justifyContent: ['center', 'center', 'normal'] }}>
-                        <Box component='img' src='Images/platte-1.png' alt='Cover 2' sx={{ width: ["60%", "60%", "36%"], mt: [25, 50, 9], position: 'absolute' }} />
+                        <Box component='img' src='Images/platte-1.png' alt='Cover 2' sx={{ width: ["70%", "80%", "36%"], mt: [18, 40, 50, 9], position: 'absolute' }} />
                     </Box>
+                    <Box
+                        component='img'
+                        src='/Images/img-4.png'
+                        alt='pack'
+                        sx={{
+                            width: ["35%", "40%", "22%"],
+                            transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
+                            position: 'absolute',
+                            ml: [0, 0, 13],
+                            zIndex: 2
+                        }}
+                    />
                     <Box sx={{ width: ["100%", "100%", "50%"] }}>
                         <Typography sx={{
                             fontSize: ['1.5rem', '1.5rem', '2.5rem'],

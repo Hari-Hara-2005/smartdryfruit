@@ -3,9 +3,18 @@ import { Box, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 const industryData = [
+    { id: "1", img: "Images/img-4.png", title: "Almond" },
+    { id: "1", img: "Images/img-4.png", title: "Almond" },
+    { id: "1", img: "Images/img-4.png", title: "Almond" },
+    { id: "1", img: "Images/img-4.png", title: "Almond" },
+    { id: "1", img: "Images/img-4.png", title: "Almond" },
+    { id: "1", img: "Images/img-4.png", title: "Almond" },
+    { id: "1", img: "Images/img-4.png", title: "Almond" },
+    { id: "1", img: "Images/img-4.png", title: "Almond" },
+    { id: "1", img: "Images/img-4.png", title: "Almond" },
     { id: "1", img: "Images/img-4.png", title: "Almond" },
     { id: "1", img: "Images/img-4.png", title: "Almond" },
     { id: "1", img: "Images/img-4.png", title: "Almond" },
@@ -30,7 +39,7 @@ const MainProductSlide = () => {
             } else if (window.innerWidth >= 700) {
                 setSlidesPerView(3);
             } else {
-                setSlidesPerView(1.340);
+                setSlidesPerView(3);
             }
         };
 
@@ -39,21 +48,16 @@ const MainProductSlide = () => {
         return () => window.removeEventListener('resize', updateSlidesPerView);
     }, []);
 
-    const getBoxShadowColor = (index) => {
-        const colors = ['red', 'blue', 'yellow', 'green', 'purple'];
-        return colors[index % colors.length];
-    };
-
     return (
         <>
-            <Box sx={{ width: '100%', height: ["25rem", "30rem", "40rem", "40rem", "30rem"], pt: 5 }}>
+            <Box sx={{ display: 'flex', alignContent: 'center', height: ['80%','80%','90%'] }}>
                 <Swiper
                     slidesPerView={slidesPerView}
                     navigation={true}
-                    centeredSlides={true}
-                    spaceBetween={20}
-                    modules={[Navigation]}
+                    spaceBetween={0}
+                    modules={[Navigation, Autoplay]}
                     className="mySwiper"
+                    autoplay={{ delay: 2500, disableOnInteraction: false }}
                     onSlideChange={handleSlideChange}
                     breakpoints={{
                         700: {
@@ -75,14 +79,11 @@ const MainProductSlide = () => {
                             <Box
                                 sx={{
                                     position: 'relative',
-                                    width: { xs: "91%", sm: "85%", md: "90%", lg: "90%", xl: "88%" },
-                                    height: { xs: "15rem", sm: "18rem", md: "25rem", lg: "25rem", xl: "50rem" },
-                                    borderRadius: "8px",
-                                    overflow: 'hidden',
+                                    width: { xs: "100%", sm: "100%", md: "70%", lg: "75%", xl: "75%" },
                                     cursor: 'pointer',
-                                    transform: (index === activeIndex + Math.floor(slidesPerView / 2)) ? 'scale(1.20)' : 'scale(1)',
+                                    transform: (index === activeIndex + Math.floor(slidesPerView / 2)) ? ['scale(1.5)', 'scale(1.5)', 'scale(1.09)'] : 'scale(0.4)',
                                     transition: 'transform 0.3s ease',
-                                    }}
+                                }}
                             >
                                 <img
                                     src={item.img}
@@ -109,8 +110,8 @@ const MainProductSlide = () => {
                         text-align: center;
                         font-size: 18px;
                         display: flex;
-                        justify-content: center;
                         align-items: center;
+                          justify-content: center;
                     }
 
                     .swiper-slide img {
