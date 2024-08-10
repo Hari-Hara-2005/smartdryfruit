@@ -209,6 +209,7 @@ const ProductCard = ({ product, isLoading }) => {
             <Typography component="div" sx={{ textAlign: 'start', fontWeight: [700, 600], letterSpacing: 1, fontSize: ['0.8rem', '1.3rem'] }} >
               {product.name}
             </Typography>
+<<<<<<< HEAD
             <Typography variant="body2" component="div" sx={{ textAlign: 'start', letterSpacing: 1, py: 1 }}>
               <Select
                 value={selectedGram}
@@ -247,6 +248,10 @@ const ProductCard = ({ product, isLoading }) => {
                   </MenuItem>
                 ))}
               </Select>
+=======
+            <Typography variant="body1" component="div" sx={{ textAlign: 'start', letterSpacing: 0.5 }} >
+              1 kg
+>>>>>>> 3402b87d0725ca7d639b7b5fabbeab1d39cc3ce7
             </Typography>
 
 
