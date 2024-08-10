@@ -143,7 +143,7 @@ const ProductCard = ({ product, isLoading }) => {
               {product.name}
             </Typography>
             <Typography variant="body1" component="div" sx={{ textAlign: 'start', letterSpacing: 0.5 }} >
-              250 gm
+              1 kg
             </Typography>
             <Typography color={'#92553D'} sx={{ textAlign: 'start', fontWeight: 600, fontSize: '0.8rem', letterSpacing: 0.5, mt: 1, display: 'flex', }} >
               <VerifiedIcon sx={{ fontSize: '1rem' }} />
