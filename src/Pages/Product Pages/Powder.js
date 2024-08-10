@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardMedia, IconButton, Typography, Grid, Box, Stack, Button, Skeleton, Select, MenuItem, InputLabel } from '@mui/material';
 import { styled } from '@mui/system';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import BookmarkIcon from '@mui/icons-material/Bookmark';
 import StarIcon from '@mui/icons-material/Star';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
@@ -14,7 +13,9 @@ import Navbar from '../../Component/Navbar';
 import Title from '../../Component/Title';
 import ProductNavbar from '../../Component/ProductNavbar';
 import Footer from '../../Component/Footer';
-
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../redux/cartSlice';
+import { toast } from 'react-toastify';
 const gramOptions = [
     { value: '100g', label: '100g' },
     { value: '250g', label: '250g' },
@@ -73,6 +74,23 @@ const RatingStars = ({ rating, size }) => (
 );
 
 const ProductCard = ({ product, isLoading }) => {
+    const dispatch = useDispatch();
+
+    const handleAddToCart = () => {
+        dispatch(addToCart({
+            id: product.id,
+            name: product.name,
+            image: product.image,
+            price, // This is the selected gram price
+            originalPrice,
+            selectedGram
+        }));
+        toast.success('Successfully added to cart!', {
+            position: 'bottom-left', // Use string position
+            autoClose: 3000, // Duration in milliseconds
+        });
+    }
+
     const [liked, setLiked] = useState(false);
     const [selectedGram, setSelectedGram] = useState('100g'); // Default to 100g
     const [price, setPrice] = useState(product.prices[selectedGram].currentPrice); // Set initial price based on default gram
@@ -100,7 +118,7 @@ const ProductCard = ({ product, isLoading }) => {
 
     const handleShareClick = async (product) => {
         // Construct the URL for the product page on Vercel
-        const shareUrl = `https://smartdryfruitdryfruit.vercel.app/seeds`;
+        const shareUrl = `https://smartdryfruitdryfruit.vercel.app/powders`;
         const message = `Check out this amazing product: ${product.name}\nPrice: ${product.price}\n${shareUrl}`;
 
         // Encode URL and message
@@ -118,7 +136,6 @@ const ProductCard = ({ product, isLoading }) => {
                     text: message,
                     url: shareUrl,
                 });
-                console.log('Successful share');
             } catch (error) {
                 console.log('Error sharing:', error);
             }
@@ -134,7 +151,7 @@ const ProductCard = ({ product, isLoading }) => {
     return (
         <StyledCard>
             {isLoading ? (
-                <Skeleton variant="rectangular" width="100%" height={220} />
+                <Skeleton variant="rectangular" animation="wave" width="100%" height={260} />
             ) : (
                 <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', ml: [2, 0], mt: [0, 2] }}>
                     <Box sx={{ width: ["7.5rem", "12rem"] }}>
@@ -145,9 +162,9 @@ const ProductCard = ({ product, isLoading }) => {
             <IconContainer>
                 {isLoading ? (
                     <>
-                        <Skeleton variant="circular" width={40} height={40} />
-                        <Skeleton variant="circular" width={40} height={40} />
-                        <Skeleton variant="circular" width={40} height={40} />
+                        <Skeleton variant="circular" animation="wave" width={40} height={40} />
+                        <Skeleton variant="circular" animation="wave" width={40} height={40} />
+                        <Skeleton variant="circular" animation="wave" width={40} height={40} />
                     </>
                 ) : (
                     <>
@@ -182,9 +199,9 @@ const ProductCard = ({ product, isLoading }) => {
             <CardContent>
                 {isLoading ? (
                     <>
-                        <Skeleton variant="text" width="80%" />
-                        <Skeleton variant="text" width="60%" />
-                        <Skeleton variant="text" width="40%" />
+                        <Skeleton variant="text" animation="wave" width="80%" />
+                        <Skeleton variant="text" animation="wave" width="60%" />
+                        <Skeleton variant="text" animation="wave" width="40%" />
                         <Skeleton variant="rectangular" width="100%" height={50} />
                     </>
                 ) : (
@@ -240,22 +257,28 @@ const ProductCard = ({ product, isLoading }) => {
                         <Stack direction={["column", 'row']} justifyContent={'space-between'}>
                             <Box>
                                 <RatingStars rating={product.rating} size="1.2rem" />
-                                <Typography color={'#282828'} sx={{ textAlign: 'start', fontWeight: 700, fontSize: '1rem', letterSpacing: 0.5, display: 'flex', alignItems: 'center' }} >
-                                    {price}
-                                    <LocalOfferOutlinedIcon sx={{ fontSize: '0.9rem' }} />
-                                </Typography>
-                                <Typography color={'gray'} sx={{ textAlign: 'start', fontWeight: 600, fontSize: '0.8rem', letterSpacing: 0.5, textDecoration: "line-through" }} >
-                                    {originalPrice}
-                                </Typography>
+                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                    <Typography color={'#282828'} sx={{ textAlign: 'start', fontWeight: 700, fontSize: '1rem', letterSpacing: 0.5, display: 'flex', alignItems: 'center' }} >
+                                        {price}
+                                        <LocalOfferOutlinedIcon sx={{ fontSize: '0.9rem' }} />
+                                    </Typography>
+                                    <Typography color={'gray'} sx={{ textAlign: 'start', fontWeight: 600, fontSize: '0.9rem', letterSpacing: 0.5, textDecoration: "line-through" }} >
+                                        {originalPrice}
+                                    </Typography>
+                                </Box>
                             </Box>
-                            <Box sx={{ display: ['flex'], alignItems: 'center', mt: 1.5 }}>
-                                <Button variant="contained" startIcon={<ShoppingCartOutlinedIcon />} sx={{
-                                    bgcolor: "#92553D", textTransform: 'none', borderRadius: '50px', px: [2.5], '&:hover': {
-                                        bgcolor: "#282828"
-                                    }
-                                }}>
-                                    Add to cart
-                                </Button>
+                            <Box sx={{ display: ['flex'], alignItems: 'center', mt: [1.5, 0] }}>
+                                <Box sx={{ mt: 2 }}>
+                                    <Box sx={{ display: ['flex'], alignItems: 'center', mt: 1.5 }}>
+                                        <Button variant="contained" startIcon={<ShoppingCartOutlinedIcon />} sx={{
+                                            bgcolor: "#92553D", textTransform: 'none', borderRadius: '50px', px: [2.5], '&:hover': {
+                                                bgcolor: "#282828"
+                                            }
+                                        }} onClick={handleAddToCart}>
+                                            Add to cart
+                                        </Button>
+                                    </Box>
+                                </Box>
                             </Box>
                         </Stack>
                     </>
@@ -265,7 +288,7 @@ const ProductCard = ({ product, isLoading }) => {
     );
 };
 
-const Powder = () => {
+const Powders = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     // Simulate loading data
@@ -318,4 +341,4 @@ const Powder = () => {
     );
 };
 
-export default Powder;
+export default Powders;

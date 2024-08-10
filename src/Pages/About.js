@@ -14,6 +14,7 @@ import TRUCk from './truck.json';
 import QUALITY from './quality.json';
 import COINS from './coins.json';
 import Footer from "../Component/Footer";
+import CountUp from 'react-countup';
 export const About = () => {
     const lockRef = useRef(null);
     const truckRef = useRef(null);
@@ -217,7 +218,7 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
                                 borderBottom: ['2px solid #92553D', 'none'], px: [0, 0, 5], pb: [2, 2, 0],
                             }}>
                                 <Typography variant="h6" component="div" sx={{ mb: -1, color: '#92553D', fontWeight: 600 }}>
-                                    11+
+                                    <CountUp start={0} end={11} duration={40} startOnScreen={true} />+
                                 </Typography>
                                 <Typography variant="h6" component="div" sx={{ color: '#000', fontWeight: 600, fontSize: 15 }}>
                                     Stores
@@ -228,7 +229,7 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
                                 borderBottom: ['2px solid #92553D', 'none'], px: [0, 0, 5], pb: [2, 2, 0], ml: [0, 0, 4]
                             }}>
                                 <Typography variant="h6" component="div" sx={{ mb: -1, color: '#92553D', fontWeight: 600, }}>
-                                    450000+
+                                    <CountUp start={0} end={45000} duration={40} startOnScreen={true} />+
                                 </Typography>
                                 <Typography variant="h6" component="div" sx={{ color: '#000', fontWeight: 600, fontSize: 15, lineHeight: [1.3, 1.5] }}>
                                     Happy Customers
@@ -236,7 +237,7 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
                             </Box>
                             <Box sx={{ ml: [0, 0, 4], pt: [2, 0, 0] }}>
                                 <Typography variant="h6" component="div" sx={{ mb: -1, color: '#92553D', fontWeight: 600, }}>
-                                    500000+
+                                    <CountUp start={0} end={50000} duration={40} startOnScreen={true} />+
                                 </Typography>
                                 <Typography variant="h6" component="div" sx={{ color: '#000', fontWeight: 600, fontSize: 15, lineHeight: [1.3, 1.5] }}>
                                     Order Delivered
@@ -282,7 +283,7 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
                                 <Player
                                     ref={truckRef}
                                     trigger="loop"
-                                    size={96}
+                                    size={window.innerWidth < 600 ? 70 : 96}
                                     icon={TRUCk}
                                     colors='primary:red,secondary:white'
                                     onComplete={() => truckRef.current?.playFromBeginning()}
@@ -295,7 +296,8 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
                                 <Player
                                     ref={lockRef}
                                     trigger="loop"
-                                    size={96}
+
+                                    size={window.innerWidth < 600 ? 70 : 96}
                                     icon={LOCK}
                                     colors='primary:red,secondary:white'
                                     onComplete={() => lockRef.current?.playFromBeginning()}
@@ -308,7 +310,8 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
                                 <Player
                                     ref={qualityRef}
                                     trigger="loop"
-                                    size={96}
+
+                                    size={window.innerWidth < 600 ? 70 : 96}
                                     icon={QUALITY}
                                     colors='primary:red,secondary:white'
                                     onComplete={() => qualityRef.current?.playFromBeginning()}
@@ -321,7 +324,8 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
                                 <Player
                                     ref={coinsRef}
                                     trigger="loop"
-                                    size={96}
+
+                                    size={window.innerWidth < 600 ? 70 : 96}
                                     icon={COINS}
                                     colors='primary:red,secondary:white'
                                     onComplete={() => coinsRef.current?.playFromBeginning()}

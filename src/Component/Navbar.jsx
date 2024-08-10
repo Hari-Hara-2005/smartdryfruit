@@ -7,6 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import {
   Button,
   Drawer,
@@ -22,10 +23,11 @@ import {
   MenuItem,
   useMediaQuery,
   useTheme,
+  Badge
 } from "@mui/material";
 import CusAccordion from './CusAccordion'; // Import your CusAccordion component
 import { Link } from "react-router-dom";
-
+import { useSelector } from 'react-redux';
 const drawerWidth = 240;
 
 function HideOnScroll(props) {
@@ -40,8 +42,11 @@ function HideOnScroll(props) {
     </Slide>
   );
 }
-
+const ScrollToTop = () => {
+  window.scrollTo(0, 0)
+}
 export default function Navbar(props) {
+  const cartItems = useSelector((state) => state.cart.items);
   const { color } = props;
   const [isDown, setIsDown] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -134,7 +139,7 @@ export default function Navbar(props) {
           item.name === "Product" ? (
             <React.Fragment key={index}>
               {isMobile ? (
-                <Box sx={{ width: ['40%','10%',], ml: [3.5] }}>
+                <Box sx={{ width: ['40%', '10%',], ml: [3.5] }}>
                   <CusAccordion
                     head={
                       <Typography
@@ -156,9 +161,11 @@ export default function Navbar(props) {
                             color={"inherit"}
                             style={{ textDecoration: 'none' }}
                             key={index}
+                            onClick={ScrollToTop}
                           >
                             <Typography
                               key={menuIndex}
+                              onClick={ScrollToTop}
                               color={"inherit"}
                               underline="hover"
                               sx={{
@@ -195,6 +202,7 @@ export default function Navbar(props) {
                         alignItems: "center",
                         justifyContent: "center",
                       }}
+                      onClick={ScrollToTop}
                       disableTypography
                       primary={
                         <Typography
@@ -231,7 +239,7 @@ export default function Navbar(props) {
                     }}
                   >
                     {productMenuItems.map((menuItem, menuIndex) => (
-                      <Link to={menuItem.link} style={{ color: 'black', textDecoration: 'none' }} underline="none">
+                      <Link to={menuItem.link} style={{ color: 'black', textDecoration: 'none' }} onClick={ScrollToTop} underline="none">
                         <MenuItem
                           key={menuIndex}
                           onClick={() => {
@@ -241,7 +249,7 @@ export default function Navbar(props) {
                           sx={{
                             fontSize: [18],
                             fontWeight: "600",
-                            color: "#000", // Use the color prop here
+                            color: "#000",
                           }}
                         >
                           {menuItem.name}
@@ -279,6 +287,7 @@ export default function Navbar(props) {
                     alignItems: "center",
                     justifyContent: "center",
                   }}
+                  onClick={ScrollToTop}
                   disableTypography
                   primary={
                     <Typography
@@ -342,29 +351,40 @@ export default function Navbar(props) {
                   }}
                 >
                   <ImageListItem>
-                    <Box
-                      component="img"
-                      src="Images/logo.png"
-                      sx={{
-                        width: ["4rem", "5rem", "6rem"],
-                        height: ["4rem", "5rem", "6rem"],
-                        borderRadius: "100%",
-                        p: 1.3,
-                      }}
-                      alt="logo"
-                    />
+                    <Link color={"inherit"} underline="none" href="/">
+                      <Box
+                        component="img"
+                        src="Images/logo.png"
+                        sx={{
+                          width: ["4rem", "5rem", "6rem"],
+                          height: ["4rem", "5rem", "6rem"],
+                          borderRadius: "100%",
+                          p: 1.3,
+                        }}
+                        alt="logo"
+                      />
+                    </Link>
                   </ImageListItem>
                 </Box>
               </Link>
-              <IconButton
-                onClick={handleDrawerToggle}
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="open drawer"
-              >
-                <MenuIcon />
-              </IconButton>
+              <Box sx={{ display: 'flex' ,alignItems:'center',gap:3}}>
+                <Badge
+                  badgeContent={cartItems.length}
+                  color="error"
+                  sx={{ '& .MuiBadge-dot': { backgroundColor: '#92553D' } }} // Customize badge color if needed
+                >
+                  <ShoppingCartOutlinedIcon />
+                </Badge>
+                <IconButton
+                  onClick={handleDrawerToggle}
+                  size="large"
+                  edge="start"
+                  color="inherit"
+                  aria-label="open drawer"
+                >
+                  <MenuIcon />
+                </IconButton>
+              </Box>
             </Stack>
 
             <Link color={"inherit"} underline="none" href="/">
@@ -422,7 +442,7 @@ export default function Navbar(props) {
                         },
                       }}
                     >
-                      <Link to='/dates' color="inherit" underline="none">
+                      <Link to='/dates' color="inherit" underline="none" onClick={ScrollToTop}>
                         <MenuItem
                           onClick={handleDropdownClose}
                           sx={{
@@ -442,7 +462,7 @@ export default function Navbar(props) {
                           color: '#000', // Use the color prop here
                         }}
                       >
-                        <Link to="/dryfruits" color="inherit" underline="none">
+                        <Link to="/dryfruits" color="inherit" underline="none" onClick={ScrollToTop}>
                           Dry Fruits
                         </Link>
                       </MenuItem>
@@ -454,7 +474,7 @@ export default function Navbar(props) {
                           color: '#000', // Use the color prop here
                         }}
                       >
-                        <Link to="/seeds" color="inherit" underline="none">
+                        <Link to="/seeds" color="inherit" underline="none" onClick={ScrollToTop}>
                           Seed
                         </Link>
                       </MenuItem>
@@ -466,7 +486,7 @@ export default function Navbar(props) {
                           color: '#000', // Use the color prop here
                         }}
                       >
-                        <Link to="/nuts" color="inherit" underline="none">
+                        <Link to="/nuts" color="inherit" underline="none" onClick={ScrollToTop}>
                           Nuts
                         </Link>
                       </MenuItem>
@@ -486,11 +506,36 @@ export default function Navbar(props) {
                         backgroundColor: "rgba(255,255,255,0.1)",
                       },
                     }}
+                    onClick={ScrollToTop}
                   >
                     {item.name}
                   </Button>
                 )
               )}
+              <Button
+                href="/cart"
+                variant="contained"
+                startIcon={
+                  <Badge
+                    badgeContent={cartItems.length}
+                    color="error"
+                    sx={{ '& .MuiBadge-dot': { backgroundColor: '#92553D' } }} // Customize badge color if needed
+                  >
+                    <ShoppingCartOutlinedIcon />
+                  </Badge>
+                }
+                sx={{
+                  bgcolor: "#92553D",
+                  textTransform: 'none',
+                  borderRadius: '50px',
+                  px: [2.5],
+                  '&:hover': {
+                    bgcolor: "#282828"
+                  }
+                }}
+              >
+                Go To Cart
+              </Button>
             </Box>
           </Toolbar>
         </AppBar>

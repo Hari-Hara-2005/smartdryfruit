@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
+import { Navigation,Autoplay } from 'swiper/modules';
 
 const industryData = [
     { id: "1", img: "Images/ProductsImages/overview images/almond.jpeg", title: "Almond" },
@@ -53,7 +53,8 @@ const IndustryCarousel = () => {
                     navigation={true}
                     centeredSlides={true}
                     spaceBetween={20}
-                    modules={[Navigation]}
+                    modules={[Navigation,Autoplay]}
+                    autoplay={{ delay: 3000, disableOnInteraction: false }}
                     className="mySwiper"
                     onSlideChange={handleSlideChange}
                     breakpoints={{
