@@ -16,12 +16,7 @@ import Footer from '../../Component/Footer';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/cartSlice';
 import { toast } from 'react-toastify';
-const gramOptions = [
-  { value: '100g', label: '100g' },
-  { value: '250g', label: '250g' },
-  { value: '500g', label: '500g' },
-  { value: '1kg', label: '1kg' },
-];
+
 const StyledCard = styled(Card)(({ theme }) => ({
   backgroundColor: '#fff',
   color: '#92553D',
@@ -81,9 +76,8 @@ const ProductCard = ({ product, isLoading }) => {
       id: product.id,
       name: product.name,
       image: product.image,
-      price, // This is the selected gram price
-      originalPrice,
-      selectedGram
+      price: product.price, // This is the selected gram price
+      originalPrice: product.originalPrice,
     }));
     toast.success('Successfully added to cart!', {
       position: 'bottom-left', // Use string position
@@ -92,23 +86,14 @@ const ProductCard = ({ product, isLoading }) => {
   }
 
   const [liked, setLiked] = useState(false);
-  const [selectedGram, setSelectedGram] = useState('100g'); // Default to 100g
-  const [price, setPrice] = useState(product.prices[selectedGram].currentPrice); // Set initial price based on default gram
-  const [originalPrice, setOriginalPrice] = useState(product.prices[selectedGram].originalPrice); // Set initial original price based on default gram
 
   const handleLikeClick = () => {
     setLiked(!liked);
   };
 
-  const handleGramChange = (e) => {
-    const newGram = e.target.value;
-    setSelectedGram(newGram);
-    setPrice(product.prices[newGram].currentPrice); // Update the current price based on the selected gram
-    setOriginalPrice(product.prices[newGram].originalPrice); // Update the original price based on the selected gram
-  };
 
   const handleShoppingClick = (product) => {
-    const encodedMessage = encodeURIComponent(`Hi! I'm interested in this product:\n\nName: ${product.name}\nPrice: ${price}\n\nGrams: ${selectedGram}\n\nPlease provide more details and help me place an order.`);
+    const encodedMessage = encodeURIComponent(`Hi! I'm interested in this product:\n\nName: ${product.name}\nPrice: ${product.price}\n\nGrams:1kg \n\nPlease provide more details and help me place an order.`);
     const whatsappNumber = '919952857016';
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
@@ -209,49 +194,8 @@ const ProductCard = ({ product, isLoading }) => {
             <Typography component="div" sx={{ textAlign: 'start', fontWeight: [700, 600], letterSpacing: 1, fontSize: ['0.8rem', '1.3rem'] }} >
               {product.name}
             </Typography>
-<<<<<<< HEAD
             <Typography variant="body2" component="div" sx={{ textAlign: 'start', letterSpacing: 1, py: 1 }}>
-              <Select
-                value={selectedGram}
-                displayEmpty
-                style={{ height: 40 }}
-                onChange={handleGramChange}
-                sx={{
-                  fontSize: ['1rem', '1rem'],
-                  minWidth: 100,
-                  letterSpacing: 0.5,
-                  '& .MuiOutlinedInput-root': {
-                    '& fieldset': {
-                      borderColor: '#ccc', // Default border color
-                    },
-                    '&:hover fieldset': {
-                      borderColor: '#92553D', // Border color on hover
-                    },
-                    '&.Mui-focused fieldset': {
-                      borderColor: '#92553D', // Border color when focused
-                    },
-                  },
-                  '& .MuiOutlinedInput-notchedOutline': {
-                    borderColor: '#ccc', // Default border color
-                  },
-                  '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                    borderColor: '#92553D !important', // Border color when focused
-                  },
-                }}
-              >
-                <MenuItem value="" disabled>
-                  Select weight
-                </MenuItem>
-                {gramOptions.map((option) => (
-                  <MenuItem key={option.value} value={option.value}>
-                    {option.label}
-                  </MenuItem>
-                ))}
-              </Select>
-=======
-            <Typography variant="body1" component="div" sx={{ textAlign: 'start', letterSpacing: 0.5 }} >
-              1 kg
->>>>>>> 3402b87d0725ca7d639b7b5fabbeab1d39cc3ce7
+              1kg
             </Typography>
 
 
@@ -264,11 +208,11 @@ const ProductCard = ({ product, isLoading }) => {
                 <RatingStars rating={product.rating} size="1.2rem" />
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                   <Typography color={'#282828'} sx={{ textAlign: 'start', fontWeight: 700, fontSize: '1rem', letterSpacing: 0.5, display: 'flex', alignItems: 'center' }} >
-                    {price}
+                    {product.price}
                     <LocalOfferOutlinedIcon sx={{ fontSize: '0.9rem' }} />
                   </Typography>
                   <Typography color={'gray'} sx={{ textAlign: 'start', fontWeight: 600, fontSize: '0.9rem', letterSpacing: 0.5, textDecoration: "line-through" }} >
-                    {originalPrice}
+                    {product.originalPrice}
                   </Typography>
                 </Box>
               </Box>

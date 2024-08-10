@@ -345,7 +345,7 @@ export const dryfruits = [
             '500g': { currentPrice: '₹324', originalPrice: '₹350' },
             '1kg': { currentPrice: '₹648', originalPrice: '₹680' },
         },
-            
+
         image: 'Images/ProductsImages/dryFruits/pomelo.png',
         unitsSold: 43,
     },
@@ -353,7 +353,7 @@ export const dryfruits = [
         id: 15,
         name: 'Mixed Fruits',
         rating: 4,
-        price: 
+        price:
         {
             '100g': { currentPrice: '₹80', originalPrice: '₹100' },
             '250g': { currentPrice: '₹200', originalPrice: '₹220' },
@@ -367,7 +367,7 @@ export const dryfruits = [
         id: 16,
         name: 'Raspberry',
         rating: 4,
-        price: 
+        price:
         {
             '100g': { currentPrice: '₹400', originalPrice: '₹420' },
             '250g': { currentPrice: '₹1,000', originalPrice: '₹1,050' },
@@ -381,7 +381,7 @@ export const dryfruits = [
         id: 17,
         name: 'Strawberry',
         rating: 4,
-        price: 
+        price:
         {
             '100g': { currentPrice: '₹138', originalPrice: '₹150' },
             '250g': { currentPrice: '₹345', originalPrice: '₹360' },
@@ -395,7 +395,7 @@ export const dryfruits = [
         id: 18,
         name: 'Yellow Peach',
         rating: 4,
-        price: 
+        price:
         {
             '100g': { currentPrice: '₹65', originalPrice: '₹80' },
             '250g': { currentPrice: '₹162', originalPrice: '₹190' },
@@ -409,7 +409,7 @@ export const dryfruits = [
         id: 19,
         name: 'Masala Guava',
         rating: 4,
-        price: 
+        price:
         {
             '100g': { currentPrice: '₹120', originalPrice: '₹150' },
             '250g': { currentPrice: '₹300', originalPrice: '₹330' },
@@ -436,7 +436,7 @@ export const dryfruits = [
         id: 21,
         name: 'Gojiberry',
         rating: 4,
-        price: 
+        price:
         {
             '100g': { currentPrice: '₹150', originalPrice: '₹180' },
             '250g': { currentPrice: '₹375', originalPrice: '₹400' },
@@ -450,7 +450,7 @@ export const dryfruits = [
         id: 22,
         name: 'Prunes',
         rating: 4,
-        price: 
+        price:
         {
             '100g': { currentPrice: '₹110', originalPrice: '₹130' },
             '250g': { currentPrice: '₹275', originalPrice: '₹300' },
@@ -794,55 +794,63 @@ export const dates = [
         name: 'Ajwa Dates',
         rating: 5,
         price: '₹1,200',
+        originalPrice: '₹1,300',
         image: 'Images/ProductsImages/dates/ajwa dates.png',
     },
     {
         id: 2,
         name: 'Khimiya Dates',
         rating: 4,
-        prices: '₹750',
+        price: '₹750',
+        originalPrice: '₹1,300',
         image: 'Images/ProductsImages/dates/khimiya   dates.png',
     },
     {
         id: 3,
         name: 'Medjoul Dates',
         rating: 4,
-        prices: '₹1,500',
+        price: '₹1,500',
+        originalPrice: '₹1,300',
         image: 'Images/ProductsImages/dates/medjoul  dates.png',
     },
     {
         id: 4,
         name: 'Kimia Dates',
         rating: 4,
-        prices: '₹260',
+        price: '₹260',
+        originalPrice: '₹1,300',
         image: 'Images/ProductsImages/dates/kimia.jpg',
     },
     {
         id: 5,
         name: 'Mabroom Dates',
         rating: 4,
-        prices: '₹1,250',
+        price: '₹1,250',
+        originalPrice: '₹1,300',
         image: 'Images/ProductsImages/dates/Mabroom.jpg',
     },
     {
         id: 6,
         name: 'Mashrook Dates',
         rating: 4,
-        prices: '₹850',
+        price: '₹850',
+        originalPrice: '₹1,300',
         image: 'Images/ProductsImages/dates/Mashrook.jpg',
     },
     {
         id: 7,
         name: 'Barrari Dates',
         rating: 4,
-        prices: '₹560',
+        price: '₹560',
+        originalPrice: '₹1,300',
         image: 'Images/ProductsImages/dates/Barrari.jpg',
     },
     {
         id: 8,
         name: 'Muscat Dates',
         rating: 4,
-        prices: '₹250',
+        price: '₹250',
+        originalPrice: '₹1,300',
         image: 'Images/ProductsImages/dates/Muscat.jpg',
     },
 
@@ -876,7 +884,7 @@ export const chocalates = [
         id: 4,
         name: 'Lotus Biscoff Smooth',
         rating: 4,
-        price: '₹250.00', 
+        price: '₹250.00',
         image: 'Images/ProductsImages/chocolates/biscoffsmooth.png',
     },
     {
