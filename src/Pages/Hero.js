@@ -30,7 +30,7 @@ const Hero = () => {
             <Box sx={{}} className="hero_bg">
                 <Navbar />
                 <MainProductSlide />
-                <Box sx={{ display: 'flex', justifyContent: 'center', mt: -4 }}>
+                {/* <Box sx={{ display: 'flex', justifyContent: 'center', mt: -4 }}>
                     <Button
                         variant="contained"
                         href='/dates'
@@ -50,7 +50,7 @@ const Hero = () => {
                     >
                         Shop Now
                     </Button>
-                </Box>
+                </Box> */}
             </Box>
             <Box sx={{ height: ['100vh', '110vh'], bgcolor: '#92553D' }}>
                 <Navbar color="#fff" />

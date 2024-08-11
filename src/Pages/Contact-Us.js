@@ -17,7 +17,7 @@ export const Contact = () => {
             <Box
                 component='img'
                 id='pack'
-                src='Images/aboutimage/IMG_20240806_163109.jpg'
+                src='/Images/aboutimage/sdfshop.jpg'
                 alt='pack'
                 sx={{
                     width: ["100%"],
