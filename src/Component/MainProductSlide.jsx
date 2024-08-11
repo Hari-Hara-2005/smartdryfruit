@@ -79,7 +79,7 @@ const MainProductSlide = () => {
                             <Box
                                 sx={{
                                     position: 'relative',
-                                    width: { xs: "100%", sm: "100%", md: "70%", lg: "75%", xl: "70%" },
+                                    width: { xs: "100%", sm: "100%", md: "70%", lg: "75%", xl: "65%" },
                                     cursor: 'pointer',
                                     pt:5,
                                     transform: (index === activeIndex + Math.floor(slidesPerView / 2)) ? ['scale(1.5)', 'scale(1.5)', 'scale(1.09)'] : 'scale(0.4)',
