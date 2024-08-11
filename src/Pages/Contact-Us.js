@@ -40,8 +40,8 @@ export const Contact = () => {
                                     Smart Dry Fruits
                                 </Typography>
                                 <Typography variant="body1" align="center" sx={{ mt: 2, lineHeight: 2 }}>
-                                    X97F+92G, Chakrapani Sannathi Street,<br />
-                                    Karna Kollai Agraharam, Valayapettai Agraharam,<br />
+                                    31 , Sarangapani East Street,<br />
+                                    Utchi Pillaiyar Kovil,<br />
                                     Kumbakonam, Tamil Nadu 612001, India.
                                 </Typography>
                             </Box>
@@ -55,7 +55,7 @@ export const Contact = () => {
                                 <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                     <PhoneCallback sx={{ color: '#282828', mr: 1 }} />
                                     <Typography variant="body1" sx={{ fontWeight: 'medium', letterSpacing: 1 }}>
-                                        +91 9952857016
+                                        +91 7339534672
                                     </Typography>
                                 </Box>
                             </Box>
