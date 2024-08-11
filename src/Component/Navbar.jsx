@@ -371,6 +371,7 @@ export default function Navbar(props) {
                 <IconButton
                   onClick={handleDrawerToggle}
                   href="/cart"
+                      color="inherit"
                 >
                   <Badge
                     badgeContent={cartItems.length}
