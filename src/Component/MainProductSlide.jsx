@@ -6,20 +6,20 @@ import 'swiper/css/navigation';
 import { Navigation, Autoplay } from 'swiper/modules';
 
 const industryData = [
-    { id: "1", img: "Images/img-4.png", title: "Almond" },
-    { id: "1", img: "Images/img-4.png", title: "Almond" },
-    { id: "1", img: "Images/img-4.png", title: "Almond" },
-    { id: "1", img: "Images/img-4.png", title: "Almond" },
-    { id: "1", img: "Images/img-4.png", title: "Almond" },
-    { id: "1", img: "Images/img-4.png", title: "Almond" },
-    { id: "1", img: "Images/img-4.png", title: "Almond" },
-    { id: "1", img: "Images/img-4.png", title: "Almond" },
-    { id: "1", img: "Images/img-4.png", title: "Almond" },
-    { id: "1", img: "Images/img-4.png", title: "Almond" },
-    { id: "1", img: "Images/img-4.png", title: "Almond" },
-    { id: "1", img: "Images/img-4.png", title: "Almond" },
-    { id: "1", img: "Images/img-4.png", title: "Almond" },
-    { id: "1", img: "Images/img-4.png", title: "Almond" }
+    { id: "1", img: "Images/mpi/img1.png", title: "Almond" },
+    { id: "2", img: "Images/mpi/img2.png", title: "Almond" },
+    { id: "3", img: "Images/mpi/img3.png", title: "Almond" },
+    { id: "4", img: "Images/mpi/img4.png", title: "Almond" },
+    { id: "5", img: "Images/mpi/img5.png", title: "Almond" },
+    { id: "6", img: "Images/mpi/img6.png", title: "Almond" },
+    { id: "7", img: "Images/mpi/img7.png", title: "Almond" },
+    { id: "8", img: "Images/mpi/img8.png", title: "Almond" },
+    { id: "9", img: "Images/mpi/img9.png", title: "Almond" },
+    { id: "10", img: "Images/mpi/img10.png", title: "Almond" },
+    { id: "11", img: "Images/mpi/img11.png", title: "Almond" },
+    { id: "12", img: "Images/mpi/img12.png", title: "Almond" },
+    { id: "13", img: "Images/mpi/img13.png", title: "Almond" },
+    { id: "14", img: "Images/mpi/img14.png", title: "Almond" }
 ];
 
 const MainProductSlide = () => {
