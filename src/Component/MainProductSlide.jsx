@@ -50,10 +50,10 @@ const MainProductSlide = () => {
 
     return (
         <>
-            <Box sx={{ display: 'flex', alignContent: 'center', height: ['80%','80%','90%'] }}>
+            <Box sx={{ display: 'flex', alignContent: 'center', height: ['80%', '80%', '90%'] }}>
                 <Swiper
                     slidesPerView={slidesPerView}
-                    navigation={true}
+                    navigation={false}
                     spaceBetween={0}
                     modules={[Navigation, Autoplay]}
                     className="mySwiper"
@@ -128,13 +128,13 @@ const MainProductSlide = () => {
 
                     .swiper-button-next,
                     .swiper-button-prev {
+                    display:none;
                         background-color: #f5f5f7;
                         border-radius: 100%;
                         padding: 2rem;
                         height: 4rem;
                         width: 4rem;
                         color: gray;
-                        display: flex;
                         align-items: center;
                         justify-content: center;
                     }

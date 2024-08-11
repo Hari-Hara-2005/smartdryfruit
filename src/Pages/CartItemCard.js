@@ -10,6 +10,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
     fontWeight: 900,
     boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
     borderRadius: 16,
+    border:'2px solid #92553D',
     position: 'relative',
     display: 'flex',
     flexDirection: 'row',

@@ -2,7 +2,6 @@ import {
     Box,
     Stack,
     Typography,
-    Link,
     Divider,
     Grid,
     Fab,
@@ -13,6 +12,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import CusAccordion from "./CusAccordion";
+import { Link } from "react-router-dom";
 function Footer() {
     const overview = [
         {
@@ -30,6 +30,110 @@ function Footer() {
         {
             path: "/contact-us",
             name: "Contact Us",
+        },
+    ];
+    const nuts = [
+        {
+            path: "/nuts",
+            name: "Almond",
+        },
+        {
+            path: "/nuts",
+            name: "Anjeer Figs",
+        },
+        {
+            path: "/nuts",
+            name: "Cashew",
+        },
+        {
+            path: "/nuts",
+            name: "Pistachios",
+        },
+    ];
+    const dryfruits = [
+        {
+            path: "/dryfruits",
+            name: "Black Current",
+        },
+        {
+            path: "/dryfruits",
+            name: "Dry Amla",
+        },
+        {
+            path: "/dryfruits",
+            name: "Ginger Cubes",
+        },
+        {
+            path: "/dryfruits",
+            name: "Honey Amla",
+        },
+    ];
+    const seeds = [
+        {
+            path: "/seeds",
+            name: "Sunflower Seeds",
+        },
+        {
+            path: "/seeds",
+            name: "Sabja Seeds",
+        },
+        {
+            path: "/seeds",
+            name: "Watermelon Seeds",
+        },
+        {
+            path: "/seeds",
+            name: "Vellari Seeds",
+        },
+    ];
+    const dates = [
+        {
+            path: "/dates",
+            name: "Ajwa Dates",
+        },
+        {
+            path: "/dates",
+            name: "Khimiya Dates",
+        },
+        {
+            path: "/dates",
+            name: "Medjoul Dates",
+        },
+        {
+            path: "/dates",
+            name: "Kimia Dates",
+        },
+    ];
+    const chocolates = [
+        {
+            path: "/chocolates",
+            name: "Twinx",
+        },
+        {
+            path: "/chocolates",
+            name: "Kinder Bueno",
+        },
+        {
+            path: "/chocolates",
+            name: "Mars",
+        },
+        {
+            path: "/chocolates",
+            name: "M&M Choco",
+        },
+    ];
+    const drinks = [
+        {
+            path: "/drinks",
+            name: "Davidoff",
+        },
+        {
+            path: "/drinks",
+            name: "Milo",
+        },
+        {
+            path: "/drinks",
+            name: "Oval Time",
         },
     ];
     const scrollToTop = () => {
@@ -95,97 +199,27 @@ function Footer() {
                                             Nuts
                                         </Typography>}
                                     body={
-                                        <>
-                                            <Typography
-                                                color={"inherit"}
-                                                underline="hover"
-                                                sx={{
-                                                    fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                    letterSpacing: 1,
-                                                    ":hover": {
-                                                        color: "gray",
-                                                        textDecoration: 'none'
-                                                    },
-                                                }}
-                                            >
-                                                Cashew
-                                            </Typography>
-                                            <Typography
-                                                color={"inherit"}
-                                                underline="hover"
-                                                sx={{
-                                                    fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                    letterSpacing: 1,
-                                                    py: 1,
-                                                    ":hover": {
-                                                        color: "gray",
-                                                        textDecoration: 'none'
-                                                    },
-                                                }}
-                                            >
-                                                Cashew
-                                            </Typography>
-                                            <Typography
-                                                color={"inherit"}
-                                                underline="hover"
-                                                sx={{
-                                                    fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                    letterSpacing: 1,
-                                                    py: 1,
-                                                    ":hover": {
-                                                        color: "gray",
-                                                        textDecoration: 'none'
-                                                    },
-                                                }}
-                                            >
-                                                Cashew
-                                            </Typography>
-                                            <Typography
-                                                color={"inherit"}
-                                                underline="hover"
-                                                sx={{
-                                                    fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                    letterSpacing: 1,
-                                                    py: 1,
-                                                    ":hover": {
-                                                        color: "gray",
-                                                        textDecoration: 'none'
-                                                    },
-                                                }}
-                                            >
-                                                Cashew
-                                            </Typography>
-                                            <Typography
-                                                color={"inherit"}
-                                                underline="hover"
-                                                sx={{
-                                                    fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                    letterSpacing: 1,
-                                                    py: 1,
-                                                    ":hover": {
-                                                        color: "gray",
-                                                        textDecoration: 'none'
-                                                    },
-                                                }}
-                                            >
-                                                Cashew
-                                            </Typography>
-                                            <Typography
-                                                color={"inherit"}
-                                                underline="hover"
-                                                sx={{
-                                                    fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                    letterSpacing: 1,
-                                                    py: 1,
-                                                    ":hover": {
-                                                        color: "gray",
-                                                        textDecoration: 'none'
-                                                    },
-                                                }}
-                                            >
-                                                Cashew
-                                            </Typography>
-                                        </>
+                                        <Box sx={{ mt: -2 }}>
+                                            {nuts.map((item, index) => (
+                                                <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                    <Typography
+                                                        key={index}
+                                                        color="#fff"
+                                                        underline="hover"
+                                                        sx={{
+                                                            fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
+                                                            letterSpacing: 1,
+                                                            cursor: 'pointer',
+                                                            py: 1,
+                                                            ":hover": {
+                                                                color: "gray",
+                                                                textDecoration: 'none'
+                                                            },
+                                                        }}
+                                                    >
+                                                        {item.name}
+                                                    </Typography></Link>))}
+                                        </Box>
                                     }
                                 />
                                 <CusAccordion
@@ -202,82 +236,27 @@ function Footer() {
                                             Seeds
                                         </Typography>}
                                     body={
-                                        <>
-                                            <Typography
-                                                color={"inherit"}
-                                                underline="hover"
-                                                sx={{
-                                                    fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                    letterSpacing: 1,
-                                                    ":hover": {
-                                                        color: "gray",
-                                                        textDecoration: 'none'
-                                                    },
-                                                }}
-                                            >
-                                                Cashew
-                                            </Typography>
-                                            <Typography
-                                                color={"inherit"}
-                                                underline="hover"
-                                                sx={{
-                                                    fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                    letterSpacing: 1,
-                                                    py: 1,
-                                                    ":hover": {
-                                                        color: "gray",
-                                                        textDecoration: 'none'
-                                                    },
-                                                }}
-                                            >
-                                                Cashew
-                                            </Typography>
-                                            <Typography
-                                                color={"inherit"}
-                                                underline="hover"
-                                                sx={{
-                                                    fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                    letterSpacing: 1,
-                                                    py: 1,
-                                                    ":hover": {
-                                                        color: "gray",
-                                                        textDecoration: 'none'
-                                                    },
-                                                }}
-                                            >
-                                                Cashew
-                                            </Typography>
-                                            <Typography
-                                                color={"inherit"}
-                                                underline="hover"
-                                                sx={{
-                                                    fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                    letterSpacing: 1,
-                                                    py: 1,
-                                                    ":hover": {
-                                                        color: "gray",
-                                                        textDecoration: 'none'
-                                                    },
-                                                }}
-                                            >
-                                                Cashew
-                                            </Typography>
-                                            <Typography
-                                                color={"inherit"}
-                                                underline="hover"
-                                                sx={{
-                                                    fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                    letterSpacing: 1,
-                                                    py: 1,
-                                                    ":hover": {
-                                                        color: "gray",
-                                                        textDecoration: 'none'
-                                                    },
-                                                }}
-                                            >
-                                                Cashew
-                                            </Typography>
-                                        </>
+                                        <Box sx={{ mt: -2 }}>
+                                            {seeds.map((item, index) => (
+                                                <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                    <Typography
+                                                        key={index}
+                                                        color="#fff"
+                                                        underline="hover"
+                                                        sx={{
+                                                            fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
+                                                            letterSpacing: 1,
+                                                            cursor: 'pointer',
+                                                            py: 1,
+                                                            ":hover": {
+                                                                color: "gray",
+                                                                textDecoration: 'none'
+                                                            },
+                                                        }}
+                                                    >
+                                                        {item.name}
+                                                    </Typography></Link>))}
+                                        </Box>
                                     }
                                 />
                                 <CusAccordion
@@ -294,82 +273,138 @@ function Footer() {
                                             Dry Fruits
                                         </Typography>}
                                     body={
-                                        <>
-                                            <Typography
-                                                color={"inherit"}
-                                                underline="hover"
-                                                sx={{
-                                                    fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                    letterSpacing: 1,
-                                                    ":hover": {
-                                                        color: "gray",
-                                                        textDecoration: 'none'
-                                                    },
-                                                }}
-                                            >
-                                                Cashew
-                                            </Typography>
-                                            <Typography
-                                                color={"inherit"}
-                                                underline="hover"
-                                                sx={{
-                                                    fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                    letterSpacing: 1,
-                                                    py: 1,
-                                                    ":hover": {
-                                                        color: "gray",
-                                                        textDecoration: 'none'
-                                                    },
-                                                }}
-                                            >
-                                                Cashew
-                                            </Typography>
-                                            <Typography
-                                                color={"inherit"}
-                                                underline="hover"
-                                                sx={{
-                                                    fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                    letterSpacing: 1,
-                                                    py: 1,
-                                                    ":hover": {
-                                                        color: "gray",
-                                                        textDecoration: 'none'
-                                                    },
-                                                }}
-                                            >
-                                                Cashew
-                                            </Typography>
-                                            <Typography
-                                                color={"inherit"}
-                                                underline="hover"
-                                                sx={{
-                                                    fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                    letterSpacing: 1,
-                                                    py: 1,
-                                                    ":hover": {
-                                                        color: "gray",
-                                                        textDecoration: 'none'
-                                                    },
-                                                }}
-                                            >
-                                                Cashew
-                                            </Typography>
-                                            <Typography
-                                                color={"inherit"}
-                                                underline="hover"
-                                                sx={{
-                                                    fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                    letterSpacing: 1,
-                                                    py: 1,
-                                                    ":hover": {
-                                                        color: "gray",
-                                                        textDecoration: 'none'
-                                                    },
-                                                }}
-                                            >
-                                                Cashew
-                                            </Typography>
-                                        </>
+                                        <Box sx={{ mt: -2 }}>
+                                            {dryfruits.map((item, index) => (
+                                                <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                    <Typography
+                                                        key={index}
+                                                        color="#fff"
+                                                        underline="hover"
+                                                        sx={{
+                                                            fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
+                                                            letterSpacing: 1,
+                                                            cursor: 'pointer',
+                                                            py: 1,
+                                                            ":hover": {
+                                                                color: "gray",
+                                                                textDecoration: 'none'
+                                                            },
+                                                        }}
+                                                    >
+                                                        {item.name}
+                                                    </Typography></Link>))}
+                                        </Box>
+                                    }
+                                />
+                                <CusAccordion
+                                    head={
+                                        <Typography
+                                            sx={{
+                                                fontSize: ["0.8rem"],
+                                                fontWeight: 600,
+                                                color: "#fff",
+                                                letterSpacing: 2,
+                                                textTransform: "uppercase",
+                                            }}
+                                        >
+                                            Dates
+                                        </Typography>}
+                                    body={
+                                        <Box sx={{ mt: -2 }}>
+                                            {dates.map((item, index) => (
+                                                <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                    <Typography
+                                                        key={index}
+                                                        color="#fff"
+                                                        underline="hover"
+                                                        sx={{
+                                                            fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
+                                                            letterSpacing: 1,
+                                                            cursor: 'pointer',
+                                                            py: 1,
+                                                            ":hover": {
+                                                                color: "gray",
+                                                                textDecoration: 'none'
+                                                            },
+                                                        }}
+                                                    >
+                                                        {item.name}
+                                                    </Typography></Link>))}
+                                        </Box>
+                                    }
+                                />
+                                <CusAccordion
+                                    head={
+                                        <Typography
+                                            sx={{
+                                                fontSize: ["0.8rem"],
+                                                fontWeight: 600,
+                                                color: "#fff",
+                                                letterSpacing: 2,
+                                                textTransform: "uppercase",
+                                            }}
+                                        >
+                                            Chocolates
+                                        </Typography>}
+                                    body={
+                                        <Box sx={{ mt: -2 }}>
+                                            {chocolates.map((item, index) => (
+                                                <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                    <Typography
+                                                        key={index}
+                                                        color="#fff"
+                                                        underline="hover"
+                                                        sx={{
+                                                            fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
+                                                            letterSpacing: 1,
+                                                            cursor: 'pointer',
+                                                            py: 1,
+                                                            ":hover": {
+                                                                color: "gray",
+                                                                textDecoration: 'none'
+                                                            },
+                                                        }}
+                                                    >
+                                                        {item.name}
+                                                    </Typography></Link>))}
+                                        </Box>
+                                    }
+                                />
+                                <CusAccordion
+                                    head={
+                                        <Typography
+                                            sx={{
+                                                fontSize: ["0.8rem"],
+                                                fontWeight: 600,
+                                                color: "#fff",
+                                                letterSpacing: 2,
+                                                textTransform: "uppercase",
+                                            }}
+                                        >
+                                            Drinks
+                                        </Typography>}
+                                    body={
+                                        <Box sx={{ mt: -2 }}>
+                                            {drinks.map((item, index) => (
+                                                <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                    <Typography
+                                                        key={index}
+                                                        color="#fff"
+                                                        underline="hover"
+                                                        sx={{
+                                                            fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
+                                                            letterSpacing: 1,
+                                                            cursor: 'pointer',
+                                                            py: 1,
+                                                            ":hover": {
+                                                                color: "gray",
+                                                                textDecoration: 'none'
+                                                            },
+                                                        }}
+                                                    >
+                                                        {item.name}
+                                                    </Typography></Link>))}
+                                        </Box>
                                     }
                                 />
                             </Box>
@@ -507,97 +542,27 @@ function Footer() {
                                                 Nuts
                                             </Typography>}
                                         body={
-                                            <>
-                                                <Typography
-                                                    color={"inherit"}
-                                                    underline="hover"
-                                                    sx={{
-                                                        fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                        letterSpacing: 1,
-                                                        ":hover": {
-                                                            color: "gray",
-                                                            textDecoration: 'none'
-                                                        },
-                                                    }}
-                                                >
-                                                    Cashew
-                                                </Typography>
-                                                <Typography
-                                                    color={"inherit"}
-                                                    underline="hover"
-                                                    sx={{
-                                                        fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                        letterSpacing: 1,
-                                                        py: 1,
-                                                        ":hover": {
-                                                            color: "gray",
-                                                            textDecoration: 'none'
-                                                        },
-                                                    }}
-                                                >
-                                                    Cashew
-                                                </Typography>
-                                                <Typography
-                                                    color={"inherit"}
-                                                    underline="hover"
-                                                    sx={{
-                                                        fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                        letterSpacing: 1,
-                                                        py: 1,
-                                                        ":hover": {
-                                                            color: "gray",
-                                                            textDecoration: 'none'
-                                                        },
-                                                    }}
-                                                >
-                                                    Cashew
-                                                </Typography>
-                                                <Typography
-                                                    color={"inherit"}
-                                                    underline="hover"
-                                                    sx={{
-                                                        fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                        letterSpacing: 1,
-                                                        py: 1,
-                                                        ":hover": {
-                                                            color: "gray",
-                                                            textDecoration: 'none'
-                                                        },
-                                                    }}
-                                                >
-                                                    Cashew
-                                                </Typography>
-                                                <Typography
-                                                    color={"inherit"}
-                                                    underline="hover"
-                                                    sx={{
-                                                        fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                        letterSpacing: 1,
-                                                        py: 1,
-                                                        ":hover": {
-                                                            color: "gray",
-                                                            textDecoration: 'none'
-                                                        },
-                                                    }}
-                                                >
-                                                    Cashew
-                                                </Typography>
-                                                <Typography
-                                                    color={"inherit"}
-                                                    underline="hover"
-                                                    sx={{
-                                                        fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                        letterSpacing: 1,
-                                                        py: 1,
-                                                        ":hover": {
-                                                            color: "gray",
-                                                            textDecoration: 'none'
-                                                        },
-                                                    }}
-                                                >
-                                                    Cashew
-                                                </Typography>
-                                            </>
+                                            <Box sx={{ mt: -2 }}>
+                                                {nuts.map((item, index) => (
+                                                    <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                        <Typography
+                                                            key={index}
+                                                            color="#fff"
+                                                            underline="hover"
+                                                            sx={{
+                                                                fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
+                                                                letterSpacing: 1,
+                                                                cursor: 'pointer',
+                                                                py: 1,
+                                                                ":hover": {
+                                                                    color: "gray",
+                                                                    textDecoration: 'none'
+                                                                },
+                                                            }}
+                                                        >
+                                                            {item.name}
+                                                        </Typography></Link>))}
+                                            </Box>
                                         }
                                     />
                                     <CusAccordion
@@ -614,82 +579,27 @@ function Footer() {
                                                 Seeds
                                             </Typography>}
                                         body={
-                                            <>
-                                                <Typography
-                                                    color={"inherit"}
-                                                    underline="hover"
-                                                    sx={{
-                                                        fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                        letterSpacing: 1,
-                                                        ":hover": {
-                                                            color: "gray",
-                                                            textDecoration: 'none'
-                                                        },
-                                                    }}
-                                                >
-                                                    Cashew
-                                                </Typography>
-                                                <Typography
-                                                    color={"inherit"}
-                                                    underline="hover"
-                                                    sx={{
-                                                        fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                        letterSpacing: 1,
-                                                        py: 1,
-                                                        ":hover": {
-                                                            color: "gray",
-                                                            textDecoration: 'none'
-                                                        },
-                                                    }}
-                                                >
-                                                    Cashew
-                                                </Typography>
-                                                <Typography
-                                                    color={"inherit"}
-                                                    underline="hover"
-                                                    sx={{
-                                                        fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                        letterSpacing: 1,
-                                                        py: 1,
-                                                        ":hover": {
-                                                            color: "gray",
-                                                            textDecoration: 'none'
-                                                        },
-                                                    }}
-                                                >
-                                                    Cashew
-                                                </Typography>
-                                                <Typography
-                                                    color={"inherit"}
-                                                    underline="hover"
-                                                    sx={{
-                                                        fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                        letterSpacing: 1,
-                                                        py: 1,
-                                                        ":hover": {
-                                                            color: "gray",
-                                                            textDecoration: 'none'
-                                                        },
-                                                    }}
-                                                >
-                                                    Cashew
-                                                </Typography>
-                                                <Typography
-                                                    color={"inherit"}
-                                                    underline="hover"
-                                                    sx={{
-                                                        fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                        letterSpacing: 1,
-                                                        py: 1,
-                                                        ":hover": {
-                                                            color: "gray",
-                                                            textDecoration: 'none'
-                                                        },
-                                                    }}
-                                                >
-                                                    Cashew
-                                                </Typography>
-                                            </>
+                                            <Box sx={{ mt: -2 }}>
+                                                {seeds.map((item, index) => (
+                                                    <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                        <Typography
+                                                            key={index}
+                                                            color="#fff"
+                                                            underline="hover"
+                                                            sx={{
+                                                                fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
+                                                                letterSpacing: 1,
+                                                                cursor: 'pointer',
+                                                                py: 1,
+                                                                ":hover": {
+                                                                    color: "gray",
+                                                                    textDecoration: 'none'
+                                                                },
+                                                            }}
+                                                        >
+                                                            {item.name}
+                                                        </Typography></Link>))}
+                                            </Box>
                                         }
                                     />
                                     <CusAccordion
@@ -706,140 +616,178 @@ function Footer() {
                                                 Dry Fruits
                                             </Typography>}
                                         body={
-                                            <>
-                                                <Typography
-                                                    color={"inherit"}
-                                                    underline="hover"
-                                                    sx={{
-                                                        fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                        letterSpacing: 1,
-                                                        ":hover": {
-                                                            color: "gray",
-                                                            textDecoration: 'none'
-                                                        },
-                                                    }}
-                                                >
-                                                    Cashew
-                                                </Typography>
-                                                <Typography
-                                                    color={"inherit"}
-                                                    underline="hover"
-                                                    sx={{
-                                                        fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                        letterSpacing: 1,
-                                                        py: 1,
-                                                        ":hover": {
-                                                            color: "gray",
-                                                            textDecoration: 'none'
-                                                        },
-                                                    }}
-                                                >
-                                                    Cashew
-                                                </Typography>
-                                                <Typography
-                                                    color={"inherit"}
-                                                    underline="hover"
-                                                    sx={{
-                                                        fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                        letterSpacing: 1,
-                                                        py: 1,
-                                                        ":hover": {
-                                                            color: "gray",
-                                                            textDecoration: 'none'
-                                                        },
-                                                    }}
-                                                >
-                                                    Cashew
-                                                </Typography>
-                                                <Typography
-                                                    color={"inherit"}
-                                                    underline="hover"
-                                                    sx={{
-                                                        fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                        letterSpacing: 1,
-                                                        py: 1,
-                                                        ":hover": {
-                                                            color: "gray",
-                                                            textDecoration: 'none'
-                                                        },
-                                                    }}
-                                                >
-                                                    Cashew
-                                                </Typography>
-                                                <Typography
-                                                    color={"inherit"}
-                                                    underline="hover"
-                                                    sx={{
-                                                        fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                        letterSpacing: 1,
-                                                        py: 1,
-                                                        ":hover": {
-                                                            color: "gray",
-                                                            textDecoration: 'none'
-                                                        },
-                                                    }}
-                                                >
-                                                    Cashew
-                                                </Typography>
-                                            </>
+                                            <Box sx={{ mt: -2 }}>
+                                                {dryfruits.map((item, index) => (
+                                                    <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                        <Typography
+                                                            key={index}
+                                                            color="#fff"
+                                                            underline="hover"
+                                                            sx={{
+                                                                fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
+                                                                letterSpacing: 1,
+                                                                cursor: 'pointer',
+                                                                py: 1,
+                                                                ":hover": {
+                                                                    color: "gray",
+                                                                    textDecoration: 'none'
+                                                                },
+                                                            }}
+                                                        >
+                                                            {item.name}
+                                                        </Typography></Link>))}
+                                            </Box>
                                         }
                                     />
+                                    <CusAccordion
+                                        head={
+                                            <Typography
+                                                sx={{
+                                                    fontSize: ["0.8rem"],
+                                                    fontWeight: 600,
+                                                    color: "#fff",
+                                                    letterSpacing: 2,
+                                                    textTransform: "uppercase",
+                                                }}
+                                            >
+                                                Nuts
+                                            </Typography>}
+                                        body={
+                                            <Box sx={{ mt: -2 }}>
+                                                {nuts.map((item, index) => (
+                                                    <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                        <Typography
+                                                            key={index}
+                                                            color="#fff"
+                                                            underline="hover"
+                                                            sx={{
+                                                                fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
+                                                                letterSpacing: 1,
+                                                                cursor: 'pointer',
+                                                                py: 1,
+                                                                ":hover": {
+                                                                    color: "gray",
+                                                                    textDecoration: 'none'
+                                                                },
+                                                            }}
+                                                        >
+                                                            {item.name}
+                                                        </Typography></Link>))}
+                                            </Box>
+                                        }
+                                    />
+                                                           <CusAccordion
+                                    head={
+                                        <Typography
+                                            sx={{
+                                                fontSize: ["0.8rem"],
+                                                fontWeight: 600,
+                                                color: "#fff",
+                                                letterSpacing: 2,
+                                                textTransform: "uppercase",
+                                            }}
+                                        >
+                                            Dates
+                                        </Typography>}
+                                    body={
+                                        <Box sx={{ mt: -2 }}>
+                                            {dates.map((item, index) => (
+                                                <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                    <Typography
+                                                        key={index}
+                                                        color="#fff"
+                                                        underline="hover"
+                                                        sx={{
+                                                            fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
+                                                            letterSpacing: 1,
+                                                            cursor: 'pointer',
+                                                            py: 1,
+                                                            ":hover": {
+                                                                color: "gray",
+                                                                textDecoration: 'none'
+                                                            },
+                                                        }}
+                                                    >
+                                                        {item.name}
+                                                    </Typography></Link>))}
+                                        </Box>
+                                    }
+                                />
+                                <CusAccordion
+                                    head={
+                                        <Typography
+                                            sx={{
+                                                fontSize: ["0.8rem"],
+                                                fontWeight: 600,
+                                                color: "#fff",
+                                                letterSpacing: 2,
+                                                textTransform: "uppercase",
+                                            }}
+                                        >
+                                            Chocolates
+                                        </Typography>}
+                                    body={
+                                        <Box sx={{ mt: -2 }}>
+                                            {chocolates.map((item, index) => (
+                                                <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                    <Typography
+                                                        key={index}
+                                                        color="#fff"
+                                                        underline="hover"
+                                                        sx={{
+                                                            fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
+                                                            letterSpacing: 1,
+                                                            cursor: 'pointer',
+                                                            py: 1,
+                                                            ":hover": {
+                                                                color: "gray",
+                                                                textDecoration: 'none'
+                                                            },
+                                                        }}
+                                                    >
+                                                        {item.name}
+                                                    </Typography></Link>))}
+                                        </Box>
+                                    }
+                                />
+                                <CusAccordion
+                                    head={
+                                        <Typography
+                                            sx={{
+                                                fontSize: ["0.8rem"],
+                                                fontWeight: 600,
+                                                color: "#fff",
+                                                letterSpacing: 2,
+                                                textTransform: "uppercase",
+                                            }}
+                                        >
+                                            Drinks
+                                        </Typography>}
+                                    body={
+                                        <Box sx={{ mt: -2 }}>
+                                            {drinks.map((item, index) => (
+                                                <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                    <Typography
+                                                        key={index}
+                                                        color="#fff"
+                                                        underline="hover"
+                                                        sx={{
+                                                            fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
+                                                            letterSpacing: 1,
+                                                            cursor: 'pointer',
+                                                            py: 1,
+                                                            ":hover": {
+                                                                color: "gray",
+                                                                textDecoration: 'none'
+                                                            },
+                                                        }}
+                                                    >
+                                                        {item.name}
+                                                    </Typography></Link>))}
+                                        </Box>
+                                    }
+                                />
                                 </>
-                                // <Stack direction={{ xs: "row" }} gap={{ xs: 1.2, sm: 4 }}>
-                                //     <Stack direction={{ xs: "column" }} gap={{ xs: 1.2, sm: 2 }}>
-                                //         {footerProducts.slice(0, 12).map((item, index) => (
-                                //             <Typography
-                                //                 key={index}
-                                //                 component={Link}
-                                //                 href={item.id}
-                                //                 color={"inherit"}
-                                //                 underline="hover"
-                                //                 sx={{
-                                //                     fontSize: [
-                                //                         ".85rem",
-                                //                         ".85rem",
-                                //                         "12px",
-                                //                         "12px",
-                                //                         ".85rem",
-                                //                     ],
-                                //                     ":hover": {
-                                //                         color: "#F74641",
-                                //                         textDecoration: 'none'
-                                //                     },
-                                //                 }}
-                                //             >
-                                //                 {item.title}
-                                //             </Typography>
-                                //         ))}
-                                //     </Stack>
-
-                                //     {/* <Stack direction={{ xs: "column" }} gap={{ xs: 1.2, sm: 2 }}>
-                                //         {newIndustries.slice(12, 25).map((item, index) => (
-                                //             <Typography
-                                //                 key={index}
-                                //                 component={Link}
-                                //                 href={item.id}
-                                //                 color={"inherit"}
-                                //                 underline="hover"
-                                //                 sx={{
-                                //                     fontSize: [
-                                //                         ".85rem",
-                                //                         ".85rem",
-                                //                         "12px",
-                                //                         "12px",
-                                //                         ".85rem",
-                                //                     ],
-                                //                     ":hover": {
-                                //                         color: "#F74641",
-                                //                         textDecoration: 'none'
-                                //                     },
-                                //                 }}
-                                //             >
-                                //                 {item.title}
-                                //             </Typography>
-                                //         ))}
-                                //     </Stack> */}
-                                // </Stack>
                             }
                         />
 
@@ -996,7 +944,8 @@ function Footer() {
                 sx={{
                     width: "100%",
                     gap: 3,
-                    py: 3
+                    pt: 8,
+                    pb:3
                 }}
             >
                 <Stack

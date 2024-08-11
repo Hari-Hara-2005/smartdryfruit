@@ -5,6 +5,7 @@ import Footer from '../Component/Footer';
 import { removeFromCart, clearCart } from '../redux/cartSlice';
 import CartItemCard from '../Pages/CartItemCard.js';
 import Navbar from '../Component/Navbar';
+import Title from '../Component/Title.jsx';
 
 const Cart = () => {
     const cartItems = useSelector((state) => state.cart.items);
@@ -32,10 +33,19 @@ const Cart = () => {
     return (
         <>
             <Navbar color="#000" />
+            <Box component='img'
+                src='Images/leaf3.avif'
+                alt='leaf'
+                sx={{
+                    width: ["70%", "50%", "25%", "25%", "25%"],
+                    zIndex: -2,
+                    ml: [-12],
+                    mt: [0, 20, -2, -2, -2],
+                    position: 'absolute',
+                }}
+            />
             <Box sx={{ display: 'flex', justifyContent: 'start', color: 'black', px: [2, 5, 4] }}>
-                <Typography variant="h4" sx={{ mt: 3, mb: 3, color: '#282828', fontWeight: 700 }}>
-                    Your Cart
-                </Typography>
+                <Title color="#282828">Your Cart</Title>
             </Box>
             <Box sx={{ textAlign: 'center', px: [2, 3, 0], py: [5], zIndex: 30 }}>
                 <Grid container spacing={6} justifyContent="center" alignItems="center">
@@ -51,10 +61,10 @@ const Cart = () => {
                     ))}
                 </Grid>
             </Box>
-            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2,gap:'5rem' }}>
+            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2, gap: '5rem' }}>
                 {cartItems.length > 0 && (
                     <Button variant="contained" sx={{
-                        bgcolor: "#92553D", textTransform: 'none', borderRadius: '50px', px: [2.5], '&:hover': {
+                        bgcolor: "#92553D", textTransform: 'none', borderRadius: '50px', px: [2.5],py:1, '&:hover': {
                             bgcolor: "#282828"
                         }
                     }} color="primary" onClick={handleClearCart}>
@@ -64,14 +74,14 @@ const Cart = () => {
                 <Button
                     variant="contained"
                     sx={{
-                        bgcolor: "#92553D", textTransform: 'none', borderRadius: '50px', px: [2.5], '&:hover': {
+                        bgcolor: "#92553D", textTransform: 'none', borderRadius: '50px', px: [2.5], py: 1, '&:hover': {
                             bgcolor: "#282828"
                         }
                     }}
                     onClick={handleShoppingClick}
                     disabled={cartItems.length === 0}
                 >
-                    Shop via WhatsApp
+                    Buy Now 
                 </Button>
             </Box>
             <Box sx={{ bgcolor: 'black', mt: 20, px: 2 }}>

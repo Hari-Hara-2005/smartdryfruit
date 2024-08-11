@@ -3,18 +3,22 @@ import { Box, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation,Autoplay } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
+import { Link } from "react-router-dom";
 
 const industryData = [
-    { id: "1", img: "Images/ProductsImages/overview images/almond.jpeg", title: "Almond" },
-    { id: "2", img: "Images/ProductsImages/overview images/cashew.webp", title: "Cashew" },
-    { id: "4", img: "Images/ProductsImages/overview images/raisin.jpeg", title: "Raisin" },
-    { id: "5", img: "Images/ProductsImages/overview images/wallnut..png", title: "Wallnut" },
-    { id: "6", img: "Images/ProductsImages/overview images/pistachios.jpg", title: "Pistachios" },
-    { id: "3", img: "Images/ProductsImages/overview images/dates.jpeg", title: "Dates" },
+    { id: "1", img: "Images/ProductsImages/overview images/almond.jpeg", title: "Almond", link: '/nuts' },
+    { id: "2", img: "Images/ProductsImages/overview images/cashew.webp", title: "Cashew", link: '/nuts' },
+    { id: "3", img: "Images/ProductsImages/overview images/raisin.jpeg", title: "Raisin", link: '/nuts' },
+    { id: "4", img: "Images/ProductsImages/overview images/wallnut..png", title: "Wallnut", link: '/nuts' },
+    { id: "5", img: "Images/ProductsImages/overview images/pistachios.jpg", title: "Pistachios", link: '/nuts' },
+    { id: "6", img: "Images/ProductsImages/overview images/dates.jpeg", title: "Dates", link: '/dates' },
 ];
 
 const IndustryCarousel = () => {
+    const ScrollToTop = () => {
+        window.scrollTo(0, 0)
+    }
     const [activeIndex, setActiveIndex] = useState(0);
     const [slidesPerView, setSlidesPerView] = useState(1);
 
@@ -53,7 +57,7 @@ const IndustryCarousel = () => {
                     navigation={true}
                     centeredSlides={true}
                     spaceBetween={20}
-                    modules={[Navigation,Autoplay]}
+                    modules={[Navigation, Autoplay]}
                     autoplay={{ delay: 3000, disableOnInteraction: false }}
                     className="mySwiper"
                     onSlideChange={handleSlideChange}
@@ -87,30 +91,32 @@ const IndustryCarousel = () => {
                                     boxShadow: (index === activeIndex + Math.floor(slidesPerView / 2)) ? `0px 4px 20px ${getBoxShadowColor(index)}` : 'none',
                                 }}
                             >
-                                <img
-                                    src={item.img}
-                                    alt={item.title}
-                                    style={{
-                                        width: '100%',
-                                        height: '100%',
-                                        objectFit: 'cover',
-                                    }}
-                                />
-                                <Box
-                                    sx={{
-                                        position: 'absolute',
-                                        bottom: 0,
-                                        width: '100%',
-                                        bgcolor: 'rgba(0, 0, 0, 0.6)',
-                                        color: '#fff',
-                                        textAlign: 'center',
-                                        p: 1,
-                                    }}
-                                >
-                                    <Typography sx={{ fontSize: ['1rem'] }}>
-                                        {item.title}
-                                    </Typography>
-                                </Box>
+                                <Link to={item.link} onClick={ScrollToTop}>
+                                    <img
+                                        src={item.img}
+                                        alt={item.title}
+                                        style={{
+                                            width: '100%',
+                                            height: '100%',
+                                            objectFit: 'cover',
+                                        }}
+                                    />
+                                    <Box
+                                        sx={{
+                                            position: 'absolute',
+                                            bottom: 0,
+                                            width: '100%',
+                                            bgcolor: 'rgba(0, 0, 0, 0.6)',
+                                            color: '#fff',
+                                            textAlign: 'center',
+                                            p: 1,
+                                        }}
+                                    >
+                                        <Typography sx={{ fontSize: ['1rem'] }}>
+                                            {item.title}
+                                        </Typography>
+                                    </Box>
+                                </Link>
                             </Box>
                         </SwiperSlide>
                     ))}
