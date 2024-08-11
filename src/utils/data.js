@@ -365,7 +365,7 @@ export const dryfruits = [
 
 export const nuts = [
     {
-        id: 1,
+        id: 16,
         name: 'Almond',
         rating: 5,
         prices: {
@@ -377,7 +377,7 @@ export const nuts = [
         image: 'Images/ProductsImages/nuts/Almond.png',
     },
     {
-        id: 2,
+        id: 17,
         name: 'Anjeer Figs',
         rating: 5,
         prices: {
@@ -389,7 +389,7 @@ export const nuts = [
         image: 'Images/ProductsImages/nuts/Anjeer.png',
     },
     {
-        id: 3,
+        id: 18,
         name: 'Brazil Nuts',
         rating: 4,
         prices: {
@@ -401,7 +401,7 @@ export const nuts = [
         image: 'Images/ProductsImages/nuts/Brazil nuts.png',
     },
     {
-        id: 4,
+        id: 19,
         name: 'Cashew',
         rating: 4,
         prices: {
@@ -413,7 +413,7 @@ export const nuts = [
         image: 'Images/ProductsImages/nuts/Cashew.png',
     },
     {
-        id: 5,
+        id: 20,
         name: 'Pecan Nuts',
         rating: 3,
         prices: {
@@ -425,7 +425,7 @@ export const nuts = [
         image: 'Images/ProductsImages/nuts/Pecan nut.png',
     },
     {
-        id: 6,
+        id: 21,
         name: 'Pepper Cashew',
         rating: 4,
         prices: {
@@ -437,7 +437,7 @@ export const nuts = [
         image: 'Images/ProductsImages/nuts/pepper cashew.png',
     },
     {
-        id: 7,
+        id: 22,
         name: 'Pine Nuts',
         rating: 4,
         prices: {
@@ -449,7 +449,7 @@ export const nuts = [
         image: 'Images/ProductsImages/nuts/Pine nuts.png',
     },
     {
-        id: 8,
+        id: 23,
         name: 'Pistachios',
         rating: 4,
         prices: {
@@ -461,7 +461,7 @@ export const nuts = [
         image: 'Images/ProductsImages/nuts/pista.png',
     },
     {
-        id: 9,
+        id: 24,
         name: 'Salted Almond',
         rating: 4,
         prices: {
@@ -473,7 +473,7 @@ export const nuts = [
         image: 'Images/ProductsImages/nuts/saltedalmond.jpg',
     },
     {
-        id: 10,
+        id: 25,
         name: 'Salted Cashew',
         rating: 4,
         prices: {
@@ -485,7 +485,7 @@ export const nuts = [
         image: 'Images/ProductsImages/nuts/saltedcashew.jpg',
     },
     {
-        id: 11,
+        id: 26,
         name: 'Walnut',
         rating: 4,
         prices: {
@@ -497,7 +497,7 @@ export const nuts = [
         image: 'Images/ProductsImages/nuts/wallnut.png',
     },
     {
-        id: 12,
+        id: 27,
         name: 'Chilli Cashew',
         rating: 4,
         prices: {
@@ -509,7 +509,7 @@ export const nuts = [
         image: 'Images/ProductsImages/nuts/Chillicashew.jpg',
     },
     {
-        id: 13,
+        id: 28,
         name: 'Periperi Cashew',
         rating: 4,
         prices: {
@@ -521,7 +521,7 @@ export const nuts = [
         image: 'Images/ProductsImages/nuts/peripericashew.jpg',
     },
     {
-        id: 14,
+        id: 29,
         name: 'Indian Grapes',
         rating: 4,
         prices: {
@@ -533,7 +533,7 @@ export const nuts = [
         image: 'Images/ProductsImages/nuts/Indiangrape.jpg',
     },
     {
-        id: 15,
+        id: 30,
         name: 'Afghan Grapes',
         rating: 4,
         prices: {
@@ -545,7 +545,7 @@ export const nuts = [
         image: 'Images/ProductsImages/nuts/Afghangrape.jpg',
     },
     {
-        id: 16,
+        id: 31,
         name: 'Hazle Nut',
         rating: 4,
         prices: {
@@ -562,7 +562,7 @@ export const nuts = [
 
 export const seeds = [
     {
-        id: 1,
+        id: 32,
         name: 'Blackgrape Seeds',
         rating: 5,
         prices: {
@@ -574,7 +574,7 @@ export const seeds = [
         image: 'Images/ProductsImages/seeds/Black grapes  seeds.png',
     },
     {
-        id: 2,
+        id: 33,
         name: 'Chia Seeds',
         rating: 4,
         prices: {
@@ -586,7 +586,7 @@ export const seeds = [
         image: 'Images/ProductsImages/seeds/chia seeds.png',
     },
     {
-        id: 3,
+        id: 34,
         name: 'Flax Seeds',
         rating: 4,
         prices: {
@@ -598,7 +598,7 @@ export const seeds = [
         image: 'Images/ProductsImages/seeds/flax seed.png',
     },
     {
-        id: 4,
+        id: 35,
         name: 'Karunjeeragam Seeds',
         rating: 3,
         prices: {
@@ -610,7 +610,7 @@ export const seeds = [
         image: 'Images/ProductsImages/seeds/Karunjeeragam  seeds.png',
     },
     {
-        id: 5,
+        id: 36,
         name: 'Poppy Seeds',
         rating: 4,
         prices: {
@@ -622,7 +622,7 @@ export const seeds = [
         image: 'Images/ProductsImages/seeds/Poppy seeds.png',
     },
     {
-        id: 6,
+        id: 37,
         name: 'Pumpkin Seeds',
         rating: 4,
         prices: {
@@ -634,7 +634,7 @@ export const seeds = [
         image: 'Images/ProductsImages/seeds/pumpkin seeds.png',
     },
     {
-        id: 7,
+        id: 38,
         name: 'Sabja Seeds',
         rating: 4,
         prices: {
@@ -646,7 +646,7 @@ export const seeds = [
         image: 'Images/ProductsImages/seeds/sabja seeds.png',
     },
     {
-        id: 8,
+        id: 39,
         name: 'Sunflower Seeds',
         rating: 4,
         prices: {
@@ -658,7 +658,7 @@ export const seeds = [
         image: 'Images/ProductsImages/seeds/sunflower seeds (1).png',
     },
     {
-        id: 9,
+        id: 40,
         name: 'Watermelon Seeds',
         rating: 4,
         prices: {
@@ -670,7 +670,7 @@ export const seeds = [
         image: 'Images/ProductsImages/seeds/watermelon seeds (1).png',
     },
     {
-        id: 10,
+        id: 41,
         name: 'Vellari Seeds',
         rating: 4,
         prices: {
@@ -689,7 +689,7 @@ export const seeds = [
 
 export const dates = [
     {
-        id: 1,
+        id: 42,
         name: 'Ajwa Dates',
         rating: 5,
         prices: {
@@ -701,7 +701,7 @@ export const dates = [
         image: 'Images/ProductsImages/dates/ajwa dates.png',
     },
     {
-        id: 2,
+        id: 43,
         name: 'Khimiya Dates',
         rating: 4,
         prices: {
@@ -713,7 +713,7 @@ export const dates = [
         image: 'Images/ProductsImages/dates/khimiya   dates.png',
     },
     {
-        id: 3,
+        id: 44,
         name: 'Medjoul Dates',
         rating: 4,
         prices: {
@@ -725,7 +725,7 @@ export const dates = [
         image: 'Images/ProductsImages/dates/medjoul  dates.png',
     },
     {
-        id: 4,
+        id: 45,
         name: 'Kimia Dates',
         rating: 4,
         prices: {
@@ -737,7 +737,7 @@ export const dates = [
         image: 'Images/ProductsImages/dates/kimia.jpg',
     },
     {
-        id: 5,
+        id: 46,
         name: 'Mabroom Dates',
         rating: 4,
         prices: {
@@ -749,7 +749,7 @@ export const dates = [
         image: 'Images/ProductsImages/dates/Mabroom.jpg',
     },
     {
-        id: 6,
+        id: 47,
         name: 'Mashrook Dates',
         rating: 4,
         prices: {
@@ -761,7 +761,7 @@ export const dates = [
         image: 'Images/ProductsImages/dates/Mashrook.jpg',
     },
     {
-        id: 7,
+        id: 48,
         name: 'Barrari Dates',
         rating: 4,
         prices: {
@@ -773,7 +773,7 @@ export const dates = [
         image: 'Images/ProductsImages/dates/Barrari.jpg',
     },
     {
-        id: 8,
+        id: 49,
         name: 'Muscat Dates',
         rating: 4,
         prices: {
@@ -791,7 +791,7 @@ export const dates = [
 
 export const chocolates = [
     {
-        id: 1,
+        id: 50,
         name: 'Twix',
         rating: 4,
         prices: {
@@ -803,7 +803,7 @@ export const chocolates = [
         image: 'Images/ProductsImages/chocolates/twix.png',
     },
     {
-        id: 2,
+        id: 51,
         name: 'Kinder Bueno',
         rating: 5,
         prices: {
@@ -827,7 +827,7 @@ export const chocolates = [
     //     image: 'Images/ProductsImages/chocolates/davidoff.png',
     // },
     {
-        id: 4,
+        id: 52,
         name: 'Lotus Biscoff Smooth',
         rating: 4,
         prices: {
@@ -839,7 +839,7 @@ export const chocolates = [
         image: 'Images/ProductsImages/chocolates/biscoffsmooth.png',
     },
     {
-        id: 5,
+        id: 53,
         name: 'Mars',
         rating: 4,
         prices: {
@@ -851,7 +851,7 @@ export const chocolates = [
         image: 'Images/ProductsImages/chocolates/mars.png',
     },
     {
-        id: 6,
+        id: 54,
         name: 'Lotus Biscoff',
         rating: 4,
         prices: {
@@ -876,7 +876,7 @@ export const chocolates = [
     //     image: 'Images/ProductsImages/chocolates/millo.jpg',
     // },
     {
-        id: 8,
+        id: 55,
         name: 'Nutella Be Ready',
         rating: 4,
         prices: {
@@ -888,7 +888,7 @@ export const chocolates = [
         image: 'Images/ProductsImages/chocolates/nutellabeready.png',
     },
     {
-        id: 9,
+        id: 56,
         name: 'Nutella Go',
         rating: 4,
         prices: {
@@ -900,7 +900,7 @@ export const chocolates = [
         image: 'Images/ProductsImages/chocolates/nutella.png',
     },
     {
-        id: 10,
+        id: 57,
         name: 'Ferrero Rocher',
         rating: 4,
         prices: {
@@ -912,7 +912,7 @@ export const chocolates = [
         image: 'Images/ProductsImages/chocolates/ferreroroucher.png',
     },
     {
-        id: 11,
+        id: 58,
         name: 'Raffelo',
         rating: 4,
         prices: {
@@ -936,7 +936,7 @@ export const chocolates = [
     //     image: 'Images/ProductsImages/chocolates/ovaltine.png',
     // },
     {
-        id: 13,
+        id: 59,
         name: 'Thai Chew Candy',
         rating: 4,
         prices: {
@@ -948,7 +948,7 @@ export const chocolates = [
         image: 'Images/ProductsImages/chocolates/thaichew.png',
     },
     {
-        id: 14,
+        id: 60,
         name: 'M&M Choco',
         rating: 4,
         prices: {
@@ -965,7 +965,7 @@ export const chocolates = [
 export const drinks = [
 
     {
-        id: 1,
+        id: 61,
         name: 'Redbull',
         rating: 4,
         prices: {
@@ -977,7 +977,7 @@ export const drinks = [
         image: 'Images/ProductsImages/juices/redbull.png',
     },
     {
-        id: 2,
+        id: 62,
         name: '100 Plus',
         rating: 3,
         prices: {
@@ -989,7 +989,7 @@ export const drinks = [
         image: 'Images/ProductsImages/juices/100plus.png',
     },
     {
-        id: 3,
+        id: 63,
         name: 'Bavaria',
         rating: 4,
         prices: {
@@ -1001,7 +1001,7 @@ export const drinks = [
         image: 'Images/ProductsImages/juices/bavaria.png',
     },
     {
-        id: 4,
+        id: 64,
         name: 'Mousey',
         rating: 3,
         prices: {
@@ -1013,7 +1013,7 @@ export const drinks = [
         image: 'Images/ProductsImages/juices/moussy.png',
     },
     {
-        id: 5,
+        id: 65,
         name: 'Redbull Gold',
         rating: 4,
         prices: {
@@ -1025,7 +1025,7 @@ export const drinks = [
         image: 'Images/ProductsImages/juices/redbullgold.png',
     },
     {
-        id: 6,
+        id: 66,
         name: 'American Basil',
         rating: 4,
         prices: {
@@ -1037,7 +1037,7 @@ export const drinks = [
         image: 'Images/ProductsImages/juices/american.png',
     },
     {
-        id: 7,
+        id: 67,
         name: 'Red Wine',
         rating: 4,
         prices: {
@@ -1049,7 +1049,7 @@ export const drinks = [
         image: 'Images/ProductsImages/juices/edanberg.png',
     },
     {
-        id: 8,
+        id: 68,
         name: 'Joiner',
         rating: 4,
         prices: {
@@ -1060,9 +1060,8 @@ export const drinks = [
         },
         image: 'Images/ProductsImages/juices/joiner65.png',
     },
-
     {
-        id: 9,
+        id: 69,
         name: 'Patritti Red Wine',
         rating: 4,
         prices: {
@@ -1077,7 +1076,7 @@ export const drinks = [
 
 export const powders = [
     {
-        id: 1,
+        id: 70,
         name: 'Davidoff',
         rating: 4,
         prices: {
@@ -1089,7 +1088,7 @@ export const powders = [
         image: 'Images/ProductsImages/chocolates/davidoff.png',
     },
     {
-        id: 2,
+        id: 71,
         name: 'Milo',
         rating: 4,
         prices: {
@@ -1102,7 +1101,7 @@ export const powders = [
         image: 'Images/ProductsImages/chocolates/millo.jpg',
     },
     {
-        id: 3,
+        id: 72,
         name: 'Ovaltine',
         rating: 4,
         prices: {
