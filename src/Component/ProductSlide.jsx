@@ -10,7 +10,7 @@ const industryData = [
     { id: "1", img: "Images/ProductsImages/overview images/almond.jpeg", title: "Almond", link: '/nuts' },
     { id: "2", img: "Images/ProductsImages/overview images/cashew.webp", title: "Cashew", link: '/nuts' },
     { id: "3", img: "Images/ProductsImages/overview images/raisin.jpeg", title: "Raisin", link: '/nuts' },
-    { id: "4", img: "Images/ProductsImages/overview images/wallnut..png", title: "Wallnut", link: '/nuts' },
+    { id: "4", img: "Images/ProductsImages/overview images/wallnut.png", title: "Wallnut", link: '/nuts' },
     { id: "5", img: "Images/ProductsImages/overview images/pistachios.jpg", title: "Pistachios", link: '/nuts' },
     { id: "6", img: "Images/ProductsImages/overview images/dates.jpeg", title: "Dates", link: '/dates' },
 ];

@@ -163,13 +163,13 @@ function Footer() {
                                 <Typography sx={{ fontSize: '18px', fontFamily: 'sans-serif', fontWeight: '500', color: 'white', letterSpacing: 1 }}>
                                     Address
                                 </Typography>
-                                <Typography sx={{ fontSize: '15px', fontFamily: 'sans-serif', color: 'white', mt: 1, letterSpacing: 1 }}>
-                                    X97F+92G, Chakrapani Sannathi Street,
+                                <Typography sx={{ fontSize: '17px', fontFamily: 'sans-serif', color: 'white', mt: 1, letterSpacing: 1 }}>
+                                   31,Sarangapani East Street,
                                 </Typography>
-                                <Typography sx={{ fontSize: '15px', fontFamily: 'sans-serif', color: 'white', letterSpacing: 1 }}>
-                                    Karna Kollai Agraharam, Valayapettai Agraharam,
+                                <Typography sx={{ fontSize: '17px', fontFamily: 'sans-serif', color: 'white', letterSpacing: 1 }}>
+                                    Utchi Pillaiyar Kovil,
                                 </Typography>
-                                <Typography sx={{ fontSize: '15px', fontFamily: 'sans-serif', color: 'white', letterSpacing: 1 }}>
+                                <Typography sx={{ fontSize: '17px', fontFamily: 'sans-serif', color: 'white', letterSpacing: 1 }}>
                                     Kumbakonam, Tamil Nadu 612001, India.
                                 </Typography>
                                 <Typography sx={{ fontSize: '18px', fontFamily: 'sans-serif', fontWeight: '500', color: 'white', letterSpacing: 1, mt: 5 }}>
