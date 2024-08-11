@@ -81,20 +81,27 @@ const ProductCard = ({ product, isLoading }) => {
             id: product.id,
             name: product.name,
             image: product.image,
-            price, 
+            price,
             originalPrice,
             selectedGram
         }));
         toast.success('Successfully added to cart!', {
-            position: 'bottom-left', // Use string position
-            autoClose: 3000, // Duration in milliseconds
+            position: 'bottom-left',
+            autoClose: 3000,
         });
     }
 
     const [liked, setLiked] = useState(false);
-    const [selectedGram, setSelectedGram] = useState('1 Pocket'); // Default to 100g
-    const [price, setPrice] = useState(product.prices[selectedGram].currentPrice); // Set initial price based on default gram
-    const [originalPrice, setOriginalPrice] = useState(product.prices[selectedGram].originalPrice); // Set initial original price based on default gram
+    const [selectedGram, setSelectedGram] = useState('1pocket'); // Default to 1pocket
+    const [price, setPrice] = useState(0); // Default price
+    const [originalPrice, setOriginalPrice] = useState(0); // Default original price
+
+    useEffect(() => {
+        if (product && product.prices && product.prices[selectedGram]) {
+            setPrice(product.prices[selectedGram].currentPrice);
+            setOriginalPrice(product.prices[selectedGram].originalPrice);
+        }
+    }, [product, selectedGram]);
 
     const handleLikeClick = () => {
         setLiked(!liked);
@@ -103,8 +110,6 @@ const ProductCard = ({ product, isLoading }) => {
     const handleGramChange = (e) => {
         const newGram = e.target.value;
         setSelectedGram(newGram);
-        setPrice(product.prices[newGram].currentPrice); // Update the current price based on the selected gram
-        setOriginalPrice(product.prices[newGram].originalPrice); // Update the original price based on the selected gram
     };
 
     const handleShoppingClick = (product) => {
@@ -114,21 +119,13 @@ const ProductCard = ({ product, isLoading }) => {
         window.open(whatsappUrl, '_blank');
     };
 
-
-
     const handleShareClick = async (product) => {
-        // Construct the URL for the product page on Vercel
         const shareUrl = `https://smartdryfruitdryfruit.vercel.app/chocolates`;
-        const message = `Check out this amazing product: ${product.name}\nPrice: ${product.price}\n${shareUrl}`;
-
-        // Encode URL and message
+        const message = `Check out this amazing product: ${product.name}\nPrice: ${price}\n${shareUrl}`;
         const encodedMessage = encodeURIComponent(message);
-
-        // WhatsApp URL with the specific number
-        const whatsappNumber = '+919952857016'; // Make sure to remove any '+' in the number
+        const whatsappNumber = '+919952857016';
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
-        // Share using the Web Share API if supported
         if (navigator.share) {
             try {
                 await navigator.share({
@@ -140,13 +137,9 @@ const ProductCard = ({ product, isLoading }) => {
                 console.log('Error sharing:', error);
             }
         } else {
-            // Fallback for browsers that don't support Web Share API
             window.open(whatsappUrl, '_blank');
         }
     };
-
-
-
 
     return (
         <StyledCard>
@@ -192,7 +185,6 @@ const ProductCard = ({ product, isLoading }) => {
                         }} onClick={() => handleShoppingClick(product)}>
                             <ShoppingCartIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
                         </IconButton>
-
                     </>
                 )}
             </IconContainer>
@@ -221,20 +213,20 @@ const ProductCard = ({ product, isLoading }) => {
                                     letterSpacing: 0.5,
                                     '& .MuiOutlinedInput-root': {
                                         '& fieldset': {
-                                            borderColor: '#ccc', // Default border color
+                                            borderColor: '#ccc',
                                         },
                                         '&:hover fieldset': {
-                                            borderColor: '#92553D', // Border color on hover
+                                            borderColor: '#92553D',
                                         },
                                         '&.Mui-focused fieldset': {
-                                            borderColor: '#92553D', // Border color when focused
+                                            borderColor: '#92553D',
                                         },
                                     },
                                     '& .MuiOutlinedInput-notchedOutline': {
-                                        borderColor: '#ccc', // Default border color
+                                        borderColor: '#ccc',
                                     },
                                     '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                                        borderColor: '#92553D !important', // Border color when focused
+                                        borderColor: '#92553D !important',
                                     },
                                 }}
                             >
@@ -248,7 +240,6 @@ const ProductCard = ({ product, isLoading }) => {
                                 ))}
                             </Select>
                         </Typography>
-
 
                         <Typography color={'#92553D'} sx={{ textAlign: 'start', fontWeight: 600, fontSize: '0.8rem', letterSpacing: 0.5, mt: 1, display: 'flex', }} >
                             <VerifiedIcon sx={{ fontSize: '1rem' }} />

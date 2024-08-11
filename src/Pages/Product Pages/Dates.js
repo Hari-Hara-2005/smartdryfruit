@@ -17,10 +17,10 @@ import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/cartSlice';
 import { toast } from 'react-toastify';
 const gramOptions = [
-  { value: '100g', label: '100g' },
-  { value: '250g', label: '250g' },
-  { value: '500g', label: '500g' },
   { value: '1kg', label: '1kg' },
+  { value: '2kg', label: '2kg' },
+  { value: '3kg', label: '3kg' },
+  { value: '4kg', label: '4kg' },
 ];
 const StyledCard = styled(Card)(({ theme }) => ({
   backgroundColor: '#fff',
@@ -81,20 +81,27 @@ const ProductCard = ({ product, isLoading }) => {
       id: product.id,
       name: product.name,
       image: product.image,
-      price, // This is the selected gram price
+      price,
       originalPrice,
       selectedGram
     }));
     toast.success('Successfully added to cart!', {
-      position: 'bottom-left', // Use string position
-      autoClose: 3000, // Duration in milliseconds
+      position: 'bottom-left',
+      autoClose: 3000,
     });
   }
 
   const [liked, setLiked] = useState(false);
-  const [selectedGram, setSelectedGram] = useState('100g'); // Default to 100g
-  const [price, setPrice] = useState(product.prices[selectedGram].currentPrice); // Set initial price based on default gram
-  const [originalPrice, setOriginalPrice] = useState(product.prices[selectedGram].originalPrice); // Set initial original price based on default gram
+  const [selectedGram, setSelectedGram] = useState('1kg'); // Default to 1pocket
+  const [price, setPrice] = useState(0); // Default price
+  const [originalPrice, setOriginalPrice] = useState(0); // Default original price
+
+  useEffect(() => {
+    if (product && product.prices && product.prices[selectedGram]) {
+      setPrice(product.prices[selectedGram].currentPrice);
+      setOriginalPrice(product.prices[selectedGram].originalPrice);
+    }
+  }, [product, selectedGram]);
 
   const handleLikeClick = () => {
     setLiked(!liked);
@@ -103,32 +110,22 @@ const ProductCard = ({ product, isLoading }) => {
   const handleGramChange = (e) => {
     const newGram = e.target.value;
     setSelectedGram(newGram);
-    setPrice(product.prices[newGram].currentPrice); // Update the current price based on the selected gram
-    setOriginalPrice(product.prices[newGram].originalPrice); // Update the original price based on the selected gram
   };
 
   const handleShoppingClick = (product) => {
-    const encodedMessage = encodeURIComponent(`Hi! I'm interested in this product:\n\nName: ${product.name}\nPrice: ${price}\n\nGrams: ${selectedGram}\n\nPlease provide more details and help me place an order.`);
+    const encodedMessage = encodeURIComponent(`Hi! I'm interested in this product:\n\nName: ${product.name}\nPrice: ${price}\n\nPockets: ${selectedGram}\n\nPlease provide more details and help me place an order.`);
     const whatsappNumber = '919952857016';
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
   };
 
-
-
   const handleShareClick = async (product) => {
-    // Construct the URL for the product page on Vercel
     const shareUrl = `https://smartdryfruitdryfruit.vercel.app/dates`;
-    const message = `Check out this amazing product: ${product.name}\nPrice: ${product.price}\n${shareUrl}`;
-
-    // Encode URL and message
+    const message = `Check out this amazing product: ${product.name}\nPrice: ${price}\n${shareUrl}`;
     const encodedMessage = encodeURIComponent(message);
-
-    // WhatsApp URL with the specific number
-    const whatsappNumber = '+919952857016'; // Make sure to remove any '+' in the number
+    const whatsappNumber = '+919952857016';
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
-    // Share using the Web Share API if supported
     if (navigator.share) {
       try {
         await navigator.share({
@@ -140,13 +137,9 @@ const ProductCard = ({ product, isLoading }) => {
         console.log('Error sharing:', error);
       }
     } else {
-      // Fallback for browsers that don't support Web Share API
       window.open(whatsappUrl, '_blank');
     }
   };
-
-
-
 
   return (
     <StyledCard>
@@ -192,7 +185,6 @@ const ProductCard = ({ product, isLoading }) => {
             }} onClick={() => handleShoppingClick(product)}>
               <ShoppingCartIcon sx={{ fontSize: ['0.8rem', '1.5rem'] }} />
             </IconButton>
-
           </>
         )}
       </IconContainer>
@@ -221,20 +213,20 @@ const ProductCard = ({ product, isLoading }) => {
                   letterSpacing: 0.5,
                   '& .MuiOutlinedInput-root': {
                     '& fieldset': {
-                      borderColor: '#ccc', // Default border color
+                      borderColor: '#ccc',
                     },
                     '&:hover fieldset': {
-                      borderColor: '#92553D', // Border color on hover
+                      borderColor: '#92553D',
                     },
                     '&.Mui-focused fieldset': {
-                      borderColor: '#92553D', // Border color when focused
+                      borderColor: '#92553D',
                     },
                   },
                   '& .MuiOutlinedInput-notchedOutline': {
-                    borderColor: '#ccc', // Default border color
+                    borderColor: '#ccc',
                   },
                   '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                    borderColor: '#92553D !important', // Border color when focused
+                    borderColor: '#92553D !important',
                   },
                 }}
               >
@@ -248,7 +240,6 @@ const ProductCard = ({ product, isLoading }) => {
                 ))}
               </Select>
             </Typography>
-
 
             <Typography color={'#92553D'} sx={{ textAlign: 'start', fontWeight: 600, fontSize: '0.8rem', letterSpacing: 0.5, mt: 1, display: 'flex', }} >
               <VerifiedIcon sx={{ fontSize: '1rem' }} />
@@ -299,7 +290,7 @@ const Dates = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "dates";
+    document.title = "Dates";
   }, []);
 
   return (
@@ -320,7 +311,7 @@ const Dates = () => {
         <ProductNavbar />
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'start', color: 'black', px: [2, 5, 4] }}>
-        <Title color="#282828">dates</Title>
+        <Title color="#282828">Dates</Title>
       </Box>
       <Box sx={{ display: ['none', 'block'] }}>
         <ProductNavbar />

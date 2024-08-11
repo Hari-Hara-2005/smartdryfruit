@@ -133,7 +133,7 @@ function Footer() {
         },
         {
             path: "/drinks",
-            name: "Oval Time",
+            name: "Oval Tine",
         },
     ];
     const scrollToTop = () => {
