@@ -290,7 +290,7 @@ const Chocolates = () => {
     }, []);
 
     useEffect(() => {
-        document.title = "chocolates";
+        document.title = "Chocolates";
     }, []);
 
     return (
@@ -311,7 +311,7 @@ const Chocolates = () => {
                 <ProductNavbar />
             </Box>
             <Box sx={{ display: 'flex', justifyContent: 'start', color: 'black', px: [2, 5, 4] }}>
-                <Title color="#282828">chocolates</Title>
+                <Title color="#282828">Chocolates</Title>
             </Box>
             <Box sx={{ display: ['none', 'block'] }}>
                 <ProductNavbar />

@@ -113,7 +113,7 @@ const ProductCard = ({ product, isLoading }) => {
     };
 
     const handleShoppingClick = (product) => {
-        const encodedMessage = encodeURIComponent(`Hi! I'm interested in this product:\n\nName: ${product.name}\nPrice: ${price}\n\nPockets: ${selectedGram}\n\nPlease provide more details and help me place an order.`);
+        const encodedMessage = encodeURIComponent(`Hi! I'm interested in this product:\n\nName: ${product.name}\nPrice: ${price}\n\nBottle: ${selectedGram}\n\nPlease provide more details and help me place an order.`);
         const whatsappNumber = '919952857016';
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
         window.open(whatsappUrl, '_blank');
