@@ -26,7 +26,7 @@ const CartItemCard = ({ product, onRemove }) => {
                     component="img"
                     image={product.image}
                     alt={product.name}
-                    sx={{ width: '100%', height: 'auto' }}
+                    sx={{ width: '100%', height: 'auto'}}
                 />
             </Box>
             <CardContent sx={{ flex: '1 1 auto', ml: [0,2] }}>

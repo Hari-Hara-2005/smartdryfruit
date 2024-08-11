@@ -12,25 +12,28 @@ import Chocolates from './Pages/Product Pages/Chocolates';
 import Juice from './Pages/Product Pages/Juice';
 import Cart from './Pages/Cart';
 import Powder from './Pages/Product Pages/Powder';
-
+import { Provider } from 'react-redux';
+import store from './redux/store';
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Hero />} />
-        <Route path='/product' element={<ProductGrid />} />
-        <Route path='/dryfruits' element={<DryFruits />} />
-        <Route path='/dates' element={<Dates />} />
-        <Route path='/nuts' element={<Nuts />} />
-        <Route path='/seeds' element={<Seeds />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/chocolates' element={<Chocolates />} />
-        <Route path='/Juice' element={<Juice />} />
-        <Route path='/cart' element={<Cart />} />
-        <Route path='/Powder' element={<Powder />} />
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Hero />} />
+          <Route path='/product' element={<ProductGrid />} />
+          <Route path='/dryfruits' element={<DryFruits />} />
+          <Route path='/dates' element={<Dates />} />
+          <Route path='/nuts' element={<Nuts />} />
+          <Route path='/seeds' element={<Seeds />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/chocolates' element={<Chocolates />} />
+          <Route path='/Juice' element={<Juice />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/Powder' element={<Powder />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 };
 

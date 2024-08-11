@@ -868,7 +868,7 @@ export const chocolates = [
     //     rating: 4,
     //     prices: {
     //         '1pocket': { currentPrice: '₹300', originalPrice: '₹350' },
-            
+
     //         '2pocket': { currentPrice: '₹600', originalPrice: '₹650' },
     //         '3pocket': { currentPrice: '₹900', originalPrice: '₹950' },
     //         '4pocket': { currentPrice: '₹1,200', originalPrice: '₹1,250' },
@@ -940,10 +940,10 @@ export const chocolates = [
         name: 'Thai Chew Candy',
         rating: 4,
         prices: {
-            '100gm': { currentPrice: '₹65', originalPrice: '₹90' },
-            '200gm': { currentPrice: '₹130', originalPrice: '₹150' },
-            '300gm': { currentPrice: '₹195', originalPrice: '₹220' },
-            '400gm': { currentPrice: '₹260', originalPrice: '₹280' },
+            '1pocket': { currentPrice: '₹65', originalPrice: '₹90' },
+            '2pocket': { currentPrice: '₹130', originalPrice: '₹150' },
+            '3pocket': { currentPrice: '₹195', originalPrice: '₹220' },
+            '4pocket': { currentPrice: '₹260', originalPrice: '₹280' },
         },
         image: 'Images/ProductsImages/chocolates/thaichew.png',
     },

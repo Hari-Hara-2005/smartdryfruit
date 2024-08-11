@@ -7,6 +7,7 @@ const loadCartFromLocalStorage = () => {
         if (serializedState === null) return [];
         return JSON.parse(serializedState);
     } catch (err) {
+        console.error('Failed to load cart from localStorage:', err);
         return [];
     }
 };
@@ -26,18 +27,28 @@ const cartSlice = createSlice({
                 // If it's a new item, add it to the cart
                 state.items.push(action.payload);
             }
-            // Save updated cart to localStorage
-            localStorage.setItem('cart', JSON.stringify(state.items));
+            try {
+                localStorage.setItem('cart', JSON.stringify(state.items));
+            } catch (err) {
+                console.error('Failed to save cart to localStorage:', err);
+            }
         },
         removeFromCart: (state, action) => {
             state.items = state.items.filter(item => item.id !== action.payload);
-            // Save updated cart to localStorage
-            localStorage.setItem('cart', JSON.stringify(state.items));
+            try {
+                localStorage.setItem('cart', JSON.stringify(state.items));
+            } catch (err) {
+                console.error('Failed to save cart to localStorage:', err);
+            }
         },
         clearCart: (state) => {
+            console.log('Clearing cart. Before clear:', state.items);
             state.items = [];
-            // Remove cart from localStorage
-            localStorage.removeItem('cart');
+            try {
+                localStorage.removeItem('cart');
+            } catch (err) {
+                console.error('Failed to remove cart from localStorage:', err);
+            }
         },
     },
 });
