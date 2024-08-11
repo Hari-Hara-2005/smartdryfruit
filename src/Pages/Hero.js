@@ -21,8 +21,8 @@ const Hero = () => {
         { id: "2", img: "Images/ProductsImages/ourproducts images/nuts.png", title: "Nuts", link: "/nuts" },
         { id: "3", img: "Images/ProductsImages/ourproducts images/seeds.webp", title: "Seeds", link: "/seeds" },
         { id: "4", img: "Images/ProductsImages/ourproducts images/dryfruitss.jpg", title: "Dry Fruits", link: "/dryfruits" },
-        { id: "5", img: "Images/ProductsImages/ourproducts images/seeds.webp", title: "Chocolates", link: "/chocolates" },
-        { id: "6", img: "Images/ProductsImages/ourproducts images/dryfruitss.jpg", title: "Drinks", link: "/juice" },
+        { id: "5", img: "Images/ProductsImages/ourproducts images/choco.jpeg", title: "Chocolates", link: "/chocolates" },
+        { id: "6", img: "Images/ProductsImages/ourproducts images/juice.jpeg", title: "Drinks", link: "/juice" },
     ];
     return (
         <Box>
