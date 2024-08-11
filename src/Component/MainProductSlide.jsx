@@ -6,20 +6,20 @@ import 'swiper/css/navigation';
 import { Navigation, Autoplay } from 'swiper/modules';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 const industryData = [
-    { id: "1", img: "Images/mpi/img1.png"  },
-    { id: "2", img: "Images/mpi/img2.png"  },
-    { id: "3", img: "Images/mpi/img3.png"  },
-    { id: "4", img: "Images/mpi/img4.png"  },
-    { id: "5", img: "Images/mpi/img5.png"  },
-    { id: "6", img: "Images/mpi/img6.png"  },
-    { id: "7", img: "Images/mpi/img7.png"  },
-    { id: "8", img: "Images/mpi/img8.png"  },
-    { id: "9", img: "Images/mpi/img9.png"  },
-    { id: "10", img: "Images/mpi/img10.png"  },
-    { id: "11", img: "Images/mpi/img11.png"  },
-    { id: "12", img: "Images/mpi/img12.png"  },
-    { id: "13", img: "Images/mpi/img13.png"  },
-    { id: "14", img: "Images/mpi/img14.png"  }
+    { id: "1", img: "Images/mpi/img1.png" },
+    { id: "2", img: "Images/mpi/img2.png" },
+    { id: "3", img: "Images/mpi/img3.png" },
+    { id: "4", img: "Images/mpi/img4.png" },
+    { id: "5", img: "Images/mpi/img5.png" },
+    { id: "6", img: "Images/mpi/img6.png" },
+    { id: "7", img: "Images/mpi/img7.png" },
+    { id: "8", img: "Images/mpi/img8.png" },
+    { id: "9", img: "Images/mpi/img9.png" },
+    { id: "10", img: "Images/mpi/img10.png" },
+    { id: "11", img: "Images/mpi/img11.png" },
+    { id: "12", img: "Images/mpi/img12.png" },
+    { id: "13", img: "Images/mpi/img13.png" },
+    { id: "14", img: "Images/mpi/img14.png" }
 ];
 
 const MainProductSlide = () => {
@@ -79,11 +79,7 @@ const MainProductSlide = () => {
                             <Box
                                 sx={{
                                     position: 'relative',
-<<<<<<< HEAD
                                     width: { xs: "70%", sm: "100%", md: "70%", lg: "45%", xl: "45%" },
-=======
-                                    width: { xs: "100%", sm: "100%", md: "70%", lg: "75%", xl: "35%" },
->>>>>>> f8bfb12ca51f49995647da264b0c006a260ce8ab
                                     cursor: 'pointer',
                                     transform: (index === activeIndex + Math.floor(slidesPerView / 2)) ? ['scale(1.5)', 'scale(1.5)', 'scale(1.09)'] : 'scale(0.4)',
                                     transition: 'transform 0.3s ease',
