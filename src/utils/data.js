@@ -1095,7 +1095,7 @@ export const powders = [
             '1pocket': { currentPrice: '₹50z', originalPrice: '₹60' },
             '2pocket': { currentPrice: '₹100', originalPrice: '₹120' },
             '5pocket': { currentPrice: '₹150', originalPrice: '₹170' },
-            '1pocket': { currentPrice: '₹200', originalPrice: '₹220' },
+            '3pocket': { currentPrice: '₹200', originalPrice: '₹220' },
         },
         image: 'Images/ProductsImages/chocolates/davidoff.png',
     },
