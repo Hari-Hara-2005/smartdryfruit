@@ -26,7 +26,7 @@ const Hero = () => {
     return (
         <Box>
             <StickyWhatsapp link={"https://wa.me/8220570301"} />
-            <Box sx={{ height: '100vh', bgcolor: '#282828', position: 'relative' }}>
+            <Box sx={{ }} className="hero_bg">
                 <Navbar />
                 <MainProductSlide />
             </Box>

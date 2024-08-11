@@ -5,20 +5,20 @@
   scrollbar-width: none;
 }
 .hero_bg {
-  background-image: url('logo.png');
+  background-image: url("SMART.jpg");
   height: 100vh;
   background-repeat: no-repeat;
-  background-size: 50% 50%;
+  background-size: 100% 100%;
   background-position: 50% 50%;
 }
-
-/* Adjustments for tablets */
+/* 
+Adjustments for tablets
 @media (max-width: 768px) {
   .hero_bg {
-    background-size: 80% 50%; /* Adjust as needed */
+    background-size: 80% 50%; 
     background-position: 50% 50%;
   }
-}
+} */
 
 /* Adjustments for mobile devices */
 /* Styles for devices between 320px and 425px */
@@ -28,7 +28,7 @@
     background-position: 50% 53%;
   }
 } */
-@media (min-width: 320px) and (max-width: 359px) {
+/* @media (min-width: 320px) and (max-width: 359px) {
   .hero_bg {
     background-size: 100% 15%;
     background-position: 50% 70%;
@@ -82,7 +82,7 @@
     background-size: 100% 15%;
     background-position: 50% 46%;
   }
-}
+} */
 /* Styles for devices between 375px and 480px */
 /* @media (min-width: 375px) and (max-width: 480px) {
   .hero_bg {
@@ -108,17 +108,17 @@
 } */
 
 /* Styles for devices between 480px and 768px */
-@media (min-width: 480px) and (max-width: 768px) {
+/* @media (min-width: 480px) and (max-width: 768px) {
   .hero_bg {
     background-size: 100% 20%; /* Adjust as needed */
-    background-position: 50% 62%;
-  }
-}
+    /* background-position: 50% 62%; */
+  /* }
+} */
 
 /* Styles for devices larger than 768px */
-@media (min-width: 769px) {
+/* @media (min-width: 769px) {
   .hero_bg {
     background-size: 100% 40%; /* Adjust as needed */
-    background-position: 50% 55%;
+    /* background-position: 50% 55%;
   }
-}
+} */ 
