@@ -268,8 +268,8 @@ const ProductCard = ({ product, isLoading }) => {
                                 </Box>
                             </Box>
                             <Box sx={{ display: ['flex'], alignItems: 'center', mt: [1.5, 0] }}>
-                                <Box sx={{ mt: 2 }}>
-                                    <Box sx={{ display: ['flex'], alignItems: 'center', mt: 1.5 }}>
+                                    <Box sx={{ mt: [0, 2] }}>
+                                        <Box sx={{ display: ['flex'], alignItems: 'center', mt: [0, 1.5] }}>
                                         <Button variant="contained" startIcon={<ShoppingCartOutlinedIcon />} sx={{
                                             bgcolor: "#92553D", textTransform: 'none', borderRadius: '50px', px: [2.5], '&:hover': {
                                                 bgcolor: "#282828"
