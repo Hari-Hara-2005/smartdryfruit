@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Button, Grid, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
 import { animateHero } from '../gsapAnimations';
 import Navbar from '../Component/Navbar';
@@ -10,6 +10,7 @@ import Faq from '../Component/Faq';
 import Footer from '../Component/Footer';
 import { Link } from 'react-router-dom';
 import MainProductSlide from '../Component/MainProductSlide';
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 const Hero = () => {
     useEffect(() => {
         animateHero();
@@ -26,9 +27,30 @@ const Hero = () => {
     return (
         <Box>
             <StickyWhatsapp link={"https://wa.me/8220570301"} />
-            <Box sx={{ }} className="hero_bg">
+            <Box sx={{}} className="hero_bg">
                 <Navbar />
                 <MainProductSlide />
+                <Box sx={{ display: 'flex', justifyContent: 'center', mt: -1 }}>
+                    <Button
+                        variant="contained"
+                        href='/dates'
+                        startIcon={<ShoppingBagOutlinedIcon />}
+                        sx={{
+                            bgcolor: 'rgba(255, 255, 255, 0.2)', // Semi-transparent white background
+                            textTransform: 'none',
+                            borderRadius: '50px',
+                            px: [2.5],
+                            backdropFilter: 'blur(10px)', // Apply blur effect
+                            border: '1px solid rgba(255, 255, 255, 0.3)', // Optional: Border for better visibility
+                            color: '#fff', // Text color
+                            '&:hover': {
+                                bgcolor: 'rgba(255, 255, 255, 0.3)', // Slightly lighter on hover
+                            }
+                        }}
+                    >
+                        Shop Now
+                    </Button>
+                </Box>
             </Box>
             {/* <Box sx={{ height: '100vh', bgcolor: '#4b0082', position: 'relative' }}>
                 <Typography

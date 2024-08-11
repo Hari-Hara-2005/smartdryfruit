@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Autoplay } from 'swiper/modules';
-
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 const industryData = [
     { id: "1", img: "Images/mpi/img1.png", title: "Almond" },
     { id: "2", img: "Images/mpi/img2.png", title: "Almond" },
@@ -50,7 +50,7 @@ const MainProductSlide = () => {
 
     return (
         <>
-            <Box sx={{ display: 'flex', alignContent: 'center', height: ['80%', '80%', '90%'] }}>
+            <Box sx={{ display: 'flex', alignContent: 'center', height: ['80%', '80%', '85%'] }}>
                 <Swiper
                     slidesPerView={slidesPerView}
                     navigation={false}
@@ -79,9 +79,9 @@ const MainProductSlide = () => {
                             <Box
                                 sx={{
                                     position: 'relative',
-                                    width: { xs: "100%", sm: "100%", md: "70%", lg: "75%", xl: "65%" },
+                                    width: { xs: "100%", sm: "100%", md: "70%", lg: "75%", xl: "60%" },
                                     cursor: 'pointer',
-                                    pt:5,
+                                    pt: 5,
                                     transform: (index === activeIndex + Math.floor(slidesPerView / 2)) ? ['scale(1.5)', 'scale(1.5)', 'scale(1.09)'] : 'scale(0.4)',
                                     transition: 'transform 0.3s ease',
                                 }}
