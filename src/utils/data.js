@@ -968,12 +968,7 @@ export const drinks = [
         id: 1,
         name: 'Redbull',
         rating: 4,
-        prices: {
-            '100g': { currentPrice: '₹50', originalPrice: '₹60' },
-            '250g': { currentPrice: '₹100', originalPrice: '₹120' },
-            '500g': { currentPrice: '₹150', originalPrice: '₹170' },
-            '1kg': { currentPrice: '₹200', originalPrice: '₹220' },
-        },
+        price: ,
         image: 'Images/ProductsImages/juices/redbull.png',
     },
     {
@@ -987,12 +982,7 @@ export const drinks = [
         id: 3,
         name: 'Bavaria',
         rating: 4,
-        prices: {
-            '100g': { currentPrice: '₹50', originalPrice: '₹60' },
-            '250g': { currentPrice: '₹100', originalPrice: '₹120' },
-            '500g': { currentPrice: '₹150', originalPrice: '₹170' },
-            '1kg': { currentPrice: '₹200', originalPrice: '₹220' },
-        },
+        price: ,
         image: 'Images/ProductsImages/juices/bavaria.png',
     },
     {
@@ -1006,23 +996,13 @@ export const drinks = [
         id: 5,
         name: 'Redbull Gold',
         rating: 4,
-        prices: {
-            '100g': { currentPrice: '₹50', originalPrice: '₹60' },
-            '250g': { currentPrice: '₹100', originalPrice: '₹120' },
-            '500g': { currentPrice: '₹150', originalPrice: '₹170' },
-            '1kg': { currentPrice: '₹200', originalPrice: '₹220' },
-        },
+        price: ,
         image: 'Images/ProductsImages/juices/redbullgold.png',
     },
     {
         id: 6,
         name: 'American Basil',
-        prices: {
-            '100g': { currentPrice: '₹50', originalPrice: '₹60' },
-            '250g': { currentPrice: '₹100', originalPrice: '₹120' },
-            '500g': { currentPrice: '₹150', originalPrice: '₹170' },
-            '1kg': { currentPrice: '₹200', originalPrice: '₹220' },
-        },
+        price: ,
         price: '₹65.00',
         image: 'Images/ProductsImages/juices/american.png',
     },
@@ -1037,12 +1017,7 @@ export const drinks = [
         id: 8,
         name: 'Joiner-65',
         rating: 4,
-        prices: {
-            '100g': { currentPrice: '₹50', originalPrice: '₹60' },
-            '250g': { currentPrice: '₹100', originalPrice: '₹120' },
-            '500g': { currentPrice: '₹150', originalPrice: '₹170' },
-            '1kg': { currentPrice: '₹200', originalPrice: '₹220' },
-        },
+        price:,
         image: 'Images/ProductsImages/juices/joiner65.png',
     },
 
