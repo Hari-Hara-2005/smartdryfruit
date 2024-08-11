@@ -868,7 +868,6 @@ export const chocolates = [
         rating: 4,
         prices: {
             '1pocket': { currentPrice: '₹300', originalPrice: '₹350' },
-            
             '2pocket': { currentPrice: '₹600', originalPrice: '₹650' },
             '3pocket': { currentPrice: '₹900', originalPrice: '₹950' },
             '4pocket': { currentPrice: '₹1,200', originalPrice: '₹1,250' },
