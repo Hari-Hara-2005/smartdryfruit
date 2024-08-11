@@ -356,7 +356,7 @@ export const dryfruits = [
             '500g': { currentPrice: '₹390', originalPrice: '₹410' },
             '1kg': { currentPrice: '₹780', originalPrice: '₹800' },
         },
-        image: 'Images/ProductsImages/dryFruits/mixed fruits.png',
+        image: 'Images/ProductsImages/dryFruits/mixeddryfruit.jpg',
         unitsSold: 43,
     },
 ];
