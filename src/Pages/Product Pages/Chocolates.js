@@ -16,7 +16,12 @@ import Footer from '../../Component/Footer';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/cartSlice';
 import { toast } from 'react-toastify';
-
+const gramOptions = [
+    { value: '1pocket', label: '1pocket' },
+    { value: '2pocket', label: '2pocket' },
+    { value: '3pocket', label: '3pocket' },
+    { value: '4pocket', label: '4pocket' },
+];
 const StyledCard = styled(Card)(({ theme }) => ({
     backgroundColor: '#fff',
     color: '#92553D',
@@ -76,8 +81,9 @@ const ProductCard = ({ product, isLoading }) => {
             id: product.id,
             name: product.name,
             image: product.image,
-            price: product.price, // This is the selected gram price
-            originalPrice: product.originalPrice,
+            price, 
+            originalPrice,
+            selectedGram
         }));
         toast.success('Successfully added to cart!', {
             position: 'bottom-left', // Use string position
@@ -86,14 +92,23 @@ const ProductCard = ({ product, isLoading }) => {
     }
 
     const [liked, setLiked] = useState(false);
+    const [selectedGram, setSelectedGram] = useState('1 Pocket'); // Default to 100g
+    const [price, setPrice] = useState(product.prices[selectedGram].currentPrice); // Set initial price based on default gram
+    const [originalPrice, setOriginalPrice] = useState(product.prices[selectedGram].originalPrice); // Set initial original price based on default gram
 
     const handleLikeClick = () => {
         setLiked(!liked);
     };
 
+    const handleGramChange = (e) => {
+        const newGram = e.target.value;
+        setSelectedGram(newGram);
+        setPrice(product.prices[newGram].currentPrice); // Update the current price based on the selected gram
+        setOriginalPrice(product.prices[newGram].originalPrice); // Update the original price based on the selected gram
+    };
 
     const handleShoppingClick = (product) => {
-        const encodedMessage = encodeURIComponent(`Hi! I'm interested in this product:\n\nName: ${product.name}\nPrice: ${product.price}\n\nPlease provide more details and help me place an order.`);
+        const encodedMessage = encodeURIComponent(`Hi! I'm interested in this product:\n\nName: ${product.name}\nPrice: ${price}\n\nPockets: ${selectedGram}\n\nPlease provide more details and help me place an order.`);
         const whatsappNumber = '919952857016';
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
         window.open(whatsappUrl, '_blank');
@@ -103,7 +118,7 @@ const ProductCard = ({ product, isLoading }) => {
 
     const handleShareClick = async (product) => {
         // Construct the URL for the product page on Vercel
-        const shareUrl = `https://smartdryfruitdryfruit.vercel.app/dates`;
+        const shareUrl = `https://smartdryfruitdryfruit.vercel.app/chocolates`;
         const message = `Check out this amazing product: ${product.name}\nPrice: ${product.price}\n${shareUrl}`;
 
         // Encode URL and message
@@ -194,6 +209,47 @@ const ProductCard = ({ product, isLoading }) => {
                         <Typography component="div" sx={{ textAlign: 'start', fontWeight: [700, 600], letterSpacing: 1, fontSize: ['0.8rem', '1.3rem'] }} >
                             {product.name}
                         </Typography>
+                        <Typography variant="body2" component="div" sx={{ textAlign: 'start', letterSpacing: 1, py: 1 }}>
+                            <Select
+                                value={selectedGram}
+                                displayEmpty
+                                style={{ height: 40 }}
+                                onChange={handleGramChange}
+                                sx={{
+                                    fontSize: ['1rem', '1rem'],
+                                    minWidth: 100,
+                                    letterSpacing: 0.5,
+                                    '& .MuiOutlinedInput-root': {
+                                        '& fieldset': {
+                                            borderColor: '#ccc', // Default border color
+                                        },
+                                        '&:hover fieldset': {
+                                            borderColor: '#92553D', // Border color on hover
+                                        },
+                                        '&.Mui-focused fieldset': {
+                                            borderColor: '#92553D', // Border color when focused
+                                        },
+                                    },
+                                    '& .MuiOutlinedInput-notchedOutline': {
+                                        borderColor: '#ccc', // Default border color
+                                    },
+                                    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                        borderColor: '#92553D !important', // Border color when focused
+                                    },
+                                }}
+                            >
+                                <MenuItem value="" disabled>
+                                    Select weight
+                                </MenuItem>
+                                {gramOptions.map((option) => (
+                                    <MenuItem key={option.value} value={option.value}>
+                                        {option.label}
+                                    </MenuItem>
+                                ))}
+                            </Select>
+                        </Typography>
+
+
                         <Typography color={'#92553D'} sx={{ textAlign: 'start', fontWeight: 600, fontSize: '0.8rem', letterSpacing: 0.5, mt: 1, display: 'flex', }} >
                             <VerifiedIcon sx={{ fontSize: '1rem' }} />
                             Smart Dry Fruits
@@ -203,17 +259,17 @@ const ProductCard = ({ product, isLoading }) => {
                                 <RatingStars rating={product.rating} size="1.2rem" />
                                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                                     <Typography color={'#282828'} sx={{ textAlign: 'start', fontWeight: 700, fontSize: '1rem', letterSpacing: 0.5, display: 'flex', alignItems: 'center' }} >
-                                        {product.price}
+                                        {price}
                                         <LocalOfferOutlinedIcon sx={{ fontSize: '0.9rem' }} />
                                     </Typography>
                                     <Typography color={'gray'} sx={{ textAlign: 'start', fontWeight: 600, fontSize: '0.9rem', letterSpacing: 0.5, textDecoration: "line-through" }} >
-                                        {product.originalPrice}
+                                        {originalPrice}
                                     </Typography>
                                 </Box>
                             </Box>
                             <Box sx={{ display: ['flex'], alignItems: 'center', mt: [1.5, 0] }}>
-                                    <Box sx={{ mt: [0, 2] }}>
-                                        <Box sx={{ display: ['flex'], alignItems: 'center', mt: [0, 1.5] }}>
+                                <Box sx={{ mt: [0, 2] }}>
+                                    <Box sx={{ display: ['flex'], alignItems: 'center', mt: [0, 1.5] }}>
                                         <Button variant="contained" startIcon={<ShoppingCartOutlinedIcon />} sx={{
                                             bgcolor: "#92553D", textTransform: 'none', borderRadius: '50px', px: [2.5], '&:hover': {
                                                 bgcolor: "#282828"
@@ -243,7 +299,7 @@ const Chocolates = () => {
     }, []);
 
     useEffect(() => {
-        document.title = "Chocolates";
+        document.title = "chocolates";
     }, []);
 
     return (
@@ -264,7 +320,7 @@ const Chocolates = () => {
                 <ProductNavbar />
             </Box>
             <Box sx={{ display: 'flex', justifyContent: 'start', color: 'black', px: [2, 5, 4] }}>
-                <Title color="#282828">Chocolates</Title>
+                <Title color="#282828">chocolates</Title>
             </Box>
             <Box sx={{ display: ['none', 'block'] }}>
                 <ProductNavbar />

@@ -885,7 +885,6 @@ export const chocolates = [
             '4pocket': { currentPrice: '₹300', originalPrice: '₹325' },
         },
         image: 'Images/ProductsImages/chocolates/nutellabeready.png',
-
     },
     {
         id: 9,
@@ -937,7 +936,7 @@ export const chocolates = [
     },
     {
         id: 13,
-        name: 'Thai Chew Candy ',
+        name: 'Thai Chew Candy',
         rating: 4,
         prices: {
             '100gm': { currentPrice: '₹65', originalPrice: '₹90' },
@@ -959,9 +958,8 @@ export const chocolates = [
         },
         image: 'Images/ProductsImages/chocolates/mm.png',
     },
-
-
 ];
+
 
 export const drinks = [
 
@@ -1066,7 +1064,7 @@ export const drinks = [
         id: 9,
         name: 'Patritti Red Wine',
         rating: 4,
-         prices: {
+        prices: {
             '1bottle': { currentPrice: '₹500', originalPrice: '₹600' },
             '2bottle': { currentPrice: '₹1,000', originalPrice: '₹1,250' },
             '3bottle': { currentPrice: '₹2,000', originalPrice: '₹2,250' },
