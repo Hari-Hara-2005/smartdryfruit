@@ -367,14 +367,20 @@ export default function Navbar(props) {
                   </ImageListItem>
                 </Box>
               </Link>
-              <Box sx={{ display: 'flex' ,alignItems:'center',gap:3}}>
-                <Badge
-                  badgeContent={cartItems.length}
-                  color="error"
-                  sx={{ '& .MuiBadge-dot': { backgroundColor: '#92553D' } }} // Customize badge color if needed
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
+                <IconButton
+                  onClick={handleDrawerToggle}
+                  href="/cart"
+                      color="inherit"
                 >
-                  <ShoppingCartOutlinedIcon />
-                </Badge>
+                  <Badge
+                    badgeContent={cartItems.length}
+                    color="error"
+                    sx={{ '& .MuiBadge-dot': { backgroundColor: '#92553D' } }} 
+                  >
+                    <ShoppingCartOutlinedIcon />
+                  </Badge>
+                </IconButton>
                 <IconButton
                   onClick={handleDrawerToggle}
                   size="large"
