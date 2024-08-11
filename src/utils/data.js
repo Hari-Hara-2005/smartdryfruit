@@ -244,7 +244,7 @@ export const dryfruits = [
     },
     {
         id: 7,
-        name: 'Dry Amla ',
+        name: 'Dry Amla',
         rating: 4,
         prices: {
             '100g': { currentPrice: '₹45', originalPrice: '₹60' },
@@ -257,7 +257,6 @@ export const dryfruits = [
     },
     {
         id: 8,
-
         name: 'Ginger Cubes',
         rating: 4,
         prices: {
@@ -271,7 +270,6 @@ export const dryfruits = [
     },
     {
         id: 9,
-
         name: 'Ginger Slices',
         rating: 4,
         prices: {
@@ -339,13 +337,12 @@ export const dryfruits = [
         id: 14,
         name: 'Pomelo',
         rating: 4,
-        price: {
+        prices: {
             '100g': { currentPrice: '₹65', originalPrice: '₹80' },
             '250g': { currentPrice: '₹162', originalPrice: '₹190' },
             '500g': { currentPrice: '₹324', originalPrice: '₹350' },
             '1kg': { currentPrice: '₹648', originalPrice: '₹680' },
         },
-
         image: 'Images/ProductsImages/dryFruits/pomelo.png',
         unitsSold: 43,
     },
@@ -353,111 +350,13 @@ export const dryfruits = [
         id: 15,
         name: 'Mixed Fruits',
         rating: 4,
-        price:
-        {
-            '100g': { currentPrice: '₹80', originalPrice: '₹100' },
-            '250g': { currentPrice: '₹200', originalPrice: '₹220' },
-            '500g': { currentPrice: '₹400', originalPrice: '₹420' },
-            '1kg': { currentPrice: '₹800', originalPrice: '₹830' },
-        },
-        image: 'Images/ProductsImages/dryFruits/mixeddryfruit.jpg',
-        unitsSold: 43,
-    },
-    {
-        id: 16,
-        name: 'Raspberry',
-        rating: 4,
-        price:
-        {
-            '100g': { currentPrice: '₹400', originalPrice: '₹420' },
-            '250g': { currentPrice: '₹1,000', originalPrice: '₹1,050' },
-            '500g': { currentPrice: '₹2,000', originalPrice: '₹2,050' },
-            '1kg': { currentPrice: '₹4,000', originalPrice: '₹4,050' },
-        },
-        image: 'Images/ProductsImages/dryFruits/Rashberry.png',
-        unitsSold: 43,
-    },
-    {
-        id: 17,
-        name: 'Strawberry',
-        rating: 4,
-        price:
-        {
-            '100g': { currentPrice: '₹138', originalPrice: '₹150' },
-            '250g': { currentPrice: '₹345', originalPrice: '₹360' },
-            '500g': { currentPrice: '₹690', originalPrice: '₹710' },
-            '1kg': { currentPrice: '₹1,380', originalPrice: '₹1,400' },
-        },
-        image: 'Images/ProductsImages/dryFruits/strawberry.png',
-        unitsSold: 43,
-    },
-    {
-        id: 18,
-        name: 'Yellow Peach',
-        rating: 4,
-        price:
-        {
-            '100g': { currentPrice: '₹65', originalPrice: '₹80' },
-            '250g': { currentPrice: '₹162', originalPrice: '₹190' },
-            '500g': { currentPrice: '₹324', originalPrice: '₹350' },
-            '1kg': { currentPrice: '₹648', originalPrice: '₹670' },
-        },
-        image: 'Images/ProductsImages/dryFruits/yellow peach.png',
-        unitsSold: 43,
-    },
-    {
-        id: 19,
-        name: 'Masala Guava',
-        rating: 4,
-        price:
-        {
-            '100g': { currentPrice: '₹120', originalPrice: '₹150' },
-            '250g': { currentPrice: '₹300', originalPrice: '₹330' },
-            '500g': { currentPrice: '₹600', originalPrice: '₹640' },
-            '1kg': { currentPrice: '₹1,200', originalPrice: '₹1,230' },
-        },
-        image: 'Images/ProductsImages/dryFruits/Masalaguava.jpg',
-        unitsSold: 43,
-    },
-    {
-        id: 20,
-        name: 'Kiwi',
-        rating: 4,
         prices: {
-            '100g': { currentPrice: '₹60', originalPrice: '₹80' },
-            '250g': { currentPrice: '₹150', originalPrice: '₹180' },
-            '500g': { currentPrice: '₹300', originalPrice: '₹340' },
-            '1kg': { currentPrice: '₹600', originalPrice: '₹640' },
+            '100g': { currentPrice: '₹78', originalPrice: '₹90' },
+            '250g': { currentPrice: '₹195', originalPrice: '₹210' },
+            '500g': { currentPrice: '₹390', originalPrice: '₹410' },
+            '1kg': { currentPrice: '₹780', originalPrice: '₹800' },
         },
-        image: 'Images/ProductsImages/dryFruits/kiwi.jpg',
-        unitsSold: 43,
-    },
-    {
-        id: 21,
-        name: 'Gojiberry',
-        rating: 4,
-        price:
-        {
-            '100g': { currentPrice: '₹150', originalPrice: '₹180' },
-            '250g': { currentPrice: '₹375', originalPrice: '₹400' },
-            '500g': { currentPrice: '₹750', originalPrice: '₹780' },
-            '1kg': { currentPrice: '₹1,500', originalPrice: '₹1,550' },
-        },
-        image: 'Images/ProductsImages/dryFruits/gojiberries.jpg',
-        unitsSold: 43,
-    },
-    {
-        id: 22,
-        name: 'Prunes',
-        rating: 4,
-        price:
-        {
-            '100g': { currentPrice: '₹110', originalPrice: '₹130' },
-            '250g': { currentPrice: '₹275', originalPrice: '₹300' },
-            '500g': { currentPrice: '₹550', originalPrice: '₹580' },
-            '1kg': { currentPrice: '₹1,100', originalPrice: '₹1,130' },
-        },
-        image: 'Images/ProductsImages/dryFruits/prunes.jpg',
+        image: 'Images/ProductsImages/dryFruits/mixed fruits.png',
         unitsSold: 43,
     },
 ];
@@ -858,7 +757,7 @@ export const dates = [
 ];
 
 
-export const chocalates = [
+export const chocolates = [
     {
         id: 1,
         name: 'Twix',
