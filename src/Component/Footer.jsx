@@ -164,7 +164,7 @@ function Footer() {
                                     Address
                                 </Typography>
                                 <Typography sx={{ fontSize: '17px', fontFamily: 'sans-serif', color: 'white', mt: 1, letterSpacing: 1 }}>
-                                   31,Sarangapani East Street,
+                                    31,Sarangapani East Street,
                                 </Typography>
                                 <Typography sx={{ fontSize: '17px', fontFamily: 'sans-serif', color: 'white', letterSpacing: 1 }}>
                                     Utchi Pillaiyar Kovil,
@@ -201,7 +201,7 @@ function Footer() {
                                     body={
                                         <Box sx={{ mt: -2 }}>
                                             {nuts.map((item, index) => (
-                                                <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                <Link to={item.path} style={{ textDecoration: 'none' }} color="#fff" onClick={scrollToTop} >
                                                     <Typography
                                                         key={index}
                                                         color="#fff"
@@ -238,7 +238,7 @@ function Footer() {
                                     body={
                                         <Box sx={{ mt: -2 }}>
                                             {seeds.map((item, index) => (
-                                                <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                <Link to={item.path} style={{ textDecoration: 'none' }} color="#fff" onClick={scrollToTop} >
                                                     <Typography
                                                         key={index}
                                                         color="#fff"
@@ -275,7 +275,7 @@ function Footer() {
                                     body={
                                         <Box sx={{ mt: -2 }}>
                                             {dryfruits.map((item, index) => (
-                                                <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                <Link to={item.path} style={{ textDecoration: 'none' }} color="#fff" onClick={scrollToTop} >
                                                     <Typography
                                                         key={index}
                                                         color="#fff"
@@ -312,7 +312,7 @@ function Footer() {
                                     body={
                                         <Box sx={{ mt: -2 }}>
                                             {dates.map((item, index) => (
-                                                <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                <Link to={item.path} style={{ textDecoration: 'none' }} color="#fff" onClick={scrollToTop} >
                                                     <Typography
                                                         key={index}
                                                         color="#fff"
@@ -349,7 +349,7 @@ function Footer() {
                                     body={
                                         <Box sx={{ mt: -2 }}>
                                             {chocolates.map((item, index) => (
-                                                <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                <Link to={item.path} style={{ textDecoration: 'none' }} color="#fff" onClick={scrollToTop} >
                                                     <Typography
                                                         key={index}
                                                         color="#fff"
@@ -386,7 +386,7 @@ function Footer() {
                                     body={
                                         <Box sx={{ mt: -2 }}>
                                             {drinks.map((item, index) => (
-                                                <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                <Link to={item.path} style={{ textDecoration: 'none' }} color="#fff" onClick={scrollToTop} >
                                                     <Typography
                                                         key={index}
                                                         color="#fff"
@@ -544,7 +544,7 @@ function Footer() {
                                         body={
                                             <Box sx={{ mt: -2 }}>
                                                 {nuts.map((item, index) => (
-                                                    <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                    <Link to={item.path} style={{ textDecoration: 'none' }} color="#fff" onClick={scrollToTop} >
                                                         <Typography
                                                             key={index}
                                                             color="#fff"
@@ -581,7 +581,7 @@ function Footer() {
                                         body={
                                             <Box sx={{ mt: -2 }}>
                                                 {seeds.map((item, index) => (
-                                                    <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                    <Link to={item.path} style={{ textDecoration: 'none' }} color="#fff" onClick={scrollToTop} >
                                                         <Typography
                                                             key={index}
                                                             color="#fff"
@@ -618,7 +618,7 @@ function Footer() {
                                         body={
                                             <Box sx={{ mt: -2 }}>
                                                 {dryfruits.map((item, index) => (
-                                                    <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                    <Link to={item.path} style={{ textDecoration: 'none' }} color="#fff" onClick={scrollToTop} >
                                                         <Typography
                                                             key={index}
                                                             color="#fff"
@@ -655,7 +655,7 @@ function Footer() {
                                         body={
                                             <Box sx={{ mt: -2 }}>
                                                 {nuts.map((item, index) => (
-                                                    <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
+                                                    <Link to={item.path} style={{ textDecoration: 'none' }} color="#fff" onClick={scrollToTop} >
                                                         <Typography
                                                             key={index}
                                                             color="#fff"
@@ -676,117 +676,117 @@ function Footer() {
                                             </Box>
                                         }
                                     />
-                                                           <CusAccordion
-                                    head={
-                                        <Typography
-                                            sx={{
-                                                fontSize: ["0.8rem"],
-                                                fontWeight: 600,
-                                                color: "#fff",
-                                                letterSpacing: 2,
-                                                textTransform: "uppercase",
-                                            }}
-                                        >
-                                            Dates
-                                        </Typography>}
-                                    body={
-                                        <Box sx={{ mt: -2 }}>
-                                            {dates.map((item, index) => (
-                                                <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
-                                                    <Typography
-                                                        key={index}
-                                                        color="#fff"
-                                                        underline="hover"
-                                                        sx={{
-                                                            fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                            letterSpacing: 1,
-                                                            cursor: 'pointer',
-                                                            py: 1,
-                                                            ":hover": {
-                                                                color: "gray",
-                                                                textDecoration: 'none'
-                                                            },
-                                                        }}
-                                                    >
-                                                        {item.name}
-                                                    </Typography></Link>))}
-                                        </Box>
-                                    }
-                                />
-                                <CusAccordion
-                                    head={
-                                        <Typography
-                                            sx={{
-                                                fontSize: ["0.8rem"],
-                                                fontWeight: 600,
-                                                color: "#fff",
-                                                letterSpacing: 2,
-                                                textTransform: "uppercase",
-                                            }}
-                                        >
-                                            Chocolates
-                                        </Typography>}
-                                    body={
-                                        <Box sx={{ mt: -2 }}>
-                                            {chocolates.map((item, index) => (
-                                                <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
-                                                    <Typography
-                                                        key={index}
-                                                        color="#fff"
-                                                        underline="hover"
-                                                        sx={{
-                                                            fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                            letterSpacing: 1,
-                                                            cursor: 'pointer',
-                                                            py: 1,
-                                                            ":hover": {
-                                                                color: "gray",
-                                                                textDecoration: 'none'
-                                                            },
-                                                        }}
-                                                    >
-                                                        {item.name}
-                                                    </Typography></Link>))}
-                                        </Box>
-                                    }
-                                />
-                                <CusAccordion
-                                    head={
-                                        <Typography
-                                            sx={{
-                                                fontSize: ["0.8rem"],
-                                                fontWeight: 600,
-                                                color: "#fff",
-                                                letterSpacing: 2,
-                                                textTransform: "uppercase",
-                                            }}
-                                        >
-                                            Drinks
-                                        </Typography>}
-                                    body={
-                                        <Box sx={{ mt: -2 }}>
-                                            {drinks.map((item, index) => (
-                                                <Link to={item.path} underline="none" color="#fff" onClick={scrollToTop} >
-                                                    <Typography
-                                                        key={index}
-                                                        color="#fff"
-                                                        underline="hover"
-                                                        sx={{
-                                                            fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
-                                                            letterSpacing: 1,
-                                                            cursor: 'pointer',
-                                                            py: 1,
-                                                            ":hover": {
-                                                                color: "gray",
-                                                                textDecoration: 'none'
-                                                            },
-                                                        }}
-                                                    >
-                                                        {item.name}
-                                                    </Typography></Link>))}
-                                        </Box>
-                                    }
-                                />
+                                    <CusAccordion
+                                        head={
+                                            <Typography
+                                                sx={{
+                                                    fontSize: ["0.8rem"],
+                                                    fontWeight: 600,
+                                                    color: "#fff",
+                                                    letterSpacing: 2,
+                                                    textTransform: "uppercase",
+                                                }}
+                                            >
+                                                Dates
+                                            </Typography>}
+                                        body={
+                                            <Box sx={{ mt: -2 }}>
+                                                {dates.map((item, index) => (
+                                                    <Link to={item.path} style={{ textDecoration: 'none' }} color="#fff" onClick={scrollToTop} >
+                                                        <Typography
+                                                            key={index}
+                                                            color="#fff"
+                                                            underline="hover"
+                                                            sx={{
+                                                                fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
+                                                                letterSpacing: 1,
+                                                                cursor: 'pointer',
+                                                                py: 1,
+                                                                ":hover": {
+                                                                    color: "gray",
+                                                                    textDecoration: 'none'
+                                                                },
+                                                            }}
+                                                        >
+                                                            {item.name}
+                                                        </Typography></Link>))}
+                                            </Box>
+                                        }
+                                    />
+                                    <CusAccordion
+                                        head={
+                                            <Typography
+                                                sx={{
+                                                    fontSize: ["0.8rem"],
+                                                    fontWeight: 600,
+                                                    color: "#fff",
+                                                    letterSpacing: 2,
+                                                    textTransform: "uppercase",
+                                                }}
+                                            >
+                                                Chocolates
+                                            </Typography>}
+                                        body={
+                                            <Box sx={{ mt: -2 }}>
+                                                {chocolates.map((item, index) => (
+                                                    <Link to={item.path} style={{ textDecoration: 'none' }} color="#fff" onClick={scrollToTop} >
+                                                        <Typography
+                                                            key={index}
+                                                            color="#fff"
+                                                            underline="hover"
+                                                            sx={{
+                                                                fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
+                                                                letterSpacing: 1,
+                                                                cursor: 'pointer',
+                                                                py: 1,
+                                                                ":hover": {
+                                                                    color: "gray",
+                                                                    textDecoration: 'none'
+                                                                },
+                                                            }}
+                                                        >
+                                                            {item.name}
+                                                        </Typography></Link>))}
+                                            </Box>
+                                        }
+                                    />
+                                    <CusAccordion
+                                        head={
+                                            <Typography
+                                                sx={{
+                                                    fontSize: ["0.8rem"],
+                                                    fontWeight: 600,
+                                                    color: "#fff",
+                                                    letterSpacing: 2,
+                                                    textTransform: "uppercase",
+                                                }}
+                                            >
+                                                Drinks
+                                            </Typography>}
+                                        body={
+                                            <Box sx={{ mt: -2 }}>
+                                                {drinks.map((item, index) => (
+                                                    <Link to={item.path} style={{ textDecoration: 'none' }} color="#fff" onClick={scrollToTop} >
+                                                        <Typography
+                                                            key={index}
+                                                            color="#fff"
+                                                            underline="hover"
+                                                            sx={{
+                                                                fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
+                                                                letterSpacing: 1,
+                                                                cursor: 'pointer',
+                                                                py: 1,
+                                                                ":hover": {
+                                                                    color: "gray",
+                                                                    textDecoration: 'none'
+                                                                },
+                                                            }}
+                                                        >
+                                                            {item.name}
+                                                        </Typography></Link>))}
+                                            </Box>
+                                        }
+                                    />
                                 </>
                             }
                         />
@@ -871,9 +871,9 @@ function Footer() {
                                         <Typography
                                             key={index}
                                             component={Link}
+                                            style={{ textDecoration: 'none' }}
                                             href={item.path}
                                             color={"inherit"}
-                                            underline="hover"
                                             sx={{
                                                 fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
                                                 ":hover": {
@@ -945,7 +945,7 @@ function Footer() {
                     width: "100%",
                     gap: 3,
                     pt: 8,
-                    pb:3
+                    pb: 3
                 }}
             >
                 <Stack
