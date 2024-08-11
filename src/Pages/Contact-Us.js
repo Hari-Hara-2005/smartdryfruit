@@ -16,8 +16,7 @@ export const Contact = () => {
             <StickyWhatsapp link={"https://wa.me/7339534672"} />
             <Box
                 component='img'
-                id='pack'
-                src='Images/aboutimage/IMG_20240806_163109.jpg'
+                src='./360_F_829343592_9FbtgnN15AZJ2bunUhDzVvZaxssq1Q65.jpg'
                 alt='pack'
                 sx={{
                     width: ["100%"],
@@ -27,7 +26,7 @@ export const Contact = () => {
                     zIndex: -2
                 }}
             />
-            <Box sx={{ display: 'flex', justifyContent: 'center', height: '50vh', zIndex: 2, alignItems: 'center' }}>
+            <Box sx={{ display: 'flex', justifyContent: 'center', height: '60vh', zIndex: 2, alignItems: 'center' }}>
                 <Title color="#fff">Contact Us</Title>
             </Box>
             <Box sx={{ pb: 10 }}>

@@ -24,7 +24,7 @@ function Footer() {
             name: "About",
         },
         {
-            path: "/product",
+            path: "/dates",
             name: "Product",
         },
         {
@@ -420,7 +420,7 @@ function Footer() {
                                 <Link to="/about" onClick={scrollToTop} style={{ textDecoration: 'none' }} ><Typography sx={{ fontSize: '15px', fontFamily: 'sans-serif', color: 'white', letterSpacing: 1, mt: 1, "&:hover": { color: 'lightgray' } }}>
                                     About
                                 </Typography></Link>
-                                <Link to="/product" onClick={scrollToTop} style={{ textDecoration: 'none' }} ><Typography sx={{ fontSize: '15px', fontFamily: 'sans-serif', color: 'white', letterSpacing: 1, mt: 1, "&:hover": { color: 'lightgray' } }}>
+                                <Link to="/dates" onClick={scrollToTop} style={{ textDecoration: 'none' }} ><Typography sx={{ fontSize: '15px', fontFamily: 'sans-serif', color: 'white', letterSpacing: 1, mt: 1, "&:hover": { color: 'lightgray' } }}>
                                     Product
                                 </Typography></Link>
                                 <Link to="/contact" onClick={scrollToTop} style={{ textDecoration: 'none' }} ><Typography sx={{ fontSize: '15px', fontFamily: 'sans-serif', color: 'white', letterSpacing: 1, mt: 1, "&:hover": { color: 'lightgray' } }}>

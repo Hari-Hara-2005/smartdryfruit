@@ -148,7 +148,7 @@ export default function Navbar(props) {
                           fontWeight: "bold",
                           fontSize: "1.3rem",
                           textAlign: "center",
-                          color: "#fff",
+                          color: "#fff"
                         }}
                       >
                         {item.name}
@@ -368,8 +368,8 @@ export default function Navbar(props) {
                   </ImageListItem>
                 </Box>
               </Link>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
-                <IconButton
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                <Button
                   onClick={handleDrawerToggle}
                   href="/cart"
                   color="inherit"
@@ -381,11 +381,10 @@ export default function Navbar(props) {
                   >
                     <ShoppingCartOutlinedIcon />
                   </Badge>
-                </IconButton>
+                </Button>
                 <IconButton
                   onClick={handleDrawerToggle}
-                  size="large"
-                  edge="start"
+                 
                   color="inherit"
                   aria-label="open drawer"
                 >
