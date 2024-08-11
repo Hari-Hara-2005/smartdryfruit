@@ -843,7 +843,7 @@ function Footer() {
                                         <MailIcon />maha050108@gmail.com
                                     </Typography>
                                     <Typography sx={{ fontSize: '15px', fontFamily: 'sans-serif', color: 'white', mt: 1, letterSpacing: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
-                                        <PhoneCallback />+91 9952857016
+                                        <PhoneCallback /> +91 7339534672
                                     </Typography>
                                 </Box>
                             }

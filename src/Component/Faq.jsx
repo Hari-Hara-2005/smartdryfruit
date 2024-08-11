@@ -30,7 +30,7 @@ export default function Faq() {
         },
         {
             que: " How can I contact customer support?",
-            ans: "Reach us on WhatsApp at [WhatsApp number] or through our Contact Us page."
+            ans: "Reach us on WhatsApp at +91 7339534672 or through our Contact Us page."
         },
         {
             que: "What payment methods are accepted via WhatsApp?",

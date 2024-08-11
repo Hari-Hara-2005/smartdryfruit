@@ -43,7 +43,7 @@ const CustomerReview = () => {
                 whiteSpace: "nowrap",
                 gap: ['2rem', '2rem', '3rem'],
                 py: '1rem',
-                animation: `${scrollX} 140s linear infinite`,
+                animation: `${scrollX} 250s linear infinite`,
             }}>
                 {duplicateClients.map((review, index) => {
                     // Rotate through color styles for each review

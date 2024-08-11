@@ -64,7 +64,7 @@ const Cart = () => {
             <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2, gap: '5rem' }}>
                 {cartItems.length > 0 && (
                     <Button variant="contained" sx={{
-                        bgcolor: "#92553D", textTransform: 'none', borderRadius: '50px', px: [2.5],py:1, '&:hover': {
+                        bgcolor: "#92553D", textTransform: 'none', borderRadius: '10px', px: [4], py: 1.5, fontSize: 15, fontWeight: 600, '&:hover': {
                             bgcolor: "#282828"
                         }
                     }} color="primary" onClick={handleClearCart}>
@@ -74,14 +74,14 @@ const Cart = () => {
                 <Button
                     variant="contained"
                     sx={{
-                        bgcolor: "#92553D", textTransform: 'none', borderRadius: '50px', px: [2.5], py: 1, '&:hover': {
+                        bgcolor: "#92553D", textTransform: 'none', borderRadius: '10px', px: [4], py: 1.5, fontSize: 15, fontWeight: 600, '&:hover': {
                             bgcolor: "#282828"
                         }
                     }}
                     onClick={handleShoppingClick}
                     disabled={cartItems.length === 0}
                 >
-                    Buy Now 
+                    Buy Now
                 </Button>
             </Box>
             <Box sx={{ bgcolor: 'black', mt: 20, px: 2 }}>

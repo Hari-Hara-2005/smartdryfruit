@@ -2,74 +2,111 @@ export const reviews = [
     {
         id: 1,
         img: 'Images/images.png',
-        description: "Absolutely love it! The attention to detail is amazing, and it adds a touch of charm wherever I place it.",
+        description: "Absolutely love it! The attention to detail in the selection of dry fruits and nuts is amazing, and they add a touch of luxury to my snack time.",
         name: "Sarojini",
-        position: 'Thanjavur'
+        position: 'Madurai'
     },
     {
         id: 2,
         img: 'Images/images.png',
-        description: "Great product, it to anyone looking for something unique. It's beautifully crafted and made a perfect gift.",
+        description: "Great quality and variety! The chocolates and dates were a hit, and they made a perfect gift for my loved ones.",
         name: "Hema",
-        position: 'Thanjavur'
+        position: 'Coimbatore'
     },
     {
         id: 3,
         img: 'Images/images.png',
-        description: "Very happy with my purchase! It exceeded my expectations in terms of quality and design.",
+        description: "Very happy with my purchase! The nuts were fresh and delicious, exceeding my expectations in terms of quality.",
         name: "Rajeshwari",
-        position: 'Thanjavur'
+        position: 'Salem'
     },
     {
         id: 4,
         img: 'Images/images.png',
-        description: "Perfect addition to my home decor, it fits perfectly with my style and brings a cozy feel to the room.",
+        description: "The perfect addition to my snack collection. The assortment of dry fruits, chocolates, and drinks fits perfectly with my taste.",
         name: "Sherin Taj",
-        position: 'Thanjavur'
+        position: 'Trichy'
     },
     {
         id: 5,
         img: 'Images/images.png',
-        description: "Beautiful craftsmanship! It's clear a lot of care went into making it, and it's now a cherished piece in my collection.",
+        description: "Beautifully packaged and delicious! The selection of nuts and dates is clearly curated with care, making them a cherished part of my daily routine.",
         name: "Sreema",
-        position: 'Thanjavur'
+        position: 'Tirunelveli'
     },
     {
         id: 6,
         img: 'Images/images.png',
-        description: "Such a thoughtful gift! It brought a smile to my face and was wonderfully received by the recipient.",
+        description: "Such a thoughtful gift! The combination of dry fruits, chocolates, and drinks brought a smile to my face and was wonderfully received by the recipient.",
         name: "Raseena Farveen",
-        position: 'Thanjavur'
+        position: 'Chennai'
     },
     {
         id: 7,
         img: 'Images/images.png',
-        description: "Exactly what I was looking for. It's even better in person and has become a focal point in my space.",
+        description: "Exactly what I was looking for. The quality of the nuts and the richness of the chocolates are even better in person, becoming a focal point in my snack time.",
         name: "Jagasree",
-        position: 'Thanjavur'
+        position: 'Vellore'
     },
     {
         id: 8,
         img: 'Images/images.png',
-        description: "Impressed with the quality, definitely worth it. I appreciate the craftsmanship and attention to detail.",
+        description: "Impressed with the variety and freshness. The selection of dates, nuts, and drinks is definitely worth it. I appreciate the careful craftsmanship.",
         name: "Menaga",
-        position: 'Thanjavur'
+        position: 'Erode'
     },
     {
         id: 9,
         img: 'Images/images.png',
-        description: "Wonderful experience! The whole process was seamless, from ordering to delivery.It's beautifully crafted and made a perfect gift.",
+        description: "Wonderful experience! The whole process was seamless, from ordering to delivery. The chocolates and nuts were beautifully crafted and made a perfect gift.",
         name: "Aravindh",
-        position: 'Thanjavur'
+        position: 'Dindigul'
     },
     {
         id: 10,
         img: 'Images/images.png',
-        description: "Couldn't be happier with my purchase. It's a great addition to my collection and has exceeded my expectations.",
+        description: "Couldn't be happier with my purchase. The selection of dry fruits, dates, and drinks is a great addition to my collection and has exceeded my expectations.",
         name: "Shiva",
-        position: 'Thanjavur'
+        position: 'Kanyakumari'
+    },
+    {
+        id: 11,
+        img: 'Images/images.png',
+        description: "The dry fruits were top-notch, and the chocolates were a real treat! I'm very satisfied with the quality and packaging.",
+        name: "Priya",
+        position: 'Thiruvannamalai'
+    },
+    {
+        id: 12,
+        img: 'Images/images.png',
+        description: "The variety offered is excellent! The dates and nuts were fresh, and the drinks added a refreshing touch to my day.",
+        name: "Karthik",
+        position: 'Nagapattinam'
+    },
+    {
+        id: 13,
+        img: 'Images/images.png',
+        description: "High-quality products! The selection of chocolates, dry fruits, and nuts made for a perfect gift, and everyone loved it.",
+        name: "Divya",
+        position: 'Virudhunagar'
+    },
+    {
+        id: 14,
+        img: 'Images/images.png',
+        description: "I'm impressed with the assortment and the freshness of the products. The drinks were a delightful addition to my snack time.",
+        name: "Suresh",
+        position: 'Kanchipuram'
+    },
+    {
+        id: 15,
+        img: 'Images/images.png',
+        description: "The quality and variety of dry fruits and chocolates exceeded my expectations. I’ll definitely be ordering again!",
+        name: "Latha",
+        position: 'Ramanathapuram'
     },
 ];
+
+
 
 
 export const products = [

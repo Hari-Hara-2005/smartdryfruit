@@ -104,7 +104,8 @@ export default function Navbar(props) {
     { link: "/seeds", name: "Seeds" },
     { link: "/nuts", name: "Nuts" },
     { link: "/chocolates", name: "Chocolates" },
-    { link: "/juice", name: "Drinks" }
+    { link: "/juice", name: "Drinks" },
+    { link: "/powder", name: "Powder" }
   ];
 
   const drawer = (
@@ -371,12 +372,12 @@ export default function Navbar(props) {
                 <IconButton
                   onClick={handleDrawerToggle}
                   href="/cart"
-                      color="inherit"
+                  color="inherit"
                 >
                   <Badge
                     badgeContent={cartItems.length}
                     color="error"
-                    sx={{ '& .MuiBadge-dot': { backgroundColor: '#92553D' } }} 
+                    sx={{ '& .MuiBadge-dot': { backgroundColor: '#92553D' } }}
                   >
                     <ShoppingCartOutlinedIcon />
                   </Badge>

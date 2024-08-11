@@ -15,6 +15,7 @@ import QUALITY from './quality.json';
 import COINS from './coins.json';
 import Footer from "../Component/Footer";
 import CountUp from 'react-countup';
+import StickyWhatsapp from "../Component/StickyWhatsapp";
 export const About = () => {
     const lockRef = useRef(null);
     const truckRef = useRef(null);
@@ -91,6 +92,7 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
 
     return (
         <>
+            <StickyWhatsapp link={"https://wa.me/7339534672"} />
             <Navbar color="#000" />
             <Box component='img'
                 src='Images/leaf3.avif'

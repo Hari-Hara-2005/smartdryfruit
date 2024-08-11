@@ -26,11 +26,11 @@ const Hero = () => {
     ];
     return (
         <Box>
-            <StickyWhatsapp link={"https://wa.me/8220570301"} />
+            <StickyWhatsapp link={"https://wa.me/7339534672"} />
             <Box sx={{}} className="hero_bg">
                 <Navbar />
                 <MainProductSlide />
-                <Box sx={{ display: 'flex', justifyContent: 'center', mt: -1 }}>
+                <Box sx={{ display: 'flex', justifyContent: 'center', mt: -4 }}>
                     <Button
                         variant="contained"
                         href='/dates'
@@ -52,106 +52,15 @@ const Hero = () => {
                     </Button>
                 </Box>
             </Box>
-            {/* <Box sx={{ height: '100vh', bgcolor: '#4b0082', position: 'relative' }}>
-                <Typography
-                    variant="h1"
-                    sx={{
-                        fontSize: ["6rem", "23rem"],
-                        fontWeight: "bold",
-                        letterSpacing: [0, 30],
-                        color: "white",
-                        position: 'absolute',
-                        top: {
-                            xs: "45%",  // Extra small devices
-                            sm: "40%",  // Small devices
-                            md: "50%",  // Medium devices
-                            lg: "50%",  // Large devices
-                            xl: "50%"   // Extra large devices
-                        },
-                        left: "50%",
-                        transform: "translate(-50%, -50%)",
-                        zIndex: 1,
-                        // opacity: 0.2,
-                        textTransform: 'uppercase',
-                        fontFamily: "'Poppins ', serif",
-                    }}
-                >
-                    Smart
-                </Typography>
-                <Box
-                    component='img'
-                    id='leaf'
-                    src='/Images/leaf.png'
-                    alt='leaf'
-                    sx={{
-                        width: ["25%", "15%", "12.5%"],
-                        ml: "3.5%",
-                        mt: ["10%", "30%", "0%"],
-                        transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
-                        position: 'absolute',
-                    }}
-                />
-                <Box
-                    sx={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 0.5s',
-                        ml: [1, -4.5],
-                        py: [3, 0]
-                    }}
-                >
-                    <Box
-                        component='img'
-                        id='pack'
-                        src='/Images/img-4.png'
-                        alt='pack'
-                        sx={{
-                            width: ["25%", "43%", "22%"],
-                            mt: ['45%', 30, -1],
-                            ml: [0, 4.5],
-                            transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
-                            position: 'absolute',
-                            zIndex: 2
-                        }}
-                    />
-                    <Box
-                        component='img'
-                        id='cashew'
-                        src='/Images/cashew.png'
-                        alt='pack'
-                        sx={{
-                            width: ["28%", "25%", "15%"],
-                            mt: ["72%", "70%", '26%'],
-                            ml: ['20%', '18%'],
-                            transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
-                            position: 'absolute',
-                            zIndex: 2
-                        }}
-                    />
-                </Box>
-                <Box
-                    component='img'
-                    id='leaf2'
-                    src='/Images/leaf2.png'
-                    alt='leaf'
-                    sx={{
-                        width: ["35%", "20%", "14%"],
-                        bottom: [50, 5],
-                        right: [10, "10rem"],
-                        transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
-                        position: 'absolute',
-                    }}
-                />
-            </Box> */}
             <Box sx={{ height: ['100vh', '110vh'], bgcolor: '#92553D' }}>
                 <Navbar color="#fff" />
                 <Box sx={{ display: 'flex', flexDirection: ['column', 'column', 'row'], alignItems: 'center', justifyContent: "space-between", height: ['80%'], mx: [2, 11] }}>
                     <Box sx={{ display: 'flex', justifyContent: ['center', 'center', 'normal'] }}>
-                        <Box component='img' src='Images/platte-1.png' alt='Cover 2' sx={{ width: ["70%", "80%", "36%"], mt: [18, 40, 50, 9], position: 'absolute' }} />
+                        <Box component='img' src='Images/platte-1.png' alt='Cover 2' sx={{ width: ["70%", "80%", "36%"], mt: [17.5, 40, 40, 50, 9], position: 'absolute' }} />
                     </Box>
                     <Box
                         component='img'
-                        src='/Images/img-4.png'
+                        src='Images/mpi/img4.png'
                         alt='pack'
                         sx={{
                             width: ["35%", "40%", "22%"],
@@ -165,13 +74,13 @@ const Hero = () => {
                         <Typography sx={{
                             fontSize: ['1.5rem', '1.5rem', '2.5rem'],
                             fontWeight: '600',
-                            color: 'white',
+                            color: '#FFF',
                             py: 1
                         }}>
                             Flavour Updated
                         </Typography>
-                        <Typography>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi ut et numquam repudiandae, ullam laudantium in? Repudiandae, veniam nemo, iure cum facere accusamus est eligendi quisquam asperiores delectus aspernatur nisi?
+                        <Typography sx={{textAlign:'justify',fontSize:20,color:'#fff'}}>
+                            We're thrilled to introduce new flavors to our cashews! Whether you love bold, spicy, or sweet tastes, our updated selection has something for everyone. Each flavor is crafted with care to ensure a satisfying crunch and a burst of deliciousness in every bite. Try them today and elevate your snacking experience!
                         </Typography>
                     </Box>
                 </Box>

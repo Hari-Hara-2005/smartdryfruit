@@ -28,13 +28,13 @@ function StickyWhatsapp({ link }) {
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                     sx={{
-                        width: ["4rem", "5rem", "5rem", "4.5rem", "3.5rem"],
+                        width: ["4rem", "5rem", "5rem", "4.5rem", "5rem"],
                         overflow: "hidden",
                         alignItems: "center",
                         justifyContent: "center",
-                        height: ["4rem", "5rem", "5rem", "4.5rem", "3.5rem"],
-                        background: "linear-gradient(91.83deg, #282828 0%, #282828 100%)",
-                        p: [1.5, 1.5, 1.5, 1.5, 2],
+                        height: ["4rem", "5rem", "5rem", "4.5rem", "5rem"],
+                        background: "linear-gradient(91.83deg, #92553D 0%, #92553D 100%)",
+                        p: [1.5, 1.5, 1.5, 1.5, 1.5],
                         position: "fixed",
                         top: "60%",
                         cursor: "pointer",
@@ -49,7 +49,7 @@ function StickyWhatsapp({ link }) {
                             left: 0,
                             width: '100%',
                             height: '100%',
-                            background: "linear-gradient(91.83deg, #fff 0%, #fff 100%)",
+                            background: "linear-gradient(91.83deg, #000 0%, #000 100%)",
                             opacity: isHovered ? 1 : 0, /* Change opacity based on hover */
                             transition: "opacity .2s ease", /* Transition opacity */
                             borderRadius: "10rem 10rem 1rem 10rem",

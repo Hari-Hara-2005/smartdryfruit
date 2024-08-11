@@ -5,6 +5,7 @@ import Title from '../Component/Title'
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneCallback from '@mui/icons-material/PhoneCallback';
 import Footer from '../Component/Footer';
+import StickyWhatsapp from '../Component/StickyWhatsapp';
 export const Contact = () => {
     useEffect(() => {
         document.title = "Contact Us";
@@ -12,14 +13,15 @@ export const Contact = () => {
     return (
         <>
             <Navbar color="#000" />
+            <StickyWhatsapp link={"https://wa.me/7339534672"} />
             <Box
                 component='img'
                 id='pack'
-                src='Images/aboutimage/ab4.jpg'
+                src='Images/aboutimage/IMG_20240806_163109.jpg'
                 alt='pack'
                 sx={{
                     width: ["100%"],
-                    height: '50vh',
+                    height: ['50vh','65vh'],
                     position: 'absolute',
                     mt: [2, 4, 3],
                     zIndex: -2
