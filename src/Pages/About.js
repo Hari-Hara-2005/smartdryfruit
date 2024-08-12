@@ -125,6 +125,9 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
                                             height: { xs: "15rem", sm: "20rem", md: "25rem", lg: "25rem", xl: "30rem" },
                                             borderRadius: "16px",
                                             overflow: 'hidden',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',  
                                         }}
                                     >
                                         <img
@@ -134,6 +137,7 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
                                                 width: '100%',
                                                 height: '100%',
                                                 objectFit: 'cover',
+                                                objectPosition: 'center',  
                                                 borderRadius: "20px",
                                             }}
                                         />
