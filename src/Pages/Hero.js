@@ -33,9 +33,9 @@ const Hero = () => {
                 <MainProductSlide />
                 <ScrollDownButton />
             </Box>
-            <Box sx={{ height: ['100vh', '110vh'], bgcolor: '#92553D' }}>
+            <Box sx={{ height: ['100vh', '100vh'], bgcolor: '#92553D' }}>
                 <Navbar color="#fff" />
-                <Box sx={{ display: 'flex', flexDirection: ['column', 'column', 'row'], alignItems: 'center', justifyContent: "space-between", height: ['80%'], mx: [2, 11] }}>
+                <Box sx={{ display: 'flex', flexDirection: ['column', 'column', 'row'], alignItems: 'center', justifyContent: "space-between", height: ['75%'], mx: [2, 11] }}>
                     <Box sx={{ display: 'flex', justifyContent: ['center', 'center', 'normal'] }}>
                         <Box component='img' src='Images/platte-1.png' alt='Cover 2' sx={{ width: ["70%", "80%", "36%"], mt: [17.5, 40, 40, 50, 9], position: 'absolute' }} />
                     </Box>
