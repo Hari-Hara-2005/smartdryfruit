@@ -370,7 +370,6 @@ export default function Navbar(props) {
               </Link>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <Button
-                  onClick={handleDrawerToggle}
                   href="/cart"
                   color="inherit"
                 >
