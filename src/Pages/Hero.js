@@ -10,7 +10,7 @@ import Faq from '../Component/Faq';
 import Footer from '../Component/Footer';
 import { Link } from 'react-router-dom';
 import MainProductSlide from '../Component/MainProductSlide';
-import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+
 const Hero = () => {
     useEffect(() => {
         animateHero();

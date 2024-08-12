@@ -50,7 +50,7 @@ const MainProductSlide = () => {
 
     return (
         <>
-            <Box sx={{ display: 'flex', alignContent: 'center', height: ['80%', '80%', '85%'] ,pt:20}}>
+            <Box sx={{ display: 'flex', alignContent: 'center', height: ['80%', '80%', '85%'] }}>
                 <Swiper
                     slidesPerView={slidesPerView}
                     navigation={false}
