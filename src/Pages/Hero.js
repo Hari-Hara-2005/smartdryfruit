@@ -10,6 +10,7 @@ import Faq from '../Component/Faq';
 import Footer from '../Component/Footer';
 import { Link } from 'react-router-dom';
 import MainProductSlide from '../Component/MainProductSlide';
+import { ScrollDownButton } from '../Component/ScrollDownButton';
 
 const Hero = () => {
     useEffect(() => {
@@ -30,27 +31,7 @@ const Hero = () => {
             <Box sx={{}} className="hero_bg">
                 <Navbar />
                 <MainProductSlide />
-                {/* <Box sx={{ display: 'flex', justifyContent: 'center', mt: -4 }}>
-                    <Button
-                        variant="contained"
-                        href='/dates'
-                        startIcon={<ShoppingBagOutlinedIcon />}
-                        sx={{
-                            bgcolor: 'rgba(255, 255, 255, 0.2)', // Semi-transparent white background
-                            textTransform: 'none',
-                            borderRadius: '50px',
-                            px: [2.5],
-                            backdropFilter: 'blur(10px)', // Apply blur effect
-                            border: '1px solid rgba(255, 255, 255, 0.3)', // Optional: Border for better visibility
-                            color: '#fff', // Text color
-                            '&:hover': {
-                                bgcolor: 'rgba(255, 255, 255, 0.3)', // Slightly lighter on hover
-                            }
-                        }}
-                    >
-                        Shop Now
-                    </Button>
-                </Box> */}
+                <ScrollDownButton />
             </Box>
             <Box sx={{ height: ['100vh', '110vh'], bgcolor: '#92553D' }}>
                 <Navbar color="#fff" />
@@ -79,7 +60,7 @@ const Hero = () => {
                         }}>
                             Flavour Updated
                         </Typography>
-                        <Typography sx={{textAlign:'justify',fontSize:20,color:'#fff'}}>
+                        <Typography sx={{ textAlign: 'justify', fontSize: 20, color: '#fff' }}>
                             We're thrilled to introduce new flavors to our cashews! Whether you love bold, spicy, or sweet tastes, our updated selection has something for everyone. Each flavor is crafted with care to ensure a satisfying crunch and a burst of deliciousness in every bite. Try them today and elevate your snacking experience!
                         </Typography>
                     </Box>

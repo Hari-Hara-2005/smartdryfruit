@@ -127,19 +127,19 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
                                             borderRadius: "16px",
                                             overflow: 'hidden',
                                             display: 'flex',
+                                            alignItems: 'center',
                                             justifyContent: 'center',
-                                            alignItems: 'center',  
                                         }}
                                     >
-                                        <img
+                                        <Box
+                                            component="img"
                                             src={item.img}
                                             alt={item.title}
-                                            style={{
+                                            sx={{
                                                 width: '100%',
-                                                height: '100%',
-                                                objectFit: 'cover',
-                                                objectPosition: 'center',  
-                                                borderRadius: "20px",
+                                                height: '100%',       // Ensure the image fills the height
+                                                objectFit: 'cover',    // Ensure the image covers the container
+                                                borderRadius: "16px",  // Match container border-radius
                                             }}
                                         />
                                     </Box>
