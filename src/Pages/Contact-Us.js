@@ -50,7 +50,7 @@ export const Contact = () => {
                                 <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                     <EmailIcon sx={{ color: '#282828', mr: 1 }} />
                                     <Typography variant="body1" sx={{ fontWeight: 'medium', letterSpacing: 1 }}>
-                                        smartdryfruits@gmail.com
+                                        contactsmartdryfruits@gmail.com
                                     </Typography>
                                 </Box>
                                 <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>

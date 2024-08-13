@@ -35,7 +35,7 @@ export const ScrollDownButton = () => {
                 animation: `${bounce} 2s infinite`, // Apply the bouncing animation
             }}
         >
-            <IconButton sx={{ bgcolor: '#92553D' }} onClick={handleScroll}>
+            <IconButton sx={{  }} onClick={handleScroll}>
                 <KeyboardDoubleArrowDownIcon sx={{ fontSize: 40, color: '#fff', fontWeight: 900 }} />
             </IconButton>
         </Box>
