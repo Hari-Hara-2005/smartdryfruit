@@ -24,7 +24,7 @@ const Cart = () => {
             `Hi! I'm interested in these products:\n\n${message}\n\nPlease provide more details and help me place an order.`
         );
     
-        const whatsappNumber = '919952857016';
+        const whatsappNumber = '9952857016';
     
         // Check the user agent to determine the platform
         const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
