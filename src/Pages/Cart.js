@@ -24,7 +24,7 @@ const Cart = () => {
             `Hi! I'm interested in these products:\n\n${message}\n\nPlease provide more details and help me place an order.`
         );
     
-        const whatsappNumber = '9952857016';
+        const whatsappNumber = '919952857016';
     
         // Check the user agent to determine the platform
         const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -33,8 +33,8 @@ const Cart = () => {
         if (isMobile) {
             if (isAndroid) {
                 // Use intent URL scheme for Android devices
-                const whatsappUrl = `intent://send/?phone=${whatsappNumber}&text=${encodedMessage}#Intent;scheme=smsto;package=com.whatsapp;end`;
-                window.location.href = whatsappUrl;
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+                 window.open(whatsappUrl, '_blank');
             } else {
                 // Use wa.me URL scheme for iOS devices
                 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
