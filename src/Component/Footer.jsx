@@ -178,10 +178,9 @@ function Footer() {
                                 <Typography sx={{ fontSize: '15px', fontFamily: 'sans-serif', color: 'white', mt: 1, letterSpacing: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
                                     <MailIcon />contactsmartdryfruits@gmail.com
                                 </Typography>
-                                <PhoneCallback sx={{ color: 'white', mr: 1 }} />
-                                    <Typography variant="body1" sx={{ fontWeight: 'medium', letterSpacing: 1 }}>
-                                        +91 7339534672
-                                    </Typography>
+                                <Typography sx={{ fontSize: '15px', fontFamily: 'sans-serif', color: 'white', mt: 1, letterSpacing: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
+                                    <PhoneCallback />+91 7339534672
+                                </Typography>
                             </Box>
                         </Grid>
                         <Grid item xs={12} sm={6} lg={3}>

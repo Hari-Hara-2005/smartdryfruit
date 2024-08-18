@@ -105,7 +105,8 @@ export default function Navbar(props) {
     { link: "/nuts", name: "Nuts" },
     { link: "/chocolates", name: "Chocolates" },
     { link: "/juice", name: "Drinks" },
-    { link: "/powder", name: "Powder" }
+    { link: "/powder", name: "Powder" },
+    { link: "/biscuit", name: "Biscuits" }
   ];
 
   const drawer = (
@@ -140,7 +141,7 @@ export default function Navbar(props) {
           item.name === "Product" ? (
             <React.Fragment key={index}>
               {isMobile ? (
-                <Box sx={{ width: ['40%', '10%',], ml: [3.5] }}>
+                <Box sx={{ width: ['40%','20%'], ml: [3.5,5] }}>
                   <CusAccordion
                     head={
                       <Typography
@@ -341,7 +342,7 @@ export default function Navbar(props) {
                 justifyContent: "space-between",
               }}
             >
-              <Link color={"inherit"} underline="none" href="/">
+              <Link color={"inherit"} underline="none" to="/">
                 <Box
                   sx={{
                     display: "flex",
@@ -352,7 +353,7 @@ export default function Navbar(props) {
                   }}
                 >
                   <ImageListItem>
-                    <Link color={"inherit"} underline="none" href="/">
+                    <Link color={"inherit"} underline="none" to="/">
                       <Box
                         component="img"
                         src="Images/logo.png"
@@ -392,7 +393,7 @@ export default function Navbar(props) {
               </Box>
             </Stack>
 
-            <Link color={"inherit"} underline="none" href="/">
+            <Link color={"inherit"} underline="none" to="/">
               <ImageListItem
                 sx={{ my: -5, display: { xs: "none", md: "block", } }}
               >

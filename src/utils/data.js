@@ -851,18 +851,6 @@ export const chocolates = [
         },
         image: 'Images/ProductsImages/chocolates/bueno.png',
     },
-    // {
-    //     id: 3,
-    //     name: 'Davidoff',
-    //     rating: 4,
-    //     prices: {
-    //         '1pocket': { currentPrice: '₹500', originalPrice: '₹550' },
-    //         '2pocket': { currentPrice: '₹1,000', originalPrice: '₹1,050' },
-    //         '3pocket': { currentPrice: '₹1,500', originalPrice: '₹1,550' },
-    //         '4pocket': { currentPrice: '₹2,000', originalPrice: '₹2,050' },
-    //     },
-    //     image: 'Images/ProductsImages/chocolates/davidoff.png',
-    // },
     {
         id: 52,
         name: 'Lotus Biscoff Smooth',
@@ -899,19 +887,6 @@ export const chocolates = [
         },
         image: 'Images/ProductsImages/chocolates/biscoff.png',
     },
-    // {
-    //     id: 7,
-    //     name: 'Milo',
-    //     rating: 4,
-    //     prices: {
-    //         '1pocket': { currentPrice: '₹300', originalPrice: '₹350' },
-
-    //         '2pocket': { currentPrice: '₹600', originalPrice: '₹650' },
-    //         '3pocket': { currentPrice: '₹900', originalPrice: '₹950' },
-    //         '4pocket': { currentPrice: '₹1,200', originalPrice: '₹1,250' },
-    //     },
-    //     image: 'Images/ProductsImages/chocolates/millo.jpg',
-    // },
     {
         id: 55,
         name: 'Nutella Be Ready',
@@ -960,18 +935,6 @@ export const chocolates = [
         },
         image: 'Images/ProductsImages/chocolates/rafello.png',
     },
-    // {
-    //     id: 12,
-    //     name: 'Ovaltine',
-    //     rating: 4,
-    //     prices: {
-    //         '1pocket': { currentPrice: '₹240', originalPrice: '₹270' },
-    //         '2pocket': { currentPrice: '₹480', originalPrice: '₹500' },
-    //         '3pocket': { currentPrice: '₹720', originalPrice: '₹750' },
-    //         '4pocket': { currentPrice: '₹960', originalPrice: '₹1,000' },
-    //     },
-    //     image: 'Images/ProductsImages/chocolates/ovaltine.png',
-    // },
     {
         id: 59,
         name: 'Thai Chew Candy',
@@ -1150,5 +1113,43 @@ export const powders = [
         image: 'Images/ProductsImages/chocolates/ovaltine.png',
     },
 ];
+export const biscuits = [
+    {
+        id: 70,
+        name: 'biscuit-1',
+        rating: 4,
+        prices: {
+            '1pocket': { currentPrice: '₹500', originalPrice: '₹550' },
+            '2pocket': { currentPrice: '₹1,000', originalPrice: '₹1,050' },
+            '3pocket': { currentPrice: '₹1,500', originalPrice: '₹1,550' },
+            '4pocket': { currentPrice: '₹2,000', originalPrice: '₹2,050' },
+        },
+        image: 'Images/ProductsImages/chocolates/davidoff.png',
+    },
+    {
+        id: 71,
+        name: 'biscuit-2',
+        rating: 4,
+        prices: {
+            '1pocket': { currentPrice: '₹300', originalPrice: '₹350' },
 
+            '2pocket': { currentPrice: '₹600', originalPrice: '₹650' },
+            '3pocket': { currentPrice: '₹900', originalPrice: '₹950' },
+            '4pocket': { currentPrice: '₹1,200', originalPrice: '₹1,250' },
+        },
+        image: 'Images/ProductsImages/chocolates/millo.jpg',
+    },
+    {
+        id: 72,
+        name: 'biscuit-3',
+        rating: 4,
+        prices: {
+            '1pocket': { currentPrice: '₹240', originalPrice: '₹270' },
+            '2pocket': { currentPrice: '₹480', originalPrice: '₹500' },
+            '3pocket': { currentPrice: '₹720', originalPrice: '₹750' },
+            '4pocket': { currentPrice: '₹960', originalPrice: '₹1,000' },
+        },
+        image: 'Images/ProductsImages/chocolates/ovaltine.png',
+    },
+];
 

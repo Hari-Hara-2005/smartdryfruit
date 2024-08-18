@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Autoplay } from 'swiper/modules';
-import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 const industryData = [
     { id: "1", img: "Images/mpi/img1.png" },
     { id: "2", img: "Images/mpi/img2.png" },
@@ -50,7 +49,7 @@ const MainProductSlide = () => {
 
     return (
         <>
-            <Box sx={{ display: 'flex', alignContent: 'center', height: ['80%', '80%', '85%'] }}>
+            <Box sx={{ display: 'flex', alignContent: 'center', height: ['120%', '130%', '85%','85%','85%'] }}>
                 <Swiper
                     slidesPerView={slidesPerView}
                     navigation={false}
@@ -79,7 +78,7 @@ const MainProductSlide = () => {
                             <Box
                                 sx={{
                                     position: 'relative',
-                                    width: { xs: "70%", sm: "100%", md: "70%", lg: "45%", xl: "45%" },
+                                    width: { xs: "70%", sm: "60%", md: "60%", lg: "45%", xl: "45%" },
                                     cursor: 'pointer',
                                     transform: (index === activeIndex + Math.floor(slidesPerView / 2)) ? ['scale(1.5)', 'scale(1.5)', 'scale(1.09)'] : 'scale(0.4)',
                                     transition: 'transform 0.3s ease',
@@ -87,7 +86,7 @@ const MainProductSlide = () => {
                             >
                                 <img
                                     src={item.img}
-                                    alt={item.title}
+                                    alt='Product Iamge'
                                     style={{
                                         width: '100%',
                                         height: '100%',

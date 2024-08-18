@@ -41,6 +41,7 @@ function StickyWhatsapp({ link }) {
                         right: isDown ? "0px" : "-200px",
                         borderRadius: "10rem 10rem 1rem 10rem",
                         transition: ".3s ease",
+                        color:'#fff',
                         boxShadow: "0px 12px 21px rgb(0 0 0 / 11%)",
                         '&::before': {
                             content: '""',
@@ -61,7 +62,7 @@ function StickyWhatsapp({ link }) {
                     }}>
                     <WhatsAppIcon sx={{
                         height: "100%", width: "100%", color: "#fff", zIndex: "300", ":hover": {
-                            color: '#282828',
+                            color: '#fff',
                         },
                     }} />
                 </Stack>

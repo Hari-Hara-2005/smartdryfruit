@@ -245,7 +245,7 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
                             </Box>
                             <Box sx={{ ml: [0, 0, 4], pt: [2, 0, 0] }}>
                                 <Typography variant="h6" component="div" sx={{ mb: -1, color: '#92553D', fontWeight: 600, }}>
-                                    <CountUp start={0} end={50000} duration={40} startOnScreen={true} />+
+                                    <CountUp start={0} end={5000} duration={40} startOnScreen={true} />+
                                 </Typography>
                                 <Typography variant="h6" component="div" sx={{ color: '#000', fontWeight: 600, fontSize: 15, lineHeight: [1.3, 1.5] }}>
                                     Order Delivered
@@ -273,7 +273,7 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
                         }}>
                             Click To Shop!
                         </Typography>
-                        <Button variant="contained" sx={{
+                        <Button href="/dates" variant="contained" sx={{
                             bgcolor: "#92553D", textTransform: 'none', borderRadius: '50px', px: [2.5], '&:hover': {
                                 bgcolor: "#282828"
                             },
@@ -297,7 +297,7 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
                                     onComplete={() => truckRef.current?.playFromBeginning()}
                                 />
                             </Box>
-                            <Typography>Charge on Shipping</Typography>
+                            <Typography>Free Shiping Purchase Upto ₹1000 </Typography>
                         </FeatureItem>
                         <FeatureItem item xs={6} md={3}>
                             <Box sx={{ display: 'flex', justifyContent: 'center' }}>

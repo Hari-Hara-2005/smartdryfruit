@@ -67,7 +67,7 @@ const IndustryCarousel = () => {
                             centeredSlides: false,
                         },
                         1280: {
-                            slidesPerView: 3,
+                            slidesPerView: 3    ,
                             centeredSlides: false,
                         },
                         1700: {
@@ -82,7 +82,7 @@ const IndustryCarousel = () => {
                                 sx={{
                                     position: 'relative',
                                     width: { xs: "91%", sm: "85%", md: "90%", lg: "90%", xl: "88%" },
-                                    height: { xs: "15rem", sm: "18rem", md: "25rem", lg: "25rem", xl: "25rem" },
+                                    height: { xs: "15rem", sm: "18rem", md: "25rem", lg: "20rem", xl: "25rem" },
                                     borderRadius: "8px",
                                     overflow: 'hidden',
                                     cursor: 'pointer',

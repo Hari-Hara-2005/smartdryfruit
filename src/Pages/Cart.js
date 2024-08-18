@@ -16,15 +16,37 @@ const Cart = () => {
     };
 
     const handleShoppingClick = () => {
-        const message = cartItems.map(item => {
-            return `Name: ${item.name}\nPrice: ${item.price}\nGrams: ${item.selectedGram}`;
-        }).join('\n\n');
-
-        const encodedMessage = encodeURIComponent(`Hi! I'm interested in these products:\n\n${message}\n\nPlease provide more details and help me place an order.`);
+        const message = cartItems.map(item => 
+            `Name: ${item.name}\nPrice: ${item.price}\nGrams: ${item.selectedGram}`
+        ).join('\n\n');
+    
+        const encodedMessage = encodeURIComponent(
+            `Hi! I'm interested in these products:\n\n${message}\n\nPlease provide more details and help me place an order.`
+        );
+    
         const whatsappNumber = '919952857016';
-        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-        window.open(whatsappUrl, '_blank');
+    
+        // Check the user agent to determine the platform
+        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        const isAndroid = /Android/i.test(navigator.userAgent);
+    
+        if (isMobile) {
+            if (isAndroid) {
+                // Use intent URL scheme for Android devices
+                const whatsappUrl = `intent://send/?phone=${whatsappNumber}&text=${encodedMessage}#Intent;scheme=smsto;package=com.whatsapp;end`;
+                window.location.href = whatsappUrl;
+            } else {
+                // Use wa.me URL scheme for iOS devices
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+                window.open(whatsappUrl, '_blank');
+            }
+        } else {
+            // For desktop, open WhatsApp Web
+            const whatsappUrl = `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+        }
     };
+    
 
     const handleClearCart = () => {
         dispatch(clearCart());

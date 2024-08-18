@@ -14,6 +14,7 @@ import Cart from './Pages/Cart';
 import Powder from './Pages/Product Pages/Powder';
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import Biscuits from './Pages/Product Pages/Biscuit';
 const App = () => {
   return (
     <Provider store={store}>
@@ -31,6 +32,7 @@ const App = () => {
           <Route path='/Juice' element={<Juice />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/Powder' element={<Powder />} />
+          <Route path='/biscuit' element={<Biscuits/>} />
         </Routes>
       </BrowserRouter>
     </Provider>

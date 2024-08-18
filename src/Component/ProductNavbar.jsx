@@ -11,9 +11,12 @@ const ProductNavbar = () => {
     { link: "/nuts", name: "Nuts" },
     { link: "/chocolates", name: "Chocolates" },
     { link: "/juice", name: "Drinks" },
-    { link: "/powder", name: "Powders" }
+    { link: "/powder", name: "Powders" },
+    { link: "/biscuit", name: "Biscuits" }
   ];
-
+  const ScrollToTop = () => {
+    window.scrollTo(0, 0)
+  }
   return (
     <Box
       sx={{
@@ -40,9 +43,11 @@ const ProductNavbar = () => {
             <Link
               key={index}
               to={item.link}
+              onClick={ScrollToTop}
               style={{ textDecoration: 'none', color: '#000' }}
             >
               <ListItem
+                onClick={ScrollToTop}
                 sx={{
                   width: 'auto',
                   py: 0,

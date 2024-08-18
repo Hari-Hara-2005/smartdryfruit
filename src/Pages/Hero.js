@@ -25,6 +25,10 @@ const Hero = () => {
         { id: "5", img: "Images/ProductsImages/ourproducts images/choco.avif", title: "Chocolates", link: "/chocolates" },
         { id: "6", img: "Images/ProductsImages/ourproducts images/juice.jpeg", title: "Drinks", link: "/juice" },
     ];
+
+    const ScrollToTop = () => {
+        window.scrollTo(0, 0)
+      }
     return (
         <Box>
             <StickyWhatsapp link={"https://wa.me/7339534672"} />
@@ -33,30 +37,18 @@ const Hero = () => {
                 <MainProductSlide />
                 <ScrollDownButton />
             </Box>
-            <Box sx={{ height: ['100vh', '100vh'], bgcolor: '#92553D' }}>
+            <Box sx={{ height: ['90vh','70vh','70vh','70vh', '80vh'], bgcolor: '#92553D' }}>
                 <Navbar color="#fff" />
-                <Box sx={{ display: 'flex', flexDirection: ['column', 'column', 'row'], alignItems: 'center', justifyContent: "space-between", height: ['75%'], mx: [2, 11] }}>
-                    <Box sx={{ display: 'flex', justifyContent: ['center', 'center', 'normal'] }}>
-                        <Box component='img' src='Images/platte-1.png' alt='Cover 2' sx={{ width: ["70%", "80%", "36%"], mt: [17.5, 40, 40, 50, 9], position: 'absolute' }} />
+                <Box sx={{ display: 'flex', flexDirection: ['column', 'column', 'row'], alignItems: 'center', justifyContent: "space-between", height: ['75%'], px: [2.5, 5, 5,11] }}>
+                    <Box sx={{ display: 'flex', justifyContent: ['center', 'center', 'normal'], }}>
+                        <Box component='img' src='Images/img-4.png' alt='Cover 2' sx={{ width: ["90%", "80%","80%","100%", "42rem"] }} />
                     </Box>
-                    <Box
-                        component='img'
-                        src='Images/mpi/img4.png'
-                        alt='pack'
-                        sx={{
-                            width: ["35%", "40%", "22%"],
-                            transition: 'all cubic-bezier(0.19, 1, 0.22, 1) 2s',
-                            position: 'absolute',
-                            ml: [0, 0, 13],
-                            zIndex: 2
-                        }}
-                    />
                     <Box sx={{ width: ["100%", "100%", "50%"] }}>
                         <Typography sx={{
                             fontSize: ['1.5rem', '1.5rem', '2.5rem'],
                             fontWeight: '600',
                             color: '#FFF',
-                            py: 1
+                            py: [2.5,1],
                         }}>
                             Flavour Updated
                         </Typography>
@@ -66,15 +58,6 @@ const Hero = () => {
                     </Box>
                 </Box>
             </Box>
-            {/* <Box component='img'
-                src='Images/img-right-up@2x.avif'
-                alt='leaf'
-                sx={{
-                    width: ["40%", "20%", "20%"],
-                    right: 0,
-                    position: 'absolute',
-                }}
-            /> */}
             <Box sx={{ bgcolor: '#fff' }} className="three" >
                 <Box component='img'
                     src='Images/leaf3.avif'
@@ -82,7 +65,7 @@ const Hero = () => {
                     sx={{
                         width: ["70%", "50%", "30%"],
                         ml: [-10],
-                        mt: [54, 20, -5],
+                        mt: [54, 20,0, -5,-5],
                         position: 'absolute',
                     }}
                 />
@@ -102,6 +85,7 @@ const Hero = () => {
                                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                                     <Link
                                         to={item.link}
+                                        onClick={ScrollToTop}
                                         color={"inherit"}
                                         style={{ textDecoration: 'none' }}
                                         key={index}

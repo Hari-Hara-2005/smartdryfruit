@@ -29,7 +29,7 @@ export const ScrollDownButton = () => {
             sx={{
                 position: 'absolute',
                 bottom: '2rem', // Position it slightly above the bottom
-                left: '48.5%',
+                left: ['43.5%','48.5%'],
                 transform: 'translateX(-50%)',
                 zIndex: 1000,
                 animation: `${bounce} 2s infinite`, // Apply the bouncing animation

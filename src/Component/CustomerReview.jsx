@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, CardContent, Typography, Avatar, Box } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
-import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import { reviews } from "../utils/data";
 import { keyframes } from "@emotion/react";
 
@@ -77,7 +76,7 @@ const CustomerReview = () => {
                                             }}
                                         >
                                             <Box>
-                                                <img src='Images/double-1.png' style={{ width: '4rem', marginTop: 5 }} />
+                                                <img src='Images/double-1.png' alt='img' style={{ width: '4rem', marginTop: 5 }} />
                                             </Box>
                                         </Box>
                                         <Box sx={{ flex: 1, borderBottom: `1px solid ${colorStyle.lineColor}` }}></Box>
