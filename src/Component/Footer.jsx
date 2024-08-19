@@ -124,18 +124,70 @@ function Footer() {
     ];
     const drinks = [
         {
-            path: "/drinks",
+            path: "/Juice",
+            name: "Redbull",
+        },
+        {
+            path: "/Juice",
+            name: "Bavaria",
+        },
+        {
+            path: "/Juice",
+            name: "Mousey",
+        },
+        {
+            path: "/Juice",
+            name: "Mousey",
+        },
+        {
+            path: "/Juice",
+            name: "Redbull Gold",
+        },
+        {
+            path: "/Juice",
+            name: "Patritti Red Wine",
+        },
+    ];
+
+    const biscuits = [
+        {
+            path: "/biscuit",
+            name: "Hello Panda",
+        },
+        {
+            path: "/biscuit",
+            name: "Kaprika Waffer",
+        },
+        {
+            path: "/biscuit",
+            name: "Lotus Biscoff",
+        },
+        {
+            path: "/biscuit",
+            name: "Tiffany Waffer",
+        },
+        {
+            path: "/biscuit",
+            name: "Waffer",
+        },
+    ];
+
+    const powder = [
+        {
+            path: "/Powder",
             name: "Davidoff",
         },
         {
-            path: "/drinks",
+            path: "/Powder",
             name: "Milo",
         },
         {
-            path: "/drinks",
-            name: "Oval Tine",
+            path: "/Powder",
+            name: "Ovaltine",
         },
     ];
+
+
     const scrollToTop = () => {
         window.scrollTo(0, 0)
     }
@@ -389,6 +441,80 @@ function Footer() {
                                     body={
                                         <Box sx={{ mt: -2 }}>
                                             {drinks.map((item, index) => (
+                                                <Link to={item.path} style={{ textDecoration: 'none' }} color="#fff" onClick={scrollToTop} >
+                                                    <Typography
+                                                        key={index}
+                                                        color="#fff"
+                                                        underline="hover"
+                                                        sx={{
+                                                            fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
+                                                            letterSpacing: 1,
+                                                            cursor: 'pointer',
+                                                            py: 1,
+                                                            ":hover": {
+                                                                color: "gray",
+                                                                textDecoration: 'none'
+                                                            },
+                                                        }}
+                                                    >
+                                                        {item.name}
+                                                    </Typography></Link>))}
+                                        </Box>
+                                    }
+                                />
+                                 <CusAccordion
+                                    head={
+                                        <Typography
+                                            sx={{
+                                                fontSize: ["0.8rem"],
+                                                fontWeight: 600,
+                                                color: "#fff",
+                                                letterSpacing: 2,
+                                                textTransform: "uppercase",
+                                            }}
+                                        >
+                                            Biscuits
+                                        </Typography>}
+                                    body={
+                                        <Box sx={{ mt: -2 }}>
+                                            {biscuits.map((item, index) => (
+                                                <Link to={item.path} style={{ textDecoration: 'none' }} color="#fff" onClick={scrollToTop} >
+                                                    <Typography
+                                                        key={index}
+                                                        color="#fff"
+                                                        underline="hover"
+                                                        sx={{
+                                                            fontSize: [".85rem", ".85rem", "12px", "12px", ".85rem"],
+                                                            letterSpacing: 1,
+                                                            cursor: 'pointer',
+                                                            py: 1,
+                                                            ":hover": {
+                                                                color: "gray",
+                                                                textDecoration: 'none'
+                                                            },
+                                                        }}
+                                                    >
+                                                        {item.name}
+                                                    </Typography></Link>))}
+                                        </Box>
+                                    }
+                                />
+                                  <CusAccordion
+                                    head={
+                                        <Typography
+                                            sx={{
+                                                fontSize: ["0.8rem"],
+                                                fontWeight: 600,
+                                                color: "#fff",
+                                                letterSpacing: 2,
+                                                textTransform: "uppercase",
+                                            }}
+                                        >
+                                            Powders
+                                        </Typography>}
+                                    body={
+                                        <Box sx={{ mt: -2 }}>
+                                            {powder.map((item, index) => (
                                                 <Link to={item.path} style={{ textDecoration: 'none' }} color="#fff" onClick={scrollToTop} >
                                                     <Typography
                                                         key={index}

@@ -17,10 +17,9 @@ import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/cartSlice';
 import { toast } from 'react-toastify';
 const gramOptions = [
+  { value: '250g', label: '250g' },
+  { value: '500g', label: '500g' },
   { value: '1kg', label: '1kg' },
-  { value: '2kg', label: '2kg' },
-  { value: '3kg', label: '3kg' },
-  { value: '4kg', label: '4kg' },
 ];
 const StyledCard = styled(Card)(({ theme }) => ({
   backgroundColor: '#fff',
@@ -92,7 +91,7 @@ const ProductCard = ({ product, isLoading }) => {
   }
 
   const [liked, setLiked] = useState(false);
-  const [selectedGram, setSelectedGram] = useState('1kg'); // Default to 1pocket
+  const [selectedGram, setSelectedGram] = useState('250g'); // Default to 1pocket
   const [price, setPrice] = useState(0); // Default price
   const [originalPrice, setOriginalPrice] = useState(0); // Default original price
 

@@ -263,8 +263,7 @@ const FeatureItem = styled(Grid)(({ theme }) => ({
                             Hey, We Aren't That Far!
                         </Typography>
                         <Typography>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi ut et numquam repudiandae, ullam laudantium in? Repudiandae, veniam nemo, iure cum facere accusamus est eligendi quisquam asperiores delectus aspernatur nisi?
-                        </Typography>
+                        Explore our premium selection of dry fruits, nuts, chocolates, and more. Whether you're looking for a healthy snack or a delicious treat, we offer the finest quality products to satisfy your cravings. Freshness and flavor are just a click away !                        </Typography>
                         <Typography sx={{
                             fontSize: ['1rem', '1.2rem', '1rem'],
                             fontWeight: '600',
