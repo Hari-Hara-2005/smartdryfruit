@@ -24,6 +24,8 @@ const Hero = () => {
         { id: "4", img: "Images/ProductsImages/ourproducts images/dryfruitss.jpg", title: "Dry Fruits", link: "/dryfruits" },
         { id: "5", img: "Images/ProductsImages/ourproducts images/choco.avif", title: "Chocolates", link: "/chocolates" },
         { id: "6", img: "Images/ProductsImages/ourproducts images/juice.jpeg", title: "Drinks", link: "/juice" },
+        { id: "7", img: "Images/ProductsImages/ourproducts images/energy.jpeg", title: "Powder", link: "/powder" },
+        { id: "8", img: "Images/ProductsImages/ourproducts images/biscuits.jpeg", title: "Biscuits", link: "/biscuit" },
     ];
 
     const ScrollToTop = () => {
