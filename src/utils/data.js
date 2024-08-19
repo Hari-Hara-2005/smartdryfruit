@@ -1192,6 +1192,54 @@ export const biscuits = [
         },
         image: 'Images/ProductsImages/Biscuits/sugarcracker2.png',
     },
+    {
+        id: 80,
+        name: 'Butter Cookies',
+        rating: 4,
+        prices: {
+            '1pocket': { currentPrice: '₹240', originalPrice: '₹270' },
+            '2pocket': { currentPrice: '₹480', originalPrice: '₹500' },
+            '3pocket': { currentPrice: '₹720', originalPrice: '₹750' },
+            '4pocket': { currentPrice: '₹960', originalPrice: '₹1,000' },
+        },
+        image: 'Images/ProductsImages/Biscuits/buttercookies.png',
+    },
+    {
+        id: 81,
+        name: 'Chocobites Cookies',
+        rating: 4,
+        prices: {
+            '1pocket': { currentPrice: '₹240', originalPrice: '₹270' },
+            '2pocket': { currentPrice: '₹480', originalPrice: '₹500' },
+            '3pocket': { currentPrice: '₹720', originalPrice: '₹750' },
+            '4pocket': { currentPrice: '₹960', originalPrice: '₹1,000' },
+        },
+        image: 'Images/ProductsImages/Biscuits/chocobites.png',
+    },
+    {
+        id: 82,
+        name: 'Chocolate Cookies',
+        rating: 4,
+        prices: {
+            '1pocket': { currentPrice: '₹240', originalPrice: '₹270' },
+            '2pocket': { currentPrice: '₹480', originalPrice: '₹500' },
+            '3pocket': { currentPrice: '₹720', originalPrice: '₹750' },
+            '4pocket': { currentPrice: '₹960', originalPrice: '₹1,000' },
+        },
+        image: 'Images/ProductsImages/Biscuits/chocolatecookies.png',
+    },
+    {
+        id: 83,
+        name: 'Strawberry Cookies',
+        rating: 4,
+        prices: {
+            '1pocket': { currentPrice: '₹240', originalPrice: '₹270' },
+            '2pocket': { currentPrice: '₹480', originalPrice: '₹500' },
+            '3pocket': { currentPrice: '₹720', originalPrice: '₹750' },
+            '4pocket': { currentPrice: '₹960', originalPrice: '₹1,000' },
+        },
+        image: 'Images/ProductsImages/Biscuits/strawberrycookies.png',
+    },
   
 ];
 
