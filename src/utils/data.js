@@ -204,6 +204,54 @@ export const products = [
 export const dryfruits = [
     {
         id: 1,
+        name: 'Anjeer Figs',
+        rating: 5,
+        prices: {
+            '100g': { currentPrice: '₹90', originalPrice: '₹110' },
+            '250g': { currentPrice: '₹225', originalPrice: '₹250' },
+            '500g': { currentPrice: '₹450', originalPrice: '₹470' },
+            '1kg': { currentPrice: '₹900', originalPrice: '₹930' },
+        },
+        image: 'Images/ProductsImages/nuts/Anjeer.png',
+    },
+    {
+        id: 2,
+        name: 'Indian Grapes',
+        rating: 4,
+        prices: {
+            '100g': { currentPrice: '₹28', originalPrice: '₹50' },
+            '250g': { currentPrice: '₹70', originalPrice: '₹100' },
+            '500g': { currentPrice: '₹140', originalPrice: '₹170' },
+            '1kg': { currentPrice: '₹280', originalPrice: '₹300' },
+        },
+        image: 'Images/ProductsImages/nuts/Indiangrape.jpg',
+    },
+    {
+        id: 3,
+        name: 'Afghan Grapes',
+        rating: 4,
+        prices: {
+            '100g': { currentPrice: '₹60', originalPrice: '₹90' },
+            '250g': { currentPrice: '₹150', originalPrice: '₹180' },
+            '500g': { currentPrice: '₹300', originalPrice: '₹330' },
+            '1kg': { currentPrice: '₹600', originalPrice: '₹630' },
+        },
+        image: 'Images/ProductsImages/nuts/Afghangrape.jpg',
+    },
+    {
+        id: 4,
+        name: 'Blackgrape Seeds',
+        rating: 5,
+        prices: {
+            '100g': { currentPrice: '₹36', originalPrice: '₹60' },
+            '250g': { currentPrice: '₹80', originalPrice: '₹100' },
+            '500g': { currentPrice: '₹160', originalPrice: '₹190' },
+            '1kg': { currentPrice: '₹320', originalPrice: '₹350' },
+        },
+        image: 'Images/ProductsImages/seeds/Black grapes  seeds.png',
+    },
+    {
+        id: 5,
         name: 'Apricot',
         rating: 5,
         prices: {
@@ -215,7 +263,7 @@ export const dryfruits = [
         image: 'Images/ProductsImages/dryFruits/Apricot.png',
     },
     {
-        id: 2,
+        id: 6,
         name: 'Baby Orange',
         rating: 4,
         prices: {
@@ -228,7 +276,7 @@ export const dryfruits = [
         unitsSold: 45,
     },
     {
-        id: 3,
+        id: 7,
         name: 'Black Current',
         rating: 4,
         prices: {
@@ -241,7 +289,7 @@ export const dryfruits = [
         unitsSold: 43,
     },
     {
-        id: 4,
+        id: 8,
         name: 'Blue Berry',
         rating: 3,
         prices: {
@@ -254,7 +302,7 @@ export const dryfruits = [
         unitsSold: 25,
     },
     {
-        id: 5,
+        id: 9,
         name: 'Cherry',
         rating: 4,
         prices: {
@@ -267,7 +315,20 @@ export const dryfruits = [
         unitsSold: 43,
     },
     {
-        id: 6,
+        id: 10,
+        name: 'Strawberry',
+        rating: 4,
+        prices: {
+            '100g': { currentPrice: '₹85', originalPrice: '₹100' },
+            '250g': { currentPrice: '₹212', originalPrice: '₹230' },
+            '500g': { currentPrice: '₹424', originalPrice: '₹440' },
+            '1kg': { currentPrice: '₹848', originalPrice: '₹860' },
+        },
+        image: 'Images/ProductsImages/dryFruits/strawberry.png',
+        unitsSold: 43,
+    },
+    {
+        id: 11,
         name: 'Dry Papaya',
         rating: 4,
         prices: {
@@ -280,7 +341,7 @@ export const dryfruits = [
         unitsSold: 43,
     },
     {
-        id: 7,
+        id: 12,
         name: 'Dry Amla',
         rating: 4,
         prices: {
@@ -293,33 +354,7 @@ export const dryfruits = [
         unitsSold: 43,
     },
     {
-        id: 8,
-        name: 'Ginger Cubes',
-        rating: 4,
-        prices: {
-            '100g': { currentPrice: '₹68', originalPrice: '₹90' },
-            '250g': { currentPrice: '₹170', originalPrice: '₹190' },
-            '500g': { currentPrice: '₹340', originalPrice: '₹360' },
-            '1kg': { currentPrice: '₹680', originalPrice: '₹700' },
-        },
-        image: 'Images/ProductsImages/dryFruits/ginger cubes.png',
-        unitsSold: 43,
-    },
-    {
-        id: 9,
-        name: 'Ginger Slices',
-        rating: 4,
-        prices: {
-            '100g': { currentPrice: '₹50', originalPrice: '₹60' },
-            '250g': { currentPrice: '₹125', originalPrice: '₹140' },
-            '500g': { currentPrice: '₹250', originalPrice: '₹270' },
-            '1kg': { currentPrice: '₹500', originalPrice: '₹520' },
-        },
-        image: 'Images/ProductsImages/dryFruits/ginger slice.png',
-        unitsSold: 43,
-    },
-    {
-        id: 10,
+        id: 13,
         name: 'Honey Amla',
         rating: 4,
         prices: {
@@ -332,7 +367,34 @@ export const dryfruits = [
         unitsSold: 43,
     },
     {
-        id: 11,
+        id: 14,
+        name: 'Ginger Cubes',
+        rating: 4,
+        prices: {
+            '100g': { currentPrice: '₹68', originalPrice: '₹90' },
+            '250g': { currentPrice: '₹170', originalPrice: '₹190' },
+            '500g': { currentPrice: '₹340', originalPrice: '₹360' },
+            '1kg': { currentPrice: '₹680', originalPrice: '₹700' },
+        },
+        image: 'Images/ProductsImages/dryFruits/ginger cubes.png',
+        unitsSold: 43,
+    },
+    {
+        id: 15,
+        name: 'Ginger Slices',
+        rating: 4,
+        prices: {
+            '100g': { currentPrice: '₹50', originalPrice: '₹60' },
+            '250g': { currentPrice: '₹125', originalPrice: '₹140' },
+            '500g': { currentPrice: '₹250', originalPrice: '₹270' },
+            '1kg': { currentPrice: '₹500', originalPrice: '₹520' },
+        },
+        image: 'Images/ProductsImages/dryFruits/ginger slice.png',
+        unitsSold: 43,
+    },
+    
+    {
+        id: 16,
         name: 'Mango Slice',
         rating: 4,
         prices: {
@@ -345,7 +407,7 @@ export const dryfruits = [
         unitsSold: 43,
     },
     {
-        id: 12,
+        id: 17,
         name: 'Pineapple Coin',
         rating: 4,
         prices: {
@@ -358,7 +420,7 @@ export const dryfruits = [
         unitsSold: 43,
     },
     {
-        id: 13,
+        id: 18,
         name: 'Pineapple Ring',
         rating: 4,
         prices: {
@@ -371,8 +433,8 @@ export const dryfruits = [
         unitsSold: 43,
     },
     {
-        id: 14,
-        name: 'Pomelo',
+        id: 19,
+        name: 'Pamelo',
         rating: 4,
         prices: {
             '100g': { currentPrice: '₹65', originalPrice: '₹80' },
@@ -384,8 +446,8 @@ export const dryfruits = [
         unitsSold: 43,
     },
     {
-        id: 15,
-        name: 'Mixed Fruits',
+        id: 20,
+        name: 'Mixed Dry Fruits',
         rating: 4,
         prices: {
             '100g': { currentPrice: '₹78', originalPrice: '₹90' },
@@ -396,13 +458,66 @@ export const dryfruits = [
         image: 'Images/ProductsImages/dryFruits/mixeddryfruit.jpg',
         unitsSold: 43,
     },
+    {
+        id: 20,
+        name: 'Kiwi',
+        rating: 4,
+        prices: {
+            '100g': { currentPrice: '₹78', originalPrice: '₹90' },
+            '250g': { currentPrice: '₹195', originalPrice: '₹210' },
+            '500g': { currentPrice: '₹390', originalPrice: '₹410' },
+            '1kg': { currentPrice: '₹780', originalPrice: '₹800' },
+        },
+        image: 'Images/ProductsImages/dryFruits/kiwi.jpg',
+        unitsSold: 43,
+    },
+    {
+        id: 20,
+        name: 'Masala Guava',
+        rating: 4,
+        prices: {
+            '100g': { currentPrice: '₹78', originalPrice: '₹90' },
+            '250g': { currentPrice: '₹195', originalPrice: '₹210' },
+            '500g': { currentPrice: '₹390', originalPrice: '₹410' },
+            '1kg': { currentPrice: '₹780', originalPrice: '₹800' },
+        },
+        image: 'Images/ProductsImages/dryFruits/masalaguava.jpg',
+        unitsSold: 43,
+    },
+    {
+        id: 20,
+        name: 'Prunes',
+        rating: 4,
+        prices: {
+            '100g': { currentPrice: '₹78', originalPrice: '₹90' },
+            '250g': { currentPrice: '₹195', originalPrice: '₹210' },
+            '500g': { currentPrice: '₹390', originalPrice: '₹410' },
+            '1kg': { currentPrice: '₹780', originalPrice: '₹800' },
+        },
+        image: 'Images/ProductsImages/dryFruits/prunes.jpg',
+        unitsSold: 43,
+    },
+    {
+        id: 20,
+        name: 'Gojiberrries',
+        rating: 4,
+        prices: {
+            '100g': { currentPrice: '₹78', originalPrice: '₹90' },
+            '250g': { currentPrice: '₹195', originalPrice: '₹210' },
+            '500g': { currentPrice: '₹390', originalPrice: '₹410' },
+            '1kg': { currentPrice: '₹780', originalPrice: '₹800' },
+        },
+        image: 'Images/ProductsImages/dryFruits/gojiberries.jpg',
+        unitsSold: 43,
+    },
+  
 ];
 
 
 
 export const nuts = [
     {
-        id: 16,
+        id: 21,
         name: 'Almond',
         rating: 5,
         prices: {
@@ -414,79 +529,7 @@ export const nuts = [
         image: 'Images/ProductsImages/nuts/Almond.png',
     },
     {
-        id: 17,
-        name: 'Anjeer Figs',
-        rating: 5,
-        prices: {
-            '100g': { currentPrice: '₹90', originalPrice: '₹110' },
-            '250g': { currentPrice: '₹225', originalPrice: '₹250' },
-            '500g': { currentPrice: '₹450', originalPrice: '₹470' },
-            '1kg': { currentPrice: '₹900', originalPrice: '₹930' },
-        },
-        image: 'Images/ProductsImages/nuts/Anjeer.png',
-    },
-    {
-        id: 18,
-        name: 'Brazil Nuts',
-        rating: 4,
-        prices: {
-            '100g': { currentPrice: '₹220', originalPrice: '₹250' },
-            '250g': { currentPrice: '₹550', originalPrice: '₹580' },
-            '500g': { currentPrice: '₹1,100', originalPrice: '₹1,150' },
-            '1kg': { currentPrice: '₹2,200', originalPrice: '₹2,250' },
-        },
-        image: 'Images/ProductsImages/nuts/Brazil nuts.png',
-    },
-    {
-        id: 19,
-        name: 'Cashew',
-        rating: 4,
-        prices: {
-            '100g': { currentPrice: '₹95', originalPrice: '₹110' },
-            '250g': { currentPrice: '₹237', originalPrice: '₹250' },
-            '500g': { currentPrice: '₹474', originalPrice: '₹490' },
-            '1kg': { currentPrice: '₹948', originalPrice: '₹1,000' },
-        },
-        image: 'Images/ProductsImages/nuts/Cashew.png',
-    },
-    {
-        id: 20,
-        name: 'Pecan Nuts',
-        rating: 3,
-        prices: {
-            '100g': { currentPrice: '₹240', originalPrice: '₹270' },
-            '250g': { currentPrice: '₹600', originalPrice: '₹640' },
-            '500g': { currentPrice: '₹1,200', originalPrice: '₹1,240' },
-            '1kg': { currentPrice: '₹2,400', originalPrice: '₹2,450' },
-        },
-        image: 'Images/ProductsImages/nuts/Pecan nut.png',
-    },
-    {
-        id: 21,
-        name: 'Pepper Cashew',
-        rating: 4,
-        prices: {
-            '100g': { currentPrice: '₹95', originalPrice: '₹110' },
-            '250g': { currentPrice: '₹237', originalPrice: '₹250' },
-            '500g': { currentPrice: '₹474', originalPrice: '₹490' },
-            '1kg': { currentPrice: '₹948', originalPrice: '₹970' },
-        },
-        image: 'Images/ProductsImages/nuts/pepper cashew.png',
-    },
-    {
         id: 22,
-        name: 'Pine Nuts',
-        rating: 4,
-        prices: {
-            '100g': { currentPrice: '₹800', originalPrice: '₹1,000' },
-            '250g': { currentPrice: '₹2,000', originalPrice: '₹2,150' },
-            '500g': { currentPrice: '₹4,000', originalPrice: '₹4,150' },
-            '1kg': { currentPrice: '₹8,000', originalPrice: '₹8,150' },
-        },
-        image: 'Images/ProductsImages/nuts/Pine nuts.png',
-    },
-    {
-        id: 23,
         name: 'Pistachios',
         rating: 4,
         prices: {
@@ -498,7 +541,32 @@ export const nuts = [
         image: 'Images/ProductsImages/nuts/pista.png',
     },
     {
+        id: 23,
+        name: 'Cashew',
+        rating: 4,
+        prices: {
+            '100g': { currentPrice: '₹95', originalPrice: '₹110' },
+            '250g': { currentPrice: '₹237', originalPrice: '₹250' },
+            '500g': { currentPrice: '₹474', originalPrice: '₹490' },
+            '1kg': { currentPrice: '₹948', originalPrice: '₹1,000' },
+        },
+        image: 'Images/ProductsImages/nuts/Cashew.png',
+    },
+    {
         id: 24,
+        name: 'Walnut',
+        rating: 4,
+        prices: {
+            '100g': { currentPrice: '₹130', originalPrice: '₹150' },
+            '250g': { currentPrice: '₹325', originalPrice: '₹350' },
+            '500g': { currentPrice: '₹650', originalPrice: '₹680' },
+            '1kg': { currentPrice: '₹1,300', originalPrice: '₹1,350' },
+        },
+        image: 'Images/ProductsImages/nuts/wallnut.png',
+    },
+    
+    {
+        id: 25,
         name: 'Salted Almond',
         rating: 4,
         prices: {
@@ -510,7 +578,7 @@ export const nuts = [
         image: 'Images/ProductsImages/nuts/saltedalmond.jpg',
     },
     {
-        id: 25,
+        id: 26,
         name: 'Salted Cashew',
         rating: 4,
         prices: {
@@ -520,18 +588,6 @@ export const nuts = [
             '1kg': { currentPrice: '₹948', originalPrice: '₹1,000' },
         },
         image: 'Images/ProductsImages/nuts/saltedcashew.jpg',
-    },
-    {
-        id: 26,
-        name: 'Walnut',
-        rating: 4,
-        prices: {
-            '100g': { currentPrice: '₹130', originalPrice: '₹150' },
-            '250g': { currentPrice: '₹325', originalPrice: '₹350' },
-            '500g': { currentPrice: '₹650', originalPrice: '₹680' },
-            '1kg': { currentPrice: '₹1,300', originalPrice: '₹1,350' },
-        },
-        image: 'Images/ProductsImages/nuts/wallnut.png',
     },
     {
         id: 27,
@@ -559,27 +615,27 @@ export const nuts = [
     },
     {
         id: 29,
-        name: 'Indian Grapes',
+        name: 'Pepper Cashew',
         rating: 4,
         prices: {
-            '100g': { currentPrice: '₹28', originalPrice: '₹50' },
-            '250g': { currentPrice: '₹70', originalPrice: '₹100' },
-            '500g': { currentPrice: '₹140', originalPrice: '₹170' },
-            '1kg': { currentPrice: '₹280', originalPrice: '₹300' },
+            '100g': { currentPrice: '₹95', originalPrice: '₹110' },
+            '250g': { currentPrice: '₹237', originalPrice: '₹250' },
+            '500g': { currentPrice: '₹474', originalPrice: '₹490' },
+            '1kg': { currentPrice: '₹948', originalPrice: '₹970' },
         },
-        image: 'Images/ProductsImages/nuts/Indiangrape.jpg',
+        image: 'Images/ProductsImages/nuts/pepper cashew.png',
     },
     {
         id: 30,
-        name: 'Afghan Grapes',
+        name: 'Brazil Nuts',
         rating: 4,
         prices: {
-            '100g': { currentPrice: '₹60', originalPrice: '₹90' },
-            '250g': { currentPrice: '₹150', originalPrice: '₹180' },
-            '500g': { currentPrice: '₹300', originalPrice: '₹330' },
-            '1kg': { currentPrice: '₹600', originalPrice: '₹630' },
+            '100g': { currentPrice: '₹220', originalPrice: '₹250' },
+            '250g': { currentPrice: '₹550', originalPrice: '₹580' },
+            '500g': { currentPrice: '₹1,100', originalPrice: '₹1,150' },
+            '1kg': { currentPrice: '₹2,200', originalPrice: '₹2,250' },
         },
-        image: 'Images/ProductsImages/nuts/Afghangrape.jpg',
+        image: 'Images/ProductsImages/nuts/Brazil nuts.png',
     },
     {
         id: 31,
@@ -593,73 +649,47 @@ export const nuts = [
         },
         image: 'Images/ProductsImages/nuts/Hazlenut.jpg',
     },
+   
+    {
+        id: 32,
+        name: 'Peca Nuts',
+        rating: 3,
+        prices: {
+            '100g': { currentPrice: '₹240', originalPrice: '₹270' },
+            '250g': { currentPrice: '₹600', originalPrice: '₹640' },
+            '500g': { currentPrice: '₹1,200', originalPrice: '₹1,240' },
+            '1kg': { currentPrice: '₹2,400', originalPrice: '₹2,450' },
+        },
+        image: 'Images/ProductsImages/nuts/Pecan nut.png',
+    },
+    
+    {
+        id: 33,
+        name: 'Pine Nuts',
+        rating: 4,
+        prices: {
+            '100g': { currentPrice: '₹800', originalPrice: '₹1,000' },
+            '250g': { currentPrice: '₹2,000', originalPrice: '₹2,150' },
+            '500g': { currentPrice: '₹4,000', originalPrice: '₹4,150' },
+            '1kg': { currentPrice: '₹8,000', originalPrice: '₹8,150' },
+        },
+        image: 'Images/ProductsImages/nuts/Pine nuts.png',
+    },
+    
+    
+   
+    
+    
+   
+
 ];
 
 
 
 export const seeds = [
-    {
-        id: 32,
-        name: 'Blackgrape Seeds',
-        rating: 5,
-        prices: {
-            '100g': { currentPrice: '₹36', originalPrice: '₹60' },
-            '250g': { currentPrice: '₹80', originalPrice: '₹100' },
-            '500g': { currentPrice: '₹160', originalPrice: '₹190' },
-            '1kg': { currentPrice: '₹320', originalPrice: '₹350' },
-        },
-        image: 'Images/ProductsImages/seeds/Black grapes  seeds.png',
-    },
-    {
-        id: 33,
-        name: 'Chia Seeds',
-        rating: 4,
-        prices: {
-            '100g': { currentPrice: '₹55', originalPrice: '₹70' },
-            '250g': { currentPrice: '₹137', originalPrice: '₹150' },
-            '500g': { currentPrice: '₹274', originalPrice: '₹290' },
-            '1kg': { currentPrice: '₹548', originalPrice: '₹560' },
-        },
-        image: 'Images/ProductsImages/seeds/chia seeds.png',
-    },
+
     {
         id: 34,
-        name: 'Flax Seeds',
-        rating: 4,
-        prices: {
-            '100g': { currentPrice: '₹40', originalPrice: '₹60' },
-            '250g': { currentPrice: '₹100', originalPrice: '₹120' },
-            '500g': { currentPrice: '₹200', originalPrice: '₹220' },
-            '1kg': { currentPrice: '₹400', originalPrice: '₹440' },
-        },
-        image: 'Images/ProductsImages/seeds/flax seed.png',
-    },
-    {
-        id: 35,
-        name: 'Karunjeeragam Seeds',
-        rating: 3,
-        prices: {
-            '100g': { currentPrice: '₹50', originalPrice: '₹60' },
-            '250g': { currentPrice: '₹125', originalPrice: '₹140' },
-            '500g': { currentPrice: '₹250', originalPrice: '₹280' },
-            '1kg': { currentPrice: '₹500', originalPrice: '₹550' },
-        },
-        image: 'Images/ProductsImages/seeds/Karunjeeragam  seeds.png',
-    },
-    {
-        id: 36,
-        name: 'Poppy Seeds',
-        rating: 4,
-        prices: {
-            '100g': { currentPrice: '₹50', originalPrice: '₹60' },
-            '250g': { currentPrice: '₹125', originalPrice: '₹140' },
-            '500g': { currentPrice: '₹250', originalPrice: '₹280' },
-            '1kg': { currentPrice: '₹500', originalPrice: '₹550' },
-        },
-        image: 'Images/ProductsImages/seeds/Poppy seeds.png',
-    },
-    {
-        id: 37,
         name: 'Pumpkin Seeds',
         rating: 4,
         prices: {
@@ -669,6 +699,42 @@ export const seeds = [
             '1kg': { currentPrice: '₹600', originalPrice: '₹640' },
         },
         image: 'Images/ProductsImages/seeds/pumpkin seeds.png',
+    },
+    {
+        id: 35,
+        name: 'Sunflower Seeds',
+        rating: 4,
+        prices: {
+            '100g': { currentPrice: '₹45', originalPrice: '₹60' },
+            '250g': { currentPrice: '₹112', originalPrice: '₹130' },
+            '500g': { currentPrice: '₹224', originalPrice: '₹240' },
+            '1kg': { currentPrice: '₹448', originalPrice: '₹465' },
+        },
+        image: 'Images/ProductsImages/seeds/sunflower seeds (1).png',
+    },
+    {
+        id: 36,
+        name: 'Watermelon Seeds',
+        rating: 4,
+        prices: {
+            '100g': { currentPrice: '₹105', originalPrice: '₹120' },
+            '250g': { currentPrice: '₹262', originalPrice: '₹280' },
+            '500g': { currentPrice: '₹524', originalPrice: '₹540' },
+            '1kg': { currentPrice: '₹1,048', originalPrice: '₹1,070' },
+        },
+        image: 'Images/ProductsImages/seeds/watermelon seeds (1).png',
+    },
+    {
+        id: 37,
+        name: 'Vellari Seeds',
+        rating: 4,
+        prices: {
+            '100g': { currentPrice: '₹130', originalPrice: '₹150' },
+            '250g': { currentPrice: '₹325', originalPrice: '₹350' },
+            '500g': { currentPrice: '₹650', originalPrice: '₹670' },
+            '1kg': { currentPrice: '₹1,300', originalPrice: '₹1,350' },
+        },
+        image: 'Images/ProductsImages/seeds/vellari.jpg',
     },
     {
         id: 38,
@@ -684,41 +750,56 @@ export const seeds = [
     },
     {
         id: 39,
-        name: 'Sunflower Seeds',
+        name: 'Chia Seeds',
         rating: 4,
         prices: {
-            '100g': { currentPrice: '₹45', originalPrice: '₹60' },
-            '250g': { currentPrice: '₹112', originalPrice: '₹130' },
-            '500g': { currentPrice: '₹224', originalPrice: '₹240' },
-            '1kg': { currentPrice: '₹448', originalPrice: '₹465' },
+            '100g': { currentPrice: '₹55', originalPrice: '₹70' },
+            '250g': { currentPrice: '₹137', originalPrice: '₹150' },
+            '500g': { currentPrice: '₹274', originalPrice: '₹290' },
+            '1kg': { currentPrice: '₹548', originalPrice: '₹560' },
         },
-        image: 'Images/ProductsImages/seeds/sunflower seeds (1).png',
+        image: 'Images/ProductsImages/seeds/chia seeds.png',
     },
     {
         id: 40,
-        name: 'Watermelon Seeds',
+        name: 'Flax Seeds',
         rating: 4,
         prices: {
-            '100g': { currentPrice: '₹105', originalPrice: '₹120' },
-            '250g': { currentPrice: '₹262', originalPrice: '₹280' },
-            '500g': { currentPrice: '₹524', originalPrice: '₹540' },
-            '1kg': { currentPrice: '₹1,048', originalPrice: '₹1,070' },
+            '100g': { currentPrice: '₹40', originalPrice: '₹60' },
+            '250g': { currentPrice: '₹100', originalPrice: '₹120' },
+            '500g': { currentPrice: '₹200', originalPrice: '₹220' },
+            '1kg': { currentPrice: '₹400', originalPrice: '₹440' },
         },
-        image: 'Images/ProductsImages/seeds/watermelon seeds (1).png',
+        image: 'Images/ProductsImages/seeds/flax seed.png',
     },
     {
         id: 41,
-        name: 'Vellari Seeds',
+        name: 'Karunjeeragam',
+        rating: 3,
+        prices: {
+            '100g': { currentPrice: '₹50', originalPrice: '₹60' },
+            '250g': { currentPrice: '₹125', originalPrice: '₹140' },
+            '500g': { currentPrice: '₹250', originalPrice: '₹280' },
+            '1kg': { currentPrice: '₹500', originalPrice: '₹550' },
+        },
+        image: 'Images/ProductsImages/seeds/Karunjeeragam  seeds.png',
+    },
+    {
+        id: 42,
+        name: 'Poppy Seeds',
         rating: 4,
         prices: {
-            '100g': { currentPrice: '₹130', originalPrice: '₹150' },
-            '250g': { currentPrice: '₹325', originalPrice: '₹350' },
-            '500g': { currentPrice: '₹650', originalPrice: '₹670' },
-            '1kg': { currentPrice: '₹1,300', originalPrice: '₹1,350' },
+            '100g': { currentPrice: '₹50', originalPrice: '₹60' },
+            '250g': { currentPrice: '₹125', originalPrice: '₹140' },
+            '500g': { currentPrice: '₹250', originalPrice: '₹280' },
+            '1kg': { currentPrice: '₹500', originalPrice: '₹550' },
         },
-        image: 'Images/ProductsImages/seeds/vellari.jpg',
+        image: 'Images/ProductsImages/seeds/Poppy seeds.png',
     },
-
+   
+   
+    
+   
 
 ];
 
@@ -726,7 +807,7 @@ export const seeds = [
 
 export const dates = [
     {
-        id: 42,
+        id: 43,
         name: 'Ajwa Dates',
         rating: 5,
         prices: {
@@ -737,7 +818,7 @@ export const dates = [
         image: 'Images/ProductsImages/dates/ajwa dates.png',
     },
     {
-        id: 43,
+        id: 44,
         name: 'Khimiya Dates',
         rating: 4,
         prices: {
@@ -748,7 +829,7 @@ export const dates = [
         image: 'Images/ProductsImages/dates/khimiya   dates.png',
     },
     {
-        id: 44,
+        id: 45,
         name: 'Medjoul Dates',
         rating: 4,
         prices: {
@@ -759,7 +840,7 @@ export const dates = [
         image: 'Images/ProductsImages/dates/medjoul  dates.png',
     },
     {
-        id: 45,
+        id: 46,
         name: 'Kimia Dates',
         rating: 4,
         prices: {
@@ -771,7 +852,7 @@ export const dates = [
         image: 'Images/ProductsImages/dates/kimia.jpg',
     },
     {
-        id: 46,
+        id: 47,
         name: 'Mabroom Dates',
         rating: 4,
         prices: {
@@ -782,7 +863,7 @@ export const dates = [
         image: 'Images/ProductsImages/dates/Mabroom.jpg',
     },
     {
-        id: 47,
+        id: 48,
         name: 'Mashrook Dates',
         rating: 4,
         prices: {
@@ -793,7 +874,7 @@ export const dates = [
         image: 'Images/ProductsImages/dates/Mashrook.jpg',
     },
     {
-        id: 48,
+        id: 49,
         name: 'Barrari Dates',
         rating: 4,
         prices: {
@@ -805,7 +886,7 @@ export const dates = [
         image: 'Images/ProductsImages/dates/Barrari.jpg',
     },
     {
-        id: 49,
+        id: 50,
         name: 'Muscat Dates',
         rating: 4,
         prices: {
@@ -822,91 +903,7 @@ export const dates = [
 
 export const chocolates = [
     {
-        id: 50,
-        name: 'Twix',
-        rating: 4,
-        prices: {
-            '1pocket': { currentPrice: '₹70', originalPrice: '₹90' },
-            '2pocket': { currentPrice: '₹140', originalPrice: '₹160' },
-            '3pocket': { currentPrice: '₹210', originalPrice: '₹230' },
-            '4pocket': { currentPrice: '₹280', originalPrice: '₹300' },
-        },
-        image: 'Images/ProductsImages/chocolates/twix.png',
-    },
-    {
         id: 51,
-        name: 'Kinder Bueno',
-        rating: 5,
-        prices: {
-            '1pocket': { currentPrice: '₹95', originalPrice: '₹110' },
-            '2pocket': { currentPrice: '₹190', originalPrice: '₹210' },
-            '3pocket': { currentPrice: '₹285', originalPrice: '₹305' },
-            '4pocket': { currentPrice: '₹380', originalPrice: '₹400' },
-        },
-        image: 'Images/ProductsImages/chocolates/bueno.png',
-    },
-    {
-        id: 52,
-        name: 'Lotus Biscoff Smooth',
-        rating: 4,
-        prices: {
-            '1pocket': { currentPrice: '₹250', originalPrice: '₹280' },
-            '2pocket': { currentPrice: '₹500', originalPrice: '₹550' },
-            '3pocket': { currentPrice: '₹750', originalPrice: '₹780' },
-            '4pocket': { currentPrice: '₹1,000', originalPrice: '₹1,050' },
-        },
-        image: 'Images/ProductsImages/chocolates/biscoffsmooth.png',
-    },
-    {
-        id: 53,
-        name: 'Mars',
-        rating: 4,
-        prices: {
-            '1pocket': { currentPrice: '₹65', originalPrice: '₹80' },
-            '2pocket': { currentPrice: '₹130', originalPrice: '₹150' },
-            '3pocket': { currentPrice: '₹195', originalPrice: '₹215' },
-            '4pocket': { currentPrice: '₹260', originalPrice: '₹280' },
-        },
-        image: 'Images/ProductsImages/chocolates/mars.png',
-    },
-    {
-        id: 54,
-        name: 'Lotus Biscoff',
-        rating: 4,
-        prices: {
-            '1pocket': { currentPrice: '₹300', originalPrice: '₹350' },
-            '2pocket': { currentPrice: '₹600', originalPrice: '₹650' },
-            '3pocket': { currentPrice: '₹900', originalPrice: '₹950' },
-            '4pocket': { currentPrice: '₹1,200', originalPrice: '₹1,250' },
-        },
-        image: 'Images/ProductsImages/chocolates/biscoff.png',
-    },
-    {
-        id: 55,
-        name: 'Nutella Be Ready',
-        rating: 4,
-        prices: {
-            '1pocket': { currentPrice: '₹75', originalPrice: '₹90' },
-            '2pocket': { currentPrice: '₹150', originalPrice: '₹180' },
-            '3pocket': { currentPrice: '₹225', originalPrice: '₹250' },
-            '4pocket': { currentPrice: '₹300', originalPrice: '₹325' },
-        },
-        image: 'Images/ProductsImages/chocolates/nutellabeready.png',
-    },
-    {
-        id: 56,
-        name: 'Nutella Go',
-        rating: 4,
-        prices: {
-            '1pocket': { currentPrice: '₹185', originalPrice: '₹200' },
-            '2pocket': { currentPrice: '₹370', originalPrice: '₹390' },
-            '3pocket': { currentPrice: '₹555', originalPrice: '₹570' },
-            '4pocket': { currentPrice: '₹740', originalPrice: '₹780' },
-        },
-        image: 'Images/ProductsImages/chocolates/nutella.png',
-    },
-    {
-        id: 57,
         name: 'Ferrero Rocher',
         rating: 4,
         prices: {
@@ -918,7 +915,7 @@ export const chocolates = [
         image: 'Images/ProductsImages/chocolates/ferreroroucher.png',
     },
     {
-        id: 58,
+        id: 52,
         name: 'Raffelo',
         rating: 4,
         prices: {
@@ -928,6 +925,78 @@ export const chocolates = [
             '4pocket': { currentPrice: '₹500', originalPrice: '₹530' },
         },
         image: 'Images/ProductsImages/chocolates/rafello.png',
+    },
+    {
+        id: 53,
+        name: 'Twix',
+        rating: 4,
+        prices: {
+            '1pocket': { currentPrice: '₹70', originalPrice: '₹90' },
+            '2pocket': { currentPrice: '₹140', originalPrice: '₹160' },
+            '3pocket': { currentPrice: '₹210', originalPrice: '₹230' },
+            '4pocket': { currentPrice: '₹280', originalPrice: '₹300' },
+        },
+        image: 'Images/ProductsImages/chocolates/twix.png',
+    },
+    {
+        id: 54,
+        name: 'Kinder Bueno',
+        rating: 5,
+        prices: {
+            '1pocket': { currentPrice: '₹95', originalPrice: '₹110' },
+            '2pocket': { currentPrice: '₹190', originalPrice: '₹210' },
+            '3pocket': { currentPrice: '₹285', originalPrice: '₹305' },
+            '4pocket': { currentPrice: '₹380', originalPrice: '₹400' },
+        },
+        image: 'Images/ProductsImages/chocolates/bueno.png',
+    },
+    {
+        id: 55,
+        name: 'Mars',
+        rating: 4,
+        prices: {
+            '1pocket': { currentPrice: '₹65', originalPrice: '₹80' },
+            '2pocket': { currentPrice: '₹130', originalPrice: '₹150' },
+            '3pocket': { currentPrice: '₹195', originalPrice: '₹215' },
+            '4pocket': { currentPrice: '₹260', originalPrice: '₹280' },
+        },
+        image: 'Images/ProductsImages/chocolates/mars.png',
+    },
+    {
+        id: 56,
+        name: 'Nutella Be Ready',
+        rating: 4,
+        prices: {
+            '1pocket': { currentPrice: '₹75', originalPrice: '₹90' },
+            '2pocket': { currentPrice: '₹150', originalPrice: '₹180' },
+            '3pocket': { currentPrice: '₹225', originalPrice: '₹250' },
+            '4pocket': { currentPrice: '₹300', originalPrice: '₹325' },
+        },
+        image: 'Images/ProductsImages/chocolates/nutellabeready.png',
+    },
+    {
+        id: 57,
+        name: 'Nutella Go',
+        rating: 4,
+        prices: {
+            '1pocket': { currentPrice: '₹185', originalPrice: '₹200' },
+            '2pocket': { currentPrice: '₹370', originalPrice: '₹390' },
+            '3pocket': { currentPrice: '₹555', originalPrice: '₹570' },
+            '4pocket': { currentPrice: '₹740', originalPrice: '₹780' },
+        },
+        image: 'Images/ProductsImages/chocolates/nutella.png',
+    },
+    {
+        id: 58,
+        name: 'M&M Choco',
+        rating: 4,
+        prices: {
+            '1pocket': { currentPrice: '₹75', originalPrice: '₹100' },
+            '2pocket': { currentPrice: '₹150', originalPrice: '₹180' },
+            '3pocket': { currentPrice: '₹225', originalPrice: '₹255' },
+            '4pocket': { currentPrice: '₹300', originalPrice: '₹325' },
+        },
+        image: 'Images/ProductsImages/chocolates/mm.png',
     },
     {
         id: 59,
@@ -943,16 +1012,16 @@ export const chocolates = [
     },
     {
         id: 60,
-        name: 'M&M Choco',
+        name: 'Lotus Biscoff Smooth',
         rating: 4,
         prices: {
-            '1pocket': { currentPrice: '₹75', originalPrice: '₹100' },
-            '2pocket': { currentPrice: '₹150', originalPrice: '₹180' },
-            '3pocket': { currentPrice: '₹225', originalPrice: '₹255' },
-            '4pocket': { currentPrice: '₹300', originalPrice: '₹325' },
+            '1pocket': { currentPrice: '₹250', originalPrice: '₹280' },
+            '2pocket': { currentPrice: '₹500', originalPrice: '₹550' },
+            '3pocket': { currentPrice: '₹750', originalPrice: '₹780' },
+            '4pocket': { currentPrice: '₹1,000', originalPrice: '₹1,050' },
         },
-        image: 'Images/ProductsImages/chocolates/mm.png',
-    },
+        image: 'Images/ProductsImages/chocolates/biscoffsmooth.png',
+    }, 
 ];
 
 
@@ -972,42 +1041,6 @@ export const drinks = [
     },
     {
         id: 62,
-        name: '100 Plus',
-        rating: 3,
-        prices: {
-            '1bottle': { currentPrice: '₹95', originalPrice: '₹110' },
-            '2bottle': { currentPrice: '₹190', originalPrice: '₹210' },
-            '3bottle': { currentPrice: '₹285', originalPrice: '₹305' },
-            '4bottle': { currentPrice: '₹380', originalPrice: '₹400' },
-        },
-        image: 'Images/ProductsImages/juices/100plus.png',
-    },
-    {
-        id: 63,
-        name: 'Bavaria',
-        rating: 4,
-        prices: {
-            '1bottle': { currentPrice: '₹80', originalPrice: '₹100' },
-            '2bottle': { currentPrice: '₹160', originalPrice: '₹180' },
-            '3bottle': { currentPrice: '₹240', originalPrice: '₹260' },
-            '4bottle': { currentPrice: '₹320', originalPrice: '₹340' },
-        },
-        image: 'Images/ProductsImages/juices/bavaria.png',
-    },
-    {
-        id: 64,
-        name: 'Mousey',
-        rating: 3,
-        prices: {
-            '1bottle': { currentPrice: '₹110', originalPrice: '₹130' },
-            '2bottle': { currentPrice: '₹220', originalPrice: '₹240' },
-            '3bottle': { currentPrice: '₹330', originalPrice: '₹350' },
-            '4bottle': { currentPrice: '₹440', originalPrice: '₹460' },
-        },
-        image: 'Images/ProductsImages/juices/moussy.png',
-    },
-    {
-        id: 65,
         name: 'Redbull Gold',
         rating: 4,
         prices: {
@@ -1019,8 +1052,45 @@ export const drinks = [
         image: 'Images/ProductsImages/juices/redbullgold.png',
     },
     {
+        id: 63,
+        name: '100 Plus',
+        rating: 3,
+        prices: {
+            '1bottle': { currentPrice: '₹95', originalPrice: '₹110' },
+            '2bottle': { currentPrice: '₹190', originalPrice: '₹210' },
+            '3bottle': { currentPrice: '₹285', originalPrice: '₹305' },
+            '4bottle': { currentPrice: '₹380', originalPrice: '₹400' },
+        },
+        image: 'Images/ProductsImages/juices/100plus.png',
+    },
+    {
+        id: 64,
+        name: 'Bavaria',
+        rating: 4,
+        prices: {
+            '1bottle': { currentPrice: '₹80', originalPrice: '₹100' },
+            '2bottle': { currentPrice: '₹160', originalPrice: '₹180' },
+            '3bottle': { currentPrice: '₹240', originalPrice: '₹260' },
+            '4bottle': { currentPrice: '₹320', originalPrice: '₹340' },
+        },
+        image: 'Images/ProductsImages/juices/bavaria.png',
+    },
+    {
+        id: 65,
+        name: 'Mousey',
+        rating: 3,
+        prices: {
+            '1bottle': { currentPrice: '₹110', originalPrice: '₹130' },
+            '2bottle': { currentPrice: '₹220', originalPrice: '₹240' },
+            '3bottle': { currentPrice: '₹330', originalPrice: '₹350' },
+            '4bottle': { currentPrice: '₹440', originalPrice: '₹460' },
+        },
+        image: 'Images/ProductsImages/juices/moussy.png',
+    },
+   
+    {
         id: 66,
-        name: 'American Basil',
+        name: 'American Basil Drink',
         rating: 4,
         prices: {
             '1bottle': { currentPrice: '₹65', originalPrice: '₹80' },
@@ -1032,18 +1102,6 @@ export const drinks = [
     },
     {
         id: 67,
-        name: 'Red Wine',
-        rating: 4,
-        prices: {
-            '1bottle': { currentPrice: '₹500', originalPrice: '₹600' },
-            '2bottle': { currentPrice: '₹1,000', originalPrice: '₹1,250' },
-            '3bottle': { currentPrice: '₹2,000', originalPrice: '₹2,250' },
-            '4bottle': { currentPrice: '₹3,000', originalPrice: '₹3,250' },
-        },
-        image: 'Images/ProductsImages/juices/edanberg.png',
-    },
-    {
-        id: 68,
         name: 'Joiner',
         rating: 4,
         prices: {
@@ -1054,6 +1112,19 @@ export const drinks = [
         },
         image: 'Images/ProductsImages/juices/joiner65.png',
     },
+    {
+        id: 68,
+        name: 'Edanberg Red Wine',
+        rating: 4,
+        prices: {
+            '1bottle': { currentPrice: '₹500', originalPrice: '₹600' },
+            '2bottle': { currentPrice: '₹1,000', originalPrice: '₹1,250' },
+            '3bottle': { currentPrice: '₹2,000', originalPrice: '₹2,250' },
+            '4bottle': { currentPrice: '₹3,000', originalPrice: '₹3,250' },
+        },
+        image: 'Images/ProductsImages/juices/edanberg.png',
+    },
+   
     {
         id: 69,
         name: 'Patritti Red Wine',
@@ -1071,7 +1142,7 @@ export const drinks = [
 export const powders = [
     {
         id: 70,
-        name: 'Davidoff',
+        name: 'Davidoff Coffee Powder',
         rating: 4,
         prices: {
             '1pocket': { currentPrice: '₹500', originalPrice: '₹550' },
@@ -1110,30 +1181,6 @@ export const powders = [
 export const biscuits = [
     {
         id: 73,
-        name: 'Hello Panda',
-        rating: 4,
-        prices: {
-            '1pocket': { currentPrice: '₹115', originalPrice: '₹130' },
-            '2pocket': { currentPrice: '₹230', originalPrice: '₹260' },
-            '3pocket': { currentPrice: '₹345', originalPrice: '₹375' },
-            '4pocket': { currentPrice: '₹460', originalPrice: '₹485' },
-        },
-        image: 'Images/ProductsImages/Biscuits/helopanda.png',
-    },
-    {
-        id: 74,
-        name: 'Kaprika Waffer',
-        rating: 4,
-        prices: {
-            '1pocket': { currentPrice: '₹95', originalPrice: '₹115' },
-            '2pocket': { currentPrice: '₹190', originalPrice: '₹210' },
-            '3pocket': { currentPrice: '₹285', originalPrice: '₹305' },
-            '4pocket': { currentPrice: '₹380', originalPrice: '₹400' },
-        },
-        image: 'Images/ProductsImages/Biscuits/kaprikawaffer.png',
-    },
-    {
-        id: 75,
         name: 'Lotus Biscoff',
         rating: 4,
         prices: {
@@ -1145,31 +1192,19 @@ export const biscuits = [
         image: 'Images/ProductsImages/Biscuits/biscoffbis.png',
     },
     {
-        id: 76,
-        name: 'Tiffany Waffer',
+        id: 74,
+        name: 'Hello Panda',
         rating: 4,
         prices: {
-            '1pocket': { currentPrice: '₹95', originalPrice: '₹120' },
-            '2pocket': { currentPrice: '₹190', originalPrice: '₹215' },
-            '3pocket': { currentPrice: '₹285', originalPrice: '₹310' },
-            '4pocket': { currentPrice: '₹380', originalPrice: '₹405' },
+            '1pocket': { currentPrice: '₹115', originalPrice: '₹130' },
+            '2pocket': { currentPrice: '₹230', originalPrice: '₹260' },
+            '3pocket': { currentPrice: '₹345', originalPrice: '₹375' },
+            '4pocket': { currentPrice: '₹460', originalPrice: '₹485' },
         },
-        image: 'Images/ProductsImages/Biscuits/tiffany waffer.png',
+        image: 'Images/ProductsImages/Biscuits/helopanda.png',
     },
-    {
-        id: 77,
-        name: 'Waffer',
-        rating: 4,
-        prices: {
-            '1pocket': { currentPrice: '₹240', originalPrice: '₹270' },
-            '2pocket': { currentPrice: '₹480', originalPrice: '₹500' },
-            '3pocket': { currentPrice: '₹720', originalPrice: '₹750' },
-            '4pocket': { currentPrice: '₹960', originalPrice: '₹1,000' },
-        },
-        image: 'Images/ProductsImages/Biscuits/wf1.png',
-    },
-    {
-        id: 78,
+     {
+        id: 75,
         name: 'Cream Cracker',
         rating: 4,
         prices: {
@@ -1181,7 +1216,7 @@ export const biscuits = [
         image: 'Images/ProductsImages/Biscuits/creamcracker2.png',
     },
     {
-        id: 79,
+        id: 76,
         name: 'Sugar Cracker',
         rating: 4,
         prices: {
@@ -1192,6 +1227,45 @@ export const biscuits = [
         },
         image: 'Images/ProductsImages/Biscuits/sugarcracker2.png',
     },
+    {
+        id: 77,
+        name: 'Tiffany Waffer',
+        rating: 4,
+        prices: {
+            '1pocket': { currentPrice: '₹95', originalPrice: '₹120' },
+            '2pocket': { currentPrice: '₹190', originalPrice: '₹215' },
+            '3pocket': { currentPrice: '₹285', originalPrice: '₹310' },
+            '4pocket': { currentPrice: '₹380', originalPrice: '₹405' },
+        },
+        image: 'Images/ProductsImages/Biscuits/tiffany waffer.png',
+    },
+    {
+        id: 78,
+        name: 'Kaprika Waffer',
+        rating: 4,
+        prices: {
+            '1pocket': { currentPrice: '₹95', originalPrice: '₹115' },
+            '2pocket': { currentPrice: '₹190', originalPrice: '₹210' },
+            '3pocket': { currentPrice: '₹285', originalPrice: '₹305' },
+            '4pocket': { currentPrice: '₹380', originalPrice: '₹400' },
+        },
+        image: 'Images/ProductsImages/Biscuits/kaprikawaffer.png',
+    },
+   
+  
+    {
+        id: 79,
+        name: 'Waffer',
+        rating: 4,
+        prices: {
+            '1pocket': { currentPrice: '₹240', originalPrice: '₹270' },
+            '2pocket': { currentPrice: '₹480', originalPrice: '₹500' },
+            '3pocket': { currentPrice: '₹720', originalPrice: '₹750' },
+            '4pocket': { currentPrice: '₹960', originalPrice: '₹1,000' },
+        },
+        image: 'Images/ProductsImages/Biscuits/wf1.png',
+    },
+   
     {
         id: 80,
         name: 'Butter Cookies',
