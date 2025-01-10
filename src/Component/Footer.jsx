@@ -1099,8 +1099,8 @@ function Footer() {
                     </Typography>
                     <Typography variant="body2" color="GrayText" style={{ marginTop: '1rem' }}>
                         Designed & Developed by{'  '}
-                        <Link href="https://www.instagram.com/delta_info_?igsh=MWZ5dTZzdW43eW4wbw==" style={{ color: 'white', textDecoration: 'none' }}>
-                            Delta Info
+                        <Link href="https://harihara.vercel.app/" style={{ color: 'white', textDecoration: 'none' }}>
+                           Hari Hara
                         </Link>
                     </Typography>
                 </Stack>
